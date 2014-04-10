@@ -18,6 +18,7 @@ group :development, :test do
   gem 'binding_of_caller'
   gem 'sextant'
   gem 'rails_db_info'
+  gem 'jasmine'
 end
 
 group :test do
@@ -28,8 +29,4 @@ group :test do
   gem 'database_cleaner'
   gem 'debugger'
   gem 'simplecov', require: false
-end
-
-group :development, :test do
-  gem 'jasmine'
 end
