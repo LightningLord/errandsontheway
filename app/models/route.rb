@@ -1,9 +1,8 @@
 class Route < ActiveRecord::Base
   has_many :errands
-  validates :start_point,
-            :end_point, 
-            presence: true,
-            format: { 
-              with: /^([-+]?\d{1,2}[.]\d+),\s*([-+]?\d{1,3}[.]\d+)$/
-            }
+  validates :start_point_longitude,
+            :start_point_latitude,
+            :end_point_longitude,
+            :end_point_latitude,
+            presence: true
 end

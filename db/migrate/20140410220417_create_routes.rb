@@ -4,9 +4,10 @@ class CreateRoutes < ActiveRecord::Migration
       t.string :url
       t.integer :ending_duration, :default => 0
       t.integer :original_duration, :default => 0
-      t.point :start_point
-      t.point :end_point
-
+      t.float :start_point_latitude
+      t.float :start_point_longitude
+      t.float :end_point_latitude
+      t.float :end_point_longitude
       t.timestamps
     end
   end
