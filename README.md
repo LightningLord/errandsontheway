@@ -7,7 +7,7 @@ Errands on the Way DBC Final Project
 ![Imgur](http://i.imgur.com/zGaBShs.png)
 
 #### Wireframe
-![Imgur](http://i.imgur.com/Gji4I7b)
+![Imgur](http://i.imgur.com/Gji4I7b.png)
 
 #### Page Flow
 ![Imgur](http://i.imgur.com/AATAMvR.png)
