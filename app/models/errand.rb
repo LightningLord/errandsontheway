@@ -1,5 +1,5 @@
 class Errand < ActiveRecord::Base
-  belongs_to :route
+  belongs_to :trip
   validates :business_name, :latitude, :longitude, :additional_duration, presence: true
 
 
