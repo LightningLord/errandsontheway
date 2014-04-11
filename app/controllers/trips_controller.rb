@@ -1,8 +1,11 @@
 class TripsController < ApplicationController
-  
+
   def new
     @trip = Trip.new
   end
+  def show
+  end
+
 
   def create
     @trip = Trip.new(permitted_params)
@@ -11,9 +14,7 @@ class TripsController < ApplicationController
     end
   end
 
-  def show
-    # @trip = Trip.find(params[:id])
-  end
+
 
 
   private
