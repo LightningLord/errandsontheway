@@ -4,6 +4,7 @@ class Place
     @latitude = latitude
     @longitude = longitude
     @keyword = keyword
+    @request_businesses = request_businesses
   end
   #latitude and longitude are passed in as strings with many decimals
   #ie '-33.8670522'
@@ -20,11 +21,11 @@ class Place
   end
 
   def get_names
-    request_businesses.map{|business| business["name"]}
+    @request_businesses.map{|business| business["name"]}
   end
 
   def get_addresses
-    request_businesses.map{|business| business["vicinity"]}
+    @request_businesses.map{|business| business["vicinity"]}
   end
 
   private
