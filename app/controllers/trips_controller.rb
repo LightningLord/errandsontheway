@@ -6,7 +6,7 @@ class TripsController < ApplicationController
 
   def create
     @trip = Trip.new(permitted_params)
-    coordinates = CoordinatesRetriever.get_coordinates(@trip)
+    coordinates = CoordinatesRetriever.get_coordinates(params[:trip][:start_point_address], params[:trip][:end_point_address])
     @trip.set_coordinates(coordinates)
     if @trip.save
       redirect_to(@trip)
