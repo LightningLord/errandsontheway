@@ -25,4 +25,17 @@ ActiveRecord::Schema.define(version: 20140410231504) do
     t.integer "route_id"
   end
 
+
+  create_table "routes", force: true do |t|
+    t.string   "url"
+    t.integer  "ending_duration",       default: 0
+    t.integer  "original_duration",     default: 0
+    t.float    "start_point_latitude"
+    t.float    "start_point_longitude"
+    t.float    "end_point_latitude"
+    t.float    "end_point_longitude"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
 end
