@@ -11,4 +11,10 @@ describe TripsController do
       expect(assigns(:trip)).to be_a_new(Trip)
     end
   end
+  describe "#create" do
+    it "should create a new trip" do
+      expect{post :create, trip: FactoryGirl.attributes_for(:trip) }.to change {Trip.count}.by(1)
+      expect(response).to be_redirect
+    end
+  end
 end

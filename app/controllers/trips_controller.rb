@@ -16,7 +16,7 @@ class TripsController < ApplicationController
   end
 
 
-private
+  private
 
   def permitted_params
     params.require(:trip).permit(:start_point_address, :end_point_address)
