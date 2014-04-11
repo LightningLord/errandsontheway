@@ -6,12 +6,11 @@ class TripsController < ApplicationController
 
   def create
     @trip = Trip.new(permitted_params)
-    p @trip
+    coordinates = CoordinatesRetriever.get_coordinates(@trip)
+    @trip.set_coordinates(coordinates)
     if @trip.save
-      p @trip
       redirect_to(@trip)
     else 
-      p @trip.errors
       render :new
     end
       
