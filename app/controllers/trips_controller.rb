@@ -1,7 +1,7 @@
 class TripsController < ApplicationController
   
   def new
-    @new = Trip.new
+    @trip = Trip.new
   end
 
   def show
