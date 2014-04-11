@@ -16,6 +16,20 @@ describe "Trips" do
       it "does not submit your origin and destination" do
         pending
       end
+    end
+
+    context "fetching and saving lat/long" do
+      context "with a valid origin and destination addresses" do
+        it "should set and save lat/long columns" do
+
+        end
+      end
+
+      contex "with an invalid origin and destination addresses" do
+        it "should not save lat/long columns" do
+
+        end
+      end
     end    
 
 end
