@@ -4,7 +4,7 @@ Errandsontheway::Application.routes.draw do
 
   # WARNING:  Do not use :routes, this conflicts
   # with Rails magic!!!!
-  resources :routes, only: [:new, :show, :create]
+  resources :trips, only: [:new, :show, :create]
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'

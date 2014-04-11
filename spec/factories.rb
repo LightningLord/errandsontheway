@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :route do
+  factory :trip do
     url { Faker::Internet.domain_name }
     ending_duration { 0 }
     original_duration { rand(30) }
