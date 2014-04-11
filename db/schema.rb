@@ -22,11 +22,10 @@ ActiveRecord::Schema.define(version: 20140410231504) do
     t.float   "longitude"
     t.text    "address"
     t.integer "additional_duration"
-    t.integer "route_id"
+    t.integer "trip_id"
   end
 
-
-  create_table "routes", force: true do |t|
+  create_table "trips", force: true do |t|
     t.string   "url"
     t.integer  "ending_duration",       default: 0
     t.integer  "original_duration",     default: 0
