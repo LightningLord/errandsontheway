@@ -1,6 +1,6 @@
 Errandsontheway::Application.routes.draw do
 
-  root to: 'routes#new'
-  resources :routes, only: [:new, :create]
+  root to: 'trips#new'
+  resources :trips, only: [:new, :create]
 
 end

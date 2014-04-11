@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "Routes" do
+describe "Trips" do
 
   context "entering origin and destination values" do
     context "with a proper origin and desination" do

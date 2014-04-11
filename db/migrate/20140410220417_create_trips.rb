@@ -1,6 +1,6 @@
-class CreateRoutes < ActiveRecord::Migration
+class CreateTrips < ActiveRecord::Migration
   def change
-    create_table :routes do |t|
+    create_table :trips do |t|
       t.string :url
       t.integer :ending_duration, :default => 0
       t.integer :original_duration, :default => 0
