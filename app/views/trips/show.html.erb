@@ -1,0 +1,7 @@
+<%= form_for 'Search' do |f| %>
+  <ol>
+    <li><%= f.text_field :search, :placeholder => 'e.g. Laundry, Gas, Tacos' %></li>
+    <li><%= f.submit 'Search' %></li>
+  </ol>
+
+<% end %>
