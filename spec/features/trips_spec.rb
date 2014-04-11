@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "Routes" do
+describe "Trips" do
 
   it "can submit your origin and destination" do
     visit root_path
