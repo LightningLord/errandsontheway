@@ -5,6 +5,7 @@ class TripsController < ApplicationController
 
 
   def new
+    session[:trip_id] = nil
     @trip = Trip.new
   end
 
@@ -12,6 +13,7 @@ class TripsController < ApplicationController
   def create
     @trip = Trip.new(permitted_params)
     if @trip.save
+      session[:trip_id] = @trip.id
       redirect_to(@trip)
     end
   end
