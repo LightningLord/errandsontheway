@@ -6,7 +6,7 @@ class CreateErrands < ActiveRecord::Migration
       t.float :longitude
       t.text :address
       t.integer :additional_duration   
-      belongs_to :route
+      t.belongs_to :route
     end
   end
 end
