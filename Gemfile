@@ -29,5 +29,5 @@ group :test do
   gem 'database_cleaner'
   gem 'debugger'
   gem 'simplecov', require: false
-#  gem 'faker'
+  gem 'faker'
 end
