@@ -1,10 +1,14 @@
 require 'spec_helper'
 
 describe OptionsController do
-  context '#index' do
+  describe '#index' do
     it 'assigns a search term based on params' do
       get :index, :search => "Tacos"
       expect(assigns(:search_term)).to eq('Tacos')
+    end
+
+    it ""
+
     end
   end
 end

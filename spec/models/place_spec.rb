@@ -7,13 +7,10 @@ describe Place do
     Place.any_instance.stub(:request_businesses).and_return([{"name" => business[:name], "vicinity" => business[:address]}])
   end
 
-  it "extracts each business's name" do
-    expect(place.get_names).to include business[:name]
+  it "extracts each business's name and address" do
+    expect(place.get_names_and_addresses[0].values).to include (business[:name] && business[:address])
   end
 
-  it 'extracts each business address' do
-    expect(place.get_addresses).to include business[:address]
-  end
 
   it 'extracts the extra duration visiting this business would take'
 

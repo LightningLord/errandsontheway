@@ -8,6 +8,18 @@ class Place
   end
   #latitude and longitude are passed in as strings with many decimals
   #ie '-33.8670522'
+
+
+  def get_names_and_addresses
+    @request_businesses.map{|business|{name: business["name"], address: business["vicinity"]}}
+  end
+
+  private
+
+  def client
+    @client
+  end
+
   def request_businesses
     location = GooglePlaces::Location.new(@latitude, @longitude).format
     response = GooglePlaces::Request.spots(
@@ -18,20 +30,6 @@ class Place
       :key => ENV["API_KEY"]
       )
     response['results']
-  end
-
-  def get_names
-    @request_businesses.map{|business| business["name"]}
-  end
-
-  def get_addresses
-    @request_businesses.map{|business| business["vicinity"]}
-  end
-
-  private
-
-  def client
-    @client
   end
 end
 
