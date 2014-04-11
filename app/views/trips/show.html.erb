@@ -1,3 +1,7 @@
+<h1>Your trip</h1>
+
+<h3>Trip Duration:</h3>
+
 <%= form_tag('/options', method: 'get') do %>
   <ol>
     <li><%= text_field_tag :search, nil, :placeholder => 'e.g. Laundry, Gas, Tacos' %></li>
@@ -5,3 +9,4 @@
   </ol>
 
 <% end %>
+
