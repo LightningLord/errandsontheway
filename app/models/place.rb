@@ -18,8 +18,13 @@ class Place
       )
     response['results']
   end
+
   def get_names
     request_businesses.map{|business| business["name"]}
+  end
+
+  def get_addresses
+    request_businesses.map{|business| business["vicinity"]}
   end
 
   private
