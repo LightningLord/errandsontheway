@@ -26,9 +26,5 @@ class TripsController < ApplicationController
   def permitted_params
     params.require(:trip).permit(:start_point_address, :end_point_address)
   end
-
-  def valid_coordinates?
-    
-  end
-
+  
 end
