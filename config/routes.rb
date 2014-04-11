@@ -1,6 +1,12 @@
 Errandsontheway::Application.routes.draw do
 
-  root to: 'trips#new'
-  resources :trips, only: [:new, :create]
+
+  # WARNING:  Do not use :routes, this conflicts
+  # with Rails magic!!!!
+  resources :trips, only: [:new, :show, :create]
+  root :to => "trips#new"
+  # You can have the root of your site routed with "root"
+  # root 'welcome#index'
+
 
 end
