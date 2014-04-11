@@ -21,15 +21,14 @@ describe "Trips" do
     context "fetching and saving lat/long" do
       context "with a valid origin and destination addresses" do
         it "should set and save lat/long columns" do
-
+          pending
         end
       end
 
       contex "with an invalid origin and destination addresses" do
         it "should not save lat/long columns" do
-
+          pending
         end
       end
     end    
-
 end

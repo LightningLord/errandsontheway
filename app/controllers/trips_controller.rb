@@ -6,6 +6,7 @@ class TripsController < ApplicationController
 
   def create
     @trip = Trip.new(permitted_params)
+    p @trip
     if @trip.save
       redirect_to(@trip)
     end
