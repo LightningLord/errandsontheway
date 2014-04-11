@@ -25,7 +25,7 @@ describe "Trips" do
         end
       end
 
-      contex "with an invalid origin and destination addresses" do
+      context "with an invalid origin and destination addresses" do
         it "should not save lat/long columns" do
           pending
         end
