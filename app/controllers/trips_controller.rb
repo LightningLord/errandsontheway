@@ -8,8 +8,13 @@ class TripsController < ApplicationController
     @trip = Trip.new(permitted_params)
     p @trip
     if @trip.save
+      p @trip
       redirect_to(@trip)
+    else 
+      p @trip.errors
+      render :new
     end
+      
   end
 
   def show
