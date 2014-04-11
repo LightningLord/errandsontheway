@@ -197,11 +197,8 @@ DEPENDENCIES
   dotenv-rails
   factory_girl_rails
   faker
-<<<<<<< HEAD
   geocoder
-=======
   foundation-rails
->>>>>>> c73cd046b8e0d3f65d6878c55dceebddee50f573
   jasmine
   jbuilder (~> 1.2)
   jquery-rails
