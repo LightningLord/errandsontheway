@@ -1,19 +1,25 @@
 class Place
-  def initialize
+  def initialize(latitude, longitude, keyword)
     @client = GooglePlaces::Client.new(ENV["API_KEY"])
+    @latitude = latitude
+    @longitude = longitude
+    @keyword = keyword
   end
   #latitude and longitude are passed in as strings with many decimals
   #ie '-33.8670522'
-  def request(latitude, longitude, keyword)
-    location = GooglePlaces::Location.new(latitude, longitude).format
+  def request_businesses
+    location = GooglePlaces::Location.new(@latitude, @longitude).format
     response = GooglePlaces::Request.spots(
       :location => location,
       :radius => 200,
       :sensor => false,
-      :keyword => keyword,
+      :keyword => @keyword,
       :key => ENV["API_KEY"]
       )
     response['results']
+  end
+  def get_names
+    request_businesses.map{|business| business["name"]}
   end
 
   private
