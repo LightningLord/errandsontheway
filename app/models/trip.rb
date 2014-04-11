@@ -1,6 +1,6 @@
 class Trip < ActiveRecord::Base
   has_many :errands
-  before_validation :geocode_all #, if: :start_point_address.present? and :end_point_address.present? 
+  before_validation :geocode_all, unless: :has_coordinates?
   validates :start_point_address, :end_point_address, presence: true 
   validates :start_point_latitude, :start_point_longitude, :end_point_latitude, :end_point_longitude, presence: {message: "Please enter valid start-point and end-point."}
 
@@ -11,6 +11,13 @@ class Trip < ActiveRecord::Base
     self.start_point_longitude = start_result.last
     self.end_point_latitude = end_result.first
     self.end_point_longitude = end_result.last
+  end
+
+  def has_coordinates?
+    if self.start_point_latitude && self.start_point_longitude &&     
+      self.end_point_latitude && self.end_point_longitude
+      return true
+    end
   end
 
 end
