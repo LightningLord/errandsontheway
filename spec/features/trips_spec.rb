@@ -30,5 +30,5 @@ describe "Trips" do
           pending
         end
       end
-    end    
+    end
 end
