@@ -28,7 +28,7 @@ class TripsController < ApplicationController
   end
 
   def summary
-
+    @trip = Trip.find(session[:trip_id])
   end
 
   private

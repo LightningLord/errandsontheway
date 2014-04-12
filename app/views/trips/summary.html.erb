@@ -1,0 +1,12 @@
+<h1>Your trip</h1>
+
+<h3>Trip Duration Without Errands: <%= @trip.format_original_duration %></h3>
+<h3>Trip Duration With Errands: <%= @trip.format_ending_duration %></h3>
+
+
+<h3>Errands</h3>
+<ol>
+  <% @trip.errands.each do |errand| %>
+    <li><%= errand.business_name %></li>
+  <% end %>
+</ol>
