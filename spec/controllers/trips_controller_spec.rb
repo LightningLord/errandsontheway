@@ -38,4 +38,20 @@ describe TripsController do
       expect(response).to render_template(:new)
     end
   end
+
+  describe "#finalize" do
+    let(:my_trip){FactoryGirl.create(:valid_trip)}
+    before(:each){request.session[:trip_id] = my_trip.id}
+    it "assigns a secure random url to a trip" do
+      my_trip.update_attributes(url: nil)
+      post :finalize
+      expect(my_trip.reload.url).to_not be_nil
+    end
+
+    it "redirects to the trip_summary_path" do
+      post :finalize
+      expect(response).to redirect_to trip_summary_path(my_trip.reload.url)
+    end
+
+  end
 end
