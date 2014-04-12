@@ -1,12 +1,9 @@
 class DistanceMatrixHelper
   include HTTParty
-# /maps/api/distancematrix/json
-# https://maps.googleapis.com/maps/api/distancematrix/json
-#   origins=Vancouver+BC&
-#   destinations=San+Francisco
-#   sensor=false&
-#   key=AIzaSyAAPig8eebUk6Vj79Fgd275gDQfOvFqYnU
+
   base_uri 'https://maps.googleapis.com'
+  #enter in origins and destinations as addresses
+
   def initialize(args)
     @options = { query: { origins: args[:origins],
                           destinations: args[:destinations] ,
@@ -26,5 +23,6 @@ end
 # response.parsed_response
 # response.parsed_response["rows"].first["elements"].first["duration"]
 # seconds = response.parsed_response["rows"].first["elements"].first["duration"]["value"]
+#returns an integer number of seconds
 
 
