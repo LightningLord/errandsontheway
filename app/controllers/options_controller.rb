@@ -9,7 +9,6 @@ class OptionsController < ApplicationController
 
   private
 
-
   def get_business_info_near_point(place, trip)
     businesses = place.get_names_and_addresses.map do |name_address_hash|
       Business.new(name_address_hash[:name], name_address_hash[:address])
