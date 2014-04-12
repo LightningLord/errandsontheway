@@ -1,3 +1,20 @@
-<h1>Your trip</h1>
 
-<h3>Trip Duration:</h3>
+<script type="text/javascript">
+  var trip = <%= raw @trip.to_json.gsub('/', '\/') %>;
+  console.log(trip);
+  renderMap(trip);
+</script>
+
+
+  <h1>Your trip</h1>
+  <h3>Trip Duration: <%= @trip.original_duration - @trip.ending_duration %></h3>
+
+  <div id="map-canvas"></div>
+
+<button>Add Errand</button>
+<button>Finalize Route</button>
+<button>Start Over</button>
+
+
+  <div id="directions-panel"></div>
+

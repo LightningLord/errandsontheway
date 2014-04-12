@@ -11,3 +11,22 @@
  *= require_self
  *= require_tree .
  */
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#map-canvas {
+  display: block;
+  height: 50%;
+  width: 35%;
+}
+
+#directions-panel {
+  display: block;
+  height: 50%;
+  width: 35%;
+}
