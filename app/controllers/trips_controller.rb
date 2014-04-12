@@ -20,6 +20,17 @@ class TripsController < ApplicationController
     end
   end
 
+  def finalize
+    trip = Trip.find(session[:trip_id])
+    trip.url = SecureRandom.hex
+    trip.save
+    redirect_to trip_summary_path(trip.url)
+  end
+
+  def summary
+
+  end
+
   private
 
   def permitted_params
