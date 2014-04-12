@@ -12,5 +12,4 @@ class Trip < ActiveRecord::Base
     self.end_point_longitude = end_coords.last
   end
 
-
 end

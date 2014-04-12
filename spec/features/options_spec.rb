@@ -6,7 +6,7 @@ feature "Options", :js => false do
       visit trip_path(my_trip)
       fill_in "search", :with => "Laundry"
       click_on "Search"
-      expect(page).to have_content "Search Results"
+      expect(page).to have_content "Laundry"
     end
   end
 end

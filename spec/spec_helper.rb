@@ -15,6 +15,7 @@ RSpec.configure do |config|
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
   config.use_transactional_fixtures = true
+  
   config.before(:suite) do
     DatabaseCleaner.strategy = :truncation
   end
@@ -31,5 +32,4 @@ RSpec.configure do |config|
   config.order = "random"
   config.color_enabled = true
   config.tty = true
-  config.formatter = :documentation
 end

@@ -9,6 +9,8 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require foundation_and_overrides
+
  *= require_tree .
  */
 
@@ -20,15 +22,7 @@ html, body {
   text-align: center;
 }
 
-#map-canvas {
-  display: block;
-  height: 50%;
-  width: 35%;
-  margin: auto;
-}
-
-#directions-panel {
-  display: block;
+.errand_search, #map-canvas,#directions-panel {
   height: 50%;
   width: 35%;
   margin: auto;
