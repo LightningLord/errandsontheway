@@ -11,8 +11,8 @@ class TripsController < ApplicationController
   def create
     @trip = Trip.new(permitted_params)
     coordinates = CoordinatesRetriever.get_coordinates(params[:trip][:start_point_address], params[:trip][:end_point_address])
-    
     @trip.set_coordinates(coordinates) if coordinates
+    @trip.original_duration = DistanceMatrixHelper.new({origins: @trip.start_point_address, destinations: @trip.end_point_address}).get_trip_duration if coordinates
     if @trip.save
       session[:trip_id] = @trip.id
       redirect_to(@trip)

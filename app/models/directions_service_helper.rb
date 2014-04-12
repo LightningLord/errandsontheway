@@ -9,13 +9,13 @@ class DirectionsServiceHelper
 # key=API_KEY
   base_uri 'https://maps.googleapis.com'
   def initialize(args)
-    @options = { query: { origin: args[:origin],
-                          destination: args[:destination],
-                          waypoints: args[:waypoints].join(" | "),
-                          sensor: false,
-                          key: ENV['API_KEY']
-                        }
-                }
+      @options = { query: { origin: args[:origin],
+                            destination: args[:destination],
+                            waypoints: args[:waypoints].join(" | "),
+                            sensor: false,
+                            key: ENV['API_KEY']
+                          }
+                  }
   end
 
 
