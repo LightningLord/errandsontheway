@@ -24,7 +24,7 @@ class Place
     location = GooglePlaces::Location.new(@latitude, @longitude).format
     response = GooglePlaces::Request.spots(
       :location => location,
-      :rank_by => 'distance',
+      :rankby => 'distance',
       :sensor => false,
       :keyword => @keyword,
       :key => ENV["API_KEY"]
