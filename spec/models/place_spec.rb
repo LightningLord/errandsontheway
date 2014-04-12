@@ -12,6 +12,5 @@ describe Place do
   end
 
 
-  it 'extracts the extra duration visiting this business would take'
 
 end
