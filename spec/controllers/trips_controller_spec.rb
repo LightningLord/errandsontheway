@@ -38,4 +38,9 @@ describe TripsController do
       expect(response).to render_template(:new)
     end
   end
+
+  describe "#show" do
+    
+  end
+
 end
