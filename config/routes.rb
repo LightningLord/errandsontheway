@@ -7,6 +7,7 @@ Errandsontheway::Application.routes.draw do
 
   resources :trips, only: [:new, :show, :create]
   resources :options, only: [:index]
+  resources :errands, only: [:create]
 
 
 end
