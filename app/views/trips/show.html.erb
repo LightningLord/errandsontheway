@@ -1,8 +1,9 @@
 
 <script type="text/javascript">
   var trip = <%= raw @trip.to_json.gsub('/', '\/') %>;
-  console.log(trip);
-  renderMap(trip);
+  var errands = <%= raw @errands.to_json.gsub('/', '\/') %>;
+  console.log(errands);
+  renderMap(trip, errands);
 </script>
 
 
@@ -13,7 +14,7 @@
 
 <button>Add Errand</button>
 <button>Finalize Route</button>
-<button>Start Over</button>
+<%=  link_to "Start Over", root_path %>
 
 
   <div id="directions-panel"></div>
