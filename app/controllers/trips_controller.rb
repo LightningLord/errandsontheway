@@ -24,6 +24,11 @@ class TripsController < ApplicationController
 
   def show
     @trip = Trip.find(params[:id])
+    if @trip.errands.empty?
+      @trip_duration = @trip.original_duration
+    else
+      @trip_duration = @trip.ending_duration
+    end
     @errands = @trip.errands
   end
 
