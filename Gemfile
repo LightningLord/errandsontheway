@@ -7,6 +7,9 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'geocoder'
+gem 'httparty'
+gem 'google_places'
+gem 'dotenv-rails'
 gem 'foundation-rails'
 
 group :doc do
