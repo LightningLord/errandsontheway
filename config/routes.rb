@@ -7,6 +7,7 @@ Errandsontheway::Application.routes.draw do
   post 'trips/finalize', to: 'trips#finalize'
   resources :trips, only: [:new, :show, :create]
   resources :options, only: [:index]
+  resources :errands, only: [:create]
   get '/:url', to: 'trips#summary', as: 'trip_summary'
 
 
