@@ -3,7 +3,6 @@ class TripsController < ApplicationController
   def show
   end
 
-
   def new
     session[:trip_id] = nil
     @trip = Trip.new
