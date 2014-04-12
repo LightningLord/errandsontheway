@@ -7,8 +7,5 @@ describe OptionsController do
       expect(assigns(:search_term)).to eq('Tacos')
     end
 
-    it ""
-
-    end
   end
 end
