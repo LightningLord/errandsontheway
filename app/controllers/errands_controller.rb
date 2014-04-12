@@ -15,6 +15,6 @@ class ErrandsController < ApplicationController
   def permitted_params
     params.require(:errand).permit(:business_name,
                                    :address,
-                                   :additional_duration)
+                                   :delta_duration)
   end
 end

@@ -26,6 +26,6 @@ FactoryGirl.define do
   factory :valid_errand, class: Errand do
     business_name {"Melanie's Bagel Shop"}
     address {"1111 California Street, San Francisco, CA"}
-    additional_duration {"6 minutes"}
+    delta_duration {"6 minutes"}
   end
 end
