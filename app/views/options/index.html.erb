@@ -1,1 +1,9 @@
 <h2>You Searched: <%= @search_term %></h2>
+<dl>
+<% @businesses.each do |business| %>
+  <dt><%= business.name %></dt>
+  <dd><%= business.address %></dd>
+  <dd><%= business.extra_duration %></dd>
+<% end %>
+</dl>
+

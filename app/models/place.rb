@@ -11,7 +11,7 @@ class Place
 
 
   def get_names_and_addresses
-    @request_businesses.map{|business|{name: business["name"], address: business["vicinity"]}}
+    @request_businesses.shift(2).map{|business|{name: business["name"], address: business["vicinity"]}}
   end
 
   private
@@ -27,6 +27,7 @@ class Place
       :rankby => 'distance',
       :sensor => false,
       :keyword => @keyword,
+      :opennow => true,
       :key => ENV["API_KEY"]
       )
     response['results']
