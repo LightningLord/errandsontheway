@@ -11,9 +11,3 @@ describe ErrandsController do
     end
   end
 end
-
-# let(:create_trip){post :create, trip: FactoryGirl.attributes_for(:valid_trip)}
-#     it "should create a new trip" do
-#       expect{ create_trip }.to change {Trip.count}.by(1)
-#       expect(response).to be_redirect
-#     end
