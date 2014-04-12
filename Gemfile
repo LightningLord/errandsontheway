@@ -9,6 +9,9 @@ gem 'jbuilder', '~> 1.2'
 
 #mapping
 gem 'geocoder'
+gem 'httparty'
+gem 'google_places'
+gem 'dotenv-rails'
 gem 'foundation-rails'
 
 

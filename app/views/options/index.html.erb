@@ -1,1 +1,17 @@
 <h2>You Searched: <%= @search_term %></h2>
+<dl>
+<% @businesses.each do |business| %>
+  <dt><%= business.name %></dt>
+  <dd><%= business.address %></dd>
+  <dd><%= business.extra_duration %></dd>
+  <%= form_tag('/errands', method: 'post') do %>
+    <% hidden_field_tag("business[:business_name]", business.name)%>
+    <% hidden_field_tag("business[:address]", business.address)%>
+    <% hidden_field_tag("business[:additional_duration]", business.extra_duration)%>
+    <%= submit_tag("Choose this Business") %>
+  <% end %>
+
+<% end %>
+
+</dl>
+

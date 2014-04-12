@@ -1,12 +1,12 @@
 class TripsController < ApplicationController
 
-  def new
-    @trip = Trip.new
-  end
-  
   def show
   end
 
+  def new
+    session[:trip_id] = nil
+    @trip = Trip.new
+  end
 
   def create
     @trip = Trip.new(permitted_params)
@@ -14,10 +14,11 @@ class TripsController < ApplicationController
     
     @trip.set_coordinates(coordinates) if coordinates
     if @trip.save
+      session[:trip_id] = @trip.id
       redirect_to(@trip)
-    else 
+    else
       render :new
-    end    
+    end
   end
 
 
