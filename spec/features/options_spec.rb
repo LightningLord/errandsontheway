@@ -4,7 +4,10 @@ feature "Options", :js => false do
     let(:my_trip){FactoryGirl.create(:valid_trip)}
 
     before(:each){
-      visit trip_path(my_trip)
+      visit root_path
+      fill_in "start-point", with: "460 Fell St. San Francisco, CA"
+      fill_in "end-point", with: "633 Folsom St. San Francisco, CA"
+      click_on "Route my trip!"
       fill_in "search", :with => "Laundry"
       click_on "Search"
     }
