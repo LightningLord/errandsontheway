@@ -8,17 +8,17 @@ class TripsController < ApplicationController
     @trip = Trip.new
   end
 
-
   def create
     @trip = Trip.new(permitted_params)
+    coordinates = CoordinatesRetriever.get_coordinates(params[:trip][:start_point_address], params[:trip][:end_point_address])
+    @trip.set_coordinates(coordinates) if coordinates
     if @trip.save
       session[:trip_id] = @trip.id
       redirect_to(@trip)
+    else
+      render :new
     end
   end
-
-
-
 
   private
 
@@ -27,3 +27,4 @@ class TripsController < ApplicationController
   end
 
 end
+

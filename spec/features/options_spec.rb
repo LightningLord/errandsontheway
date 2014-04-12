@@ -1,7 +1,7 @@
 require 'spec_helper'
 feature "Options", :js => false do
   describe"return a list of business options" do
-    let(:my_trip){FactoryGirl.create(:trip)}
+    let(:my_trip){FactoryGirl.create(:valid_trip)}
 
     before(:each){
       visit trip_path(my_trip)
@@ -12,7 +12,7 @@ feature "Options", :js => false do
       expect(page).to have_content "Laundry"
     end
 
-    it "returns three business related to search term" do
+    xit "returns three business related to search term" do
       expect(page).to have_content ""
     end
   end
