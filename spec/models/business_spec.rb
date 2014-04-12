@@ -1,0 +1,11 @@
+require 'spec_helper'
+describe Business do
+  let(:my_business){Business.new("Ned's Place", "1 Stark Way")}
+  it "calculates delta duration" do
+    expect(my_business.calculate_delta_duration(30, 20)).to eq 10
+  end
+
+  it "formats delta duration" do
+    expect(my_business.format_delta_duration(2000,500)).to eq "25 minutes"
+  end
+end
