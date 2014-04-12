@@ -10,4 +10,12 @@ class Trip < ActiveRecord::Base
     self.end_point_longitude = end_coords.last
   end
 
+  def format_ending_duration
+    "#{(self.ending_duration / 60)} minutes"
+  end
+
+  def format_original_duration
+    "#{(self.original_duration / 60)} minutes"
+  end
+
 end
