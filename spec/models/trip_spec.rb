@@ -74,6 +74,9 @@ describe Trip do
     end
   end
 
+  describe "update" do
+    it ""
+  end
 
 end
 
