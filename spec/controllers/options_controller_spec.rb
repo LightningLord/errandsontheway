@@ -3,7 +3,6 @@ require 'spec_helper'
 describe OptionsController do
   describe '#index' do
     let(:new_trip){FactoryGirl.create(:valid_trip)}
-
     before(:each) do
       request.session[:trip_id] = new_trip.id
       get :index, :search => "Tacos"
