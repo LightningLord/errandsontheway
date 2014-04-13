@@ -21,4 +21,3 @@ feature "Options", :js => false do
   end
 end
 
-   # the body of the test would go here...
