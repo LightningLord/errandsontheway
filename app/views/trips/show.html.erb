@@ -1,11 +1,11 @@
 <script type="text/javascript">
   var trip = <%= raw @trip.to_json.gsub('/', '\/') %>;
   var errands = <%= raw @trip.errands.to_json.gsub('/', '\/') %>;
-  renderMap(trip, errands);
+  renderMap(trip, errands, false);
 </script>
 
 
-  <h1>Your trip</h1>
+  <h1>Your trip:</h1>
   <p><b>Start-point:</b> <%= @trip.start_point_address %><br>
   <b>Destination:</b> <%= @trip.end_point_address %></p>
 
@@ -43,5 +43,4 @@
 
 <%= button_to "Finalize Trip", action: "finalize" %>
 <%= render "start_over_link" %>
-<div id="directions-panel"></div>
 

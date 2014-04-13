@@ -1,4 +1,4 @@
-var renderMap = function(trip, errands){
+var renderMap = function(trip, errands, display_directions){
   var directionsDisplay;
   var directionsService = new google.maps.DirectionsService();
   var map;
@@ -7,8 +7,11 @@ var renderMap = function(trip, errands){
     directionsDisplay = new google.maps.DirectionsRenderer();
     map = new google.maps.Map(document.getElementById('map-canvas'));
     directionsDisplay.setMap(map);
-    directionsDisplay.setPanel(document.getElementById('directions-panel'));
     calcRoute();
+    if (display_directions === true){
+      directionsDisplay.setPanel(document.getElementById('directions-panel'));
+    }
+
   }
 
   function calcRoute() {
