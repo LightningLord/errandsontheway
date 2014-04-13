@@ -17,8 +17,11 @@ feature "Options", :js => false do
       expect(page).to have_content "Laundry"
     end
 
+    it "displays buttons to select a business" do
+      expect(page).to have_button "Choose this Business"
+    end
+
 
   end
 end
 
-   # the body of the test would go here...

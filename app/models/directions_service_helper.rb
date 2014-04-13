@@ -1,12 +1,6 @@
 class DirectionsServiceHelper
   include HTTParty
 
-# maps.googleapis.com/maps/api/directions/json
-# origin=Boston,MA&
-# destination=Concord,MA&
-# waypoints=Charlestown,MA|Lexington,MA&
-# sensor=false&
-# key=API_KEY
   base_uri 'https://maps.googleapis.com'
   def initialize(args)
       @options = { query: { origin: args[:origin],
@@ -34,7 +28,3 @@ class DirectionsServiceHelper
 
 end
 
-# response.parsed_response["routes"].first["legs"]
- # response.parsed_response["routes"].first["legs"].first["duration"]
-# :waypoints=>["85 W 5th Ave, San Mateo, CA", "1035 Northwood Drive, San Carlos, CA"]
- # :waypoints=>"85 W 5th Ave, San Mateo, CA | 1035 Northwood Drive, San Carlos, CA", :sensor=>false, :key=>"AIzaSyAAPig8eebUk6Vj79Fgd275gDQfOvFqYnU"}}

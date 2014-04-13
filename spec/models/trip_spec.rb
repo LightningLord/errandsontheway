@@ -13,11 +13,6 @@ describe Trip do
         expect(trip).to be_valid
       end
 
-      # it "should have an original duration larger than zero" do
-      #   trip = FactoryGirl.create(:valid_trip)
-      #   expect(trip.original_duration).to_not eq(0)
-      # end
-
     end
 
     context "with an invalid address" do
