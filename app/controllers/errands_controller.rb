@@ -4,7 +4,8 @@ class ErrandsController < ApplicationController
     errand = trip.errands.build(permitted_params)
     coords = CoordinatesRetriever.get_coordinates(params[:errand][:address])
     errand.set_coordinates(coords) if coords
-
+    trip.ending_duration += errand.delta_duration
+    trip.save
     errand.save
     flash[:notice] = "Your errand has been saved!"
     redirect_to(trip)
@@ -15,6 +16,6 @@ class ErrandsController < ApplicationController
   def permitted_params
     params.require(:errand).permit(:business_name,
                                    :address,
-                                   :additional_duration)
+                                   :delta_duration)
   end
 end
