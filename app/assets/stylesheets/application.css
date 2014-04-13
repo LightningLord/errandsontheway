@@ -22,6 +22,14 @@ html, body {
   text-align: center;
 }
 
+html body {
+  font-family: 'Roboto', sans-serif;
+}
+
+html h1, h2, h3 {
+  font-family: 'Roboto Slab', serif;
+}
+
 .errand_search, #map-canvas,#directions-panel {
   height: 50%;
   width: 35%;
