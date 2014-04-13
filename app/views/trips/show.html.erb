@@ -1,6 +1,6 @@
 <script type="text/javascript">
   var trip = <%= raw @trip.to_json.gsub('/', '\/') %>;
-  var errands = <%= raw @errands.to_json.gsub('/', '\/') %>;
+  var errands = <%= raw @trip.errands.to_json.gsub('/', '\/') %>;
   renderMap(trip, errands);
 </script>
 
@@ -11,7 +11,7 @@
   <div id="map-canvas"></div>
     <% if reached_max_errands? %>
     <ol class="maximum">
-      <% @errands.each do |errand| %>
+      <% @trip.errands.each do |errand| %>
         <li><%= errand.business_name %> - <%= errand.address %></li>
       <% end %>
 
@@ -27,11 +27,11 @@
     </ol>
 
     <ol>
-      <% @errands.each do |errand| %>
+      <% @trip.errands.each do |errand| %>
         <li><%= errand.business_name %> - <%= errand.address %></li>
       <% end %>
     </ol>
-    <p>You have selected <%= @errands.count %> out of 3 total errands. </p>
+    <p>You have selected <%= @trip.errands.count %> out of 3 total errands. </p>
   <% end %>
   </div>
 <% end %>
