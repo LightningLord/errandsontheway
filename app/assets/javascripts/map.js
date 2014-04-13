@@ -27,13 +27,14 @@ var renderMap = function(trip, errands){
     else {
       var errands_array = [];
       for (var i in errands) {
-        errands_array.push(errands[i].address);
+        errands_array.push({location: errands[i].address});
       }
       console.log(errands_array);
       request = {
           origin: trip.start_point_address,
-          wayPoints: errands_array,
+          waypoints: errands_array,
           destination: trip.end_point_address,
+          optimizeWaypoints: true,
           travelMode: google.maps.TravelMode.DRIVING
       };
     }
