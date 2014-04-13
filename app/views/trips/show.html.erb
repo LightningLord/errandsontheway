@@ -1,21 +1,25 @@
 <script type="text/javascript">
   var trip = <%= raw @trip.to_json.gsub('/', '\/') %>;
   var errands = <%= raw @trip.errands.to_json.gsub('/', '\/') %>;
-  renderMap(trip, errands);
+  renderMap(trip, errands, false);
 </script>
 
 <div class="row">
   <div class="small-12 large-12 columns">
       <h1>Your trip</h1>
+      <%= render "headerblock" %>
       <h3>Trip Duration: <%= time_in_minutes(@trip_duration) %></h3>
   </div>
 </div>
+
 
 <div id="map-canvas"></div>
 <% if reached_max_errands? %>
 <div class="row">
     <p>You have reached the maximum amount of errands. Please finalize your route to see the route.</p>
 </div>
+
+
 <div class="row">
   <ul class="button-group radius">
     <li>
@@ -52,22 +56,19 @@
   </div>
 </div>
 <% end %>
-<div class="row">
-  <div class="small-12 large-12 columns">
-    <ol class="maximum">
-      <% @trip.errands.each do |errand| %>
-        <li>
-            <%= errand.business_name %> -
-            <%= errand.address %>
-      </li>
-      <% end %>
-    </ol>
-  </div>
+<ol>
+  <% @trip.errands.each do |errand| %>
+    <li>
+        <%= errand.business_name %> -
+        <%= errand.address %>
+  </li>
+  <% end %>
+</ol>
+
 <% unless reached_max_errands? %>
 <div class="row">
   <div class="small-12 large-12 columns">
-    <p>You have selected <%= @trip.errands.count %> out of 3 total errands. </p>
+    <p>You have added <%= @trip.errands.count %> out of 3 total errands to your trip. </p>
   </div>
 </div>
 <% end %>
-</div>
