@@ -27,4 +27,9 @@ class Trip < ActiveRecord::Base
     end
   end
 
+  def set_duration(delta_duration)
+    self.ending_duration += delta_duration
+    self.save
+  end
+
 end

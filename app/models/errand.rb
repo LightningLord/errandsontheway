@@ -6,4 +6,6 @@ class Errand < ActiveRecord::Base
     self.latitude = coords.first
     self.longitude = coords.last
   end
+
+
 end

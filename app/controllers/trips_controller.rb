@@ -17,7 +17,6 @@ class TripsController < ApplicationController
     end
   end
 
-
   def show
     @trip = Trip.find(params[:id])
     if @trip.errands.empty?
