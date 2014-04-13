@@ -19,8 +19,8 @@ class Trip < ActiveRecord::Base
   end
 
   def update(params)
-    start_coords = CoordinatesRetriever.get_coordinates(params[:trip][:start_point_address])
-    end_coords = CoordinatesRetriever.get_coordinates(params[:trip][:end_point_address])
+    start_coords = call_coordinates_retriever(params[:trip][:start_point_address])
+    end_coords = call_coordinates_retriever(params[:trip][:end_point_address])
     if start_coords && end_coords
       self.set_coordinates(start_coords, end_coords)
       self.original_duration = DistanceMatrixHelper.new({origins: self.start_point_address, destinations: self.end_point_address}).get_trip_duration
@@ -30,6 +30,12 @@ class Trip < ActiveRecord::Base
   def set_duration(delta_duration)
     self.ending_duration += delta_duration
     self.save
+  end
+
+  private
+
+  def call_coordinates_retriever(address)
+    CoordinatesRetriever.get_coordinates(address)
   end
 
 end
