@@ -21,10 +21,7 @@ class DirectionsServiceHelper
 
 
   def calculate_total_duration
-    route = api_request["routes"].first["legs"]
-    mapped =route.map{ |leg| leg["duration"]["value"]}
-    p mapped
-    mapped.reduce(:+)
+    api_request["routes"].first["legs"].map{ |leg| leg["duration"]["value"]}.reduce(:+)
   end
 
 
