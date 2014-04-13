@@ -10,12 +10,13 @@
   <h3>Trip Duration: <%= time_in_minutes(@trip_duration) %></h3>
 
   <div id="map-canvas"></div>
-<% if reached_max_errands? %>
-  <ol class="maximum">
-    <% @errands.each do |errand| %>
-      <li><%= errand.business_name %> - <%= errand.address %></li>
-    <% end %>
-  </ol>
+    <% if reached_max_errands? %>
+    <ol class="maximum">
+      <% @errands.each do |errand| %>
+        <li><%= errand.business_name %> - <%= errand.address %></li>
+      <% end %>
+
+    </ol>
 
   <p>You have reached the maximum amount of errands. Please finalize your route to see the route.</p>
 <% else %>
@@ -36,8 +37,7 @@
   </div>
 <% end %>
 
-<%= button_to "Finalize Trip", action: "finalize" %>
-<%=  link_to "Start Over", root_path %>
-<div id="directions-panel"></div>
 
+<%= button_to "Finalize Trip", action: "finalize" %>
 <%= render "start_over_link" %>
+<div id="directions-panel"></div>

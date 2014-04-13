@@ -1,8 +1,5 @@
 class TripsController < ApplicationController
 
-  def show
-  end
-
   def new
     session[:trip_id] = nil
     @trip = Trip.new
@@ -47,6 +44,7 @@ class TripsController < ApplicationController
 
   def summary
     @trip = Trip.find(session[:trip_id])
+    @errands = @trip.errands
   end
 
   private
