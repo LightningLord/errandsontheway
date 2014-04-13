@@ -4,18 +4,20 @@
   renderMap(trip, errands);
 </script>
 
-<h1>Your trip</h1>
+<h1>Here's your trip!</h1>
 
-<h3>Trip Duration Without Errands: <%= @trip.format_original_duration %></h3>
-<h3>Trip Duration With Errands: <%= @trip.format_ending_duration %></h3>
+<p><b>Start-point:</b> <%= @trip.start_point_address %></p>
+<p><b>Destination:</b> <%= @trip.end_point_address %></p>
 
-
-<h3>Errands</h3>
+<h3>Your errands on the way:</h3>
 <ol>
   <% @trip.errands.each do |errand| %>
     <li><%= errand.business_name %></li>
   <% end %>
 </ol>
+<p><b>Trip Duration Without Errands:</b> <%= @trip.format_original_duration %><br><b>Trip Duration With Errands:</b> <%= @trip.format_ending_duration %></p>
+
+<p>This trip link is yours! Bookmark it, share it, save it.</p>
 
 <%= render "start_over_link" %>
 <div id="map-canvas"></div>

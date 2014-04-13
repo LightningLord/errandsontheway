@@ -19,10 +19,11 @@
 
   <p>You have reached the maximum amount of errands. Please finalize your route to see the route.</p>
 <% else %>
+  Type in an errand:
   <div class="errand_search">
     <%= form_tag('/options', method: 'get') do %>
     <ol class="inline-list">
-      <li><%= text_field_tag :search, nil, :placeholder => 'e.g. Laundry, Gas, Tacos' %></li>
+      <li><%= text_field_tag :search, nil, :placeholder => 'e.g. Pick up laundry, buy coffee' %></li>
       <li><%= submit_tag('Search') %></li>
     </ol>
 
@@ -31,7 +32,7 @@
         <li><%= errand.business_name %> - <%= errand.address %></li>
       <% end %>
     </ol>
-    <p>You have selected <%= @trip.errands.count %> out of 3 total errands. </p>
+    <p>You have added <%= @trip.errands.count %> out of 3 total errands to your trip. </p>
   <% end %>
   </div>
 <% end %>
