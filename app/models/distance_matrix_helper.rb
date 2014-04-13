@@ -26,9 +26,6 @@ class DistanceMatrixHelper
 
 end
 
-# response.parsed_response
-# response.parsed_response["rows"].first["elements"].first["duration"]
-# seconds = response.parsed_response["rows"].first["elements"].first["duration"]["value"]
-#returns an integer number of seconds
+
 
 
