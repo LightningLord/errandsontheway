@@ -30,8 +30,12 @@ html h1, html h2, html h3 {
   font-family: 'Roboto Slab', serif;
 }
 
-#map-canvas,#directions-panel {
+#map-canvas, #directions-panel {
   height: 50%;
   width: 35%;
-  margin: auto;
+  margin: 0 auto;
+}
+
+#map-canvas {
+  margin-bottom: 1.65rem;
 }

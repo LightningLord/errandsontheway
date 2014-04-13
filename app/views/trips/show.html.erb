@@ -4,56 +4,45 @@
   renderMap(trip, errands);
 </script>
 
-  <div class="row">
-    <h1>Your trip</h1>
-    <h3>Trip Duration: <%= time_in_minutes(@trip_duration) %></h3>
-  </div>
+<div class="row">
+<h1>Your trip</h1>
+<h3>Trip Duration: <%= time_in_minutes(@trip_duration) %></h3>
+</div>
 
-    <div class="row" id="map-canvas"></div>
-    <% if reached_max_errands? %>
-    <div>
-      <ol class="maximum">
-        <% @trip.errands.each do |errand| %>
-          <li><%= errand.business_name %> - <%= errand.address %></li>
-        <% end %>
+<div class="row" id="map-canvas"></div>
+<% if reached_max_errands? %>
+<div class="row">
+  <ol class="maximum">
+    <% @trip.errands.each do |errand| %>
+      <li><%= errand.business_name %> - <%= errand.address %></li>
+    <% end %>
 
-      </ol>
-      <p>You have reached the maximum amount of errands. Please finalize your route to see the route.</p>
-    </div>
+  </ol>
+  <p>You have reached the maximum amount of errands. Please finalize your route to see the route.</p>
+</div>
 <% else %>
-
-    <%#= form_tag('/options', method: 'get') do %>
+<div class="row">
+  <div class="small-6 columns">
     <form action="/options" method="get">
-      <div class="row">
-        <div class="small-6 columns">
-          <div class="row collapse">
-            <div class="small-5 columns">
-              <input name="search" placeholder="e.g. Laundry, Gas, Tacos" type="text">
-            </div>
-            <div class="small-1 columns">
-              <input class="button" type="submit" value="Search">
-            </div>
-          </div>
-        </div>
+      <div class="row collapse">
+        <input class="inline" name="search" placeholder="e.g. Laundry, Gas, Tacos" type="text">
+        <input class="button" type="submit" value="Search">
       </div>
-  </form>
-      <div class="row">
-        <p>You have selected <%= @trip.errands.count %> out of 3 total errands. </p>
-      </div>
-
-
-
+    </form>
+  </div>
+  <div class="small-5 small-offset-1 columns">
+    <ul class="button-group">
+      <li>
+      <%= link_to 'Finalize Trip', trips_finalize_path, method: "post", class: 'button' %>
+      </li>
+      <li>
+      <%= render "start_over_link" %>
+      </li>
+    </ul>
+  </div>
+</div>
 <% end %>
 
 <div class="row">
-  <ul class="button-group">
-    <li>
-      <%= link_to 'Finalize Trip', trips_finalize_path, method: "post", class: 'button' %>
-    </li>
-    <li>
-      <%= link_to "Start Over", new_trip_path, class: 'button' %>
-    </li>
-  </div>
+  <p>You have selected <%= @trip.errands.count %> out of 3 total errands. </p>
 </div>
-
-
