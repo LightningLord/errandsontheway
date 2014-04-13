@@ -8,7 +8,6 @@ class ErrandsController < ApplicationController
     errand.save
     flash[:notice] = "Your errand has been saved!"
     redirect_to(trip)
-
   end
 
   private
