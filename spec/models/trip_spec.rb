@@ -50,21 +50,31 @@ describe Trip do
     end
 
     it "should set start_point_latitude properly" do
-      expect(my_trip.reload.start_point_latitude). to eq 33.33
+      expect(my_trip.reload.start_point_latitude).to eq 33.33
     end
 
     it "should set start_point_longitude properly" do
-      expect(my_trip.reload.start_point_longitude). to eq 44.44
+      expect(my_trip.reload.start_point_longitude).to eq 44.44
     end
 
     it "should set end_point_latitude properly" do
-      expect(my_trip.reload.end_point_latitude). to eq 55.55
+      expect(my_trip.reload.end_point_latitude).to eq 55.55
     end
 
     it "should set end_point_longitude properly" do
-      expect(my_trip.reload.end_point_longitude). to eq 66.66
+      expect(my_trip.reload.end_point_longitude).to eq 66.66
     end
   end
+
+  describe "set_duration" do
+    it "sets the ending duration" do
+      original_end_duration = my_trip.ending_duration
+      my_trip.set_duration(3000)
+      expect(my_trip.reload.ending_duration).to eq(original_end_duration + 3000)
+    end
+  end
+
+
 end
 
 
