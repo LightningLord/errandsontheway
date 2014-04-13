@@ -43,6 +43,7 @@ class TripsController < ApplicationController
 
   def summary
     @trip = Trip.find(session[:trip_id])
+    @errands = @trip.errands
   end
 
   private

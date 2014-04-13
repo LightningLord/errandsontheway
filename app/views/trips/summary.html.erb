@@ -1,3 +1,10 @@
+<script type="text/javascript">
+  var trip = <%= raw @trip.to_json.gsub('/', '\/') %>;
+  var errands = <%= raw @errands.to_json.gsub('/', '\/') %>;
+  console.log(errands);
+  renderMap(trip, errands);
+</script>
+
 <h1>Your trip</h1>
 
 <h3>Trip Duration Without Errands: <%= @trip.format_original_duration %></h3>
