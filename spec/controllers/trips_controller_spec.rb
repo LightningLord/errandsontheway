@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe TripsController do
 
+  let(:my_trip){FactoryGirl.create(:valid_trip)}
   describe "#new" do
     before(:each){get :new}
     it "renders new page" do
@@ -44,7 +45,6 @@ describe TripsController do
   end
 
   describe "finalize and summary" do
-    let(:my_trip){FactoryGirl.create(:valid_trip)}
     before(:each){request.session[:trip_id] = my_trip.id}
     describe "#finalize" do
       it "assigns a secure random url to a trip" do
@@ -68,6 +68,26 @@ describe TripsController do
       it "assigns @trip to the right trip" do
         expect(assigns(:trip)).to eq(my_trip)
       end
+    end
+  end
+
+  describe "#show" do
+    before(:each) do
+      my_trip.update_attributes(original_duration: 500, ending_duration: 1000)
+      get :show, :id => my_trip.id
+    end
+    it "assigns @trip properly" do
+      expect(assigns(:trip)).to eq my_trip
+    end
+
+    it "assigns @trip_duration to original_duration when no errands" do
+      expect(assigns(:trip_duration)).to eq my_trip.original_duration
+    end
+
+    it "assigns @trip_duration to ending_duration when trip has errands" do
+      my_trip.errands << FactoryGirl.create(:valid_errand)
+      get :show, :id => my_trip.id
+      expect(assigns(:trip_duration)).to eq my_trip.ending_duration
     end
   end
 end
