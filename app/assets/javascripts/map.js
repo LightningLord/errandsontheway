@@ -1,5 +1,4 @@
 var renderMap = function(trip, errands){
-  console.log("we are here at rendermap");
   var directionsDisplay;
   var directionsService = new google.maps.DirectionsService();
   var map;
@@ -13,7 +12,6 @@ var renderMap = function(trip, errands){
   }
 
   function calcRoute() {
-    console.log("at calc route");
     var request;
 
     if (errands.length === 0){
@@ -29,7 +27,6 @@ var renderMap = function(trip, errands){
       for (var i in errands) {
         errands_array.push({location: errands[i].address});
       }
-      console.log(errands_array);
       request = {
           origin: trip.start_point_address,
           waypoints: errands_array,
@@ -43,8 +40,6 @@ var renderMap = function(trip, errands){
       if (status == google.maps.DirectionsStatus.OK) {
         directionsDisplay.setDirections(response);
       }
-      else
-        console.log("whattup");
     });
   }
 
