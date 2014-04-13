@@ -9,8 +9,8 @@
   <h1>Your trip</h1>
   <h3>Trip Duration: <%= time_in_minutes(@trip_duration) %></h3>
 
-  <div id="map-canvas"></div>
 
+<div id="map-canvas"></div>
 <div class="errand_search">
   <%= form_tag('/options', method: 'get') do %>
   <ol class="inline-list">
@@ -20,8 +20,7 @@
 <% end %>
 </div>
 
-<%= button_to "Finalize Trip", action: "finalize" %>
-<%=  link_to "Start Over", root_path %>
-<div id="directions-panel"></div>
 
+<%= button_to "Finalize Trip", action: "finalize" %>
 <%= render "start_over_link" %>
+<div id="directions-panel"></div>
