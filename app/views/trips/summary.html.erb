@@ -3,20 +3,20 @@
   var errands = <%= raw @trip.errands.to_json.gsub('/', '\/') %>;
   renderMap(trip, errands);
 </script>
-
-<h1>Your trip</h1>
-
-<h3>Trip Duration Without Errands: <%= @trip.format_original_duration %></h3>
-<h3>Trip Duration With Errands: <%= @trip.format_ending_duration %></h3>
-
-
+<div class="row">
+  <div class="small-12 large-12 columns">
+    <h1>Your trip</h1>
+    <h3>Trip Duration Without Errands: <%= @trip.format_original_duration %></h3>
+    <h3>Trip Duration With Errands: <%= @trip.format_ending_duration %></h3>
+</div>
+<div class="row">
 <h3>Errands</h3>
 <ol>
   <% @trip.errands.each do |errand| %>
     <li><%= errand.business_name %></li>
   <% end %>
 </ol>
-
+</div>
 <%= render "start_over_link" %>
 <div id="map-canvas"></div>
 <div id="directions-panel"></div>
