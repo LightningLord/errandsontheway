@@ -22,14 +22,20 @@ html, body {
   text-align: center;
 }
 
-html body {
+html body,
+html .button {
   font-family: 'Roboto', sans-serif;
 }
+
 
 html h1, html h2, html h3 {
   font-family: 'Roboto Slab', serif;
 }
 
+html input[type=text] {
+  font-size: 1rem;
+  height: 3.25rem;
+}
 #map-canvas, #directions-panel {
   height: 50%;
   width: 35%;

@@ -5,11 +5,12 @@
 </script>
 
 <div class="row">
-<h1>Your trip</h1>
-<h3>Trip Duration: <%= time_in_minutes(@trip_duration) %></h3>
+  <h1>Your trip</h1>
+  <h3>Trip Duration: <%= time_in_minutes(@trip_duration) %></h3>
 </div>
 
-<div class="row" id="map-canvas"></div>
+<div id="map-canvas"></div>
+
 <% if reached_max_errands? %>
 <div class="row">
   <ol class="maximum">
@@ -23,15 +24,19 @@
 <% else %>
 <div class="row">
   <div class="small-6 columns">
-    <form action="/options" method="get">
-      <div class="row collapse">
-        <input class="inline" name="search" placeholder="e.g. Laundry, Gas, Tacos" type="text">
-        <input class="button" type="submit" value="Search">
-      </div>
-    </form>
+    <div class="row collapse">
+      <form action="/options" method="get">
+        <div class="small-9 columns">
+          <input class="radius" name="search" placeholder="e.g. Laundry, Gas, Tacos" type="text">
+        </div>
+        <div class="small-3 columns">
+          <input class="button radius" type="submit" value="Search">
+        </div>
+      </form>
+    </div>
   </div>
   <div class="small-5 small-offset-1 columns">
-    <ul class="button-group">
+    <ul class="button-group radius">
       <li>
       <%= link_to 'Finalize Trip', trips_finalize_path, method: "post", class: 'button' %>
       </li>
