@@ -1,8 +1,8 @@
 <h1>Errands on the Way</h1>
 
 <%= form_for(@trip) do |f| %>
-  <%= f.text_field :start_point_address, placeholder: "start-point", onFocus: "geolocate()" %>
-  <%= f.text_field :end_point_address, placeholder: "end-point", onFocus: "geolocate()" %>
+  <%= f.text_field :start_point_address, label: "Where are you starting?", placeholder: "start point", onFocus: "geolocate()" %>
+  <%= f.text_field :end_point_address, label: "Where are you going?", placeholder: "end point", onFocus: "geolocate()" %>
   <%= f.submit "Route my trip!"%>
 <% end %>
 

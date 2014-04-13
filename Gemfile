@@ -12,7 +12,8 @@ gem 'geocoder'
 gem 'httparty'
 gem 'google_places'
 gem 'dotenv-rails'
-gem 'foundation-rails'
+gem 'zurb-foundation'
+gem 'foundation_rails_helper'
 
 
 group :doc do
@@ -22,7 +23,6 @@ end
 group :development, :test do
   gem 'rspec-rails'
   gem 'pry'
-  gem 'dotenv-rails'
   gem 'binding_of_caller'
   gem 'sextant'
   gem 'rails_db_info'
