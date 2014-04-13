@@ -15,7 +15,6 @@ describe TripsController do
     it "should clear the session" do
       expect(session[:trip_id]).to be_nil
     end
-
   end
 
   describe "#create" do
@@ -38,14 +37,11 @@ describe TripsController do
       expect(Trip.find(session[:trip_id]).original_duration).to_not eq(0)
     end
 
-
     it "should render new page for invalid addresses" do
       post :create, trip: {"start_point_address"=>"1BadAddress", "end_point_address"=>"2Bad Address"}
       expect(response).to render_template(:new)
     end
-
   end
-
 
   describe "finalize and summary" do
     let(:my_trip){FactoryGirl.create(:valid_trip)}
@@ -73,9 +69,5 @@ describe TripsController do
         expect(assigns(:trip)).to eq(my_trip)
       end
     end
-
   end
-
-
-
 end
