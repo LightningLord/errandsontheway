@@ -11,7 +11,7 @@ class DirectionsServiceHelper
   def initialize(args)
       @options = { query: { origin: args[:origin],
                             destination: args[:destination],
-                            waypoints: "optimize:true" + args[:waypoints].join(" | "),
+                            waypoints: "optimize:true|" + args[:waypoints].join(" | "),
                             sensor: false,
 
                             key: ENV['API_KEY']
