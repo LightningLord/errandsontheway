@@ -12,8 +12,11 @@ class TripsController < ApplicationController
     @trip = Trip.new(permitted_params)
     start_coords = CoordinatesRetriever.get_coordinates(params[:trip][:start_point_address])
     end_coords = CoordinatesRetriever.get_coordinates(params[:trip][:end_point_address])
-    @trip.set_coordinates(start_coords, end_coords) if start_coords && end_coords
-    @trip.original_duration = DistanceMatrixHelper.new({origins: @trip.start_point_address, destinations: @trip.end_point_address}).get_trip_duration if coordinates
+
+    if start_coords && end_coords
+      @trip.set_coordinates(start_coords, end_coords) 
+      @trip.original_duration = DistanceMatrixHelper.new({origins: @trip.start_point_address, destinations: @trip.end_point_address}).get_trip_duration
+    end
 
     if @trip.save
       session[:trip_id] = @trip.id

@@ -46,12 +46,7 @@ describe TripsController do
 
   end
 
-<<<<<<< HEAD
-  describe "#show" do
-    
-  end
 
-=======
   describe "#finalize" do
     let(:my_trip){FactoryGirl.create(:valid_trip)}
     before(:each){request.session[:trip_id] = my_trip.id}
@@ -67,5 +62,5 @@ describe TripsController do
     end
 
   end
->>>>>>> master
+
 end
