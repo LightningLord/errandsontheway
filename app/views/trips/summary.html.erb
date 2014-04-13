@@ -1,13 +1,13 @@
 <script type="text/javascript">
   var trip = <%= raw @trip.to_json.gsub('/', '\/') %>;
   var errands = <%= raw @trip.errands.to_json.gsub('/', '\/') %>;
-  renderMap(trip, errands);
+  renderMap(trip, errands, true);
 </script>
 
 <h1>Here's your trip!</h1>
 
-<p><b>Start-point:</b> <%= @trip.start_point_address %></p>
-<p><b>Destination:</b> <%= @trip.end_point_address %></p>
+<p><b>Start-point:</b> <%= @trip.start_point_address %><br/>
+<b>Destination:</b> <%= @trip.end_point_address %></p>
 
 <h3>Your errands on the way:</h3>
 <ol>
