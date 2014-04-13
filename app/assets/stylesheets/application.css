@@ -36,9 +36,24 @@ html input[type=text] {
   font-size: 1rem;
   height: 3.25rem;
 }
+
+html label {
+  margin-bottom: .5rem;
+  text-align: left;
+}
+
+html ol {
+  text-align: left;
+}
+
+html .button-group {
+  margin: 0 auto;
+  width: 300px;
+}
+
 #map-canvas, #directions-panel {
   height: 50%;
-  width: 35%;
+  /*width: 35%;*/
   margin: 0 auto;
 }
 

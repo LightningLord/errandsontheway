@@ -10,32 +10,35 @@
 </div>
 
 <div id="map-canvas"></div>
-
 <% if reached_max_errands? %>
 <div class="row">
-  <ol class="maximum">
-    <% @trip.errands.each do |errand| %>
-      <li><%= errand.business_name %> - <%= errand.address %></li>
-    <% end %>
-
-  </ol>
-  <p>You have reached the maximum amount of errands. Please finalize your route to see the route.</p>
+    <p>You have reached the maximum amount of errands. Please finalize your route to see the route.</p>
+</div>
+<div class="row">
+  <ul class="button-group radius">
+    <li>
+    <%= link_to 'Finalize Trip', trips_finalize_path, method: "post", class: 'button' %>
+    </li>
+    <li>
+    <%= render "start_over_link" %>
+    </li>
+  </ul>
 </div>
 <% else %>
 <div class="row">
-  <div class="small-6 columns">
+  <div class="small-12 large-6 columns">
     <div class="row collapse">
       <form action="/options" method="get">
-        <div class="small-9 columns">
+        <div class="small-12 large-9 columns">
           <input class="radius" name="search" placeholder="e.g. Laundry, Gas, Tacos" type="text">
         </div>
-        <div class="small-3 columns">
+        <div class="small-12 large-3 columns text-center">
           <input class="button radius" type="submit" value="Search">
         </div>
       </form>
     </div>
   </div>
-  <div class="small-5 small-offset-1 columns">
+  <div class="small-12 large-5 large-offset-1  text-center columns">
     <ul class="button-group radius">
       <li>
       <%= link_to 'Finalize Trip', trips_finalize_path, method: "post", class: 'button' %>
@@ -47,7 +50,15 @@
   </div>
 </div>
 <% end %>
-
 <div class="row">
-  <p>You have selected <%= @trip.errands.count %> out of 3 total errands. </p>
+  <div class="small-12 large-12 columns">
+    <ol class="maximum">
+      <% @trip.errands.each do |errand| %>
+        <li><%= errand.business_name %> - <%= errand.address %></li>
+      <% end %>
+    </ol>
+<% unless reached_max_errands? %>
+    <p>You have selected <%= @trip.errands.count %> out of 3 total errands. </p>
+<% end %>
+  </div>
 </div>
