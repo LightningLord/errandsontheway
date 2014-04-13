@@ -32,6 +32,7 @@ class TripsController < ApplicationController
       @trip_duration = @trip.ending_duration
     end
     @errands = @trip.errands
+
   end
 
   def finalize
