@@ -1,7 +1,6 @@
 <script type="text/javascript">
   var trip = <%= raw @trip.to_json.gsub('/', '\/') %>;
   var errands = <%= raw @trip.errands.to_json.gsub('/', '\/') %>;
-  console.log(errands);
   renderMap(trip, errands);
 </script>
 

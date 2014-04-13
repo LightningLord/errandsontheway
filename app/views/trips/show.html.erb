@@ -8,16 +8,33 @@
   <h1>Your trip</h1>
   <h3>Trip Duration: <%= time_in_minutes(@trip_duration) %></h3>
 
+  <div id="map-canvas"></div>
+    <% if reached_max_errands? %>
+    <ol class="maximum">
+      <% @errands.each do |errand| %>
+        <li><%= errand.business_name %> - <%= errand.address %></li>
+      <% end %>
 
-<div id="map-canvas"></div>
-<div class="errand_search">
-  <%= form_tag('/options', method: 'get') do %>
-  <ol class="inline-list">
-    <li><%= text_field_tag :search, nil, :placeholder => 'e.g. Laundry, Gas, Tacos' %></li>
-    <li><%= submit_tag('Search') %></li>
-  </ol>
+    </ol>
+
+  <p>You have reached the maximum amount of errands. Please finalize your route to see the route.</p>
+<% else %>
+  <div class="errand_search">
+    <%= form_tag('/options', method: 'get') do %>
+    <ol class="inline-list">
+      <li><%= text_field_tag :search, nil, :placeholder => 'e.g. Laundry, Gas, Tacos' %></li>
+      <li><%= submit_tag('Search') %></li>
+    </ol>
+
+    <ol>
+      <% @errands.each do |errand| %>
+        <li><%= errand.business_name %> - <%= errand.address %></li>
+      <% end %>
+    </ol>
+    <p>You have selected <%= @errands.count %> out of 3 total errands. </p>
+  <% end %>
+  </div>
 <% end %>
-</div>
 
 
 <%= button_to "Finalize Trip", action: "finalize" %>
