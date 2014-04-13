@@ -82,6 +82,7 @@ describe TripsController do
   describe "#show" do
     before(:each) do
       my_trip.update_attributes(original_duration: 500, ending_duration: 1000)
+      request.session[:trip_id] = my_trip.id
       get :show, :id => my_trip.id
     end
     it "assigns @trip properly" do
