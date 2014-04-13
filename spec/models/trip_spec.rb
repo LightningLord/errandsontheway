@@ -75,7 +75,30 @@ describe Trip do
   end
 
   describe "update" do
-    it ""
+    context "when CoordinatesRetriever returns coordinates" do
+      before(:each) { my_trip.stub(:call_coordinates_retriever).and_return([33.33, 44.44])}
+      let(:params){ {trip: {start_point_address: my_trip.start_point_address,
+          end_point_address: my_trip.end_point_address}} }
+      it "sets the coordinates" do
+        my_trip.update(params)
+        my_trip.save
+        expect(my_trip.reload.start_point_latitude).to eq 33.33
+      end
+
+      it "calls set_coordinates" do
+        expect(my_trip).to receive(:set_coordinates)
+        my_trip.update(params)
+      end
+    end
+
+    context "when CoordinatesRetriever does not return coordinates" do
+      it "does not call set_coordinates" do
+        my_trip.stub(:call_coordinates_retriever).and_return(nil)
+        expect(my_trip).to_not receive(:set_coordinates)
+        my_trip.update({trip: {}})
+      end
+    end
+
   end
 
 end
