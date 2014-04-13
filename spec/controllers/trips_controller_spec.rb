@@ -37,7 +37,7 @@ describe TripsController do
       expect{post :create, trip: FactoryGirl.attributes_for(:valid_trip) }.to change {Trip.count}.by(1)
       expect(Trip.find(session[:trip_id]).original_duration).to_not eq(0)
     end
-    
+
 
     it "should render new page for invalid addresses" do
       post :create, trip: {"start_point_address"=>"1BadAddress", "end_point_address"=>"2Bad Address"}
@@ -47,20 +47,35 @@ describe TripsController do
   end
 
 
-  describe "#finalize" do
+  describe "finalize and summary" do
     let(:my_trip){FactoryGirl.create(:valid_trip)}
     before(:each){request.session[:trip_id] = my_trip.id}
-    it "assigns a secure random url to a trip" do
-      my_trip.update_attributes(url: nil)
-      post :finalize
-      expect(my_trip.reload.url).to_not be_nil
+    describe "#finalize" do
+      it "assigns a secure random url to a trip" do
+        my_trip.update_attributes(url: nil)
+        post :finalize
+        expect(my_trip.reload.url).to_not be_nil
+      end
+
+      it "redirects to the trip_summary_path" do
+        post :finalize
+        expect(response).to redirect_to trip_summary_path(my_trip.reload.url)
+      end
     end
 
-    it "redirects to the trip_summary_path" do
-      post :finalize
-      expect(response).to redirect_to trip_summary_path(my_trip.reload.url)
+    describe "#summary" do
+      before(:each){get :summary, :url => my_trip.url}
+      it "is successful" do
+        expect(response).to render_template(:summary)
+      end
+
+      it "assigns @trip to the right trip" do
+        expect(assigns(:trip)).to eq(my_trip)
+      end
     end
 
   end
+
+
 
 end
