@@ -5,9 +5,9 @@
   <dd><%= business.address %></dd>
   <dd><%= business.extra_duration %></dd>
   <%= form_tag('/errands', method: 'post') do %>
-    <% hidden_field_tag("business[:business_name]", business.name)%>
-    <% hidden_field_tag("business[:address]", business.address)%>
-    <% hidden_field_tag("business[:additional_duration]", business.extra_duration)%>
+    <%= hidden_field_tag("errand[business_name]", business.name)%>
+    <%= hidden_field_tag("errand[address]", business.address)%>
+    <%= hidden_field_tag("errand[additional_duration]", business.extra_duration)%>
     <%= submit_tag("Choose this Business") %>
   <% end %>
 

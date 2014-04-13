@@ -22,13 +22,26 @@ describe Trip do
     context "with an invalid address" do
       it "should not be valid" do
         trip = FactoryGirl.build(:trip_with_invalid_addresses)
-        trip.valid? 
+        trip.valid?
         expect(trip).to have(1).error_on(:start_point_latitude)
         expect(trip).to have(1).error_on(:start_point_longitude)
         expect(trip).to have(1).error_on(:end_point_latitude)
         expect(trip).to have(1).error_on(:end_point_longitude)
       end
     end
+  end
+
+  describe "format durations" do
+    let(:my_trip){FactoryGirl.create(:valid_trip)}
+    before(:each){my_trip.update_attributes(original_duration: 1500, ending_duration: 3000)}
+    it "should format the ending duration" do
+      expect(my_trip.format_original_duration).to eq("25 minutes")
+    end
+
+    it "should format the original duration" do
+      expect(my_trip.format_ending_duration).to eq("50 minutes")
+    end
+
   end
 end
 
