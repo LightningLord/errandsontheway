@@ -5,8 +5,11 @@ class ErrandsController < ApplicationController
     coords = CoordinatesRetriever.get_coordinates(params[:errand][:address])
     errand.set_coordinates(coords) if coords
     trip.set_duration(errand.delta_duration)
-    errand.save
-    flash[:notice] = "Your errand has been saved!"
+    if errand.save
+      flash[:notice] = "Your errand has been saved!"
+    else
+      flash[:notice] = "There was a problem saving this errand. Please choose a different business"
+    end
     redirect_to(trip)
   end
 
