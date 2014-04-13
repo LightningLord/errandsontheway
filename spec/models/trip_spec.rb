@@ -106,10 +106,14 @@ describe Trip do
     end
 
     context "when CoordinatesRetriever does not return coordinates" do
+      before(:each){ my_trip.stub(:call_coordinates_retriever).and_return(nil)}
+      after(:each){ my_trip.update({trip: {}}) }
       it "does not call set_coordinates" do
-        my_trip.stub(:call_coordinates_retriever).and_return(nil)
         expect(my_trip).to_not receive(:set_coordinates)
-        my_trip.update({trip: {}})
+      end
+
+      it "does not call distance_matrix_helper  " do
+        expect(my_trip).to_not receive(:call_distance_matrix_helper)
       end
     end
 
