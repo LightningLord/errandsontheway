@@ -80,23 +80,33 @@ describe TripsController do
   end
 
   describe "#show" do
-    before(:each) do
-      my_trip.update_attributes(original_duration: 500, ending_duration: 1000)
-      request.session[:trip_id] = my_trip.id
-      get :show, :id => my_trip.id
-    end
-    it "assigns @trip properly" do
-      expect(assigns(:trip)).to eq my_trip
+    context "session set" do
+      before(:each) do
+        my_trip.update_attributes(original_duration: 500, ending_duration: 1000)
+        request.session[:trip_id] = my_trip.id
+        get :show, :id => my_trip.id
+      end
+      it "assigns @trip properly" do
+        expect(assigns(:trip)).to eq my_trip
+      end
+
+      it "assigns @trip_duration to original_duration when no errands" do
+        expect(assigns(:trip_duration)).to eq my_trip.original_duration
+      end
+
+      it "assigns @trip_duration to ending_duration when trip has errands" do
+        my_trip.errands << FactoryGirl.create(:valid_errand)
+        get :show, :id => my_trip.id
+        expect(assigns(:trip_duration)).to eq my_trip.ending_duration
+      end
     end
 
-    it "assigns @trip_duration to original_duration when no errands" do
-      expect(assigns(:trip_duration)).to eq my_trip.original_duration
+    context "no session" do
+      it "redirects to root path" do
+        get :show, :id => my_trip.id
+        expect(response).to redirect_to(root_path)
+      end
     end
 
-    it "assigns @trip_duration to ending_duration when trip has errands" do
-      my_trip.errands << FactoryGirl.create(:valid_errand)
-      get :show, :id => my_trip.id
-      expect(assigns(:trip_duration)).to eq my_trip.ending_duration
-    end
   end
 end
