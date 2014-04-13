@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/distancematrix/json?origins=460%20Fell%20St.%20San%20Francisco%2C%20CA&destinations=633%20Folsom%20St.%20San%20Francisco%2C%20CA&sensor=false&key=AIzaSyAAPig8eebUk6Vj79Fgd275gDQfOvFqYnU
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type:
+      - application/json; charset=UTF-8
+      date:
+      - Sun, 13 Apr 2014 20:57:36 GMT
+      expires:
+      - Mon, 14 Apr 2014 20:57:36 GMT
+      cache-control:
+      - public, max-age=86400
+      vary:
+      - Accept-Language
+      server:
+      - mafe
+      x-xss-protection:
+      - 1; mode=block
+      x-frame-options:
+      - SAMEORIGIN
+      alternate-protocol:
+      - 443:quic
+      connection:
+      - close
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: US-ASCII
+      string: ! "{\n   \"destination_addresses\" : [ \"633 Folsom Street, San Francisco,
+        CA 94107, USA\" ],\n   \"origin_addresses\" : [ \"460 Fell Street, San Francisco,
+        CA 94102, USA\" ],\n   \"rows\" : [\n      {\n         \"elements\" : [\n
+        \           {\n               \"distance\" : {\n                  \"text\"
+        : \"3.6 km\",\n                  \"value\" : 3570\n               },\n               \"duration\"
+        : {\n                  \"text\" : \"7 mins\",\n                  \"value\"
+        : 402\n               },\n               \"status\" : \"OK\"\n            }\n
+        \        ]\n      }\n   ],\n   \"status\" : \"OK\"\n}\n"
+    http_version: '1.1'
+  recorded_at: Sun, 13 Apr 2014 20:57:36 GMT
+recorded_with: VCR 2.9.0
