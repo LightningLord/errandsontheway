@@ -29,6 +29,7 @@ class TripsController < ApplicationController
   def finalize
     trip = Trip.find(session[:trip_id])
     trip.update_attributes(url: SecureRandom.hex)
+    trip.update_attributes(ending_duration: trip.original_duration) if trip.ending_duration == 0
     redirect_to trip_summary_path(trip.url)
   end
 
