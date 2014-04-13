@@ -27,5 +27,7 @@ FactoryGirl.define do
     business_name {"Melanie's Bagel Shop"}
     address {"1111 California Street, San Francisco, CA"}
     delta_duration {360}
+    latitude {11.11}
+    longitude {22.22}
   end
 end
