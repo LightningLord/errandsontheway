@@ -6,12 +6,12 @@ class TripsController < ApplicationController
   end
 
   def create
-    @trip = Trip.new(permitted_params)
-    @trip.update(params)
-    @trip.ending_duration = @trip.original_duration
-    if @trip.save
-      session[:trip_id] = @trip.id
-      redirect_to(@trip)
+    trip = Trip.new(permitted_params)
+    trip.update(params)
+    trip.ending_duration = trip.original_duration
+    if trip.save
+      session[:trip_id] = trip.id
+      redirect_to(trip)
     else
       render :new
     end
