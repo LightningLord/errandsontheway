@@ -45,7 +45,7 @@ class TripsController < ApplicationController
   end
 
   def summary
-    @trip = Trip.find(session[:trip_id])
+    @trip = Trip.find_by_url(params[:url])
   end
 
   private
