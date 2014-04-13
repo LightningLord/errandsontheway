@@ -14,7 +14,7 @@ class TripsController < ApplicationController
     end_coords = CoordinatesRetriever.get_coordinates(params[:trip][:end_point_address])
 
     if start_coords && end_coords
-      @trip.set_coordinates(start_coords, end_coords) 
+      @trip.set_coordinates(start_coords, end_coords)
       @trip.original_duration = DistanceMatrixHelper.new({origins: @trip.start_point_address, destinations: @trip.end_point_address}).get_trip_duration
     end
 
@@ -35,6 +35,7 @@ class TripsController < ApplicationController
       @trip_duration = @trip.ending_duration
     end
     @errands = @trip.errands
+
   end
 
   def finalize
