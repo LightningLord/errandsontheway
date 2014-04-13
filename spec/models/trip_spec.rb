@@ -4,6 +4,7 @@ describe Trip do
   it { should have_many :errands }
   it { should validate_presence_of(:start_point_address)}
   it { should validate_presence_of(:end_point_address)}
+  let(:my_trip){FactoryGirl.create(:valid_trip)}
 
   describe "lat and long" do
     context "with a valid address" do
@@ -16,7 +17,7 @@ describe Trip do
       #   trip = FactoryGirl.create(:valid_trip)
       #   expect(trip.original_duration).to_not eq(0)
       # end
-    
+
     end
 
     context "with an invalid address" do
@@ -32,7 +33,6 @@ describe Trip do
   end
 
   describe "format durations" do
-    let(:my_trip){FactoryGirl.create(:valid_trip)}
     before(:each){my_trip.update_attributes(original_duration: 1500, ending_duration: 3000)}
     it "should format the ending duration" do
       expect(my_trip.format_original_duration).to eq("25 minutes")
@@ -41,7 +41,29 @@ describe Trip do
     it "should format the original duration" do
       expect(my_trip.format_ending_duration).to eq("50 minutes")
     end
+  end
 
+  describe "set_coordinates" do
+    before(:each) do
+      my_trip.set_coordinates([33.33, 44.44],[55.55, 66.66])
+      my_trip.save
+    end
+
+    it "should set start_point_latitude properly" do
+      expect(my_trip.reload.start_point_latitude). to eq 33.33
+    end
+
+    it "should set start_point_longitude properly" do
+      expect(my_trip.reload.start_point_longitude). to eq 44.44
+    end
+
+    it "should set end_point_latitude properly" do
+      expect(my_trip.reload.end_point_latitude). to eq 55.55
+    end
+
+    it "should set end_point_longitude properly" do
+      expect(my_trip.reload.end_point_longitude). to eq 66.66
+    end
   end
 end
 
