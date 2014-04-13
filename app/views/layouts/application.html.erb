@@ -4,6 +4,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+
+    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
     <title><%= content_for?(:title) ? yield(:title) : "Errands on the Way" %></title>
 
     <%= stylesheet_link_tag    "application" %>

@@ -33,11 +33,19 @@ describe TripsController do
       expect(response).to be_redirect
     end
 
+    it "should create trip with an original duration larger than zero" do
+      expect{post :create, trip: FactoryGirl.attributes_for(:valid_trip) }.to change {Trip.count}.by(1)
+      expect(Trip.find(session[:trip_id]).original_duration).to_not eq(0)
+    end
+    
+
     it "should render new page for invalid addresses" do
       post :create, trip: {"start_point_address"=>"1BadAddress", "end_point_address"=>"2Bad Address"}
       expect(response).to render_template(:new)
     end
+
   end
+
 
   describe "#finalize" do
     let(:my_trip){FactoryGirl.create(:valid_trip)}
@@ -54,4 +62,5 @@ describe TripsController do
     end
 
   end
+
 end
