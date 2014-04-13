@@ -17,7 +17,10 @@ class OptionsController < ApplicationController
       waypoints_list = [business.address]
       waypoints_list += trip.errands.map{|errand| errand.address} unless trip.errands.empty?
       trip_info = {origin: trip.start_point_address, destination: trip.end_point_address, waypoints: waypoints_list}
+      p '#'* 100
+      p "original duration: #{trip.original_duration}"
       business.extra_duration = business.calculate_delta_duration(DirectionsServiceHelper.new(trip_info).calculate_total_duration, trip.original_duration)
+      p "extra_duration: #{business.extra_duration}"
     end
     return businesses
   end

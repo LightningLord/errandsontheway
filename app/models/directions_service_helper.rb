@@ -11,8 +11,9 @@ class DirectionsServiceHelper
   def initialize(args)
       @options = { query: { origin: args[:origin],
                             destination: args[:destination],
-                            waypoints: args[:waypoints].join(" | "),
+                            waypoints: "optimize:true" + args[:waypoints].join(" | "),
                             sensor: false,
+
                             key: ENV['API_KEY']
                           }
                   }
@@ -20,7 +21,10 @@ class DirectionsServiceHelper
 
 
   def calculate_total_duration
-    api_request["routes"].first["legs"].map{ |leg| leg["duration"]["value"]}.reduce(:+)
+    route = api_request["routes"].first["legs"]
+    mapped =route.map{ |leg| leg["duration"]["value"]}
+    p mapped
+    mapped.reduce(:+)
   end
 
 
