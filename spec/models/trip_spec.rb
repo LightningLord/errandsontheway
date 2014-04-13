@@ -76,7 +76,10 @@ describe Trip do
 
   describe "update" do
     context "when CoordinatesRetriever returns coordinates" do
-      before(:each) { my_trip.stub(:call_coordinates_retriever).and_return([33.33, 44.44])}
+      before(:each) do
+        my_trip.stub(:call_coordinates_retriever).and_return([33.33, 44.44])
+        my_trip.stub(:call_distance_matrix_helper).and_return(1500)
+      end
       let(:params){ {trip: {start_point_address: my_trip.start_point_address,
           end_point_address: my_trip.end_point_address}} }
       it "sets the coordinates" do
@@ -89,6 +92,17 @@ describe Trip do
         expect(my_trip).to receive(:set_coordinates)
         my_trip.update(params)
       end
+
+      it "calls distance_matrix_helper" do
+        expect(my_trip).to receive(:call_distance_matrix_helper)
+        my_trip.update(params)
+      end
+
+      it "sets original duration" do
+        my_trip.update(params)
+        my_trip.save
+        expect(my_trip.reload.original_duration).to eq 1500
+      end
     end
 
     context "when CoordinatesRetriever does not return coordinates" do
@@ -98,6 +112,8 @@ describe Trip do
         my_trip.update({trip: {}})
       end
     end
+
+
 
   end
 
