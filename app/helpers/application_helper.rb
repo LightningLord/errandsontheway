@@ -5,7 +5,7 @@ module ApplicationHelper
   end
 
   def reached_max_errands?
-    @errands.length == 3
+    @trip.errands.length == 3
   end
 
 end
