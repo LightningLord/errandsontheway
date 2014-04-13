@@ -1,0 +1,1768 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/distancematrix/json?origins=460%20Fell%20St.%20San%20Francisco%2C%20CA&destinations=633%20Folsom%20St.%20San%20Francisco%2C%20CA&sensor=false&key=AIzaSyAAPig8eebUk6Vj79Fgd275gDQfOvFqYnU
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type:
+      - application/json; charset=UTF-8
+      date:
+      - Sun, 13 Apr 2014 20:55:16 GMT
+      expires:
+      - Mon, 14 Apr 2014 20:55:16 GMT
+      cache-control:
+      - public, max-age=86400
+      vary:
+      - Accept-Language
+      server:
+      - mafe
+      x-xss-protection:
+      - 1; mode=block
+      x-frame-options:
+      - SAMEORIGIN
+      alternate-protocol:
+      - 443:quic
+      connection:
+      - close
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: US-ASCII
+      string: ! "{\n   \"destination_addresses\" : [ \"633 Folsom Street, San Francisco,
+        CA 94107, USA\" ],\n   \"origin_addresses\" : [ \"460 Fell Street, San Francisco,
+        CA 94102, USA\" ],\n   \"rows\" : [\n      {\n         \"elements\" : [\n
+        \           {\n               \"distance\" : {\n                  \"text\"
+        : \"3.6 km\",\n                  \"value\" : 3570\n               },\n               \"duration\"
+        : {\n                  \"text\" : \"7 mins\",\n                  \"value\"
+        : 402\n               },\n               \"status\" : \"OK\"\n            }\n
+        \        ]\n      }\n   ],\n   \"status\" : \"OK\"\n}\n"
+    http_version: '1.1'
+  recorded_at: Sun, 13 Apr 2014 20:55:16 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=37.77586700%2C-122.42549100&rankby=distance&sensor=false&keyword=Laundry&opennow=true&key=AIzaSyAAPig8eebUk6Vj79Fgd275gDQfOvFqYnU
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type:
+      - application/json; charset=UTF-8
+      date:
+      - Sun, 13 Apr 2014 20:55:16 GMT
+      expires:
+      - Sun, 13 Apr 2014 21:00:16 GMT
+      cache-control:
+      - public, max-age=300
+      vary:
+      - Accept-Language
+      server:
+      - mafe
+      x-xss-protection:
+      - 1; mode=block
+      x-frame-options:
+      - SAMEORIGIN
+      alternate-protocol:
+      - 443:quic
+      connection:
+      - close
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: US-ASCII
+      string: ! "{\n   \"html_attributions\" : [],\n   \"next_page_token\" : \"CoQC-wAAAI_eFl1OVP6vBKXiaGIMPastkSHTLFzJJ-yNlfhY5ESjyTqJ-2IDDycLy8KDA2otagYd6F46mWpunI0zkvfhwtF6ry5MFgDg7H3bKjxaM4p-uVQVbI9fY-qPRlYUc_ek8YO5NOR4X7BVcXLDmz8yoy5EfQO1Mv_kq0UHN4zbcFIxj03qoqgujczdlkR-2XSowHAiGEOs2qAsYZwwLUMa07-lgl1OBGjzl2hLv8s8PrjqZcuoe0xr74imkq1lilX32RlRJ1oTiQXjloRoe4RxwEGhXOplqalwXyfTPISga7gU_DWbqpjYqRoDkGPqyaTuzsDfKFhr0B1HaKiM7gVXmmQSEPCSP5mHkpbte-adWFi6gPMaFBRmlVqjBL6cPCkug58gjq00ho__\",\n
+        \  \"results\" : [\n      {\n         \"geometry\" : {\n            \"location\"
+        : {\n               \"lat\" : 37.770596,\n               \"lng\" : -122.425331\n
+        \           }\n         },\n         \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png\",\n
+        \        \"id\" : \"28e84a0c6439f7d5c692039e0f1f93ed18e56904\",\n         \"name\"
+        : \"Little Hollywood Launderette\",\n         \"opening_hours\" : {\n            \"open_now\"
+        : true\n         },\n         \"reference\" : \"CoQBfQAAANgKDwvhVqdodAdYvbdsHYn4AXlhfIZ5DoIaFn0mRp6F3FoCAJTt72avilD7ZZ0BRbGgNNPB5RksM24xpLc072T86sPRsN9aBnlE2kPtAaEoKAU9YuMOo1TX-Z6pIc4IwHViq9oO8THSngqzv-uVFMO76fBey6fp_FEA7NVlvqb8EhAwDIXR-TshPn-iCGg50Ca9GhR0ekQZ5aTCVO2YJMlB8Wi81Y3sxg\",\n
+        \        \"types\" : [ \"laundry\", \"establishment\" ],\n         \"vicinity\"
+        : \"1906 Market St, San Francisco\"\n      },\n      {\n         \"geometry\"
+        : {\n            \"location\" : {\n               \"lat\" : 37.78273,\n               \"lng\"
+        : -122.43244\n            }\n         },\n         \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png\",\n
+        \        \"id\" : \"128e83faa6d6c8b96e1d730264835b782721ed3a\",\n         \"name\"
+        : \"Fillmore Laundromat (coin op laundry)\",\n         \"opening_hours\" :
+        {\n            \"open_now\" : true\n         },\n         \"photos\" : [\n
+        \           {\n               \"height\" : 478,\n               \"html_attributions\"
+        : [],\n               \"photo_reference\" : \"CoQBdgAAAA3N3Dkkk-uMVxWhEkM56F-MwXLb-wo9CCPnZaH_4REfqb_G_CgmI2Dc5Nz1FS3rgTrsBIDJ0-31tvriEe-JGWfSCDcUNwzvVqlQAhMUjNe0xsJxLB5zzKRRIPOLXdBfMdApFZqQk6IyqNH1Jh-KAzSbRc9qIgVmq4EClXi9jT1PEhDSp7NLDlYV5YJJL7NU09PfGhSsIswKMjEWXCx8a6Lvu8GVW1BqJA\",\n
+        \              \"width\" : 640\n            }\n         ],\n         \"reference\"
+        : \"CpQBhwAAAGhS65JVz5_KQXAXlkx7Qjqle_CorneQhqIs2xMB1lM75RmyJpXThoAjPCWxICUEhl2nYrnQ70YtHWGJHdAVplHbId-RWy4sfB0uE3cYidKIRb4ebvJeRq6nxI0Q0cfdtVnzOu858MPZg3x_MG-WSBKHbRGfzHZuEKf_eV9TET568N3RLcemD-3ZS6AqwOMhUhIQ1hhYT4J8gPovss2maMf48BoU3mb3PZmDQgIzhAMuPw2YuxXl-kc\",\n
+        \        \"types\" : [ \"laundry\", \"home_goods_store\", \"store\", \"establishment\"
+        ],\n         \"vicinity\" : \"1426-B Fillmore St, San Francisco\"\n      },\n
+        \     {\n         \"geometry\" : {\n            \"location\" : {\n               \"lat\"
+        : 37.783183,\n               \"lng\" : -122.432804\n            }\n         },\n
+        \        \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png\",\n
+        \        \"id\" : \"dd510311f77721df2f57e23b5ed1458a5645342b\",\n         \"name\"
+        : \"Laundry Locker Cleaners\",\n         \"opening_hours\" : {\n            \"open_now\"
+        : true\n         },\n         \"reference\" : \"CoQBeAAAAGuYgotcxDwOa4wGj3tZaKAD7JODQIBP8YTpBZrjBYuPSemXPOu-fJgq4uLSTEx12zCSm1lqTAAo0NnvIvIzFMkW6AkTgc8OZdeDOxVXXWmmcH9q61CXxaHV5i7BYi3wjDMW64QCU7oPxB1rHUUj65ZF9cTxTbfMgzpIT_COkkO4EhBE-EZWK8GkgUtV2KvNvuppGhSghMghcO4bJcCxNsE_TyLWhB4PDQ\",\n
+        \        \"types\" : [ \"laundry\", \"establishment\" ],\n         \"vicinity\"
+        : \"1410 Steiner St, San Francisco\"\n      },\n      {\n         \"geometry\"
+        : {\n            \"location\" : {\n               \"lat\" : 37.773181,\n               \"lng\"
+        : -122.43781\n            }\n         },\n         \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png\",\n
+        \        \"id\" : \"5b63c5541e6e45d37c53dd4bf3461f9fd3602260\",\n         \"name\"
+        : \"Oak Street Laundry\",\n         \"opening_hours\" : {\n            \"open_now\"
+        : true\n         },\n         \"reference\" : \"CoQBdAAAAMaWQwEFzFZW98WikuQuiB3AKZMxDbu0Og4a7y1NXQ_WLFnW3RV-BbsY7E3tFO7BTSI8caJIuF-9Hjx8dXV070urxKBDQQCxxXVHrvlvyb1e3vxhUar6YzSDUNWh5lSd1jIzxsK6Enyat-4fCyTLPoX4y_M7eWaUdR2v6f6dRcw5EhDrOT74LZc1GZHWUULGA5irGhRsbHU6-2nbehJzQN60CKH188l6ww\",\n
+        \        \"types\" : [ \"laundry\", \"establishment\" ],\n         \"vicinity\"
+        : \"1130 Oak St, San Francisco\"\n      },\n      {\n         \"geometry\"
+        : {\n            \"location\" : {\n               \"lat\" : 37.77898,\n               \"lng\"
+        : -122.438749\n            }\n         },\n         \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png\",\n
+        \        \"id\" : \"a267c7103ee49376c5441dfc09c8ccb9c1ef3e00\",\n         \"name\"
+        : \"Everyday Cleaners\",\n         \"opening_hours\" : {\n            \"open_now\"
+        : true\n         },\n         \"reference\" : \"CoQBcgAAAMNgWckySJg00q6BAlZdRMkI0o5KuusXU_Fx_9UmucUg2Jqc6VSmZOdkwlzq0-qY-gsH2HjOyyjmcKifcgy-sV7R_CZm81-Em-lu4Jyro6SzSC_oC9taZCpeBLVnQeOfK725gV4EwU0cTq08PnvnYtVbt-4PwiB7PmfnVtrOBdoNEhCdagGotAt-xvyIGlDdfItDGhRsDQDCF39jAHx_d5Lb4nTlAbV2hA\",\n
+        \        \"types\" : [ \"laundry\", \"establishment\" ],\n         \"vicinity\"
+        : \"1017 Divisadero St, San Francisco\"\n      },\n      {\n         \"geometry\"
+        : {\n            \"location\" : {\n               \"lat\" : 37.776308,\n               \"lng\"
+        : -122.408608\n            }\n         },\n         \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/bar-71.png\",\n
+        \        \"id\" : \"07608e0c4ac9c8eb8fe338930d9995361df591ee\",\n         \"name\"
+        : \"BrainWash\",\n         \"opening_hours\" : {\n            \"open_now\"
+        : true\n         },\n         \"photos\" : [\n            {\n               \"height\"
+        : 1200,\n               \"html_attributions\" : [],\n               \"photo_reference\"
+        : \"CnRnAAAAWuhpRoN7GrIPO0uT5OXpg0U8RqYfH6cj1kwVb8oxvhuL2jnHxjfnRYNaqIOUrnmfvDdbkZqhVBZCgd3B8oRrzCFKjPYCLhfYHmqgwiPMB63UXcWJ9MxDOCth5je8oRO71B8k6R_jBO77KmfJlTcx4BIQB7BkIfwSSBj4BIAopKLx5hoUwPmcYKr0LlOtkbML8Dbf_9SSE2Y\",\n
+        \              \"width\" : 1600\n            }\n         ],\n         \"price_level\"
+        : 2,\n         \"rating\" : 3.8,\n         \"reference\" : \"CnRqAAAAHzJklErcYVmNHo3HUkT08ni49IaBPhG2pM_BzcNWbO_PRb0_81LlpZDoJELa6gTQ6HuW5jPHq7Cg1jNGppnC3AMy54WFnqfYnlDZGUiwCJnQtT40Djbt7Aby2ULlmStN8GeasDqVIKo-st1pZf2w_hIQjjJX5ZgRCmpa4t4w9d5zoxoU7BsnfEN1GIOmIbLh5frgT1V77YU\",\n
+        \        \"types\" : [\n            \"night_club\",\n            \"laundry\",\n
+        \           \"cafe\",\n            \"restaurant\",\n            \"food\",\n
+        \           \"establishment\"\n         ],\n         \"vicinity\" : \"1122
+        Folsom St, San Francisco\"\n      },\n      {\n         \"geometry\" : {\n
+        \           \"location\" : {\n               \"lat\" : 37.761627,\n               \"lng\"
+        : -122.424221\n            }\n         },\n         \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png\",\n
+        \        \"id\" : \"63dafbbe106f2e33ac7d93eaf2ca0e5e7711679a\",\n         \"name\"
+        : \"Wash & Dry\",\n         \"opening_hours\" : {\n            \"open_now\"
+        : true\n         },\n         \"reference\" : \"CnRrAAAA6NW-q_dewt6NYdD_akVnRgEWtyCJqHVPqB5jPzR_ffXZ0gvbT9uK6O2jwBj0jlP3I3OfwvL1ENRSSSQ6xnYMsjA8XYq3WHNxG5pI7jyTD9OwCaRh_Bmtf_ymAbAyAL658gy3n_Eyu2ty4LadlJANSRIQA1oivdB8M815MNM3wox6ThoUFpc-jpFFtN6WX3D6jzy40cbSUz0\",\n
+        \        \"types\" : [ \"atm\", \"laundry\", \"finance\", \"establishment\"
+        ],\n         \"vicinity\" : \"18th St, San Francisco\"\n      },\n      {\n
+        \        \"geometry\" : {\n            \"location\" : {\n               \"lat\"
+        : 37.788397,\n               \"lng\" : -122.416386\n            }\n         },\n
+        \        \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png\",\n
+        \        \"id\" : \"efd74a846e34c658e6cb66817c673f5f56906349\",\n         \"name\"
+        : \"Rainbow Bubble Laundry\",\n         \"opening_hours\" : {\n            \"open_now\"
+        : true\n         },\n         \"reference\" : \"CoQBeAAAAFbgsslX8DMYlFTkH4Z2paGQZOkWMhphSrmhhqO2xsG5I8q1XSom5NXkX0_8QuuVX7ww3VEXOPSeyU7373VBlrie3ebDqS_72_H0N6n89gNK3_-wL25FyO9AK2VpNk4PwNjVZRKIKCazOwdUGIpRlkNUQYhWLzOx6JiixwDCmyrZEhCNF2gnLm12OzWRtTVlVqcJGhScoIAuLOiu6Kgs8hW2tj05dbasuQ\",\n
+        \        \"types\" : [ \"laundry\", \"establishment\" ],\n         \"vicinity\"
+        : \"970 Sutter St, San Francisco\"\n      },\n      {\n         \"geometry\"
+        : {\n            \"location\" : {\n               \"lat\" : 37.789361,\n               \"lng\"
+        : -122.413575\n            }\n         },\n         \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png\",\n
+        \        \"id\" : \"e9c9e1383c7d0647314bdd6235f2faa707159fde\",\n         \"name\"
+        : \"San Francisco Rinse Laundromat\",\n         \"opening_hours\" : {\n            \"open_now\"
+        : true\n         },\n         \"photos\" : [\n            {\n               \"height\"
+        : 400,\n               \"html_attributions\" : [],\n               \"photo_reference\"
+        : \"CpQBhQAAAOWPoMmL6X5w61MwTl7JUsjScNt-rganxU6Vu2FnwH1rZ_FlxAPWJP8SUYm8f1gDTqulTZXxVHp8ghA5Bcwnh4UGwYD4Mf-EkX1ucSCKE0vSd0Mofbp-k_FPE-Y1Gits3BpZn7u_lIkYyL1kNTLWXGXTIroy7-qKx-X6SMZfplBkXQifRCKQJbkQn6RQSNf64xIQ9p_S9JrVjI1WCHdHXlyryhoUwaRM2_C4He28uqG1x2ze_NJ7klA\",\n
+        \              \"width\" : 533\n            }\n         ],\n         \"reference\"
+        : \"CoQBfwAAAG-jADD2GoveHdT2lHKuCAKs4OQ6bFQNqOE2neDe1QpFY6SMjqbgm37tCy3QQpIsWR0AW9I89i3SF8BbU8XivZwC5QIyP6t-Z5peDZz9EuMh444ouym-vvu0Ar4SqqRz4am8iaythglrlc6EWwyjl2sR2n5M92zmkZAarZH6iyTzEhBdaeoDyc6uLNx-JFmqF9-qGhSLzroq3ei8fbqbjLRB_Y1gbdAQ5A\",\n
+        \        \"types\" : [ \"laundry\", \"establishment\" ],\n         \"vicinity\"
+        : \"850 Jones St, San Francisco\"\n      },\n      {\n         \"geometry\"
+        : {\n            \"location\" : {\n               \"lat\" : 37.78947,\n               \"lng\"
+        : -122.413472\n            }\n         },\n         \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png\",\n
+        \        \"id\" : \"db2a3402b913d8e52a27a0f9ee01cdc5cb28b824\",\n         \"name\"
+        : \"Laundry Locker at Mayflower Market\",\n         \"opening_hours\" : {\n
+        \           \"open_now\" : true\n         },\n         \"photos\" : [\n            {\n
+        \              \"height\" : 380,\n               \"html_attributions\" : [],\n
+        \              \"photo_reference\" : \"CnRnAAAAEUXNV-0wyq7nPQpfjia0XGjBa7wX91Fg-JoL2EGt-SN7IO9razVrRXRJpQMEx6ke4cxWFCsdmWr5W3iy98kgtM7OQKOtZ_GBYE5OvKhmzQx6fWvPcGnoWdhGc_jDRBF1Zy_Ihu188_ecHd4eVlfsSRIQcu2d0vL72ijmbbzvTJK66xoU19IIYNPdtCSqJU_qMqe0j33w-VU\",\n
+        \              \"width\" : 508\n            }\n         ],\n         \"reference\"
+        : \"CpQBhAAAAAuuoiJpKf37dO2RRr0d2jSPGzdl_fcLptwTrkkot9FrOeH2YBZ8FdOE44UGwiQnd9cYwcWKIKV3TE9qSkrqu72lNeW0Lbxk1W3Ndha_pKkAQ5ia1TBcQxreFLqtyezXgowthQhCtbdIhJtvpdKSlGRO0vOcTgnrxhA4mUfnQAC4knrHQvXXM95LBiJyH9SsDBIQWG41UBW5dyVTb-7bJnO1phoUlNHstrx_xCPI8_KsLbnQF7Ja4YU\",\n
+        \        \"types\" : [ \"laundry\", \"establishment\" ],\n         \"vicinity\"
+        : \"985 Bush St, San Francisco\"\n      },\n      {\n         \"geometry\"
+        : {\n            \"location\" : {\n               \"lat\" : 37.790472,\n               \"lng\"
+        : -122.407397\n            }\n         },\n         \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png\",\n
+        \        \"id\" : \"96a18ae99f9684817dc0e3e1f9bdafec2fa64072\",\n         \"name\"
+        : \"Bush & Stockton St Coin Laundry\",\n         \"opening_hours\" : {\n            \"open_now\"
+        : true\n         },\n         \"reference\" : \"CoQBgAAAAP0XlC9q-1ec1QEmdYmsTWpTW9u9eLfOhA3qY-9ODG_WRQdbhsgKVNQmZA4eyjVNGVMbey-fkH8q3EwTV6HntpjP3RyYALuERPwi2jnxR8CFTTq41vHhRyIiX_9NhwrMxOK4iSFmyAnKhm2n5ycnv5LhtJyfnfilLm6KO8P3p_oIEhCmYlg6P5RT_tg1qbB4-32QGhTGVAmHXUSb0DoJMbHk0j5fmVd7bQ\",\n
+        \        \"types\" : [ \"laundry\", \"establishment\" ],\n         \"vicinity\"
+        : \"600 Bush St, San Francisco\"\n      },\n      {\n         \"geometry\"
+        : {\n            \"location\" : {\n               \"lat\" : 37.759006,\n               \"lng\"
+        : -122.409872\n            }\n         },\n         \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png\",\n
+        \        \"id\" : \"0624e26b4d4b2d9c5c2afd5e0a349609ea7f25d8\",\n         \"name\"
+        : \"Lily Laundromat\",\n         \"opening_hours\" : {\n            \"open_now\"
+        : true\n         },\n         \"photos\" : [\n            {\n               \"height\"
+        : 498,\n               \"html_attributions\" : [],\n               \"photo_reference\"
+        : \"CnRnAAAAVZHY5g-OEKOxx89RDXhTdNCyr-KHIF9WTCMt6FEw2JH6khnsZtS-lMXBFDC49pec45EztQY8M_fiX_wdaVGtRrLfY-QR8HAhdybSLlc0ZMte6vw-hPUnCIGZhmYYXot5wq3LROtEl4VJSc1gE6ZKqRIQO6Va5hl3NW5HyaMFIy0QOhoU4rmmDhQFq5TiW7DffE9h_fk-7zo\",\n
+        \              \"width\" : 502\n            }\n         ],\n         \"reference\"
+        : \"CnRwAAAAG8bKvyXHEz8NfzvVx3Q1LLd5ZUzCytiepghs_u8eMYsMz9LhbPMYnvI0yQXqFMVNUR2WTkF6alwbDFlZhZnme-zEMBAiBw5pMM7kaFj-aMQ5DIEcloRuJuMmRrMlnpNTnW6ttSMwtTwWSyG5Vk8dUxIQ_vj5LoqGYK90FlGakzgJChoUErQdx3c7di7_IdrD9V6AFfyaaCE\",\n
+        \        \"types\" : [ \"laundry\", \"establishment\" ],\n         \"vicinity\"
+        : \"2204 Bryant St, San Francisco\"\n      },\n      {\n         \"geometry\"
+        : {\n            \"location\" : {\n               \"lat\" : 37.798986,\n               \"lng\"
+        : -122.424289\n            }\n         },\n         \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png\",\n
+        \        \"id\" : \"8947f1b173dd43ffade375d741ec0d3ea6bbc7b0\",\n         \"name\"
+        : \"Big Bubble Laundromat\",\n         \"opening_hours\" : {\n            \"open_now\"
+        : true\n         },\n         \"reference\" : \"CoQBdwAAALbKvjP6Qh4IuefqPWUeI9JT1aCp90Ij2ST-gn-p5s0--vn6nfrPYg4hRCqWdXnM1DhJFDEwL98HgmSefJD9GVcfYbkUGoUi3ZmAB6ZDmjVC0T7mQEZbbWsCvlUVq_cteZnWWdzTxnCf8F_UPzS9dsq3RMyiWtMYr28oraM75SPXEhBlefz98D6FVKsLAn4obuv8GhR4TGzfTgCB6DhusGylakTgR2AE4g\",\n
+        \        \"types\" : [ \"laundry\", \"establishment\" ],\n         \"vicinity\"
+        : \"2525 Van Ness Ave, San Francisco\"\n      },\n      {\n         \"geometry\"
+        : {\n            \"location\" : {\n               \"lat\" : 37.798414,\n               \"lng\"
+        : -122.418791\n            }\n         },\n         \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png\",\n
+        \        \"id\" : \"c0c39a13af95dcfc65924eb909ee78d4df4c316c\",\n         \"name\"
+        : \"Hyde Street Laundry\",\n         \"opening_hours\" : {\n            \"open_now\"
+        : true\n         },\n         \"reference\" : \"CoQBdAAAAG-1cawo-D-_Em6T3wvcNX_M8rDhM9SW5jET2P2XBGSVIU3Jg0K8oI9s9pa669oXz3_9otOudQ8omn-DYpAsyMACLEITdRdkqz7CyyQfLdqC0YEjzvzCT2hknTwZlWCh-zMGFkbCCpC87E3luEXtgrqTDE1v7zGWFDcPyEp5nwEUEhAoB5gkry_9TPTxqLg5Be1EGhR2qPdjBn6gTVKF0qo_3zghs1jiEA\",\n
+        \        \"types\" : [ \"laundry\", \"establishment\" ],\n         \"vicinity\"
+        : \"1900 Hyde St, San Francisco\"\n      },\n      {\n         \"geometry\"
+        : {\n            \"location\" : {\n               \"lat\" : 37.79212,\n               \"lng\"
+        : -122.403828\n            }\n         },\n         \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png\",\n
+        \        \"id\" : \"03d0eb4e2d66a757bc8c7a01deaff5b8c4233fea\",\n         \"name\"
+        : \"Laundry Locker Cleaners\",\n         \"opening_hours\" : {\n            \"open_now\"
+        : true\n         },\n         \"reference\" : \"CoQBeAAAAI2GBfFgS7PeYd8obO1g0jdsSdwWDwEcHWvp14OtvzMtqQjK4V1ggv8d2y7twSgsrcPsvv66CwJDX5MZqpaxqRgBWE7ePdwgWZx5LcBwfH7OL8XNpeD3vFYijZpAoFsNN7nIP2JR5LTA7a3cXY__PQWVvXm_HojurYG-qOFmIJSiEhBLAMLjOquHKyPAgXH1mwEkGhQAyUO-Qf8E5GZUxBcsGscYGznjWw\",\n
+        \        \"types\" : [ \"laundry\", \"establishment\" ],\n         \"vicinity\"
+        : \"555 California St, San Francisco\"\n      },\n      {\n         \"geometry\"
+        : {\n            \"location\" : {\n               \"lat\" : 37.766415,\n               \"lng\"
+        : -122.453398\n            }\n         },\n         \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png\",\n
+        \        \"id\" : \"94f5ff251d0b3bb990faf36ec52d5061efba3aff\",\n         \"name\"
+        : \"Wash Club\",\n         \"opening_hours\" : {\n            \"open_now\"
+        : true\n         },\n         \"photos\" : [\n            {\n               \"height\"
+        : 387,\n               \"html_attributions\" : [],\n               \"photo_reference\"
+        : \"CnRnAAAAaed5p5LQyx4pBJ-vyu8oC6qg2XBuoXEWghfBeliogPtOi19E2gFh2ixYCtqx9B_-FE40Ttx5mXYGAjzz4fmMka6zByi6V-CFzXDJcIO5ZbDcR2hRL1wxZ8rBdCS86cX3ST6qhPsTJC48uQ8i6CY6RBIQpGw1IlG89BXO0pK_1kFOCBoU68JcqXn_W_RNeHxeTF2Y70ieFrM\",\n
+        \              \"width\" : 600\n            }\n         ],\n         \"reference\"
+        : \"CnRqAAAAN2KSUtQ36ruLeRbn-POIqRMfDWVYMEHi4G4MSIYFOwjAmNYmPZJPCB5GF6EvWxRH2UAWoRjXuQ0Eh25rWKg0MUM7LxW57fOeEDyFPvW48dtVU01hefzr4f5WpwWoK61ulDU32swiXM9sizJkOZPulRIQCDDAR-oKQ6kXntle3wG9jRoUsQFADYp8Pep-zP4ZUdzAOyzSQZY\",\n
+        \        \"types\" : [ \"laundry\", \"establishment\" ],\n         \"vicinity\"
+        : \"520 Frederick St, San Francisco\"\n      },\n      {\n         \"geometry\"
+        : {\n            \"location\" : {\n               \"lat\" : 37.799138,\n               \"lng\"
+        : -122.433676\n            }\n         },\n         \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png\",\n
+        \        \"id\" : \"63b5dabed1881e7def94a9efa7beef6a2cea3b98\",\n         \"name\"
+        : \"Laundry Locker\",\n         \"opening_hours\" : {\n            \"open_now\"
+        : true\n         },\n         \"reference\" : \"CnRwAAAAqq9VMyLM5JOzoUqFkwrcJqLEMFTjIXT5dTF8XtSHmxToTwTmeaoHlCPEBHr_4XxBXJS3hudkEHv_OGmDihVdXSU4QsTeE7qpP5adl4zT6sUxhZpgxpRtfAQktUrjnG01kgY5sny2jTbFlz4aXZXHFxIQo6evTqKyDMJNiPsVNG2PwRoUBSWJBr0023NAKVASO2inv0eGKaE\",\n
+        \        \"types\" : [ \"laundry\", \"establishment\" ],\n         \"vicinity\"
+        : \"2069 Greenwich St, San Francisco\"\n      },\n      {\n         \"geometry\"
+        : {\n            \"location\" : {\n               \"lat\" : 37.752611,\n               \"lng\"
+        : -122.413644\n            }\n         },\n         \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png\",\n
+        \        \"id\" : \"8e981b1ae7ff381ced241823bc0a322a30de4bc0\",\n         \"name\"
+        : \"Wash-Dry\",\n         \"opening_hours\" : {\n            \"open_now\"
+        : true\n         },\n         \"reference\" : \"CnRpAAAAwYWoxa3R7SaRHw0pVbam7ghX8vfszAMYAOhoGFhspY9YqKuKq2acV985ZQ6gwtYprBIfoxiMviyUCOg8Ahh6YMKfXF7kz-NQP91nK6KyFR1zZtqG2xPoOqtQx287PmJm5UYI85jX8NP-2T1_G_TPThIQixKmfPuNEXtMcyAdn_H-JBoUdIn4Dkrz-CvzwjkN6TfRlAg8bik\",\n
+        \        \"types\" : [ \"laundry\", \"establishment\" ],\n         \"vicinity\"
+        : \"3078 24th St, San Francisco\"\n      },\n      {\n         \"geometry\"
+        : {\n            \"location\" : {\n               \"lat\" : 37.798772,\n               \"lng\"
+        : -122.439346\n            }\n         },\n         \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png\",\n
+        \        \"id\" : \"4f3d30c94ebab6c3ba17a94d15981b5721dedf83\",\n         \"name\"
+        : \"Cow Hollow Laundromat & Cleaners\",\n         \"opening_hours\" : {\n
+        \           \"open_now\" : true\n         },\n         \"photos\" : [\n            {\n
+        \              \"height\" : 863,\n               \"html_attributions\" : [],\n
+        \              \"photo_reference\" : \"CnRqAAAA80GMfWw0zl2uGcOYbV73WSsOetIufTtRO7zoLMEnYnep4DLyggWBdDj27QHbvLPdxw2esgahBY0Jf_MvSTm4yFwzs-0eRatsBGOWcqhteRfSsFecl3h_OUzy-laHqkB8u4OE5BgJTkqXCdLCRFbdURIQ271vpxuiH_WFfFbymFQqbhoUisUoCt4yLH4FcorIsGGhIxXmqhM\",\n
+        \              \"width\" : 1150\n            }\n         ],\n         \"reference\"
+        : \"CpQBggAAADlACxrPaW21ZC9ej8EVk6bI6XXLQUiBHBCJuMNuuCA9lxNh4Mme6AVzeKGJhQtB6HD-SAGfjH6suZmY_JZJwVJEYUGygaiKxVMLTwecq16t8rtHNrx8WxfZS3Sr5Qc_52xj5F7FCFFyC7DzunQjnhkjaIL-Wle586onmJS1MBPdPC1vQvGxxDXTwuJnInPTBRIQjMZpW9q5qwpjHxMsC5CGKRoURoCKiKwaSqs9veil7exFVKrzN6Y\",\n
+        \        \"types\" : [ \"laundry\", \"establishment\" ],\n         \"vicinity\"
+        : \"3107 Pierce St, San Francisco\"\n      },\n      {\n         \"geometry\"
+        : {\n            \"location\" : {\n               \"lat\" : 37.752576,\n               \"lng\"
+        : -122.409942\n            }\n         },\n         \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png\",\n
+        \        \"id\" : \"226a56154adf3c6bc54a704350328393065dce9d\",\n         \"name\"
+        : \"Burbujas Wash and Fold\",\n         \"opening_hours\" : {\n            \"open_now\"
+        : true\n         },\n         \"photos\" : [\n            {\n               \"height\"
+        : 2048,\n               \"html_attributions\" : [],\n               \"photo_reference\"
+        : \"CnRnAAAA0Yfo45BjhOaQC5OLj_yF_ABCXuNfEJzJOhykc5Pcq8G1mCAGPCDVm-zazsQxFonTFwDwIS0EjzmsLNqWeFzIAD9cO3Ji3ta-GFKiq_bPETKpvjOgJeg49dKJBuG6NPZ556HZa1FZ9dHixDBSUFFSLhIQku6lyHqKm0-lnYW7BaCoORoUP3kDM47CzImw748JOPqvXnRHy9M\",\n
+        \              \"width\" : 1536\n            }\n         ],\n         \"reference\"
+        : \"CoQBdwAAAARK4FDPqBgS5t8A56WzUXjLs23uPYv27dM24vvnMXusVXUrvRIyEDv8QgazUb22lND7iqjyl56E1FZ15c85F11XbnzN2cEm4Ux9UHAm9A_2u5WHQZ-BG7CxFwOMBSad9JFH8pwU0MYGw_R5nBb_ASJgAUFyje2szxeMosY3cJf_EhBGGJeZD-Hs5nFN_YqS8UzGGhT8k8uVVJIKUGxjXGhV9M6l3Hd2qw\",\n
+        \        \"types\" : [ \"laundry\", \"establishment\" ],\n         \"vicinity\"
+        : \"2899 24th St, San Francisco\"\n      }\n   ],\n   \"status\" : \"OK\"\n}\n"
+    http_version: '1.1'
+  recorded_at: Sun, 13 Apr 2014 20:55:16 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=37.78362656%2C-122.39769745&rankby=distance&sensor=false&keyword=Laundry&opennow=true&key=AIzaSyAAPig8eebUk6Vj79Fgd275gDQfOvFqYnU
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type:
+      - application/json; charset=UTF-8
+      date:
+      - Sun, 13 Apr 2014 20:55:17 GMT
+      expires:
+      - Sun, 13 Apr 2014 21:00:17 GMT
+      cache-control:
+      - public, max-age=300
+      vary:
+      - Accept-Language
+      server:
+      - mafe
+      x-xss-protection:
+      - 1; mode=block
+      x-frame-options:
+      - SAMEORIGIN
+      alternate-protocol:
+      - 443:quic
+      connection:
+      - close
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: US-ASCII
+      string: ! "{\n   \"html_attributions\" : [],\n   \"next_page_token\" : \"CoQC-wAAAGyECVlsPFOcozyhRB2-GplgwTi3ECkNA_s_8Uo5E-XrrBCwqyE20tJ-9kzxiZphuVMsfGQxEwbc4kV5r-7-xVi6ypYa0rSAOZqJgjwpkueGB9AbCFDrgPLc_x8TtW3DN38Kg-BEEUglVM06PxjILLshOCxV1z-Ny9T-pfCPPYviWdRfevVdTpB52y2FgNqJ8iqNBQsbYGHYvNVADH-wngm3-MHSuNKQ7kGFb8zuVVmrRCSpMvDMM7wHdiC2UL5a9ccpNOcH-6FD0LsaTY1U5---eN0PSjrYcrv8JIOiy3TNdnE5kBq525DXLYCxdcw21MrLvjv_8OuH62yZqvsiZyUSEJnGC-8ZonZVZj1KiRW2MrYaFAuuLL1SJTPHlyQIxDt41MBRfywh\",\n
+        \  \"results\" : [\n      {\n         \"geometry\" : {\n            \"location\"
+        : {\n               \"lat\" : 37.79212,\n               \"lng\" : -122.403828\n
+        \           }\n         },\n         \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png\",\n
+        \        \"id\" : \"03d0eb4e2d66a757bc8c7a01deaff5b8c4233fea\",\n         \"name\"
+        : \"Laundry Locker Cleaners\",\n         \"opening_hours\" : {\n            \"open_now\"
+        : true\n         },\n         \"reference\" : \"CoQBeAAAABFJV6OTRja6F59q55G8aoltc61qMEmGTLUft3MXBnqYOgZE0TpNlrkp5FFRRkVT21_lGHc4hmZljubRkYjuBbDUySOipVznK-Mclrafg-rtmMLgiFA0z62mL1_3utXLRroSv5vSbBVIJ10db_3JiETw_XZ9Vz5nqT0LdSoRedHXEhAPgdxV_409yCVCGczn-hrOGhR0dmO3jDmxOnVqNPVpUDcA6x_tUg\",\n
+        \        \"types\" : [ \"laundry\", \"establishment\" ],\n         \"vicinity\"
+        : \"555 California St, San Francisco\"\n      },\n      {\n         \"geometry\"
+        : {\n            \"location\" : {\n               \"lat\" : 37.790472,\n               \"lng\"
+        : -122.407397\n            }\n         },\n         \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png\",\n
+        \        \"id\" : \"96a18ae99f9684817dc0e3e1f9bdafec2fa64072\",\n         \"name\"
+        : \"Bush & Stockton St Coin Laundry\",\n         \"opening_hours\" : {\n            \"open_now\"
+        : true\n         },\n         \"reference\" : \"CoQBgAAAAEAeMSfcDVtgBN7J9T1OQR8BVlJKpCcZNIWOnu7MpPL9rMrV19MYtODJQnXFcHGcblYC_p5608ZRPvol802KWiM6NZcnNM3gh92vMUlQzJxwb47vCW_5lJK64t6XOXTkrZhljqVr8-xhpIjdqFQDN1B_e1IU5SFjH9u2SbcI4r5lEhDxk8jSzusEbGPw5KA7jM3qGhTbkajoKTcUpKmbJK3jl4A7etj6ag\",\n
+        \        \"types\" : [ \"laundry\", \"establishment\" ],\n         \"vicinity\"
+        : \"600 Bush St, San Francisco\"\n      },\n      {\n         \"geometry\"
+        : {\n            \"location\" : {\n               \"lat\" : 37.776308,\n               \"lng\"
+        : -122.408608\n            }\n         },\n         \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/bar-71.png\",\n
+        \        \"id\" : \"07608e0c4ac9c8eb8fe338930d9995361df591ee\",\n         \"name\"
+        : \"BrainWash\",\n         \"opening_hours\" : {\n            \"open_now\"
+        : true\n         },\n         \"photos\" : [\n            {\n               \"height\"
+        : 1200,\n               \"html_attributions\" : [],\n               \"photo_reference\"
+        : \"CnRnAAAAt7At9KguZFS_cueF_wGQRYT5z2u8McGMZPqaA8Yekzr9wSQ7wM0vzYJ0ZhWyhCjfq27_EXIIS4IjEliy4AugTKbCa4Njz4hy_v4-OvWSoUHSH9HxqeA2P3LnADG9OIFT6KH-TKZWc47R4B_aNDZauRIQ4kJab4FoF4wCru-4axXrghoUofnEKiPYin-YwtjwNQul1OzqpcY\",\n
+        \              \"width\" : 1600\n            }\n         ],\n         \"price_level\"
+        : 2,\n         \"rating\" : 3.8,\n         \"reference\" : \"CnRqAAAAnKD1jnX_dD9RZnt3F3hOsVRyQkZHExWdg2QG4hdd5_9JZ-5GUxPgvji8jaRJ_DP06uo5ePDfs9j7W0VFk2WFp3zBDcezRS_LTcydmAJktTvUDhEa9I3KgZKJgqTpDEbekikg28I_4Vvv5X6ZFG0wOxIQ-idB0CmdjkEF4qWHFKQW7BoU2-I0U-3yyu5ntkI6KBB_mKNZ2Oc\",\n
+        \        \"types\" : [\n            \"night_club\",\n            \"laundry\",\n
+        \           \"cafe\",\n            \"restaurant\",\n            \"food\",\n
+        \           \"establishment\"\n         ],\n         \"vicinity\" : \"1122
+        Folsom St, San Francisco\"\n      },\n      {\n         \"geometry\" : {\n
+        \           \"location\" : {\n               \"lat\" : 37.78947,\n               \"lng\"
+        : -122.413472\n            }\n         },\n         \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png\",\n
+        \        \"id\" : \"db2a3402b913d8e52a27a0f9ee01cdc5cb28b824\",\n         \"name\"
+        : \"Laundry Locker at Mayflower Market\",\n         \"opening_hours\" : {\n
+        \           \"open_now\" : true\n         },\n         \"photos\" : [\n            {\n
+        \              \"height\" : 380,\n               \"html_attributions\" : [],\n
+        \              \"photo_reference\" : \"CnRnAAAAbaLyu_WFcmVfI_gZlkNIBnKyrz1r5qbIIzIKDugyZVntUuOigZlWnKbfFah6NncwWclCkjQUB8hVJ_WPD1Rs1BJd83SAdaQVV0nxiTx3cCyxoMdX20RKBUDIJCu_z9hJH1CWSqQ2PG_U5_OjT2lLchIQ6FGl31vgSHG-qjLAY3CuvBoUxuKrShCfm7yY5bp0frOnZSvfAwM\",\n
+        \              \"width\" : 508\n            }\n         ],\n         \"reference\"
+        : \"CpQBhAAAADdSFZxPFz9jf32kuNfCrmzMrqeera05s1DYUZWB6jutIZXHoBItqQkdx_XatSp4jvtebpL9VsWmHdC6S2kHPha7ZP2OSkzdIX8ucZYWdklRRQ1PGAv0_sy-JKCX9xEicOZ-rb5CxhT5teTIJTB7PdOvwvt8mukOevMhdG1Z1nMfqvu11zRb4By8zsCEdpUKUBIQJ784Lpdw3_5mpidq9elv2RoU17qlDw5EVKuLIbtGdOtyx6JKOHQ\",\n
+        \        \"types\" : [ \"laundry\", \"establishment\" ],\n         \"vicinity\"
+        : \"985 Bush St, San Francisco\"\n      },\n      {\n         \"geometry\"
+        : {\n            \"location\" : {\n               \"lat\" : 37.789361,\n               \"lng\"
+        : -122.413575\n            }\n         },\n         \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png\",\n
+        \        \"id\" : \"e9c9e1383c7d0647314bdd6235f2faa707159fde\",\n         \"name\"
+        : \"San Francisco Rinse Laundromat\",\n         \"opening_hours\" : {\n            \"open_now\"
+        : true\n         },\n         \"photos\" : [\n            {\n               \"height\"
+        : 400,\n               \"html_attributions\" : [],\n               \"photo_reference\"
+        : \"CpQBhQAAAO_jM_WvxXetQG4m-dcWB8axyLi0SV2mtde_uVksqwdqm9BVX78LeRC1_wDUV8MWL0kWKiBt8OfUQxBxjdjQqtKvN3BLujEG1mvowCoTD0X51VpD-KGcVRcn7iGKF1gvbo2tAefdxZE9yiC52SsjsrBNVsqc6a7s1f5mpG8DouO3HewlBqRj7af0Rm2I2WbMXRIQogyzzL_ehB5xZq8czcdHMhoUY_OEUksHCrXh469ybHL1OFPzeRQ\",\n
+        \              \"width\" : 533\n            }\n         ],\n         \"reference\"
+        : \"CoQBfwAAAA8pa-ln29YNbyYTjs_4Lek3KNGRgEluKVtgb0R2Ni8NCOzqn0OskRMuBXX4q2W20c4JmhFLzWAJo2x61q2gXNJaMlef9JJxFL7xpIcoegI1h2XN03YQVM8wMaj0ENNqqX0OD1MdkY2Rsz5RjRfTavYAyWtH722BWoBzbllyqo2sEhCrGx-Sp-zgTJF2aL4ziMLcGhTvkHlgXAWal9P0_-sZ3TsinQpx3w\",\n
+        \        \"types\" : [ \"laundry\", \"establishment\" ],\n         \"vicinity\"
+        : \"850 Jones St, San Francisco\"\n      },\n      {\n         \"geometry\"
+        : {\n            \"location\" : {\n               \"lat\" : 37.788397,\n               \"lng\"
+        : -122.416386\n            }\n         },\n         \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png\",\n
+        \        \"id\" : \"efd74a846e34c658e6cb66817c673f5f56906349\",\n         \"name\"
+        : \"Rainbow Bubble Laundry\",\n         \"opening_hours\" : {\n            \"open_now\"
+        : true\n         },\n         \"reference\" : \"CoQBeAAAAIKEHBeBs7oBJgPYRhF4WKO0BMWYidwqMtvqcnqvw7HG9Nk7E0Fzkzi-CjJLNyY9gPNRQZQWOgPhPlFutG5JxJ8Y7JI-eMEig3k5J7-dBWMbfFmRGarcaCYiZl_rBQLM69sUOR9ams51vgsPNO3wyuT_RjxMt9TzdUVwVvNJly6OEhBjRRADxUbfrmRwqkvU0NwgGhQe-EbKepyp0swfHehXouyBI878Sg\",\n
+        \        \"types\" : [ \"laundry\", \"establishment\" ],\n         \"vicinity\"
+        : \"970 Sutter St, San Francisco\"\n      },\n      {\n         \"geometry\"
+        : {\n            \"location\" : {\n               \"lat\" : 37.798351,\n               \"lng\"
+        : -122.404102\n            }\n         },\n         \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png\",\n
+        \        \"id\" : \"4f928e13f2c1ae55f438ca9ce4ef7b71a4dc5ccd\",\n         \"name\"
+        : \"Naughty Laundry\",\n         \"opening_hours\" : {\n            \"open_now\"
+        : true\n         },\n         \"reference\" : \"CoQBcQAAAJEpCZ5SsnIt-qSJAu7rGd12sPn0u5moqEG9E5BdaxTixypVFchWTG5Ch-_5twanZT0kG9Xot0wTCOzF2saiI7-cCxdTeDxbLUwlGS6Ns0UTjGepJEslawI0uQc409WNTHhOvjatAKEhkyZ31FoDhvB7pVnz2AQz_UU6wy3MAinKEhAcPS1AenphZVXVUZ51QJE-GhQ9pQ-jpQwctd4hg0gGhlnrxQE_ow\",\n
+        \        \"types\" : [ \"shoe_store\", \"clothing_store\", \"store\", \"establishment\"
+        ],\n         \"vicinity\" : \"406 Broadway St, San Francisco\"\n      },\n
+        \     {\n         \"geometry\" : {\n            \"location\" : {\n               \"lat\"
+        : 37.768023,\n               \"lng\" : -122.389399\n            }\n         },\n
+        \        \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png\",\n
+        \        \"id\" : \"f5042f0aa732d06b88d3578e40640ca45acc3cc1\",\n         \"name\"
+        : \"Laundry Locker Cleaners\",\n         \"opening_hours\" : {\n            \"open_now\"
+        : true\n         },\n         \"reference\" : \"CoQBeAAAAGMtEu46NhYx3BONy2RZK6gIHsf8CYXEFs9WDTErvgIuC7ZnDG03sPEU06dDMFVFZixXiAV54SA9IJ3UdjKTUUCmY4A9xc2Wcg4Ec7KgpY6weeiJz3kPMYp-TZ7601mTP06sAaXaVnj-yt-Anwrks025UlsJPJfOTsi2jA8_DuS_EhClhU6YqznJ9GqqYci5btq3GhTOYttQO7GMYWhDGesQWjP3eHxvRw\",\n
+        \        \"types\" : [ \"laundry\", \"establishment\" ],\n         \"vicinity\"
+        : \"1650 3rd St, San Francisco\"\n      },\n      {\n         \"geometry\"
+        : {\n            \"location\" : {\n               \"lat\" : 37.762707,\n               \"lng\"
+        : -122.39593\n            }\n         },\n         \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png\",\n
+        \        \"id\" : \"14bbfd39fccb4abb3df271549c79ffe62ccd8845\",\n         \"name\"
+        : \"Potrero Coin Laundry\",\n         \"opening_hours\" : {\n            \"open_now\"
+        : true\n         },\n         \"reference\" : \"CoQBdQAAAD4rBEPfU00p0dgFtG8d3Qmg4RtUJ2x9ZvBPoIA2Rey3QHELc5nAHgmq-lXwwbhosz89sh-T2V-6fOb73Xxy6QOwXvZqe22liUYh1j-9gydPDT7LG04schX8Ltg0NMPLztQ_32MEgt_bQ5xQ7518LyPM0BHdPyI2nKklw1QvGYnoEhDgZz79gX68IUGuEezG1h0KGhQSjuHdZyxFn7zpFnyQEPnmXRaxfA\",\n
+        \        \"types\" : [ \"laundry\", \"establishment\" ],\n         \"vicinity\"
+        : \"1310 18th St, San Francisco\"\n      },\n      {\n         \"geometry\"
+        : {\n            \"location\" : {\n               \"lat\" : 37.798414,\n               \"lng\"
+        : -122.418791\n            }\n         },\n         \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png\",\n
+        \        \"id\" : \"c0c39a13af95dcfc65924eb909ee78d4df4c316c\",\n         \"name\"
+        : \"Hyde Street Laundry\",\n         \"opening_hours\" : {\n            \"open_now\"
+        : true\n         },\n         \"reference\" : \"CoQBdAAAAKgOfHG97yBhOJd8UVlrgag8zdhUMUGZUUakO043btwZsHnJXIhI0rAEu5pWcKU-Q2XZOxFVKGXxRBNwRiO64f7Y8nlygGAoy5btfdAZCdbLgZsyd804JX3geUwjEDj5FnOl5zmpRGBPdMpRoe47obs84sk5P_Rt7vHWq2vFC-1qEhA6Rsodsd9wBDDMVjLYw0PiGhSgckrQm8VMHIsW2rWIbxHhxFZyDw\",\n
+        \        \"types\" : [ \"laundry\", \"establishment\" ],\n         \"vicinity\"
+        : \"1900 Hyde St, San Francisco\"\n      },\n      {\n         \"geometry\"
+        : {\n            \"location\" : {\n               \"lat\" : 37.770596,\n               \"lng\"
+        : -122.425331\n            }\n         },\n         \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png\",\n
+        \        \"id\" : \"28e84a0c6439f7d5c692039e0f1f93ed18e56904\",\n         \"name\"
+        : \"Little Hollywood Launderette\",\n         \"opening_hours\" : {\n            \"open_now\"
+        : true\n         },\n         \"reference\" : \"CoQBfQAAAIlGHfu2QbybWoLjLhghVi6vXEuGkhWMOghsDG-nqszEwX7BOUl4NLofzazAA-SFpAl7kEcb0C8z1ur1M4LuJYSEfF0Oy12A0xa1C-ABC9y8HoxIpljv0jLU3t9O2nwMfYAEumqXVJYVVeOZOiJaK-ZoE0HGKazqXA9FVOWoIznMEhBZVKWsp5kUwvD2TEWTfcTVGhQF4L1GGmgHIMCGHbWkkcKcn-dZ7w\",\n
+        \        \"types\" : [ \"laundry\", \"establishment\" ],\n         \"vicinity\"
+        : \"1906 Market St, San Francisco\"\n      },\n      {\n         \"geometry\"
+        : {\n            \"location\" : {\n               \"lat\" : 37.798986,\n               \"lng\"
+        : -122.424289\n            }\n         },\n         \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png\",\n
+        \        \"id\" : \"8947f1b173dd43ffade375d741ec0d3ea6bbc7b0\",\n         \"name\"
+        : \"Big Bubble Laundromat\",\n         \"opening_hours\" : {\n            \"open_now\"
+        : true\n         },\n         \"reference\" : \"CoQBdwAAADk9K52twr3cCHsxRXvqlskdmQxuGGTXDF-kE7RzjvsauD5fRIWNr4AJmQF8a2Zf0V1QYwGbk4SkfZXEL13XAV5EFmAN1YRALK5G-mv8ZPMuT7wZ9eUfjiVRFWKbq61vWkjwk6mrN7_v5KyIJjKIkWNT2pzJCZfrFY1lEpEJ2yhFEhA9W05cUgeezZjWRyJG6tCYGhQgVYsyJfYi8p76Yx3CiothWYEs6g\",\n
+        \        \"types\" : [ \"laundry\", \"establishment\" ],\n         \"vicinity\"
+        : \"2525 Van Ness Ave, San Francisco\"\n      },\n      {\n         \"geometry\"
+        : {\n            \"location\" : {\n               \"lat\" : 37.759006,\n               \"lng\"
+        : -122.409872\n            }\n         },\n         \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png\",\n
+        \        \"id\" : \"0624e26b4d4b2d9c5c2afd5e0a349609ea7f25d8\",\n         \"name\"
+        : \"Lily Laundromat\",\n         \"opening_hours\" : {\n            \"open_now\"
+        : true\n         },\n         \"photos\" : [\n            {\n               \"height\"
+        : 498,\n               \"html_attributions\" : [],\n               \"photo_reference\"
+        : \"CnRnAAAAKA99Pyt-Hy6Z97ICzRKGIrf3Ws-8YgJOWYfTKJ7TJGUgwMnGJe_ZPh7RFT8MQjrlN_scUplfm7Zz-dMnC7IbJvhXQYc7PjplXspgUaTyW6YOAlF6b0lHqzZMhUdjqv27Mfou2H_JFPdzZRvmupC07xIQpoMV1eYrstZw9rgmZhKN7RoUO612wHFKNAozY5kHXKfqBwzi0XM\",\n
+        \              \"width\" : 502\n            }\n         ],\n         \"reference\"
+        : \"CnRwAAAAEtY_OqNEBKmTJUzYqxhSzLDkm3DM6EW1392VoSfxFvKAaJKoo7UTK3dWOAbh-5hCPk-4_IzdN3_CotI5z59LgL2xJbEj-HoTX6qeUi1rUQtks78SsqMYT71a6Dn0VslezrFLvzy_zW8bdzcgbvh87xIQcQvTeaXCp36--OyKcXkXyhoUwraE8wbG1215jf0Qk_tyPtAJmcc\",\n
+        \        \"types\" : [ \"laundry\", \"establishment\" ],\n         \"vicinity\"
+        : \"2204 Bryant St, San Francisco\"\n      },\n      {\n         \"geometry\"
+        : {\n            \"location\" : {\n               \"lat\" : 37.78273,\n               \"lng\"
+        : -122.43244\n            }\n         },\n         \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png\",\n
+        \        \"id\" : \"128e83faa6d6c8b96e1d730264835b782721ed3a\",\n         \"name\"
+        : \"Fillmore Laundromat (coin op laundry)\",\n         \"opening_hours\" :
+        {\n            \"open_now\" : true\n         },\n         \"photos\" : [\n
+        \           {\n               \"height\" : 478,\n               \"html_attributions\"
+        : [],\n               \"photo_reference\" : \"CoQBdgAAAPrDulXK3DpSRKstpUPMUSqbjnI-CHWu-mLyHk-uau8xSvCMHYPg-HPIG3BN1PHiLXNMIg5l4gOkZBx5TprAxVaaFVgSB3SzUY9ZfXMAZZ7QfL5rxJ0TO2y9_yugECu0KXbW8vfZhHkMxs-smW_17dT53orZijhybD_5h_S5ZzYmEhAVJ8ahIZU5LjvNTTuA6_E-GhSS1VCBkU78qSYO0ZIweR_H52-XdA\",\n
+        \              \"width\" : 640\n            }\n         ],\n         \"reference\"
+        : \"CpQBhwAAAEwnZCtwPM_fdOx3428Qhg0smrf21XkjmAEYxHD-UJYAPyyS4iiJG-5KaRVnaqqizZ1PWUt8QVowXjgjMI5GO2mIGDZn2yP_GcJBDEISJ5o8_WhH1t-Yq5RA5CGpLrrh4bdO7fzuUPfkP8o4QKhAgb0w0qoACttfDPr7-uLNFjiRYt7gkNQ3LAruUoT_1m0DgRIQu-0q051efpct57u0xAKRLBoUBL3u-0C_qN7Ykb8STXXWAgrKjrM\",\n
+        \        \"types\" : [ \"laundry\", \"home_goods_store\", \"store\", \"establishment\"
+        ],\n         \"vicinity\" : \"1426-B Fillmore St, San Francisco\"\n      },\n
+        \     {\n         \"geometry\" : {\n            \"location\" : {\n               \"lat\"
+        : 37.761627,\n               \"lng\" : -122.424221\n            }\n         },\n
+        \        \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png\",\n
+        \        \"id\" : \"63dafbbe106f2e33ac7d93eaf2ca0e5e7711679a\",\n         \"name\"
+        : \"Wash & Dry\",\n         \"opening_hours\" : {\n            \"open_now\"
+        : true\n         },\n         \"reference\" : \"CnRrAAAAgh6g8pqtT-vXbt9EpMgO21VyovzcyPY1ssc9wOOXhbmBhkrgq1Tmg4kaf_ALnb3o0PPSQ7owayot5-A0uuJAvvrQ3vd9PG99Ti6SM1EKFCKJ3EjTFtthXoD-ss0PT95ELaPAbtlpksUgLfrzK6d5nBIQ9voZR1w2gDzRAov8GrhTkhoUvdYE1bocPsQya4WmZkaygFhuepU\",\n
+        \        \"types\" : [ \"atm\", \"laundry\", \"finance\", \"establishment\"
+        ],\n         \"vicinity\" : \"18th St, San Francisco\"\n      },\n      {\n
+        \        \"geometry\" : {\n            \"location\" : {\n               \"lat\"
+        : 37.799138,\n               \"lng\" : -122.433676\n            }\n         },\n
+        \        \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png\",\n
+        \        \"id\" : \"63b5dabed1881e7def94a9efa7beef6a2cea3b98\",\n         \"name\"
+        : \"Laundry Locker\",\n         \"opening_hours\" : {\n            \"open_now\"
+        : true\n         },\n         \"reference\" : \"CnRwAAAAsplJ4z8mYpjOK5WK4_Xl9dwjz03acl0S18TW5_Ygw8ZH9TkD7rg8HtTJd7iisONhHQmjfbIup4qdHePBlVui9PmBSZyCW0txWboMfw6L9iiZsWANjVUtrn1SvjM5U4qwqUYvOsBWeA6IIE7gIxlUEBIQRmlwLu1B8w4452SkXp-xWBoUG8W8rosi67_dlje_doNHWdULnoI\",\n
+        \        \"types\" : [ \"laundry\", \"establishment\" ],\n         \"vicinity\"
+        : \"2069 Greenwich St, San Francisco\"\n      },\n      {\n         \"geometry\"
+        : {\n            \"location\" : {\n               \"lat\" : 37.752576,\n               \"lng\"
+        : -122.409942\n            }\n         },\n         \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png\",\n
+        \        \"id\" : \"226a56154adf3c6bc54a704350328393065dce9d\",\n         \"name\"
+        : \"Burbujas Wash and Fold\",\n         \"opening_hours\" : {\n            \"open_now\"
+        : true\n         },\n         \"photos\" : [\n            {\n               \"height\"
+        : 2048,\n               \"html_attributions\" : [],\n               \"photo_reference\"
+        : \"CnRnAAAAdBmlQrHZ0sT5XIxX-U_MwCgzQ2POGyaaJKizUhzERNLH4Rqyhu5-a-XlhGdF9EH5LgLut_fOBc7WDJdpPjmVFnrJcxpimGfdtuvmllt1KAkBKrx_pY8IXkuoxtMhndWZpSy-H5OzVkScFimtXhm8YhIQpMZmPjdHT5j21lz47y87rRoUJTeXPCDrcxRkwOeP6OsMHse6vps\",\n
+        \              \"width\" : 1536\n            }\n         ],\n         \"reference\"
+        : \"CoQBdwAAAKPUanw_OQZCwp4IyhxY5kOHFnhsMH7jxptSHfxK-tp3uG0uXIWfhHjaEu77kPG3BTqIo0EYJfx9fyivOUu1uvP2R6NlAzKYVS9fFieMotGdH6VwTEimWlspqo0sqmHqSYEsMlzhwQ8_lv8t0ilRBhXj3h222btR2zHs-6zCZEsXEhBNNmZmsVMLvCE3_QP7hEWpGhQlTtEUmT2MOvrgtDJlFv_i4LABsA\",\n
+        \        \"types\" : [ \"laundry\", \"establishment\" ],\n         \"vicinity\"
+        : \"2899 24th St, San Francisco\"\n      },\n      {\n         \"geometry\"
+        : {\n            \"location\" : {\n               \"lat\" : 37.77898,\n               \"lng\"
+        : -122.438749\n            }\n         },\n         \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png\",\n
+        \        \"id\" : \"a267c7103ee49376c5441dfc09c8ccb9c1ef3e00\",\n         \"name\"
+        : \"Everyday Cleaners\",\n         \"opening_hours\" : {\n            \"open_now\"
+        : true\n         },\n         \"reference\" : \"CoQBcgAAANTRTE2G86ObH-nbdHJVt8ZqLC5Oyf0wFqOWQuFTBaY0RoUOLhZJgvcaIpFhZvu7NyidB7bhC4GocI9oFKpVZ6ARsU2J7p9CIUYjFAyle-z8NJ5U9uocnwp-1n_9rOhjHk2MDNTsLjyPWdHzM7QVsMucyuAyoOmVs1RFAfoKop26EhCqq9Phxmy2-pz-L5tktsDZGhR_vYIsPe6jV9baAE8X1MJXCzbo1A\",\n
+        \        \"types\" : [ \"laundry\", \"establishment\" ],\n         \"vicinity\"
+        : \"1017 Divisadero St, San Francisco\"\n      },\n      {\n         \"geometry\"
+        : {\n            \"location\" : {\n               \"lat\" : 37.773181,\n               \"lng\"
+        : -122.43781\n            }\n         },\n         \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png\",\n
+        \        \"id\" : \"5b63c5541e6e45d37c53dd4bf3461f9fd3602260\",\n         \"name\"
+        : \"Oak Street Laundry\",\n         \"opening_hours\" : {\n            \"open_now\"
+        : true\n         },\n         \"reference\" : \"CoQBdAAAADqRRtGADOdOSFOdAT6x61W_DKxxaiNHVMLWdKRIZugXs8gnJjvL5DLt1H6vtVf6H6YAc0C1BMkiuwo4OqUGD2IHAiV3QXEzlZIzbbKqWklR3dd2W9Xtgd5GWhggBvK-zMfzuDaYpxt7fs6MpNNgqSf9ubakYWJtTB0p3uLltOvgEhCSKVmN8xi0XfdshMfsziL5GhRi7pHkBjFxVgEikXNBMqL8DlO_BA\",\n
+        \        \"types\" : [ \"laundry\", \"establishment\" ],\n         \"vicinity\"
+        : \"1130 Oak St, San Francisco\"\n      },\n      {\n         \"geometry\"
+        : {\n            \"location\" : {\n               \"lat\" : 37.752611,\n               \"lng\"
+        : -122.413644\n            }\n         },\n         \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png\",\n
+        \        \"id\" : \"8e981b1ae7ff381ced241823bc0a322a30de4bc0\",\n         \"name\"
+        : \"Wash-Dry\",\n         \"opening_hours\" : {\n            \"open_now\"
+        : true\n         },\n         \"reference\" : \"CnRpAAAAxqj5Q54Fkj31Kg2Blr_1sJZ3XKJ3HWsLIyvOxanJj9O9TmkGZ15TcLs9hhPHOgPiJHttPrMsjMTkLVxtFDeAZ7GyM_AjpfLTdNbwPGHSn9jEc_SKJnV96qNq6jHa8IUcgcWh13hLW7BABGfxUGCH5RIQSMcke3ago7pWR3H6s5BNYxoUNOFUZeDoHnajMymwZSdf61zyfHc\",\n
+        \        \"types\" : [ \"laundry\", \"establishment\" ],\n         \"vicinity\"
+        : \"3078 24th St, San Francisco\"\n      }\n   ],\n   \"status\" : \"OK\"\n}\n"
+    http_version: '1.1'
+  recorded_at: Sun, 13 Apr 2014 20:55:17 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/directions/json?origin=460%20Fell%20St.%20San%20Francisco%2C%20CA&destination=633%20Folsom%20St.%20San%20Francisco%2C%20CA&waypoints=optimize%3Atrue%7C1906%20Market%20St%2C%20San%20Francisco&sensor=false&key=AIzaSyAAPig8eebUk6Vj79Fgd275gDQfOvFqYnU
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "Y29udGVudC10eXBl":
+      - !binary |-
+        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD1VVEYtOA==
+      !binary "ZGF0ZQ==":
+      - !binary |-
+        U3VuLCAxMyBBcHIgMjAxNCAyMDo1NToxNyBHTVQ=
+      !binary "ZXhwaXJlcw==":
+      - !binary |-
+        TW9uLCAxNCBBcHIgMjAxNCAyMDo1NToxNyBHTVQ=
+      !binary "Y2FjaGUtY29udHJvbA==":
+      - !binary |-
+        cHVibGljLCBtYXgtYWdlPTg2NDAw
+      !binary "dmFyeQ==":
+      - !binary |-
+        QWNjZXB0LUxhbmd1YWdl
+      !binary "c2VydmVy":
+      - !binary |-
+        bWFmZQ==
+      !binary "eC14c3MtcHJvdGVjdGlvbg==":
+      - !binary |-
+        MTsgbW9kZT1ibG9jaw==
+      !binary "eC1mcmFtZS1vcHRpb25z":
+      - !binary |-
+        U0FNRU9SSUdJTg==
+      !binary "YWx0ZXJuYXRlLXByb3RvY29s":
+      - !binary |-
+        NDQzOnF1aWM=
+      !binary "Y29ubmVjdGlvbg==":
+      - !binary |-
+        Y2xvc2U=
+      !binary "dHJhbnNmZXItZW5jb2Rpbmc=":
+      - !binary |-
+        Y2h1bmtlZA==
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        ewogICAicm91dGVzIiA6IFsKICAgICAgewogICAgICAgICAiYm91bmRzIiA6
+        IHsKICAgICAgICAgICAgIm5vcnRoZWFzdCIgOiB7CiAgICAgICAgICAgICAg
+        ICJsYXQiIDogMzcuNzg0ODYyNSwKICAgICAgICAgICAgICAgImxuZyIgOiAt
+        MTIyLjM5NzYxMTUKICAgICAgICAgICAgfSwKICAgICAgICAgICAgInNvdXRo
+        d2VzdCIgOiB7CiAgICAgICAgICAgICAgICJsYXQiIDogMzcuNzY3ODY3MiwK
+        ICAgICAgICAgICAgICAgImxuZyIgOiAtMTIyLjQyNjkzODMKICAgICAgICAg
+        ICAgfQogICAgICAgICB9LAogICAgICAgICAiY29weXJpZ2h0cyIgOiAiTWFw
+        IGRhdGEgwqkyMDE0IEdvb2dsZSwgU2FuYm9ybiIsCiAgICAgICAgICJsZWdz
+        IiA6IFsKICAgICAgICAgICAgewogICAgICAgICAgICAgICAiZGlzdGFuY2Ui
+        IDogewogICAgICAgICAgICAgICAgICAidGV4dCIgOiAiMC40IG1pIiwKICAg
+        ICAgICAgICAgICAgICAgInZhbHVlIiA6IDYzNwogICAgICAgICAgICAgICB9
+        LAogICAgICAgICAgICAgICAiZHVyYXRpb24iIDogewogICAgICAgICAgICAg
+        ICAgICAidGV4dCIgOiAiMiBtaW5zIiwKICAgICAgICAgICAgICAgICAgInZh
+        bHVlIiA6IDEwNQogICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAi
+        ZW5kX2FkZHJlc3MiIDogIjE5MDYgTWFya2V0IFN0cmVldCwgU2FuIEZyYW5j
+        aXNjbywgQ0EgOTQxMDIsIFVTQSIsCiAgICAgICAgICAgICAgICJlbmRfbG9j
+        YXRpb24iIDogewogICAgICAgICAgICAgICAgICAibGF0IiA6IDM3Ljc3MDUw
+        MzcsCiAgICAgICAgICAgICAgICAgICJsbmciIDogLTEyMi40MjUzMzk3CiAg
+        ICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICJzdGFydF9hZGRyZXNz
+        IiA6ICI0NjAgRmVsbCBTdHJlZXQsIFNhbiBGcmFuY2lzY28sIENBIDk0MTAy
+        LCBVU0EiLAogICAgICAgICAgICAgICAic3RhcnRfbG9jYXRpb24iIDogewog
+        ICAgICAgICAgICAgICAgICAibGF0IiA6IDM3Ljc3NTYxMDcsCiAgICAgICAg
+        ICAgICAgICAgICJsbmciIDogLTEyMi40MjU1Mzk1CiAgICAgICAgICAgICAg
+        IH0sCiAgICAgICAgICAgICAgICJzdGVwcyIgOiBbCiAgICAgICAgICAgICAg
+        ICAgIHsKICAgICAgICAgICAgICAgICAgICAgImRpc3RhbmNlIiA6IHsKICAg
+        ICAgICAgICAgICAgICAgICAgICAgInRleHQiIDogIjE2NyBmdCIsCiAgICAg
+        ICAgICAgICAgICAgICAgICAgICJ2YWx1ZSIgOiA1MQogICAgICAgICAgICAg
+        ICAgICAgICB9LAogICAgICAgICAgICAgICAgICAgICAiZHVyYXRpb24iIDog
+        ewogICAgICAgICAgICAgICAgICAgICAgICAidGV4dCIgOiAiMSBtaW4iLAog
+        ICAgICAgICAgICAgICAgICAgICAgICAidmFsdWUiIDogNgogICAgICAgICAg
+        ICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgICAgICAiZW5kX2xvY2F0
+        aW9uIiA6IHsKICAgICAgICAgICAgICAgICAgICAgICAgImxhdCIgOiAzNy43
+        NzU1MzYxLAogICAgICAgICAgICAgICAgICAgICAgICAibG5nIiA6IC0xMjIu
+        NDI2MTExNQogICAgICAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAg
+        ICAgICAgICAiaHRtbF9pbnN0cnVjdGlvbnMiIDogIkhlYWQgXHUwMDNjYlx1
+        MDAzZXdlc3RcdTAwM2MvYlx1MDAzZSBvbiBcdTAwM2NiXHUwMDNlRmVsbCBT
+        dFx1MDAzYy9iXHUwMDNlIHRvd2FyZCBcdTAwM2NiXHUwMDNlTGFndW5hIFN0
+        XHUwMDNjL2JcdTAwM2UiLAogICAgICAgICAgICAgICAgICAgICAicG9seWxp
+        bmUiIDogewogICAgICAgICAgICAgICAgICAgICAgICAicG9pbnRzIiA6ICJx
+        YHFlRnJmZmpWTHBCIgogICAgICAgICAgICAgICAgICAgICB9LAogICAgICAg
+        ICAgICAgICAgICAgICAic3RhcnRfbG9jYXRpb24iIDogewogICAgICAgICAg
+        ICAgICAgICAgICAgICAibGF0IiA6IDM3Ljc3NTYxMDcsCiAgICAgICAgICAg
+        ICAgICAgICAgICAgICJsbmciIDogLTEyMi40MjU1Mzk1CiAgICAgICAgICAg
+        ICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICAgICAgICJ0cmF2ZWxfbW9k
+        ZSIgOiAiRFJJVklORyIKICAgICAgICAgICAgICAgICAgfSwKICAgICAgICAg
+        ICAgICAgICAgewogICAgICAgICAgICAgICAgICAgICAiZGlzdGFuY2UiIDog
+        ewogICAgICAgICAgICAgICAgICAgICAgICAidGV4dCIgOiAiMC4zIG1pIiwK
+        ICAgICAgICAgICAgICAgICAgICAgICAgInZhbHVlIiA6IDUyNQogICAgICAg
+        ICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgICAgICAiZHVyYXRp
+        b24iIDogewogICAgICAgICAgICAgICAgICAgICAgICAidGV4dCIgOiAiMSBt
+        aW4iLAogICAgICAgICAgICAgICAgICAgICAgICAidmFsdWUiIDogODcKICAg
+        ICAgICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgICAgICAgImVu
+        ZF9sb2NhdGlvbiIgOiB7CiAgICAgICAgICAgICAgICAgICAgICAgICJsYXQi
+        IDogMzcuNzcwODY5MSwKICAgICAgICAgICAgICAgICAgICAgICAgImxuZyIg
+        OiAtMTIyLjQyNTIwNjkKICAgICAgICAgICAgICAgICAgICAgfSwKICAgICAg
+        ICAgICAgICAgICAgICAgImh0bWxfaW5zdHJ1Y3Rpb25zIiA6ICJUYWtlIHRo
+        ZSAxc3QgXHUwMDNjYlx1MDAzZWxlZnRcdTAwM2MvYlx1MDAzZSBvbnRvIFx1
+        MDAzY2JcdTAwM2VMYWd1bmEgU3RcdTAwM2MvYlx1MDAzZSIsCiAgICAgICAg
+        ICAgICAgICAgICAgICJwb2x5bGluZSIgOiB7CiAgICAgICAgICAgICAgICAg
+        ICAgICAgICJwb2ludHMiIDogImNgcWVGZGpmalZgQlN4QVN6QVF6QVF+QU98
+        QVV2RF9AekRhQCIKICAgICAgICAgICAgICAgICAgICAgfSwKICAgICAgICAg
+        ICAgICAgICAgICAgInN0YXJ0X2xvY2F0aW9uIiA6IHsKICAgICAgICAgICAg
+        ICAgICAgICAgICAgImxhdCIgOiAzNy43NzU1MzYxLAogICAgICAgICAgICAg
+        ICAgICAgICAgICAibG5nIiA6IC0xMjIuNDI2MTExNQogICAgICAgICAgICAg
+        ICAgICAgICB9LAogICAgICAgICAgICAgICAgICAgICAidHJhdmVsX21vZGUi
+        IDogIkRSSVZJTkciCiAgICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAg
+        ICAgICAgIHsKICAgICAgICAgICAgICAgICAgICAgImRpc3RhbmNlIiA6IHsK
+        ICAgICAgICAgICAgICAgICAgICAgICAgInRleHQiIDogIjQ5IGZ0IiwKICAg
+        ICAgICAgICAgICAgICAgICAgICAgInZhbHVlIiA6IDE1CiAgICAgICAgICAg
+        ICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICAgICAgICJkdXJhdGlvbiIg
+        OiB7CiAgICAgICAgICAgICAgICAgICAgICAgICJ0ZXh0IiA6ICIxIG1pbiIs
+        CiAgICAgICAgICAgICAgICAgICAgICAgICJ2YWx1ZSIgOiAzCiAgICAgICAg
+        ICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICAgICAgICJlbmRfbG9j
+        YXRpb24iIDogewogICAgICAgICAgICAgICAgICAgICAgICAibGF0IiA6IDM3
+        Ljc3MDgyMjEsCiAgICAgICAgICAgICAgICAgICAgICAgICJsbmciIDogLTEy
+        Mi40MjUwNDg4CiAgICAgICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAg
+        ICAgICAgICAgICJodG1sX2luc3RydWN0aW9ucyIgOiAiVHVybiBcdTAwM2Ni
+        XHUwMDNlbGVmdFx1MDAzYy9iXHUwMDNlIHRvIHN0YXkgb24gXHUwMDNjYlx1
+        MDAzZUxhZ3VuYSBTdFx1MDAzYy9iXHUwMDNlIiwKICAgICAgICAgICAgICAg
+        ICAgICAgIm1hbmV1dmVyIiA6ICJ0dXJuLWxlZnQiLAogICAgICAgICAgICAg
+        ICAgICAgICAicG9seWxpbmUiIDogewogICAgICAgICAgICAgICAgICAgICAg
+        ICAicG9pbnRzIiA6ICJ9YnBlRnBkZmpWSF9AIgogICAgICAgICAgICAgICAg
+        ICAgICB9LAogICAgICAgICAgICAgICAgICAgICAic3RhcnRfbG9jYXRpb24i
+        IDogewogICAgICAgICAgICAgICAgICAgICAgICAibGF0IiA6IDM3Ljc3MDg2
+        OTEsCiAgICAgICAgICAgICAgICAgICAgICAgICJsbmciIDogLTEyMi40MjUy
+        MDY5CiAgICAgICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICAg
+        ICAgICJ0cmF2ZWxfbW9kZSIgOiAiRFJJVklORyIKICAgICAgICAgICAgICAg
+        ICAgfSwKICAgICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAg
+        ICAiZGlzdGFuY2UiIDogewogICAgICAgICAgICAgICAgICAgICAgICAidGV4
+        dCIgOiAiMTUxIGZ0IiwKICAgICAgICAgICAgICAgICAgICAgICAgInZhbHVl
+        IiA6IDQ2CiAgICAgICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAg
+        ICAgICAgICJkdXJhdGlvbiIgOiB7CiAgICAgICAgICAgICAgICAgICAgICAg
+        ICJ0ZXh0IiA6ICIxIG1pbiIsCiAgICAgICAgICAgICAgICAgICAgICAgICJ2
+        YWx1ZSIgOiA5CiAgICAgICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAg
+        ICAgICAgICAgICJlbmRfbG9jYXRpb24iIDogewogICAgICAgICAgICAgICAg
+        ICAgICAgICAibGF0IiA6IDM3Ljc3MDUwMzcsCiAgICAgICAgICAgICAgICAg
+        ICAgICAgICJsbmciIDogLTEyMi40MjUzMzk3CiAgICAgICAgICAgICAgICAg
+        ICAgIH0sCiAgICAgICAgICAgICAgICAgICAgICJodG1sX2luc3RydWN0aW9u
+        cyIgOiAiVHVybiBcdTAwM2NiXHUwMDNlcmlnaHRcdTAwM2MvYlx1MDAzZSBv
+        bnRvIFx1MDAzY2JcdTAwM2VNYXJrZXQgU3RcdTAwM2MvYlx1MDAzZVx1MDAz
+        Y2RpdiBzdHlsZT1cImZvbnQtc2l6ZTowLjllbVwiXHUwMDNlRGVzdGluYXRp
+        b24gd2lsbCBiZSBvbiB0aGUgcmlnaHRcdTAwM2MvZGl2XHUwMDNlIiwKICAg
+        ICAgICAgICAgICAgICAgICAgIm1hbmV1dmVyIiA6ICJ0dXJuLXJpZ2h0IiwK
+        ICAgICAgICAgICAgICAgICAgICAgInBvbHlsaW5lIiA6IHsKICAgICAgICAg
+        ICAgICAgICAgICAgICAgInBvaW50cyIgOiAic2JwZUZwY2ZqVk4/XmRATlIi
+        CiAgICAgICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICAgICAg
+        ICJzdGFydF9sb2NhdGlvbiIgOiB7CiAgICAgICAgICAgICAgICAgICAgICAg
+        ICJsYXQiIDogMzcuNzcwODIyMSwKICAgICAgICAgICAgICAgICAgICAgICAg
+        ImxuZyIgOiAtMTIyLjQyNTA0ODgKICAgICAgICAgICAgICAgICAgICAgfSwK
+        ICAgICAgICAgICAgICAgICAgICAgInRyYXZlbF9tb2RlIiA6ICJEUklWSU5H
+        IgogICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgIF0sCiAgICAg
+        ICAgICAgICAgICJ2aWFfd2F5cG9pbnQiIDogW10KICAgICAgICAgICAgfSwK
+        ICAgICAgICAgICAgewogICAgICAgICAgICAgICAiZGlzdGFuY2UiIDogewog
+        ICAgICAgICAgICAgICAgICAidGV4dCIgOiAiMi40IG1pIiwKICAgICAgICAg
+        ICAgICAgICAgInZhbHVlIiA6IDM3ODkKICAgICAgICAgICAgICAgfSwKICAg
+        ICAgICAgICAgICAgImR1cmF0aW9uIiA6IHsKICAgICAgICAgICAgICAgICAg
+        InRleHQiIDogIjcgbWlucyIsCiAgICAgICAgICAgICAgICAgICJ2YWx1ZSIg
+        OiAzOTYKICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgImVuZF9h
+        ZGRyZXNzIiA6ICI2MzMgRm9sc29tIFN0cmVldCwgU2FuIEZyYW5jaXNjbywg
+        Q0EgOTQxMDcsIFVTQSIsCiAgICAgICAgICAgICAgICJlbmRfbG9jYXRpb24i
+        IDogewogICAgICAgICAgICAgICAgICAibGF0IiA6IDM3Ljc4NDg2MjUsCiAg
+        ICAgICAgICAgICAgICAgICJsbmciIDogLTEyMi4zOTc2MTE1CiAgICAgICAg
+        ICAgICAgIH0sCiAgICAgICAgICAgICAgICJzdGFydF9hZGRyZXNzIiA6ICIx
+        OTA2IE1hcmtldCBTdHJlZXQsIFNhbiBGcmFuY2lzY28sIENBIDk0MTAyLCBV
+        U0EiLAogICAgICAgICAgICAgICAic3RhcnRfbG9jYXRpb24iIDogewogICAg
+        ICAgICAgICAgICAgICAibGF0IiA6IDM3Ljc3MDUwMzcsCiAgICAgICAgICAg
+        ICAgICAgICJsbmciIDogLTEyMi40MjUzMzk3CiAgICAgICAgICAgICAgIH0s
+        CiAgICAgICAgICAgICAgICJzdGVwcyIgOiBbCiAgICAgICAgICAgICAgICAg
+        IHsKICAgICAgICAgICAgICAgICAgICAgImRpc3RhbmNlIiA6IHsKICAgICAg
+        ICAgICAgICAgICAgICAgICAgInRleHQiIDogIjAuMSBtaSIsCiAgICAgICAg
+        ICAgICAgICAgICAgICAgICJ2YWx1ZSIgOiAxOTQKICAgICAgICAgICAgICAg
+        ICAgICAgfSwKICAgICAgICAgICAgICAgICAgICAgImR1cmF0aW9uIiA6IHsK
+        ICAgICAgICAgICAgICAgICAgICAgICAgInRleHQiIDogIjEgbWluIiwKICAg
+        ICAgICAgICAgICAgICAgICAgICAgInZhbHVlIiA6IDE3CiAgICAgICAgICAg
+        ICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICAgICAgICJlbmRfbG9jYXRp
+        b24iIDogewogICAgICAgICAgICAgICAgICAgICAgICAibGF0IiA6IDM3Ljc2
+        OTI2MTYsCiAgICAgICAgICAgICAgICAgICAgICAgICJsbmciIDogLTEyMi40
+        MjY4ODQ3CiAgICAgICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAg
+        ICAgICAgICJodG1sX2luc3RydWN0aW9ucyIgOiAiSGVhZCBcdTAwM2NiXHUw
+        MDNlc291dGh3ZXN0XHUwMDNjL2JcdTAwM2Ugb24gXHUwMDNjYlx1MDAzZU1h
+        cmtldCBTdFx1MDAzYy9iXHUwMDNlIHRvd2FyZCBcdTAwM2NiXHUwMDNlQnVj
+        aGFuYW4gU3RcdTAwM2MvYlx1MDAzZSIsCiAgICAgICAgICAgICAgICAgICAg
+        ICJwb2x5bGluZSIgOiB7CiAgICAgICAgICAgICAgICAgICAgICAgICJwb2lu
+        dHMiIDogInNgcGVGamVmalZiQmBDUFR0QHxAbkB8QFpeIgogICAgICAgICAg
+        ICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgICAgICAic3RhcnRfbG9j
+        YXRpb24iIDogewogICAgICAgICAgICAgICAgICAgICAgICAibGF0IiA6IDM3
+        Ljc3MDUwMzcsCiAgICAgICAgICAgICAgICAgICAgICAgICJsbmciIDogLTEy
+        Mi40MjUzMzk3CiAgICAgICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAg
+        ICAgICAgICAgICJ0cmF2ZWxfbW9kZSIgOiAiRFJJVklORyIKICAgICAgICAg
+        ICAgICAgICAgfSwKICAgICAgICAgICAgICAgICAgewogICAgICAgICAgICAg
+        ICAgICAgICAiZGlzdGFuY2UiIDogewogICAgICAgICAgICAgICAgICAgICAg
+        ICAidGV4dCIgOiAiMC4xIG1pIiwKICAgICAgICAgICAgICAgICAgICAgICAg
+        InZhbHVlIiA6IDE1NgogICAgICAgICAgICAgICAgICAgICB9LAogICAgICAg
+        ICAgICAgICAgICAgICAiZHVyYXRpb24iIDogewogICAgICAgICAgICAgICAg
+        ICAgICAgICAidGV4dCIgOiAiMSBtaW4iLAogICAgICAgICAgICAgICAgICAg
+        ICAgICAidmFsdWUiIDogMjUKICAgICAgICAgICAgICAgICAgICAgfSwKICAg
+        ICAgICAgICAgICAgICAgICAgImVuZF9sb2NhdGlvbiIgOiB7CiAgICAgICAg
+        ICAgICAgICAgICAgICAgICJsYXQiIDogMzcuNzY3ODY3MiwKICAgICAgICAg
+        ICAgICAgICAgICAgICAgImxuZyIgOiAtMTIyLjQyNjgwNDQKICAgICAgICAg
+        ICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgICAgICAgImh0bWxfaW5z
+        dHJ1Y3Rpb25zIiA6ICJTbGlnaHQgXHUwMDNjYlx1MDAzZWxlZnRcdTAwM2Mv
+        Ylx1MDAzZSBvbnRvIFx1MDAzY2JcdTAwM2VEb2xvcmVzIFN0XHUwMDNjL2Jc
+        dTAwM2UiLAogICAgICAgICAgICAgICAgICAgICAibWFuZXV2ZXIiIDogInR1
+        cm4tc2xpZ2h0LWxlZnQiLAogICAgICAgICAgICAgICAgICAgICAicG9seWxp
+        bmUiIDogewogICAgICAgICAgICAgICAgICAgICAgICAicG9pbnRzIiA6ICJ7
+        eG9lRn5uZmpWUkRMQkpAckJPckJLIgogICAgICAgICAgICAgICAgICAgICB9
+        LAogICAgICAgICAgICAgICAgICAgICAic3RhcnRfbG9jYXRpb24iIDogewog
+        ICAgICAgICAgICAgICAgICAgICAgICAibGF0IiA6IDM3Ljc2OTI2MTYsCiAg
+        ICAgICAgICAgICAgICAgICAgICAgICJsbmciIDogLTEyMi40MjY4ODQ3CiAg
+        ICAgICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICAgICAgICJ0
+        cmF2ZWxfbW9kZSIgOiAiRFJJVklORyIKICAgICAgICAgICAgICAgICAgfSwK
+        ICAgICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAgICAiZGlz
+        dGFuY2UiIDogewogICAgICAgICAgICAgICAgICAgICAgICAidGV4dCIgOiAi
+        MC42IG1pIiwKICAgICAgICAgICAgICAgICAgICAgICAgInZhbHVlIiA6IDk4
+        NAogICAgICAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgICAg
+        ICAiZHVyYXRpb24iIDogewogICAgICAgICAgICAgICAgICAgICAgICAidGV4
+        dCIgOiAiMiBtaW5zIiwKICAgICAgICAgICAgICAgICAgICAgICAgInZhbHVl
+        IiA6IDExNAogICAgICAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAg
+        ICAgICAgICAiZW5kX2xvY2F0aW9uIiA6IHsKICAgICAgICAgICAgICAgICAg
+        ICAgICAgImxhdCIgOiAzNy43Njg1NDMyLAogICAgICAgICAgICAgICAgICAg
+        ICAgICAibG5nIiA6IC0xMjIuNDE1NjQ1OQogICAgICAgICAgICAgICAgICAg
+        ICB9LAogICAgICAgICAgICAgICAgICAgICAiaHRtbF9pbnN0cnVjdGlvbnMi
+        IDogIlR1cm4gXHUwMDNjYlx1MDAzZWxlZnRcdTAwM2MvYlx1MDAzZSBvbnRv
+        IFx1MDAzY2JcdTAwM2UxNHRoIFN0XHUwMDNjL2JcdTAwM2UiLAogICAgICAg
+        ICAgICAgICAgICAgICAibWFuZXV2ZXIiIDogInR1cm4tbGVmdCIsCiAgICAg
+        ICAgICAgICAgICAgICAgICJwb2x5bGluZSIgOiB7CiAgICAgICAgICAgICAg
+        ICAgICAgICAgICJwb2ludHMiIDogImVwb2VGbm5malY/XU1zRUFlQElzRENX
+        WW9MSWFEQWNAQ3NBSV9ES3FDR2lDR3lDS31FS3NFIgogICAgICAgICAgICAg
+        ICAgICAgICB9LAogICAgICAgICAgICAgICAgICAgICAic3RhcnRfbG9jYXRp
+        b24iIDogewogICAgICAgICAgICAgICAgICAgICAgICAibGF0IiA6IDM3Ljc2
+        Nzg2NzIsCiAgICAgICAgICAgICAgICAgICAgICAgICJsbmciIDogLTEyMi40
+        MjY4MDQ0CiAgICAgICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAg
+        ICAgICAgICJ0cmF2ZWxfbW9kZSIgOiAiRFJJVklORyIKICAgICAgICAgICAg
+        ICAgICAgfSwKICAgICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAg
+        ICAgICAiZGlzdGFuY2UiIDogewogICAgICAgICAgICAgICAgICAgICAgICAi
+        dGV4dCIgOiAiMS41IG1pIiwKICAgICAgICAgICAgICAgICAgICAgICAgInZh
+        bHVlIiA6IDI0NTUKICAgICAgICAgICAgICAgICAgICAgfSwKICAgICAgICAg
+        ICAgICAgICAgICAgImR1cmF0aW9uIiA6IHsKICAgICAgICAgICAgICAgICAg
+        ICAgICAgInRleHQiIDogIjQgbWlucyIsCiAgICAgICAgICAgICAgICAgICAg
+        ICAgICJ2YWx1ZSIgOiAyNDAKICAgICAgICAgICAgICAgICAgICAgfSwKICAg
+        ICAgICAgICAgICAgICAgICAgImVuZF9sb2NhdGlvbiIgOiB7CiAgICAgICAg
+        ICAgICAgICAgICAgICAgICJsYXQiIDogMzcuNzg0ODYyNSwKICAgICAgICAg
+        ICAgICAgICAgICAgICAgImxuZyIgOiAtMTIyLjM5NzYxMTUKICAgICAgICAg
+        ICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgICAgICAgImh0bWxfaW5z
+        dHJ1Y3Rpb25zIiA6ICJUdXJuIFx1MDAzY2JcdTAwM2VsZWZ0XHUwMDNjL2Jc
+        dTAwM2Ugb250byBcdTAwM2NiXHUwMDNlRm9sc29tIFN0XHUwMDNjL2JcdTAw
+        M2VcdTAwM2NkaXYgc3R5bGU9XCJmb250LXNpemU6MC45ZW1cIlx1MDAzZURl
+        c3RpbmF0aW9uIHdpbGwgYmUgb24gdGhlIHJpZ2h0XHUwMDNjL2Rpdlx1MDAz
+        ZSIsCiAgICAgICAgICAgICAgICAgICAgICJtYW5ldXZlciIgOiAidHVybi1s
+        ZWZ0IiwKICAgICAgICAgICAgICAgICAgICAgInBvbHlsaW5lIiA6IHsKICAg
+        ICAgICAgICAgICAgICAgICAgICAgInBvaW50cyIgOiAia3RvZUZ4aGRqVldA
+        T0BTP1NAW0FPP0U/SUFZRV1HYUBHUUNjQVFxQV1nQFdnQFddWU9LUU9lQGFA
+        V1lJSU9Ta0BzQHdBe0J9QXdCX0J3QmFCeUJrRWNHZ0BzQHlBcUJxQWVCT1Vp
+        QX1BZUBvQHNAX0FxQWdCb0B9QGtAd0BfQGlATVFrQHdAUVNjQXdBY0BpQHdD
+        X0VjRG9FdUhnS2tAdUBfQGtAd0FxQmtDbURLT21Be0FhQl9DbUFjQmNAb0Ai
+        CiAgICAgICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICAgICAg
+        ICJzdGFydF9sb2NhdGlvbiIgOiB7CiAgICAgICAgICAgICAgICAgICAgICAg
+        ICJsYXQiIDogMzcuNzY4NTQzMiwKICAgICAgICAgICAgICAgICAgICAgICAg
+        ImxuZyIgOiAtMTIyLjQxNTY0NTkKICAgICAgICAgICAgICAgICAgICAgfSwK
+        ICAgICAgICAgICAgICAgICAgICAgInRyYXZlbF9tb2RlIiA6ICJEUklWSU5H
+        IgogICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgIF0sCiAgICAg
+        ICAgICAgICAgICJ2aWFfd2F5cG9pbnQiIDogW10KICAgICAgICAgICAgfQog
+        ICAgICAgICBdLAogICAgICAgICAib3ZlcnZpZXdfcG9seWxpbmUiIDogewog
+        ICAgICAgICAgICAicG9pbnRzIiA6ICJxYHFlRnJmZmpWTHBCYEJTdERlQHBN
+        d0F6RGFASF9ATj9eZEByQnRDZkFyQWpBfEFSRFhEZkZbWWtNaUBtU2FAb09T
+        d0pLc0VXQGNAQG9AP3lAR3VDZUBxQV1nQFdlQXFAYUBbfUB7QFlda0BzQHdB
+        e0J9RG9GbUh9SmNGYUhfS2dOY1l7X0BvR3tJbUF7QWFCX0NxQnNDIgogICAg
+        ICAgICB9LAogICAgICAgICAic3VtbWFyeSIgOiAiRm9sc29tIFN0IiwKICAg
+        ICAgICAgIndhcm5pbmdzIiA6IFtdLAogICAgICAgICAid2F5cG9pbnRfb3Jk
+        ZXIiIDogWyAwIF0KICAgICAgfQogICBdLAogICAic3RhdHVzIiA6ICJPSyIK
+        fQo=
+    http_version: !binary |-
+      MS4x
+  recorded_at: Sun, 13 Apr 2014 20:55:17 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/directions/json?origin=460%20Fell%20St.%20San%20Francisco%2C%20CA&destination=633%20Folsom%20St.%20San%20Francisco%2C%20CA&waypoints=optimize%3Atrue%7C1426-B%20Fillmore%20St%2C%20San%20Francisco&sensor=false&key=AIzaSyAAPig8eebUk6Vj79Fgd275gDQfOvFqYnU
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "Y29udGVudC10eXBl":
+      - !binary |-
+        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD1VVEYtOA==
+      !binary "ZGF0ZQ==":
+      - !binary |-
+        U3VuLCAxMyBBcHIgMjAxNCAyMDo1NToxOCBHTVQ=
+      !binary "ZXhwaXJlcw==":
+      - !binary |-
+        TW9uLCAxNCBBcHIgMjAxNCAyMDo1NToxOCBHTVQ=
+      !binary "Y2FjaGUtY29udHJvbA==":
+      - !binary |-
+        cHVibGljLCBtYXgtYWdlPTg2NDAw
+      !binary "dmFyeQ==":
+      - !binary |-
+        QWNjZXB0LUxhbmd1YWdl
+      !binary "c2VydmVy":
+      - !binary |-
+        bWFmZQ==
+      !binary "eC14c3MtcHJvdGVjdGlvbg==":
+      - !binary |-
+        MTsgbW9kZT1ibG9jaw==
+      !binary "eC1mcmFtZS1vcHRpb25z":
+      - !binary |-
+        U0FNRU9SSUdJTg==
+      !binary "YWx0ZXJuYXRlLXByb3RvY29s":
+      - !binary |-
+        NDQzOnF1aWM=
+      !binary "Y29ubmVjdGlvbg==":
+      - !binary |-
+        Y2xvc2U=
+      !binary "dHJhbnNmZXItZW5jb2Rpbmc=":
+      - !binary |-
+        Y2h1bmtlZA==
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        ewogICAicm91dGVzIiA6IFsKICAgICAgewogICAgICAgICAiYm91bmRzIiA6
+        IHsKICAgICAgICAgICAgIm5vcnRoZWFzdCIgOiB7CiAgICAgICAgICAgICAg
+        ICJsYXQiIDogMzcuNzg0ODYyNSwKICAgICAgICAgICAgICAgImxuZyIgOiAt
+        MTIyLjM5NzYxMTUKICAgICAgICAgICAgfSwKICAgICAgICAgICAgInNvdXRo
+        d2VzdCIgOiB7CiAgICAgICAgICAgICAgICJsYXQiIDogMzcuNzc1MTIwNCwK
+        ICAgICAgICAgICAgICAgImxuZyIgOiAtMTIyLjQzMjU2NDYKICAgICAgICAg
+        ICAgfQogICAgICAgICB9LAogICAgICAgICAiY29weXJpZ2h0cyIgOiAiTWFw
+        IGRhdGEgwqkyMDE0IEdvb2dsZSwgU2FuYm9ybiIsCiAgICAgICAgICJsZWdz
+        IiA6IFsKICAgICAgICAgICAgewogICAgICAgICAgICAgICAiZGlzdGFuY2Ui
+        IDogewogICAgICAgICAgICAgICAgICAidGV4dCIgOiAiMC45IG1pIiwKICAg
+        ICAgICAgICAgICAgICAgInZhbHVlIiA6IDEzNzkKICAgICAgICAgICAgICAg
+        fSwKICAgICAgICAgICAgICAgImR1cmF0aW9uIiA6IHsKICAgICAgICAgICAg
+        ICAgICAgInRleHQiIDogIjMgbWlucyIsCiAgICAgICAgICAgICAgICAgICJ2
+        YWx1ZSIgOiAxNTAKICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAg
+        ImVuZF9hZGRyZXNzIiA6ICIxNDI2LUIgRmlsbG1vcmUgU3RyZWV0LCBTYW4g
+        RnJhbmNpc2NvLCBDQSA5NDExNSwgVVNBIiwKICAgICAgICAgICAgICAgImVu
+        ZF9sb2NhdGlvbiIgOiB7CiAgICAgICAgICAgICAgICAgICJsYXQiIDogMzcu
+        NzgyNzE0OCwKICAgICAgICAgICAgICAgICAgImxuZyIgOiAtMTIyLjQzMjU2
+        NDYKICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgInN0YXJ0X2Fk
+        ZHJlc3MiIDogIjQ2MCBGZWxsIFN0cmVldCwgU2FuIEZyYW5jaXNjbywgQ0Eg
+        OTQxMDIsIFVTQSIsCiAgICAgICAgICAgICAgICJzdGFydF9sb2NhdGlvbiIg
+        OiB7CiAgICAgICAgICAgICAgICAgICJsYXQiIDogMzcuNzc1NjEwNywKICAg
+        ICAgICAgICAgICAgICAgImxuZyIgOiAtMTIyLjQyNTUzOTUKICAgICAgICAg
+        ICAgICAgfSwKICAgICAgICAgICAgICAgInN0ZXBzIiA6IFsKICAgICAgICAg
+        ICAgICAgICAgewogICAgICAgICAgICAgICAgICAgICAiZGlzdGFuY2UiIDog
+        ewogICAgICAgICAgICAgICAgICAgICAgICAidGV4dCIgOiAiMC4yIG1pIiwK
+        ICAgICAgICAgICAgICAgICAgICAgICAgInZhbHVlIiA6IDM0MAogICAgICAg
+        ICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgICAgICAiZHVyYXRp
+        b24iIDogewogICAgICAgICAgICAgICAgICAgICAgICAidGV4dCIgOiAiMSBt
+        aW4iLAogICAgICAgICAgICAgICAgICAgICAgICAidmFsdWUiIDogMzIKICAg
+        ICAgICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgICAgICAgImVu
+        ZF9sb2NhdGlvbiIgOiB7CiAgICAgICAgICAgICAgICAgICAgICAgICJsYXQi
+        IDogMzcuNzc1MTIwNCwKICAgICAgICAgICAgICAgICAgICAgICAgImxuZyIg
+        OiAtMTIyLjQyOTM2MDMKICAgICAgICAgICAgICAgICAgICAgfSwKICAgICAg
+        ICAgICAgICAgICAgICAgImh0bWxfaW5zdHJ1Y3Rpb25zIiA6ICJIZWFkIFx1
+        MDAzY2JcdTAwM2V3ZXN0XHUwMDNjL2JcdTAwM2Ugb24gXHUwMDNjYlx1MDAz
+        ZUZlbGwgU3RcdTAwM2MvYlx1MDAzZSB0b3dhcmQgXHUwMDNjYlx1MDAzZUxh
+        Z3VuYSBTdFx1MDAzYy9iXHUwMDNlIiwKICAgICAgICAgICAgICAgICAgICAg
+        InBvbHlsaW5lIiA6IHsKICAgICAgICAgICAgICAgICAgICAgICAgInBvaW50
+        cyIgOiAicWBxZUZyZmZqVkxwQmZAYElqQGZJIgogICAgICAgICAgICAgICAg
+        ICAgICB9LAogICAgICAgICAgICAgICAgICAgICAic3RhcnRfbG9jYXRpb24i
+        IDogewogICAgICAgICAgICAgICAgICAgICAgICAibGF0IiA6IDM3Ljc3NTYx
+        MDcsCiAgICAgICAgICAgICAgICAgICAgICAgICJsbmciIDogLTEyMi40MjU1
+        Mzk1CiAgICAgICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICAg
+        ICAgICJ0cmF2ZWxfbW9kZSIgOiAiRFJJVklORyIKICAgICAgICAgICAgICAg
+        ICAgfSwKICAgICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAg
+        ICAiZGlzdGFuY2UiIDogewogICAgICAgICAgICAgICAgICAgICAgICAidGV4
+        dCIgOiAiMC41IG1pIiwKICAgICAgICAgICAgICAgICAgICAgICAgInZhbHVl
+        IiA6IDczNgogICAgICAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAg
+        ICAgICAgICAiZHVyYXRpb24iIDogewogICAgICAgICAgICAgICAgICAgICAg
+        ICAidGV4dCIgOiAiMSBtaW4iLAogICAgICAgICAgICAgICAgICAgICAgICAi
+        dmFsdWUiIDogNzYKICAgICAgICAgICAgICAgICAgICAgfSwKICAgICAgICAg
+        ICAgICAgICAgICAgImVuZF9sb2NhdGlvbiIgOiB7CiAgICAgICAgICAgICAg
+        ICAgICAgICAgICJsYXQiIDogMzcuNzgxNjY0OSwKICAgICAgICAgICAgICAg
+        ICAgICAgICAgImxuZyIgOiAtMTIyLjQzMDUxMTkKICAgICAgICAgICAgICAg
+        ICAgICAgfSwKICAgICAgICAgICAgICAgICAgICAgImh0bWxfaW5zdHJ1Y3Rp
+        b25zIiA6ICJUYWtlIHRoZSAzcmQgXHUwMDNjYlx1MDAzZXJpZ2h0XHUwMDNj
+        L2JcdTAwM2Ugb250byBcdTAwM2NiXHUwMDNlV2Vic3RlciBTdFx1MDAzYy9i
+        XHUwMDNlIiwKICAgICAgICAgICAgICAgICAgICAgInBvbHlsaW5lIiA6IHsK
+        ICAgICAgICAgICAgICAgICAgICAgICAgInBvaW50cyIgOiAib31wZUZufmZq
+        VntBVH1BTmtBTFVDUUNPP00/bUBEeURoQHtBTl9CSHdEZEB1QVBZQmtBTn1B
+        UnlBTiIKICAgICAgICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAg
+        ICAgICAgInN0YXJ0X2xvY2F0aW9uIiA6IHsKICAgICAgICAgICAgICAgICAg
+        ICAgICAgImxhdCIgOiAzNy43NzUxMjA0LAogICAgICAgICAgICAgICAgICAg
+        ICAgICAibG5nIiA6IC0xMjIuNDI5MzYwMwogICAgICAgICAgICAgICAgICAg
+        ICB9LAogICAgICAgICAgICAgICAgICAgICAidHJhdmVsX21vZGUiIDogIkRS
+        SVZJTkciCiAgICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICAg
+        IHsKICAgICAgICAgICAgICAgICAgICAgImRpc3RhbmNlIiA6IHsKICAgICAg
+        ICAgICAgICAgICAgICAgICAgInRleHQiIDogIjAuMSBtaSIsCiAgICAgICAg
+        ICAgICAgICAgICAgICAgICJ2YWx1ZSIgOiAxNjAKICAgICAgICAgICAgICAg
+        ICAgICAgfSwKICAgICAgICAgICAgICAgICAgICAgImR1cmF0aW9uIiA6IHsK
+        ICAgICAgICAgICAgICAgICAgICAgICAgInRleHQiIDogIjEgbWluIiwKICAg
+        ICAgICAgICAgICAgICAgICAgICAgInZhbHVlIiA6IDIwCiAgICAgICAgICAg
+        ICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICAgICAgICJlbmRfbG9jYXRp
+        b24iIDogewogICAgICAgICAgICAgICAgICAgICAgICAibGF0IiA6IDM3Ljc4
+        MTQ0MTYsCiAgICAgICAgICAgICAgICAgICAgICAgICJsbmciIDogLTEyMi40
+        MzIzMTExCiAgICAgICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAg
+        ICAgICAgICJodG1sX2luc3RydWN0aW9ucyIgOiAiVHVybiBcdTAwM2NiXHUw
+        MDNlbGVmdFx1MDAzYy9iXHUwMDNlIG9udG8gXHUwMDNjYlx1MDAzZUVkZHkg
+        U3RcdTAwM2MvYlx1MDAzZSIsCiAgICAgICAgICAgICAgICAgICAgICJtYW5l
+        dXZlciIgOiAidHVybi1sZWZ0IiwKICAgICAgICAgICAgICAgICAgICAgInBv
+        bHlsaW5lIiA6IHsKICAgICAgICAgICAgICAgICAgICAgICAgInBvaW50cyIg
+        OiAia2ZyZUZ0ZWdqVkJcXFJoREhoQUh0QSIKICAgICAgICAgICAgICAgICAg
+        ICAgfSwKICAgICAgICAgICAgICAgICAgICAgInN0YXJ0X2xvY2F0aW9uIiA6
+        IHsKICAgICAgICAgICAgICAgICAgICAgICAgImxhdCIgOiAzNy43ODE2NjQ5
+        LAogICAgICAgICAgICAgICAgICAgICAgICAibG5nIiA6IC0xMjIuNDMwNTEx
+        OQogICAgICAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgICAg
+        ICAidHJhdmVsX21vZGUiIDogIkRSSVZJTkciCiAgICAgICAgICAgICAgICAg
+        IH0sCiAgICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICAg
+        ImRpc3RhbmNlIiA6IHsKICAgICAgICAgICAgICAgICAgICAgICAgInRleHQi
+        IDogIjQ2OSBmdCIsCiAgICAgICAgICAgICAgICAgICAgICAgICJ2YWx1ZSIg
+        OiAxNDMKICAgICAgICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAg
+        ICAgICAgImR1cmF0aW9uIiA6IHsKICAgICAgICAgICAgICAgICAgICAgICAg
+        InRleHQiIDogIjEgbWluIiwKICAgICAgICAgICAgICAgICAgICAgICAgInZh
+        bHVlIiA6IDIyCiAgICAgICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAg
+        ICAgICAgICAgICJlbmRfbG9jYXRpb24iIDogewogICAgICAgICAgICAgICAg
+        ICAgICAgICAibGF0IiA6IDM3Ljc4MjcxNDgsCiAgICAgICAgICAgICAgICAg
+        ICAgICAgICJsbmciIDogLTEyMi40MzI1NjQ2CiAgICAgICAgICAgICAgICAg
+        ICAgIH0sCiAgICAgICAgICAgICAgICAgICAgICJodG1sX2luc3RydWN0aW9u
+        cyIgOiAiVGFrZSB0aGUgMXN0IFx1MDAzY2JcdTAwM2VyaWdodFx1MDAzYy9i
+        XHUwMDNlIG9udG8gXHUwMDNjYlx1MDAzZUZpbGxtb3JlIFN0XHUwMDNjL2Jc
+        dTAwM2VcdTAwM2NkaXYgc3R5bGU9XCJmb250LXNpemU6MC45ZW1cIlx1MDAz
+        ZURlc3RpbmF0aW9uIHdpbGwgYmUgb24gdGhlIHJpZ2h0XHUwMDNjL2Rpdlx1
+        MDAzZSIsCiAgICAgICAgICAgICAgICAgICAgICJwb2x5bGluZSIgOiB7CiAg
+        ICAgICAgICAgICAgICAgICAgICAgICJwb2ludHMiIDogIl9lcmVGfHBnalZ1
+        RGBAZ0FOIgogICAgICAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAg
+        ICAgICAgICAic3RhcnRfbG9jYXRpb24iIDogewogICAgICAgICAgICAgICAg
+        ICAgICAgICAibGF0IiA6IDM3Ljc4MTQ0MTYsCiAgICAgICAgICAgICAgICAg
+        ICAgICAgICJsbmciIDogLTEyMi40MzIzMTExCiAgICAgICAgICAgICAgICAg
+        ICAgIH0sCiAgICAgICAgICAgICAgICAgICAgICJ0cmF2ZWxfbW9kZSIgOiAi
+        RFJJVklORyIKICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICBd
+        LAogICAgICAgICAgICAgICAidmlhX3dheXBvaW50IiA6IFtdCiAgICAgICAg
+        ICAgIH0sCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgImRpc3RhbmNl
+        IiA6IHsKICAgICAgICAgICAgICAgICAgInRleHQiIDogIjIuNCBtaSIsCiAg
+        ICAgICAgICAgICAgICAgICJ2YWx1ZSIgOiAzODYxCiAgICAgICAgICAgICAg
+        IH0sCiAgICAgICAgICAgICAgICJkdXJhdGlvbiIgOiB7CiAgICAgICAgICAg
+        ICAgICAgICJ0ZXh0IiA6ICI4IG1pbnMiLAogICAgICAgICAgICAgICAgICAi
+        dmFsdWUiIDogNDgyCiAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAg
+        ICJlbmRfYWRkcmVzcyIgOiAiNjMzIEZvbHNvbSBTdHJlZXQsIFNhbiBGcmFu
+        Y2lzY28sIENBIDk0MTA3LCBVU0EiLAogICAgICAgICAgICAgICAiZW5kX2xv
+        Y2F0aW9uIiA6IHsKICAgICAgICAgICAgICAgICAgImxhdCIgOiAzNy43ODQ4
+        NjI1LAogICAgICAgICAgICAgICAgICAibG5nIiA6IC0xMjIuMzk3NjExNQog
+        ICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAic3RhcnRfYWRkcmVz
+        cyIgOiAiMTQyNi1CIEZpbGxtb3JlIFN0cmVldCwgU2FuIEZyYW5jaXNjbywg
+        Q0EgOTQxMTUsIFVTQSIsCiAgICAgICAgICAgICAgICJzdGFydF9sb2NhdGlv
+        biIgOiB7CiAgICAgICAgICAgICAgICAgICJsYXQiIDogMzcuNzgyNzE0OCwK
+        ICAgICAgICAgICAgICAgICAgImxuZyIgOiAtMTIyLjQzMjU2NDYKICAgICAg
+        ICAgICAgICAgfSwKICAgICAgICAgICAgICAgInN0ZXBzIiA6IFsKICAgICAg
+        ICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAgICAiZGlzdGFuY2Ui
+        IDogewogICAgICAgICAgICAgICAgICAgICAgICAidGV4dCIgOiAiMC4yIG1p
+        IiwKICAgICAgICAgICAgICAgICAgICAgICAgInZhbHVlIiA6IDM1MwogICAg
+        ICAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgICAgICAiZHVy
+        YXRpb24iIDogewogICAgICAgICAgICAgICAgICAgICAgICAidGV4dCIgOiAi
+        MSBtaW4iLAogICAgICAgICAgICAgICAgICAgICAgICAidmFsdWUiIDogNjIK
+        ICAgICAgICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgICAgICAg
+        ImVuZF9sb2NhdGlvbiIgOiB7CiAgICAgICAgICAgICAgICAgICAgICAgICJs
+        YXQiIDogMzcuNzc5NTc2NywKICAgICAgICAgICAgICAgICAgICAgICAgImxu
+        ZyIgOiAtMTIyLjQzMTk2NzIKICAgICAgICAgICAgICAgICAgICAgfSwKICAg
+        ICAgICAgICAgICAgICAgICAgImh0bWxfaW5zdHJ1Y3Rpb25zIiA6ICJIZWFk
+        IFx1MDAzY2JcdTAwM2Vzb3V0aFx1MDAzYy9iXHUwMDNlIG9uIFx1MDAzY2Jc
+        dTAwM2VGaWxsbW9yZSBTdFx1MDAzYy9iXHUwMDNlIHRvd2FyZCBcdTAwM2Ni
+        XHUwMDNlRWxsaXMgU3RcdTAwM2MvYlx1MDAzZSIsCiAgICAgICAgICAgICAg
+        ICAgICAgICJwb2x5bGluZSIgOiB7CiAgICAgICAgICAgICAgICAgICAgICAg
+        ICJwb2ludHMiIDogIn1scmVGbnJnalZmQU90RGFAeERdaEJVbkFPIgogICAg
+        ICAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgICAgICAic3Rh
+        cnRfbG9jYXRpb24iIDogewogICAgICAgICAgICAgICAgICAgICAgICAibGF0
+        IiA6IDM3Ljc4MjcxNDgsCiAgICAgICAgICAgICAgICAgICAgICAgICJsbmci
+        IDogLTEyMi40MzI1NjQ2CiAgICAgICAgICAgICAgICAgICAgIH0sCiAgICAg
+        ICAgICAgICAgICAgICAgICJ0cmF2ZWxfbW9kZSIgOiAiRFJJVklORyIKICAg
+        ICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgICAgewogICAgICAg
+        ICAgICAgICAgICAgICAiZGlzdGFuY2UiIDogewogICAgICAgICAgICAgICAg
+        ICAgICAgICAidGV4dCIgOiAiMS4yIG1pIiwKICAgICAgICAgICAgICAgICAg
+        ICAgICAgInZhbHVlIiA6IDE5MjcKICAgICAgICAgICAgICAgICAgICAgfSwK
+        ICAgICAgICAgICAgICAgICAgICAgImR1cmF0aW9uIiA6IHsKICAgICAgICAg
+        ICAgICAgICAgICAgICAgInRleHQiIDogIjQgbWlucyIsCiAgICAgICAgICAg
+        ICAgICAgICAgICAgICJ2YWx1ZSIgOiAyNDAKICAgICAgICAgICAgICAgICAg
+        ICAgfSwKICAgICAgICAgICAgICAgICAgICAgImVuZF9sb2NhdGlvbiIgOiB7
+        CiAgICAgICAgICAgICAgICAgICAgICAgICJsYXQiIDogMzcuNzgyMjM0NiwK
+        ICAgICAgICAgICAgICAgICAgICAgICAgImxuZyIgOiAtMTIyLjQxMDMzMDYK
+        ICAgICAgICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgICAgICAg
+        Imh0bWxfaW5zdHJ1Y3Rpb25zIiA6ICJUdXJuIFx1MDAzY2JcdTAwM2VsZWZ0
+        XHUwMDNjL2JcdTAwM2Ugb250byBcdTAwM2NiXHUwMDNlR29sZGVuIEdhdGUg
+        QXZlXHUwMDNjL2JcdTAwM2UiLAogICAgICAgICAgICAgICAgICAgICAibWFu
+        ZXV2ZXIiIDogInR1cm4tbGVmdCIsCiAgICAgICAgICAgICAgICAgICAgICJw
+        b2x5bGluZSIgOiB7CiAgICAgICAgICAgICAgICAgICAgICAgICJwb2ludHMi
+        IDogImt5cWVGeG5nalZJX0Jdb0ZDXWVAZUhpQGNJa0BtSWdAZ0lrQGVJZ0B5
+        SENfQFdrRFFpQ097QldxRUdrQUl5QVVhRElvQUtfQlN3Q2lAZ0lfQGtHQ1s/
+        TUFJP0k/Qz9DP0M/RT9DP0M/QT9DQENCR0JHIgogICAgICAgICAgICAgICAg
+        ICAgICB9LAogICAgICAgICAgICAgICAgICAgICAic3RhcnRfbG9jYXRpb24i
+        IDogewogICAgICAgICAgICAgICAgICAgICAgICAibGF0IiA6IDM3Ljc3OTU3
+        NjcsCiAgICAgICAgICAgICAgICAgICAgICAgICJsbmciIDogLTEyMi40MzE5
+        NjcyCiAgICAgICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICAg
+        ICAgICJ0cmF2ZWxfbW9kZSIgOiAiRFJJVklORyIKICAgICAgICAgICAgICAg
+        ICAgfSwKICAgICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAg
+        ICAiZGlzdGFuY2UiIDogewogICAgICAgICAgICAgICAgICAgICAgICAidGV4
+        dCIgOiAiMC40IG1pIiwKICAgICAgICAgICAgICAgICAgICAgICAgInZhbHVl
+        IiA6IDU4NAogICAgICAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAg
+        ICAgICAgICAiZHVyYXRpb24iIDogewogICAgICAgICAgICAgICAgICAgICAg
+        ICAidGV4dCIgOiAiMSBtaW4iLAogICAgICAgICAgICAgICAgICAgICAgICAi
+        dmFsdWUiIDogNzIKICAgICAgICAgICAgICAgICAgICAgfSwKICAgICAgICAg
+        ICAgICAgICAgICAgImVuZF9sb2NhdGlvbiIgOiB7CiAgICAgICAgICAgICAg
+        ICAgICAgICAgICJsYXQiIDogMzcuNzc4NTI0MSwKICAgICAgICAgICAgICAg
+        ICAgICAgICAgImxuZyIgOiAtMTIyLjQwNTYzNDIKICAgICAgICAgICAgICAg
+        ICAgICAgfSwKICAgICAgICAgICAgICAgICAgICAgImh0bWxfaW5zdHJ1Y3Rp
+        b25zIiA6ICJDb250aW51ZSBvbnRvIFx1MDAzY2JcdTAwM2U2dGggU3RcdTAw
+        M2MvYlx1MDAzZSIsCiAgICAgICAgICAgICAgICAgICAgICJwb2x5bGluZSIg
+        OiB7CiAgICAgICAgICAgICAgICAgICAgICAgICJwb2ludHMiIDogIn1pcmVG
+        cGdjalZIUUBBSE1GSXxAa0FiQXdBdkFxQnRBaUJoQXtBeEFvQm5BZUJqQV9C
+        dkFtQiIKICAgICAgICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAg
+        ICAgICAgInN0YXJ0X2xvY2F0aW9uIiA6IHsKICAgICAgICAgICAgICAgICAg
+        ICAgICAgImxhdCIgOiAzNy43ODIyMzQ2LAogICAgICAgICAgICAgICAgICAg
+        ICAgICAibG5nIiA6IC0xMjIuNDEwMzMwNgogICAgICAgICAgICAgICAgICAg
+        ICB9LAogICAgICAgICAgICAgICAgICAgICAidHJhdmVsX21vZGUiIDogIkRS
+        SVZJTkciCiAgICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICAg
+        IHsKICAgICAgICAgICAgICAgICAgICAgImRpc3RhbmNlIiA6IHsKICAgICAg
+        ICAgICAgICAgICAgICAgICAgInRleHQiIDogIjAuNiBtaSIsCiAgICAgICAg
+        ICAgICAgICAgICAgICAgICJ2YWx1ZSIgOiA5OTcKICAgICAgICAgICAgICAg
+        ICAgICAgfSwKICAgICAgICAgICAgICAgICAgICAgImR1cmF0aW9uIiA6IHsK
+        ICAgICAgICAgICAgICAgICAgICAgICAgInRleHQiIDogIjIgbWlucyIsCiAg
+        ICAgICAgICAgICAgICAgICAgICAgICJ2YWx1ZSIgOiAxMDgKICAgICAgICAg
+        ICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgICAgICAgImVuZF9sb2Nh
+        dGlvbiIgOiB7CiAgICAgICAgICAgICAgICAgICAgICAgICJsYXQiIDogMzcu
+        Nzg0ODYyNSwKICAgICAgICAgICAgICAgICAgICAgICAgImxuZyIgOiAtMTIy
+        LjM5NzYxMTUKICAgICAgICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAg
+        ICAgICAgICAgImh0bWxfaW5zdHJ1Y3Rpb25zIiA6ICJUdXJuIFx1MDAzY2Jc
+        dTAwM2VsZWZ0XHUwMDNjL2JcdTAwM2Ugb250byBcdTAwM2NiXHUwMDNlRm9s
+        c29tIFN0XHUwMDNjL2JcdTAwM2VcdTAwM2NkaXYgc3R5bGU9XCJmb250LXNp
+        emU6MC45ZW1cIlx1MDAzZURlc3RpbmF0aW9uIHdpbGwgYmUgb24gdGhlIHJp
+        Z2h0XHUwMDNjL2Rpdlx1MDAzZSIsCiAgICAgICAgICAgICAgICAgICAgICJt
+        YW5ldXZlciIgOiAidHVybi1sZWZ0IiwKICAgICAgICAgICAgICAgICAgICAg
+        InBvbHlsaW5lIiA6IHsKICAgICAgICAgICAgICAgICAgICAgICAgInBvaW50
+        cyIgOiAid3JxZUZkamJqVmNAaUB3Q19FY0RvRXVIZ0trQHVAX0BrQHdBcUJr
+        Q21ES09tQXtBYUJfQ21BY0JjQG9AIgogICAgICAgICAgICAgICAgICAgICB9
+        LAogICAgICAgICAgICAgICAgICAgICAic3RhcnRfbG9jYXRpb24iIDogewog
+        ICAgICAgICAgICAgICAgICAgICAgICAibGF0IiA6IDM3Ljc3ODUyNDEsCiAg
+        ICAgICAgICAgICAgICAgICAgICAgICJsbmciIDogLTEyMi40MDU2MzQyCiAg
+        ICAgICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICAgICAgICJ0
+        cmF2ZWxfbW9kZSIgOiAiRFJJVklORyIKICAgICAgICAgICAgICAgICAgfQog
+        ICAgICAgICAgICAgICBdLAogICAgICAgICAgICAgICAidmlhX3dheXBvaW50
+        IiA6IFtdCiAgICAgICAgICAgIH0KICAgICAgICAgXSwKICAgICAgICAgIm92
+        ZXJ2aWV3X3BvbHlsaW5lIiA6IHsKICAgICAgICAgICAgInBvaW50cyIgOiAi
+        cWBxZUZyZmZqVnRAckxqQGZJe0FUaURcXGdAR10/bUBEeURoQHtBTl9CSG1H
+        dkB9R3ZAakBmSn1GcEB8RnFAeERdaEJVbkFPSV9CYUBtR29BaVJnRHVnQH1A
+        cU1fQXlPc0FvU2VAX0k/ZUBET1hpQGBGX0hoSXtLYkRtRXtEaUZlUHlUY0Zf
+        SHlBa0JzRXNHIgogICAgICAgICB9LAogICAgICAgICAic3VtbWFyeSIgOiAi
+        R29sZGVuIEdhdGUgQXZlIGFuZCBGb2xzb20gU3QiLAogICAgICAgICAid2Fy
+        bmluZ3MiIDogW10sCiAgICAgICAgICJ3YXlwb2ludF9vcmRlciIgOiBbIDAg
+        XQogICAgICB9CiAgIF0sCiAgICJzdGF0dXMiIDogIk9LIgp9Cg==
+    http_version: !binary |-
+      MS4x
+  recorded_at: Sun, 13 Apr 2014 20:55:18 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/directions/json?origin=460%20Fell%20St.%20San%20Francisco%2C%20CA&destination=633%20Folsom%20St.%20San%20Francisco%2C%20CA&waypoints=optimize%3Atrue%7C555%20California%20St%2C%20San%20Francisco&sensor=false&key=AIzaSyAAPig8eebUk6Vj79Fgd275gDQfOvFqYnU
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "Y29udGVudC10eXBl":
+      - !binary |-
+        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD1VVEYtOA==
+      !binary "ZGF0ZQ==":
+      - !binary |-
+        U3VuLCAxMyBBcHIgMjAxNCAyMDo1NToxOCBHTVQ=
+      !binary "ZXhwaXJlcw==":
+      - !binary |-
+        TW9uLCAxNCBBcHIgMjAxNCAyMDo1NToxOCBHTVQ=
+      !binary "Y2FjaGUtY29udHJvbA==":
+      - !binary |-
+        cHVibGljLCBtYXgtYWdlPTg2NDAw
+      !binary "dmFyeQ==":
+      - !binary |-
+        QWNjZXB0LUxhbmd1YWdl
+      !binary "c2VydmVy":
+      - !binary |-
+        bWFmZQ==
+      !binary "eC14c3MtcHJvdGVjdGlvbg==":
+      - !binary |-
+        MTsgbW9kZT1ibG9jaw==
+      !binary "eC1mcmFtZS1vcHRpb25z":
+      - !binary |-
+        U0FNRU9SSUdJTg==
+      !binary "YWx0ZXJuYXRlLXByb3RvY29s":
+      - !binary |-
+        NDQzOnF1aWM=
+      !binary "Y29ubmVjdGlvbg==":
+      - !binary |-
+        Y2xvc2U=
+      !binary "dHJhbnNmZXItZW5jb2Rpbmc=":
+      - !binary |-
+        Y2h1bmtlZA==
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        ewogICAicm91dGVzIiA6IFsKICAgICAgewogICAgICAgICAiYm91bmRzIiA6
+        IHsKICAgICAgICAgICAgIm5vcnRoZWFzdCIgOiB7CiAgICAgICAgICAgICAg
+        ICJsYXQiIDogMzcuNzkyODc3LAogICAgICAgICAgICAgICAibG5nIiA6IC0x
+        MjIuMzk3NjExNQogICAgICAgICAgICB9LAogICAgICAgICAgICAic291dGh3
+        ZXN0IiA6IHsKICAgICAgICAgICAgICAgImxhdCIgOiAzNy43NzU1MzYxLAog
+        ICAgICAgICAgICAgICAibG5nIiA6IC0xMjIuNDI2NDgwOQogICAgICAgICAg
+        ICB9CiAgICAgICAgIH0sCiAgICAgICAgICJjb3B5cmlnaHRzIiA6ICJNYXAg
+        ZGF0YSDCqTIwMTQgR29vZ2xlLCBTYW5ib3JuIiwKICAgICAgICAgImxlZ3Mi
+        IDogWwogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICJkaXN0YW5jZSIg
+        OiB7CiAgICAgICAgICAgICAgICAgICJ0ZXh0IiA6ICIyLjQgbWkiLAogICAg
+        ICAgICAgICAgICAgICAidmFsdWUiIDogMzg1NQogICAgICAgICAgICAgICB9
+        LAogICAgICAgICAgICAgICAiZHVyYXRpb24iIDogewogICAgICAgICAgICAg
+        ICAgICAidGV4dCIgOiAiNyBtaW5zIiwKICAgICAgICAgICAgICAgICAgInZh
+        bHVlIiA6IDQ0MQogICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAi
+        ZW5kX2FkZHJlc3MiIDogIjU1NSBDYWxpZm9ybmlhIFN0cmVldCwgU2FuIEZy
+        YW5jaXNjbywgQ0EgOTQxMDQsIFVTQSIsCiAgICAgICAgICAgICAgICJlbmRf
+        bG9jYXRpb24iIDogewogICAgICAgICAgICAgICAgICAibGF0IiA6IDM3Ljc5
+        Mjc1MTUwMDAwMDAxLAogICAgICAgICAgICAgICAgICAibG5nIiA6IC0xMjIu
+        NDAzOTU0OAogICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAic3Rh
+        cnRfYWRkcmVzcyIgOiAiNDYwIEZlbGwgU3RyZWV0LCBTYW4gRnJhbmNpc2Nv
+        LCBDQSA5NDEwMiwgVVNBIiwKICAgICAgICAgICAgICAgInN0YXJ0X2xvY2F0
+        aW9uIiA6IHsKICAgICAgICAgICAgICAgICAgImxhdCIgOiAzNy43NzU2MTA3
+        LAogICAgICAgICAgICAgICAgICAibG5nIiA6IC0xMjIuNDI1NTM5NQogICAg
+        ICAgICAgICAgICB9LAogICAgICAgICAgICAgICAic3RlcHMiIDogWwogICAg
+        ICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgICJkaXN0YW5j
+        ZSIgOiB7CiAgICAgICAgICAgICAgICAgICAgICAgICJ0ZXh0IiA6ICIxNjcg
+        ZnQiLAogICAgICAgICAgICAgICAgICAgICAgICAidmFsdWUiIDogNTEKICAg
+        ICAgICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgICAgICAgImR1
+        cmF0aW9uIiA6IHsKICAgICAgICAgICAgICAgICAgICAgICAgInRleHQiIDog
+        IjEgbWluIiwKICAgICAgICAgICAgICAgICAgICAgICAgInZhbHVlIiA6IDYK
+        ICAgICAgICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgICAgICAg
+        ImVuZF9sb2NhdGlvbiIgOiB7CiAgICAgICAgICAgICAgICAgICAgICAgICJs
+        YXQiIDogMzcuNzc1NTM2MSwKICAgICAgICAgICAgICAgICAgICAgICAgImxu
+        ZyIgOiAtMTIyLjQyNjExMTUKICAgICAgICAgICAgICAgICAgICAgfSwKICAg
+        ICAgICAgICAgICAgICAgICAgImh0bWxfaW5zdHJ1Y3Rpb25zIiA6ICJIZWFk
+        IFx1MDAzY2JcdTAwM2V3ZXN0XHUwMDNjL2JcdTAwM2Ugb24gXHUwMDNjYlx1
+        MDAzZUZlbGwgU3RcdTAwM2MvYlx1MDAzZSB0b3dhcmQgXHUwMDNjYlx1MDAz
+        ZUxhZ3VuYSBTdFx1MDAzYy9iXHUwMDNlIiwKICAgICAgICAgICAgICAgICAg
+        ICAgInBvbHlsaW5lIiA6IHsKICAgICAgICAgICAgICAgICAgICAgICAgInBv
+        aW50cyIgOiAicWBxZUZyZmZqVkxwQiIKICAgICAgICAgICAgICAgICAgICAg
+        fSwKICAgICAgICAgICAgICAgICAgICAgInN0YXJ0X2xvY2F0aW9uIiA6IHsK
+        ICAgICAgICAgICAgICAgICAgICAgICAgImxhdCIgOiAzNy43NzU2MTA3LAog
+        ICAgICAgICAgICAgICAgICAgICAgICAibG5nIiA6IC0xMjIuNDI1NTM5NQog
+        ICAgICAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgICAgICAi
+        dHJhdmVsX21vZGUiIDogIkRSSVZJTkciCiAgICAgICAgICAgICAgICAgIH0s
+        CiAgICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICAgImRp
+        c3RhbmNlIiA6IHsKICAgICAgICAgICAgICAgICAgICAgICAgInRleHQiIDog
+        IjAuMSBtaSIsCiAgICAgICAgICAgICAgICAgICAgICAgICJ2YWx1ZSIgOiAy
+        MTAKICAgICAgICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgICAg
+        ICAgImR1cmF0aW9uIiA6IHsKICAgICAgICAgICAgICAgICAgICAgICAgInRl
+        eHQiIDogIjEgbWluIiwKICAgICAgICAgICAgICAgICAgICAgICAgInZhbHVl
+        IiA6IDM4CiAgICAgICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAg
+        ICAgICAgICJlbmRfbG9jYXRpb24iIDogewogICAgICAgICAgICAgICAgICAg
+        ICAgICAibGF0IiA6IDM3Ljc3NzM5ODEsCiAgICAgICAgICAgICAgICAgICAg
+        ICAgICJsbmciIDogLTEyMi40MjY0ODA5CiAgICAgICAgICAgICAgICAgICAg
+        IH0sCiAgICAgICAgICAgICAgICAgICAgICJodG1sX2luc3RydWN0aW9ucyIg
+        OiAiVGFrZSB0aGUgMXN0IFx1MDAzY2JcdTAwM2VyaWdodFx1MDAzYy9iXHUw
+        MDNlIG9udG8gXHUwMDNjYlx1MDAzZUxhZ3VuYSBTdFx1MDAzYy9iXHUwMDNl
+        IiwKICAgICAgICAgICAgICAgICAgICAgInBvbHlsaW5lIiA6IHsKICAgICAg
+        ICAgICAgICAgICAgICAgICAgInBvaW50cyIgOiAiY2BxZUZkamZqVn1BUnlB
+        UHtASmFARH1BUCIKICAgICAgICAgICAgICAgICAgICAgfSwKICAgICAgICAg
+        ICAgICAgICAgICAgInN0YXJ0X2xvY2F0aW9uIiA6IHsKICAgICAgICAgICAg
+        ICAgICAgICAgICAgImxhdCIgOiAzNy43NzU1MzYxLAogICAgICAgICAgICAg
+        ICAgICAgICAgICAibG5nIiA6IC0xMjIuNDI2MTExNQogICAgICAgICAgICAg
+        ICAgICAgICB9LAogICAgICAgICAgICAgICAgICAgICAidHJhdmVsX21vZGUi
+        IDogIkRSSVZJTkciCiAgICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAg
+        ICAgICAgIHsKICAgICAgICAgICAgICAgICAgICAgImRpc3RhbmNlIiA6IHsK
+        ICAgICAgICAgICAgICAgICAgICAgICAgInRleHQiIDogIjAuMyBtaSIsCiAg
+        ICAgICAgICAgICAgICAgICAgICAgICJ2YWx1ZSIgOiA0NDEKICAgICAgICAg
+        ICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgICAgICAgImR1cmF0aW9u
+        IiA6IHsKICAgICAgICAgICAgICAgICAgICAgICAgInRleHQiIDogIjEgbWlu
+        IiwKICAgICAgICAgICAgICAgICAgICAgICAgInZhbHVlIiA6IDYzCiAgICAg
+        ICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICAgICAgICJlbmRf
+        bG9jYXRpb24iIDogewogICAgICAgICAgICAgICAgICAgICAgICAibGF0IiA6
+        IDM3Ljc3ODAzMTI5OTk5OTk5LAogICAgICAgICAgICAgICAgICAgICAgICAi
+        bG5nIiA6IC0xMjIuNDIxNTI4MwogICAgICAgICAgICAgICAgICAgICB9LAog
+        ICAgICAgICAgICAgICAgICAgICAiaHRtbF9pbnN0cnVjdGlvbnMiIDogIlR1
+        cm4gXHUwMDNjYlx1MDAzZXJpZ2h0XHUwMDNjL2JcdTAwM2Ugb250byBcdTAw
+        M2NiXHUwMDNlR3JvdmUgU3RcdTAwM2MvYlx1MDAzZSIsCiAgICAgICAgICAg
+        ICAgICAgICAgICJtYW5ldXZlciIgOiAidHVybi1yaWdodCIsCiAgICAgICAg
+        ICAgICAgICAgICAgICJwb2x5bGluZSIgOiB7CiAgICAgICAgICAgICAgICAg
+        ICAgICAgICJwb2ludHMiIDogIndrcWVGbmxmalZpQG1JaUBnSVt5RU1tQiIK
+        ICAgICAgICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgICAgICAg
+        InN0YXJ0X2xvY2F0aW9uIiA6IHsKICAgICAgICAgICAgICAgICAgICAgICAg
+        ImxhdCIgOiAzNy43NzczOTgxLAogICAgICAgICAgICAgICAgICAgICAgICAi
+        bG5nIiA6IC0xMjIuNDI2NDgwOQogICAgICAgICAgICAgICAgICAgICB9LAog
+        ICAgICAgICAgICAgICAgICAgICAidHJhdmVsX21vZGUiIDogIkRSSVZJTkci
+        CiAgICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICAgIHsKICAg
+        ICAgICAgICAgICAgICAgICAgImRpc3RhbmNlIiA6IHsKICAgICAgICAgICAg
+        ICAgICAgICAgICAgInRleHQiIDogIjAuNyBtaSIsCiAgICAgICAgICAgICAg
+        ICAgICAgICAgICJ2YWx1ZSIgOiAxMTU1CiAgICAgICAgICAgICAgICAgICAg
+        IH0sCiAgICAgICAgICAgICAgICAgICAgICJkdXJhdGlvbiIgOiB7CiAgICAg
+        ICAgICAgICAgICAgICAgICAgICJ0ZXh0IiA6ICIyIG1pbnMiLAogICAgICAg
+        ICAgICAgICAgICAgICAgICAidmFsdWUiIDogMTI3CiAgICAgICAgICAgICAg
+        ICAgICAgIH0sCiAgICAgICAgICAgICAgICAgICAgICJlbmRfbG9jYXRpb24i
+        IDogewogICAgICAgICAgICAgICAgICAgICAgICAibGF0IiA6IDM3Ljc4ODI4
+        NzYsCiAgICAgICAgICAgICAgICAgICAgICAgICJsbmciIDogLTEyMi40MjM2
+        MTg0CiAgICAgICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICAg
+        ICAgICJodG1sX2luc3RydWN0aW9ucyIgOiAiVHVybiBcdTAwM2NiXHUwMDNl
+        bGVmdFx1MDAzYy9iXHUwMDNlIG9udG8gXHUwMDNjYlx1MDAzZUZyYW5rbGlu
+        IFN0XHUwMDNjL2JcdTAwM2UiLAogICAgICAgICAgICAgICAgICAgICAibWFu
+        ZXV2ZXIiIDogInR1cm4tbGVmdCIsCiAgICAgICAgICAgICAgICAgICAgICJw
+        b2x5bGluZSIgOiB7CiAgICAgICAgICAgICAgICAgICAgICAgICJwb2ludHMi
+        IDogInVvcWVGcG1lalZ1Q1xcZ0BIY0BEdUBKe0FSX0JQfUFSfUFQd0FQYUJS
+        eUFQYUJSe0FOfUFSeUFOX0JSeUFSb0JUa0FOX0JSe0FQdUFSdUBKa0BGIgog
+        ICAgICAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgICAgICAi
+        c3RhcnRfbG9jYXRpb24iIDogewogICAgICAgICAgICAgICAgICAgICAgICAi
+        bGF0IiA6IDM3Ljc3ODAzMTI5OTk5OTk5LAogICAgICAgICAgICAgICAgICAg
+        ICAgICAibG5nIiA6IC0xMjIuNDIxNTI4MwogICAgICAgICAgICAgICAgICAg
+        ICB9LAogICAgICAgICAgICAgICAgICAgICAidHJhdmVsX21vZGUiIDogIkRS
+        SVZJTkciCiAgICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICAg
+        IHsKICAgICAgICAgICAgICAgICAgICAgImRpc3RhbmNlIiA6IHsKICAgICAg
+        ICAgICAgICAgICAgICAgICAgInRleHQiIDogIjEuMSBtaSIsCiAgICAgICAg
+        ICAgICAgICAgICAgICAgICJ2YWx1ZSIgOiAxNzM5CiAgICAgICAgICAgICAg
+        ICAgICAgIH0sCiAgICAgICAgICAgICAgICAgICAgICJkdXJhdGlvbiIgOiB7
+        CiAgICAgICAgICAgICAgICAgICAgICAgICJ0ZXh0IiA6ICIzIG1pbnMiLAog
+        ICAgICAgICAgICAgICAgICAgICAgICAidmFsdWUiIDogMTczCiAgICAgICAg
+        ICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICAgICAgICJlbmRfbG9j
+        YXRpb24iIDogewogICAgICAgICAgICAgICAgICAgICAgICAibGF0IiA6IDM3
+        Ljc5MDc2MzIsCiAgICAgICAgICAgICAgICAgICAgICAgICJsbmciIDogLTEy
+        Mi40MDQwNzM1CiAgICAgICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAg
+        ICAgICAgICAgICJodG1sX2luc3RydWN0aW9ucyIgOiAiVHVybiBcdTAwM2Ni
+        XHUwMDNlcmlnaHRcdTAwM2MvYlx1MDAzZSBvbnRvIFx1MDAzY2JcdTAwM2VC
+        dXNoIFN0XHUwMDNjL2JcdTAwM2UiLAogICAgICAgICAgICAgICAgICAgICAi
+        bWFuZXV2ZXIiIDogInR1cm4tcmlnaHQiLAogICAgICAgICAgICAgICAgICAg
+        ICAicG9seWxpbmUiIDogewogICAgICAgICAgICAgICAgICAgICAgICAicG9p
+        bnRzIiA6ICJ5b3NlRnJ6ZWpWaUBfSUNbZ0B3SGlAZUlXb0VPd0JPc0JZeUVV
+        b0RVeUNnQGVJZ0BhSWVAd0hBT0NTUXtDQVFJb0FHe0BJaUFLX0JNbUNLd0FL
+        dUFHc0BDW0V3QCIKICAgICAgICAgICAgICAgICAgICAgfSwKICAgICAgICAg
+        ICAgICAgICAgICAgInN0YXJ0X2xvY2F0aW9uIiA6IHsKICAgICAgICAgICAg
+        ICAgICAgICAgICAgImxhdCIgOiAzNy43ODgyODc2LAogICAgICAgICAgICAg
+        ICAgICAgICAgICAibG5nIiA6IC0xMjIuNDIzNjE4NAogICAgICAgICAgICAg
+        ICAgICAgICB9LAogICAgICAgICAgICAgICAgICAgICAidHJhdmVsX21vZGUi
+        IDogIkRSSVZJTkciCiAgICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAg
+        ICAgICAgIHsKICAgICAgICAgICAgICAgICAgICAgImRpc3RhbmNlIiA6IHsK
+        ICAgICAgICAgICAgICAgICAgICAgICAgInRleHQiIDogIjAuMSBtaSIsCiAg
+        ICAgICAgICAgICAgICAgICAgICAgICJ2YWx1ZSIgOiAyMTYKICAgICAgICAg
+        ICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgICAgICAgImR1cmF0aW9u
+        IiA6IHsKICAgICAgICAgICAgICAgICAgICAgICAgInRleHQiIDogIjEgbWlu
+        IiwKICAgICAgICAgICAgICAgICAgICAgICAgInZhbHVlIiA6IDI3CiAgICAg
+        ICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICAgICAgICJlbmRf
+        bG9jYXRpb24iIDogewogICAgICAgICAgICAgICAgICAgICAgICAibGF0IiA6
+        IDM3Ljc5MjY4ODQsCiAgICAgICAgICAgICAgICAgICAgICAgICJsbmciIDog
+        LTEyMi40MDQ0Mzg2CiAgICAgICAgICAgICAgICAgICAgIH0sCiAgICAgICAg
+        ICAgICAgICAgICAgICJodG1sX2luc3RydWN0aW9ucyIgOiAiVHVybiBcdTAw
+        M2NiXHUwMDNlbGVmdFx1MDAzYy9iXHUwMDNlIG9udG8gXHUwMDNjYlx1MDAz
+        ZUtlYXJueSBTdFx1MDAzYy9iXHUwMDNlIiwKICAgICAgICAgICAgICAgICAg
+        ICAgIm1hbmV1dmVyIiA6ICJ0dXJuLWxlZnQiLAogICAgICAgICAgICAgICAg
+        ICAgICAicG9seWxpbmUiIDogewogICAgICAgICAgICAgICAgICAgICAgICAi
+        cG9pbnRzIiA6ICJnX3RlRmxgYmpWd0JWY0FMZ0JQc0FOR0BBPyIKICAgICAg
+        ICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgICAgICAgInN0YXJ0
+        X2xvY2F0aW9uIiA6IHsKICAgICAgICAgICAgICAgICAgICAgICAgImxhdCIg
+        OiAzNy43OTA3NjMyLAogICAgICAgICAgICAgICAgICAgICAgICAibG5nIiA6
+        IC0xMjIuNDA0MDczNQogICAgICAgICAgICAgICAgICAgICB9LAogICAgICAg
+        ICAgICAgICAgICAgICAidHJhdmVsX21vZGUiIDogIkRSSVZJTkciCiAgICAg
+        ICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICAgIHsKICAgICAgICAg
+        ICAgICAgICAgICAgImRpc3RhbmNlIiA6IHsKICAgICAgICAgICAgICAgICAg
+        ICAgICAgInRleHQiIDogIjE0MSBmdCIsCiAgICAgICAgICAgICAgICAgICAg
+        ICAgICJ2YWx1ZSIgOiA0MwogICAgICAgICAgICAgICAgICAgICB9LAogICAg
+        ICAgICAgICAgICAgICAgICAiZHVyYXRpb24iIDogewogICAgICAgICAgICAg
+        ICAgICAgICAgICAidGV4dCIgOiAiMSBtaW4iLAogICAgICAgICAgICAgICAg
+        ICAgICAgICAidmFsdWUiIDogNwogICAgICAgICAgICAgICAgICAgICB9LAog
+        ICAgICAgICAgICAgICAgICAgICAiZW5kX2xvY2F0aW9uIiA6IHsKICAgICAg
+        ICAgICAgICAgICAgICAgICAgImxhdCIgOiAzNy43OTI3NTE1MDAwMDAwMSwK
+        ICAgICAgICAgICAgICAgICAgICAgICAgImxuZyIgOiAtMTIyLjQwMzk1NDgK
+        ICAgICAgICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgICAgICAg
+        Imh0bWxfaW5zdHJ1Y3Rpb25zIiA6ICJUdXJuIFx1MDAzY2JcdTAwM2VyaWdo
+        dFx1MDAzYy9iXHUwMDNlIGF0IHRoZSAybmQgY3Jvc3Mgc3RyZWV0IG9udG8g
+        XHUwMDNjYlx1MDAzZUNhbGlmb3JuaWEgU3RcdTAwM2MvYlx1MDAzZVx1MDAz
+        Y2RpdiBzdHlsZT1cImZvbnQtc2l6ZTowLjllbVwiXHUwMDNlRGVzdGluYXRp
+        b24gd2lsbCBiZSBvbiB0aGUgcmlnaHRcdTAwM2MvZGl2XHUwMDNlIiwKICAg
+        ICAgICAgICAgICAgICAgICAgIm1hbmV1dmVyIiA6ICJ0dXJuLXJpZ2h0IiwK
+        ICAgICAgICAgICAgICAgICAgICAgInBvbHlsaW5lIiA6IHsKICAgICAgICAg
+        ICAgICAgICAgICAgICAgInBvaW50cyIgOiAiaWt0ZUZ2YmJqVkthQiIKICAg
+        ICAgICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgICAgICAgInN0
+        YXJ0X2xvY2F0aW9uIiA6IHsKICAgICAgICAgICAgICAgICAgICAgICAgImxh
+        dCIgOiAzNy43OTI2ODg0LAogICAgICAgICAgICAgICAgICAgICAgICAibG5n
+        IiA6IC0xMjIuNDA0NDM4NgogICAgICAgICAgICAgICAgICAgICB9LAogICAg
+        ICAgICAgICAgICAgICAgICAidHJhdmVsX21vZGUiIDogIkRSSVZJTkciCiAg
+        ICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgXSwKICAgICAgICAg
+        ICAgICAgInZpYV93YXlwb2ludCIgOiBbXQogICAgICAgICAgICB9LAogICAg
+        ICAgICAgICB7CiAgICAgICAgICAgICAgICJkaXN0YW5jZSIgOiB7CiAgICAg
+        ICAgICAgICAgICAgICJ0ZXh0IiA6ICIwLjggbWkiLAogICAgICAgICAgICAg
+        ICAgICAidmFsdWUiIDogMTIzMAogICAgICAgICAgICAgICB9LAogICAgICAg
+        ICAgICAgICAiZHVyYXRpb24iIDogewogICAgICAgICAgICAgICAgICAidGV4
+        dCIgOiAiMyBtaW5zIiwKICAgICAgICAgICAgICAgICAgInZhbHVlIiA6IDIw
+        MwogICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAiZW5kX2FkZHJl
+        c3MiIDogIjYzMyBGb2xzb20gU3RyZWV0LCBTYW4gRnJhbmNpc2NvLCBDQSA5
+        NDEwNywgVVNBIiwKICAgICAgICAgICAgICAgImVuZF9sb2NhdGlvbiIgOiB7
+        CiAgICAgICAgICAgICAgICAgICJsYXQiIDogMzcuNzg0ODYyNSwKICAgICAg
+        ICAgICAgICAgICAgImxuZyIgOiAtMTIyLjM5NzYxMTUKICAgICAgICAgICAg
+        ICAgfSwKICAgICAgICAgICAgICAgInN0YXJ0X2FkZHJlc3MiIDogIjU1NSBD
+        YWxpZm9ybmlhIFN0cmVldCwgU2FuIEZyYW5jaXNjbywgQ0EgOTQxMDQsIFVT
+        QSIsCiAgICAgICAgICAgICAgICJzdGFydF9sb2NhdGlvbiIgOiB7CiAgICAg
+        ICAgICAgICAgICAgICJsYXQiIDogMzcuNzkyNzUxNTAwMDAwMDEsCiAgICAg
+        ICAgICAgICAgICAgICJsbmciIDogLTEyMi40MDM5NTQ4CiAgICAgICAgICAg
+        ICAgIH0sCiAgICAgICAgICAgICAgICJzdGVwcyIgOiBbCiAgICAgICAgICAg
+        ICAgICAgIHsKICAgICAgICAgICAgICAgICAgICAgImRpc3RhbmNlIiA6IHsK
+        ICAgICAgICAgICAgICAgICAgICAgICAgInRleHQiIDogIjMyOCBmdCIsCiAg
+        ICAgICAgICAgICAgICAgICAgICAgICJ2YWx1ZSIgOiAxMDAKICAgICAgICAg
+        ICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgICAgICAgImR1cmF0aW9u
+        IiA6IHsKICAgICAgICAgICAgICAgICAgICAgICAgInRleHQiIDogIjEgbWlu
+        IiwKICAgICAgICAgICAgICAgICAgICAgICAgInZhbHVlIiA6IDE3CiAgICAg
+        ICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICAgICAgICJlbmRf
+        bG9jYXRpb24iIDogewogICAgICAgICAgICAgICAgICAgICAgICAibGF0IiA6
+        IDM3Ljc5Mjg3NywKICAgICAgICAgICAgICAgICAgICAgICAgImxuZyIgOiAt
+        MTIyLjQwMjgyNzIKICAgICAgICAgICAgICAgICAgICAgfSwKICAgICAgICAg
+        ICAgICAgICAgICAgImh0bWxfaW5zdHJ1Y3Rpb25zIiA6ICJIZWFkIFx1MDAz
+        Y2JcdTAwM2VlYXN0XHUwMDNjL2JcdTAwM2Ugb24gXHUwMDNjYlx1MDAzZUNh
+        bGlmb3JuaWEgU3RcdTAwM2MvYlx1MDAzZSB0b3dhcmQgXHUwMDNjYlx1MDAz
+        ZVNwcmluZyBTdFx1MDAzYy9iXHUwMDNlIiwKICAgICAgICAgICAgICAgICAg
+        ICAgInBvbHlsaW5lIiA6IHsKICAgICAgICAgICAgICAgICAgICAgICAgInBv
+        aW50cyIgOiAidWt0ZUZ0X2JqVkNVVWlFIgogICAgICAgICAgICAgICAgICAg
+        ICB9LAogICAgICAgICAgICAgICAgICAgICAic3RhcnRfbG9jYXRpb24iIDog
+        ewogICAgICAgICAgICAgICAgICAgICAgICAibGF0IiA6IDM3Ljc5Mjc1MTUw
+        MDAwMDAxLAogICAgICAgICAgICAgICAgICAgICAgICAibG5nIiA6IC0xMjIu
+        NDAzOTU0OAogICAgICAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAg
+        ICAgICAgICAidHJhdmVsX21vZGUiIDogIkRSSVZJTkciCiAgICAgICAgICAg
+        ICAgICAgIH0sCiAgICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAg
+        ICAgICAgImRpc3RhbmNlIiA6IHsKICAgICAgICAgICAgICAgICAgICAgICAg
+        InRleHQiIDogIjAuMyBtaSIsCiAgICAgICAgICAgICAgICAgICAgICAgICJ2
+        YWx1ZSIgOiA0NTcKICAgICAgICAgICAgICAgICAgICAgfSwKICAgICAgICAg
+        ICAgICAgICAgICAgImR1cmF0aW9uIiA6IHsKICAgICAgICAgICAgICAgICAg
+        ICAgICAgInRleHQiIDogIjEgbWluIiwKICAgICAgICAgICAgICAgICAgICAg
+        ICAgInZhbHVlIiA6IDg1CiAgICAgICAgICAgICAgICAgICAgIH0sCiAgICAg
+        ICAgICAgICAgICAgICAgICJlbmRfbG9jYXRpb24iIDogewogICAgICAgICAg
+        ICAgICAgICAgICAgICAibGF0IiA6IDM3Ljc4ODgxOTcsCiAgICAgICAgICAg
+        ICAgICAgICAgICAgICJsbmciIDogLTEyMi40MDE5OTE0CiAgICAgICAgICAg
+        ICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICAgICAgICJodG1sX2luc3Ry
+        dWN0aW9ucyIgOiAiVHVybiBcdTAwM2NiXHUwMDNlcmlnaHRcdTAwM2MvYlx1
+        MDAzZSBvbnRvIFx1MDAzY2JcdTAwM2VNb250Z29tZXJ5IFN0XHUwMDNjL2Jc
+        dTAwM2UiLAogICAgICAgICAgICAgICAgICAgICAibWFuZXV2ZXIiIDogInR1
+        cm4tcmlnaHQiLAogICAgICAgICAgICAgICAgICAgICAicG9seWxpbmUiIDog
+        ewogICAgICAgICAgICAgICAgICAgICAgICAicG9pbnRzIiA6ICJvbHRlRnR4
+        YWpWQD9EQXpEaUBiQlNyQU9gQlN8QVVsQEdyQldSQ25ASUg/IgogICAgICAg
+        ICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgICAgICAic3RhcnRf
+        bG9jYXRpb24iIDogewogICAgICAgICAgICAgICAgICAgICAgICAibGF0IiA6
+        IDM3Ljc5Mjg3NywKICAgICAgICAgICAgICAgICAgICAgICAgImxuZyIgOiAt
+        MTIyLjQwMjgyNzIKICAgICAgICAgICAgICAgICAgICAgfSwKICAgICAgICAg
+        ICAgICAgICAgICAgInRyYXZlbF9tb2RlIiA6ICJEUklWSU5HIgogICAgICAg
+        ICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgICB7CiAgICAgICAgICAg
+        ICAgICAgICAgICJkaXN0YW5jZSIgOiB7CiAgICAgICAgICAgICAgICAgICAg
+        ICAgICJ0ZXh0IiA6ICIwLjIgbWkiLAogICAgICAgICAgICAgICAgICAgICAg
+        ICAidmFsdWUiIDogNDAyCiAgICAgICAgICAgICAgICAgICAgIH0sCiAgICAg
+        ICAgICAgICAgICAgICAgICJkdXJhdGlvbiIgOiB7CiAgICAgICAgICAgICAg
+        ICAgICAgICAgICJ0ZXh0IiA6ICIxIG1pbiIsCiAgICAgICAgICAgICAgICAg
+        ICAgICAgICJ2YWx1ZSIgOiA1MgogICAgICAgICAgICAgICAgICAgICB9LAog
+        ICAgICAgICAgICAgICAgICAgICAiZW5kX2xvY2F0aW9uIiA6IHsKICAgICAg
+        ICAgICAgICAgICAgICAgICAgImxhdCIgOiAzNy43ODYyMTQyLAogICAgICAg
+        ICAgICAgICAgICAgICAgICAibG5nIiA6IC0xMjIuMzk4OTg2NgogICAgICAg
+        ICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgICAgICAiaHRtbF9p
+        bnN0cnVjdGlvbnMiIDogIkNvbnRpbnVlIG9udG8gXHUwMDNjYlx1MDAzZU5l
+        dyBNb250Z29tZXJ5IFN0XHUwMDNjL2JcdTAwM2UiLAogICAgICAgICAgICAg
+        ICAgICAgICAicG9seWxpbmUiIDogewogICAgICAgICAgICAgICAgICAgICAg
+        ICAicG9pbnRzIiA6ICJjc3NlRmxzYWpWVEhCP0g/QD8/QUA/QEFkQXdBZEFf
+        QmZAb0BuQF9BbkFpQnJBX0J2QWtCIgogICAgICAgICAgICAgICAgICAgICB9
+        LAogICAgICAgICAgICAgICAgICAgICAic3RhcnRfbG9jYXRpb24iIDogewog
+        ICAgICAgICAgICAgICAgICAgICAgICAibGF0IiA6IDM3Ljc4ODgxOTcsCiAg
+        ICAgICAgICAgICAgICAgICAgICAgICJsbmciIDogLTEyMi40MDE5OTE0CiAg
+        ICAgICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICAgICAgICJ0
+        cmF2ZWxfbW9kZSIgOiAiRFJJVklORyIKICAgICAgICAgICAgICAgICAgfSwK
+        ICAgICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAgICAiZGlz
+        dGFuY2UiIDogewogICAgICAgICAgICAgICAgICAgICAgICAidGV4dCIgOiAi
+        MTY0IGZ0IiwKICAgICAgICAgICAgICAgICAgICAgICAgInZhbHVlIiA6IDUw
+        CiAgICAgICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICAgICAg
+        ICJkdXJhdGlvbiIgOiB7CiAgICAgICAgICAgICAgICAgICAgICAgICJ0ZXh0
+        IiA6ICIxIG1pbiIsCiAgICAgICAgICAgICAgICAgICAgICAgICJ2YWx1ZSIg
+        OiAxMAogICAgICAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAg
+        ICAgICAiZW5kX2xvY2F0aW9uIiA6IHsKICAgICAgICAgICAgICAgICAgICAg
+        ICAgImxhdCIgOiAzNy43ODU5MDAyLAogICAgICAgICAgICAgICAgICAgICAg
+        ICAibG5nIiA6IC0xMjIuMzk5Mzg2NAogICAgICAgICAgICAgICAgICAgICB9
+        LAogICAgICAgICAgICAgICAgICAgICAiaHRtbF9pbnN0cnVjdGlvbnMiIDog
+        IlR1cm4gXHUwMDNjYlx1MDAzZXJpZ2h0XHUwMDNjL2JcdTAwM2Ugb250byBc
+        dTAwM2NiXHUwMDNlSG93YXJkIFN0XHUwMDNjL2JcdTAwM2UiLAogICAgICAg
+        ICAgICAgICAgICAgICAibWFuZXV2ZXIiIDogInR1cm4tcmlnaHQiLAogICAg
+        ICAgICAgICAgICAgICAgICAicG9seWxpbmUiIDogewogICAgICAgICAgICAg
+        ICAgICAgICAgICAicG9pbnRzIiA6ICJ5YnNlRnRgYWpWfEBuQSIKICAgICAg
+        ICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgICAgICAgInN0YXJ0
+        X2xvY2F0aW9uIiA6IHsKICAgICAgICAgICAgICAgICAgICAgICAgImxhdCIg
+        OiAzNy43ODYyMTQyLAogICAgICAgICAgICAgICAgICAgICAgICAibG5nIiA6
+        IC0xMjIuMzk4OTg2NgogICAgICAgICAgICAgICAgICAgICB9LAogICAgICAg
+        ICAgICAgICAgICAgICAidHJhdmVsX21vZGUiIDogIkRSSVZJTkciCiAgICAg
+        ICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICAgIHsKICAgICAgICAg
+        ICAgICAgICAgICAgImRpc3RhbmNlIiA6IHsKICAgICAgICAgICAgICAgICAg
+        ICAgICAgInRleHQiIDogIjAuMSBtaSIsCiAgICAgICAgICAgICAgICAgICAg
+        ICAgICJ2YWx1ZSIgOiAxOTIKICAgICAgICAgICAgICAgICAgICAgfSwKICAg
+        ICAgICAgICAgICAgICAgICAgImR1cmF0aW9uIiA6IHsKICAgICAgICAgICAg
+        ICAgICAgICAgICAgInRleHQiIDogIjEgbWluIiwKICAgICAgICAgICAgICAg
+        ICAgICAgICAgInZhbHVlIiA6IDI5CiAgICAgICAgICAgICAgICAgICAgIH0s
+        CiAgICAgICAgICAgICAgICAgICAgICJlbmRfbG9jYXRpb24iIDogewogICAg
+        ICAgICAgICAgICAgICAgICAgICAibGF0IiA6IDM3Ljc4NDY4MjcsCiAgICAg
+        ICAgICAgICAgICAgICAgICAgICJsbmciIDogLTEyMi4zOTc4NDUxCiAgICAg
+        ICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICAgICAgICJodG1s
+        X2luc3RydWN0aW9ucyIgOiAiVGFrZSB0aGUgMXN0IFx1MDAzY2JcdTAwM2Vs
+        ZWZ0XHUwMDNjL2JcdTAwM2Ugb250byBcdTAwM2NiXHUwMDNlSGF3dGhvcm5l
+        IFN0XHUwMDNjL2JcdTAwM2UiLAogICAgICAgICAgICAgICAgICAgICAicG9s
+        eWxpbmUiIDogewogICAgICAgICAgICAgICAgICAgICAgICAicG9pbnRzIiA6
+        ICJ7YHNlRmRjYWpWckZzSCIKICAgICAgICAgICAgICAgICAgICAgfSwKICAg
+        ICAgICAgICAgICAgICAgICAgInN0YXJ0X2xvY2F0aW9uIiA6IHsKICAgICAg
+        ICAgICAgICAgICAgICAgICAgImxhdCIgOiAzNy43ODU5MDAyLAogICAgICAg
+        ICAgICAgICAgICAgICAgICAibG5nIiA6IC0xMjIuMzk5Mzg2NAogICAgICAg
+        ICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgICAgICAidHJhdmVs
+        X21vZGUiIDogIkRSSVZJTkciCiAgICAgICAgICAgICAgICAgIH0sCiAgICAg
+        ICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICAgImRpc3RhbmNl
+        IiA6IHsKICAgICAgICAgICAgICAgICAgICAgICAgInRleHQiIDogIjk1IGZ0
+        IiwKICAgICAgICAgICAgICAgICAgICAgICAgInZhbHVlIiA6IDI5CiAgICAg
+        ICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICAgICAgICJkdXJh
+        dGlvbiIgOiB7CiAgICAgICAgICAgICAgICAgICAgICAgICJ0ZXh0IiA6ICIx
+        IG1pbiIsCiAgICAgICAgICAgICAgICAgICAgICAgICJ2YWx1ZSIgOiAxMAog
+        ICAgICAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgICAgICAi
+        ZW5kX2xvY2F0aW9uIiA6IHsKICAgICAgICAgICAgICAgICAgICAgICAgImxh
+        dCIgOiAzNy43ODQ4NjI1LAogICAgICAgICAgICAgICAgICAgICAgICAibG5n
+        IiA6IC0xMjIuMzk3NjExNQogICAgICAgICAgICAgICAgICAgICB9LAogICAg
+        ICAgICAgICAgICAgICAgICAiaHRtbF9pbnN0cnVjdGlvbnMiIDogIlRha2Ug
+        dGhlIDFzdCBcdTAwM2NiXHUwMDNlbGVmdFx1MDAzYy9iXHUwMDNlIG9udG8g
+        XHUwMDNjYlx1MDAzZUZvbHNvbSBTdFx1MDAzYy9iXHUwMDNlXHUwMDNjZGl2
+        IHN0eWxlPVwiZm9udC1zaXplOjAuOWVtXCJcdTAwM2VEZXN0aW5hdGlvbiB3
+        aWxsIGJlIG9uIHRoZSByaWdodFx1MDAzYy9kaXZcdTAwM2UiLAogICAgICAg
+        ICAgICAgICAgICAgICAicG9seWxpbmUiIDogewogICAgICAgICAgICAgICAg
+        ICAgICAgICAicG9pbnRzIiA6ICJneXJlRnB5YGpWY0BvQCIKICAgICAgICAg
+        ICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgICAgICAgInN0YXJ0X2xv
+        Y2F0aW9uIiA6IHsKICAgICAgICAgICAgICAgICAgICAgICAgImxhdCIgOiAz
+        Ny43ODQ2ODI3LAogICAgICAgICAgICAgICAgICAgICAgICAibG5nIiA6IC0x
+        MjIuMzk3ODQ1MQogICAgICAgICAgICAgICAgICAgICB9LAogICAgICAgICAg
+        ICAgICAgICAgICAidHJhdmVsX21vZGUiIDogIkRSSVZJTkciCiAgICAgICAg
+        ICAgICAgICAgIH0KICAgICAgICAgICAgICAgXSwKICAgICAgICAgICAgICAg
+        InZpYV93YXlwb2ludCIgOiBbXQogICAgICAgICAgICB9CiAgICAgICAgIF0s
+        CiAgICAgICAgICJvdmVydmlld19wb2x5bGluZSIgOiB7CiAgICAgICAgICAg
+        ICJwb2ludHMiIDogInFgcWVGcmZmalZMcEJ9QVJ1Q1xcX0NWc0F1U2lAZ0l9
+        RGZAdUd2QHVKakF1SmhBeURiQGlFaEB9SWhBYUJSbUB7SXlCZV11QXdTd0Jv
+        XW1BZVNjQH1GRXdAd0JWa0Ree0FQTWFCWV9GRkF0TWFCckd5QHhASVhITEFs
+        Q3lEdkFvQm5BaUJyQV9CdkFrQnxAbkFyRnNIY0BvQCIKICAgICAgICAgfSwK
+        ICAgICAgICAgInN1bW1hcnkiIDogIk1vbnRnb21lcnkgU3QgYW5kIE5ldyBN
+        b250Z29tZXJ5IFN0IiwKICAgICAgICAgIndhcm5pbmdzIiA6IFtdLAogICAg
+        ICAgICAid2F5cG9pbnRfb3JkZXIiIDogWyAwIF0KICAgICAgfQogICBdLAog
+        ICAic3RhdHVzIiA6ICJPSyIKfQo=
+    http_version: !binary |-
+      MS4x
+  recorded_at: Sun, 13 Apr 2014 20:55:19 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/directions/json?origin=460%20Fell%20St.%20San%20Francisco%2C%20CA&destination=633%20Folsom%20St.%20San%20Francisco%2C%20CA&waypoints=optimize%3Atrue%7C600%20Bush%20St%2C%20San%20Francisco&sensor=false&key=AIzaSyAAPig8eebUk6Vj79Fgd275gDQfOvFqYnU
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "Y29udGVudC10eXBl":
+      - !binary |-
+        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD1VVEYtOA==
+      !binary "ZGF0ZQ==":
+      - !binary |-
+        U3VuLCAxMyBBcHIgMjAxNCAyMDo1NToxOSBHTVQ=
+      !binary "ZXhwaXJlcw==":
+      - !binary |-
+        TW9uLCAxNCBBcHIgMjAxNCAyMDo1NToxOSBHTVQ=
+      !binary "Y2FjaGUtY29udHJvbA==":
+      - !binary |-
+        cHVibGljLCBtYXgtYWdlPTg2NDAw
+      !binary "dmFyeQ==":
+      - !binary |-
+        QWNjZXB0LUxhbmd1YWdl
+      !binary "c2VydmVy":
+      - !binary |-
+        bWFmZQ==
+      !binary "eC14c3MtcHJvdGVjdGlvbg==":
+      - !binary |-
+        MTsgbW9kZT1ibG9jaw==
+      !binary "eC1mcmFtZS1vcHRpb25z":
+      - !binary |-
+        U0FNRU9SSUdJTg==
+      !binary "YWx0ZXJuYXRlLXByb3RvY29s":
+      - !binary |-
+        NDQzOnF1aWM=
+      !binary "Y29ubmVjdGlvbg==":
+      - !binary |-
+        Y2xvc2U=
+      !binary "dHJhbnNmZXItZW5jb2Rpbmc=":
+      - !binary |-
+        Y2h1bmtlZA==
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        ewogICAicm91dGVzIiA6IFsKICAgICAgewogICAgICAgICAiYm91bmRzIiA6
+        IHsKICAgICAgICAgICAgIm5vcnRoZWFzdCIgOiB7CiAgICAgICAgICAgICAg
+        ICJsYXQiIDogMzcuNzkwOTc2LAogICAgICAgICAgICAgICAibG5nIiA6IC0x
+        MjIuMzk3NjExNQogICAgICAgICAgICB9LAogICAgICAgICAgICAic291dGh3
+        ZXN0IiA6IHsKICAgICAgICAgICAgICAgImxhdCIgOiAzNy43NzU1MzYxLAog
+        ICAgICAgICAgICAgICAibG5nIiA6IC0xMjIuNDI2NDgwOQogICAgICAgICAg
+        ICB9CiAgICAgICAgIH0sCiAgICAgICAgICJjb3B5cmlnaHRzIiA6ICJNYXAg
+        ZGF0YSDCqTIwMTQgR29vZ2xlLCBTYW5ib3JuIiwKICAgICAgICAgImxlZ3Mi
+        IDogWwogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICJkaXN0YW5jZSIg
+        OiB7CiAgICAgICAgICAgICAgICAgICJ0ZXh0IiA6ICIyLjEgbWkiLAogICAg
+        ICAgICAgICAgICAgICAidmFsdWUiIDogMzMwNQogICAgICAgICAgICAgICB9
+        LAogICAgICAgICAgICAgICAiZHVyYXRpb24iIDogewogICAgICAgICAgICAg
+        ICAgICAidGV4dCIgOiAiNiBtaW5zIiwKICAgICAgICAgICAgICAgICAgInZh
+        bHVlIiA6IDM3OQogICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAi
+        ZW5kX2FkZHJlc3MiIDogIjYwMCBCdXNoIFN0cmVldCwgU2FuIEZyYW5jaXNj
+        bywgQ0EgOTQxMDgsIFVTQSIsCiAgICAgICAgICAgICAgICJlbmRfbG9jYXRp
+        b24iIDogewogICAgICAgICAgICAgICAgICAibGF0IiA6IDM3Ljc5MDM1MDIs
+        CiAgICAgICAgICAgICAgICAgICJsbmciIDogLTEyMi40MDczNDk3CiAgICAg
+        ICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICJzdGFydF9hZGRyZXNzIiA6
+        ICI0NjAgRmVsbCBTdHJlZXQsIFNhbiBGcmFuY2lzY28sIENBIDk0MTAyLCBV
+        U0EiLAogICAgICAgICAgICAgICAic3RhcnRfbG9jYXRpb24iIDogewogICAg
+        ICAgICAgICAgICAgICAibGF0IiA6IDM3Ljc3NTYxMDcsCiAgICAgICAgICAg
+        ICAgICAgICJsbmciIDogLTEyMi40MjU1Mzk1CiAgICAgICAgICAgICAgIH0s
+        CiAgICAgICAgICAgICAgICJzdGVwcyIgOiBbCiAgICAgICAgICAgICAgICAg
+        IHsKICAgICAgICAgICAgICAgICAgICAgImRpc3RhbmNlIiA6IHsKICAgICAg
+        ICAgICAgICAgICAgICAgICAgInRleHQiIDogIjE2NyBmdCIsCiAgICAgICAg
+        ICAgICAgICAgICAgICAgICJ2YWx1ZSIgOiA1MQogICAgICAgICAgICAgICAg
+        ICAgICB9LAogICAgICAgICAgICAgICAgICAgICAiZHVyYXRpb24iIDogewog
+        ICAgICAgICAgICAgICAgICAgICAgICAidGV4dCIgOiAiMSBtaW4iLAogICAg
+        ICAgICAgICAgICAgICAgICAgICAidmFsdWUiIDogNgogICAgICAgICAgICAg
+        ICAgICAgICB9LAogICAgICAgICAgICAgICAgICAgICAiZW5kX2xvY2F0aW9u
+        IiA6IHsKICAgICAgICAgICAgICAgICAgICAgICAgImxhdCIgOiAzNy43NzU1
+        MzYxLAogICAgICAgICAgICAgICAgICAgICAgICAibG5nIiA6IC0xMjIuNDI2
+        MTExNQogICAgICAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAg
+        ICAgICAiaHRtbF9pbnN0cnVjdGlvbnMiIDogIkhlYWQgXHUwMDNjYlx1MDAz
+        ZXdlc3RcdTAwM2MvYlx1MDAzZSBvbiBcdTAwM2NiXHUwMDNlRmVsbCBTdFx1
+        MDAzYy9iXHUwMDNlIHRvd2FyZCBcdTAwM2NiXHUwMDNlTGFndW5hIFN0XHUw
+        MDNjL2JcdTAwM2UiLAogICAgICAgICAgICAgICAgICAgICAicG9seWxpbmUi
+        IDogewogICAgICAgICAgICAgICAgICAgICAgICAicG9pbnRzIiA6ICJxYHFl
+        RnJmZmpWTHBCIgogICAgICAgICAgICAgICAgICAgICB9LAogICAgICAgICAg
+        ICAgICAgICAgICAic3RhcnRfbG9jYXRpb24iIDogewogICAgICAgICAgICAg
+        ICAgICAgICAgICAibGF0IiA6IDM3Ljc3NTYxMDcsCiAgICAgICAgICAgICAg
+        ICAgICAgICAgICJsbmciIDogLTEyMi40MjU1Mzk1CiAgICAgICAgICAgICAg
+        ICAgICAgIH0sCiAgICAgICAgICAgICAgICAgICAgICJ0cmF2ZWxfbW9kZSIg
+        OiAiRFJJVklORyIKICAgICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAg
+        ICAgICAgewogICAgICAgICAgICAgICAgICAgICAiZGlzdGFuY2UiIDogewog
+        ICAgICAgICAgICAgICAgICAgICAgICAidGV4dCIgOiAiMC4xIG1pIiwKICAg
+        ICAgICAgICAgICAgICAgICAgICAgInZhbHVlIiA6IDIxMAogICAgICAgICAg
+        ICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgICAgICAiZHVyYXRpb24i
+        IDogewogICAgICAgICAgICAgICAgICAgICAgICAidGV4dCIgOiAiMSBtaW4i
+        LAogICAgICAgICAgICAgICAgICAgICAgICAidmFsdWUiIDogMzgKICAgICAg
+        ICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgICAgICAgImVuZF9s
+        b2NhdGlvbiIgOiB7CiAgICAgICAgICAgICAgICAgICAgICAgICJsYXQiIDog
+        MzcuNzc3Mzk4MSwKICAgICAgICAgICAgICAgICAgICAgICAgImxuZyIgOiAt
+        MTIyLjQyNjQ4MDkKICAgICAgICAgICAgICAgICAgICAgfSwKICAgICAgICAg
+        ICAgICAgICAgICAgImh0bWxfaW5zdHJ1Y3Rpb25zIiA6ICJUYWtlIHRoZSAx
+        c3QgXHUwMDNjYlx1MDAzZXJpZ2h0XHUwMDNjL2JcdTAwM2Ugb250byBcdTAw
+        M2NiXHUwMDNlTGFndW5hIFN0XHUwMDNjL2JcdTAwM2UiLAogICAgICAgICAg
+        ICAgICAgICAgICAicG9seWxpbmUiIDogewogICAgICAgICAgICAgICAgICAg
+        ICAgICAicG9pbnRzIiA6ICJjYHFlRmRqZmpWfUFSeUFQe0BKYUBEfUFQIgog
+        ICAgICAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgICAgICAi
+        c3RhcnRfbG9jYXRpb24iIDogewogICAgICAgICAgICAgICAgICAgICAgICAi
+        bGF0IiA6IDM3Ljc3NTUzNjEsCiAgICAgICAgICAgICAgICAgICAgICAgICJs
+        bmciIDogLTEyMi40MjYxMTE1CiAgICAgICAgICAgICAgICAgICAgIH0sCiAg
+        ICAgICAgICAgICAgICAgICAgICJ0cmF2ZWxfbW9kZSIgOiAiRFJJVklORyIK
+        ICAgICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgICAgewogICAg
+        ICAgICAgICAgICAgICAgICAiZGlzdGFuY2UiIDogewogICAgICAgICAgICAg
+        ICAgICAgICAgICAidGV4dCIgOiAiMC4zIG1pIiwKICAgICAgICAgICAgICAg
+        ICAgICAgICAgInZhbHVlIiA6IDQ0MQogICAgICAgICAgICAgICAgICAgICB9
+        LAogICAgICAgICAgICAgICAgICAgICAiZHVyYXRpb24iIDogewogICAgICAg
+        ICAgICAgICAgICAgICAgICAidGV4dCIgOiAiMSBtaW4iLAogICAgICAgICAg
+        ICAgICAgICAgICAgICAidmFsdWUiIDogNjMKICAgICAgICAgICAgICAgICAg
+        ICAgfSwKICAgICAgICAgICAgICAgICAgICAgImVuZF9sb2NhdGlvbiIgOiB7
+        CiAgICAgICAgICAgICAgICAgICAgICAgICJsYXQiIDogMzcuNzc4MDMxMjk5
+        OTk5OTksCiAgICAgICAgICAgICAgICAgICAgICAgICJsbmciIDogLTEyMi40
+        MjE1MjgzCiAgICAgICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAg
+        ICAgICAgICJodG1sX2luc3RydWN0aW9ucyIgOiAiVHVybiBcdTAwM2NiXHUw
+        MDNlcmlnaHRcdTAwM2MvYlx1MDAzZSBvbnRvIFx1MDAzY2JcdTAwM2VHcm92
+        ZSBTdFx1MDAzYy9iXHUwMDNlIiwKICAgICAgICAgICAgICAgICAgICAgIm1h
+        bmV1dmVyIiA6ICJ0dXJuLXJpZ2h0IiwKICAgICAgICAgICAgICAgICAgICAg
+        InBvbHlsaW5lIiA6IHsKICAgICAgICAgICAgICAgICAgICAgICAgInBvaW50
+        cyIgOiAid2txZUZubGZqVmlAbUlpQGdJW3lFTW1CIgogICAgICAgICAgICAg
+        ICAgICAgICB9LAogICAgICAgICAgICAgICAgICAgICAic3RhcnRfbG9jYXRp
+        b24iIDogewogICAgICAgICAgICAgICAgICAgICAgICAibGF0IiA6IDM3Ljc3
+        NzM5ODEsCiAgICAgICAgICAgICAgICAgICAgICAgICJsbmciIDogLTEyMi40
+        MjY0ODA5CiAgICAgICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAg
+        ICAgICAgICJ0cmF2ZWxfbW9kZSIgOiAiRFJJVklORyIKICAgICAgICAgICAg
+        ICAgICAgfSwKICAgICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAg
+        ICAgICAiZGlzdGFuY2UiIDogewogICAgICAgICAgICAgICAgICAgICAgICAi
+        dGV4dCIgOiAiMC43IG1pIiwKICAgICAgICAgICAgICAgICAgICAgICAgInZh
+        bHVlIiA6IDExNTUKICAgICAgICAgICAgICAgICAgICAgfSwKICAgICAgICAg
+        ICAgICAgICAgICAgImR1cmF0aW9uIiA6IHsKICAgICAgICAgICAgICAgICAg
+        ICAgICAgInRleHQiIDogIjIgbWlucyIsCiAgICAgICAgICAgICAgICAgICAg
+        ICAgICJ2YWx1ZSIgOiAxMjcKICAgICAgICAgICAgICAgICAgICAgfSwKICAg
+        ICAgICAgICAgICAgICAgICAgImVuZF9sb2NhdGlvbiIgOiB7CiAgICAgICAg
+        ICAgICAgICAgICAgICAgICJsYXQiIDogMzcuNzg4Mjg3NiwKICAgICAgICAg
+        ICAgICAgICAgICAgICAgImxuZyIgOiAtMTIyLjQyMzYxODQKICAgICAgICAg
+        ICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgICAgICAgImh0bWxfaW5z
+        dHJ1Y3Rpb25zIiA6ICJUdXJuIFx1MDAzY2JcdTAwM2VsZWZ0XHUwMDNjL2Jc
+        dTAwM2Ugb250byBcdTAwM2NiXHUwMDNlRnJhbmtsaW4gU3RcdTAwM2MvYlx1
+        MDAzZSIsCiAgICAgICAgICAgICAgICAgICAgICJtYW5ldXZlciIgOiAidHVy
+        bi1sZWZ0IiwKICAgICAgICAgICAgICAgICAgICAgInBvbHlsaW5lIiA6IHsK
+        ICAgICAgICAgICAgICAgICAgICAgICAgInBvaW50cyIgOiAidW9xZUZwbWVq
+        VnVDXFxnQEhjQER1QEp7QVJfQlB9QVJ9QVB3QVBhQlJ5QVBhQlJ7QU59QVJ5
+        QU5fQlJ5QVJvQlRrQU5fQlJ7QVB1QVJ1QEprQEYiCiAgICAgICAgICAgICAg
+        ICAgICAgIH0sCiAgICAgICAgICAgICAgICAgICAgICJzdGFydF9sb2NhdGlv
+        biIgOiB7CiAgICAgICAgICAgICAgICAgICAgICAgICJsYXQiIDogMzcuNzc4
+        MDMxMjk5OTk5OTksCiAgICAgICAgICAgICAgICAgICAgICAgICJsbmciIDog
+        LTEyMi40MjE1MjgzCiAgICAgICAgICAgICAgICAgICAgIH0sCiAgICAgICAg
+        ICAgICAgICAgICAgICJ0cmF2ZWxfbW9kZSIgOiAiRFJJVklORyIKICAgICAg
+        ICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgICAgewogICAgICAgICAg
+        ICAgICAgICAgICAiZGlzdGFuY2UiIDogewogICAgICAgICAgICAgICAgICAg
+        ICAgICAidGV4dCIgOiAiMC45IG1pIiwKICAgICAgICAgICAgICAgICAgICAg
+        ICAgInZhbHVlIiA6IDE0NDgKICAgICAgICAgICAgICAgICAgICAgfSwKICAg
+        ICAgICAgICAgICAgICAgICAgImR1cmF0aW9uIiA6IHsKICAgICAgICAgICAg
+        ICAgICAgICAgICAgInRleHQiIDogIjIgbWlucyIsCiAgICAgICAgICAgICAg
+        ICAgICAgICAgICJ2YWx1ZSIgOiAxNDUKICAgICAgICAgICAgICAgICAgICAg
+        fSwKICAgICAgICAgICAgICAgICAgICAgImVuZF9sb2NhdGlvbiIgOiB7CiAg
+        ICAgICAgICAgICAgICAgICAgICAgICJsYXQiIDogMzcuNzkwMzUwMiwKICAg
+        ICAgICAgICAgICAgICAgICAgICAgImxuZyIgOiAtMTIyLjQwNzM0OTcKICAg
+        ICAgICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgICAgICAgImh0
+        bWxfaW5zdHJ1Y3Rpb25zIiA6ICJUdXJuIFx1MDAzY2JcdTAwM2VyaWdodFx1
+        MDAzYy9iXHUwMDNlIG9udG8gXHUwMDNjYlx1MDAzZUJ1c2ggU3RcdTAwM2Mv
+        Ylx1MDAzZVx1MDAzY2RpdiBzdHlsZT1cImZvbnQtc2l6ZTowLjllbVwiXHUw
+        MDNlRGVzdGluYXRpb24gd2lsbCBiZSBvbiB0aGUgbGVmdFx1MDAzYy9kaXZc
+        dTAwM2UiLAogICAgICAgICAgICAgICAgICAgICAibWFuZXV2ZXIiIDogInR1
+        cm4tcmlnaHQiLAogICAgICAgICAgICAgICAgICAgICAicG9seWxpbmUiIDog
+        ewogICAgICAgICAgICAgICAgICAgICAgICAicG9pbnRzIiA6ICJ5b3NlRnJ6
+        ZWpWaUBfSUNbZ0B3SGlAZUlXb0VPd0JPc0JZeUVVb0RVeUNnQGVJZ0BhSWVA
+        d0hBT0NTUXtDQVFJb0FDWSIKICAgICAgICAgICAgICAgICAgICAgfSwKICAg
+        ICAgICAgICAgICAgICAgICAgInN0YXJ0X2xvY2F0aW9uIiA6IHsKICAgICAg
+        ICAgICAgICAgICAgICAgICAgImxhdCIgOiAzNy43ODgyODc2LAogICAgICAg
+        ICAgICAgICAgICAgICAgICAibG5nIiA6IC0xMjIuNDIzNjE4NAogICAgICAg
+        ICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgICAgICAidHJhdmVs
+        X21vZGUiIDogIkRSSVZJTkciCiAgICAgICAgICAgICAgICAgIH0KICAgICAg
+        ICAgICAgICAgXSwKICAgICAgICAgICAgICAgInZpYV93YXlwb2ludCIgOiBb
+        XQogICAgICAgICAgICB9LAogICAgICAgICAgICB7CiAgICAgICAgICAgICAg
+        ICJkaXN0YW5jZSIgOiB7CiAgICAgICAgICAgICAgICAgICJ0ZXh0IiA6ICIw
+        LjggbWkiLAogICAgICAgICAgICAgICAgICAidmFsdWUiIDogMTM1NAogICAg
+        ICAgICAgICAgICB9LAogICAgICAgICAgICAgICAiZHVyYXRpb24iIDogewog
+        ICAgICAgICAgICAgICAgICAidGV4dCIgOiAiMyBtaW5zIiwKICAgICAgICAg
+        ICAgICAgICAgInZhbHVlIiA6IDIwNgogICAgICAgICAgICAgICB9LAogICAg
+        ICAgICAgICAgICAiZW5kX2FkZHJlc3MiIDogIjYzMyBGb2xzb20gU3RyZWV0
+        LCBTYW4gRnJhbmNpc2NvLCBDQSA5NDEwNywgVVNBIiwKICAgICAgICAgICAg
+        ICAgImVuZF9sb2NhdGlvbiIgOiB7CiAgICAgICAgICAgICAgICAgICJsYXQi
+        IDogMzcuNzg0ODYyNSwKICAgICAgICAgICAgICAgICAgImxuZyIgOiAtMTIy
+        LjM5NzYxMTUKICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgInN0
+        YXJ0X2FkZHJlc3MiIDogIjYwMCBCdXNoIFN0cmVldCwgU2FuIEZyYW5jaXNj
+        bywgQ0EgOTQxMDgsIFVTQSIsCiAgICAgICAgICAgICAgICJzdGFydF9sb2Nh
+        dGlvbiIgOiB7CiAgICAgICAgICAgICAgICAgICJsYXQiIDogMzcuNzkwMzUw
+        MiwKICAgICAgICAgICAgICAgICAgImxuZyIgOiAtMTIyLjQwNzM0OTcKICAg
+        ICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgInN0ZXBzIiA6IFsKICAg
+        ICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAgICAiZGlzdGFu
+        Y2UiIDogewogICAgICAgICAgICAgICAgICAgICAgICAidGV4dCIgOiAiMC4z
+        IG1pIiwKICAgICAgICAgICAgICAgICAgICAgICAgInZhbHVlIiA6IDQzOAog
+        ICAgICAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgICAgICAi
+        ZHVyYXRpb24iIDogewogICAgICAgICAgICAgICAgICAgICAgICAidGV4dCIg
+        OiAiMSBtaW4iLAogICAgICAgICAgICAgICAgICAgICAgICAidmFsdWUiIDog
+        NDgKICAgICAgICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgICAg
+        ICAgImVuZF9sb2NhdGlvbiIgOiB7CiAgICAgICAgICAgICAgICAgICAgICAg
+        ICJsYXQiIDogMzcuNzkwOTc2LAogICAgICAgICAgICAgICAgICAgICAgICAi
+        bG5nIiA6IC0xMjIuNDAyNDI4MQogICAgICAgICAgICAgICAgICAgICB9LAog
+        ICAgICAgICAgICAgICAgICAgICAiaHRtbF9pbnN0cnVjdGlvbnMiIDogIkhl
+        YWQgXHUwMDNjYlx1MDAzZWVhc3RcdTAwM2MvYlx1MDAzZSBvbiBcdTAwM2Ni
+        XHUwMDNlQnVzaCBTdFx1MDAzYy9iXHUwMDNlIHRvd2FyZCBcdTAwM2NiXHUw
+        MDNlU3RvY2t0b24gU3RcdTAwM2MvYlx1MDAzZSIsCiAgICAgICAgICAgICAg
+        ICAgICAgICJwb2x5bGluZSIgOiB7CiAgICAgICAgICAgICAgICAgICAgICAg
+        ICJwb2ludHMiIDogInV8c2VGfHRialZDYUBJaUFLX0JNbUNLd0FLdUFHc0BD
+        W0V3QElpQVVxREtrQSIKICAgICAgICAgICAgICAgICAgICAgfSwKICAgICAg
+        ICAgICAgICAgICAgICAgInN0YXJ0X2xvY2F0aW9uIiA6IHsKICAgICAgICAg
+        ICAgICAgICAgICAgICAgImxhdCIgOiAzNy43OTAzNTAyLAogICAgICAgICAg
+        ICAgICAgICAgICAgICAibG5nIiA6IC0xMjIuNDA3MzQ5NwogICAgICAgICAg
+        ICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgICAgICAidHJhdmVsX21v
+        ZGUiIDogIkRSSVZJTkciCiAgICAgICAgICAgICAgICAgIH0sCiAgICAgICAg
+        ICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICAgImRpc3RhbmNlIiA6
+        IHsKICAgICAgICAgICAgICAgICAgICAgICAgInRleHQiIDogIjAuMiBtaSIs
+        CiAgICAgICAgICAgICAgICAgICAgICAgICJ2YWx1ZSIgOiAyNDMKICAgICAg
+        ICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgICAgICAgImR1cmF0
+        aW9uIiA6IHsKICAgICAgICAgICAgICAgICAgICAgICAgInRleHQiIDogIjEg
+        bWluIiwKICAgICAgICAgICAgICAgICAgICAgICAgInZhbHVlIiA6IDU3CiAg
+        ICAgICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICAgICAgICJl
+        bmRfbG9jYXRpb24iIDogewogICAgICAgICAgICAgICAgICAgICAgICAibGF0
+        IiA6IDM3Ljc4ODgxOTcsCiAgICAgICAgICAgICAgICAgICAgICAgICJsbmci
+        IDogLTEyMi40MDE5OTE0CiAgICAgICAgICAgICAgICAgICAgIH0sCiAgICAg
+        ICAgICAgICAgICAgICAgICJodG1sX2luc3RydWN0aW9ucyIgOiAiVHVybiBc
+        dTAwM2NiXHUwMDNlcmlnaHRcdTAwM2MvYlx1MDAzZSBvbnRvIFx1MDAzY2Jc
+        dTAwM2VNb250Z29tZXJ5IFN0XHUwMDNjL2JcdTAwM2UiLAogICAgICAgICAg
+        ICAgICAgICAgICAibWFuZXV2ZXIiIDogInR1cm4tcmlnaHQiLAogICAgICAg
+        ICAgICAgICAgICAgICAicG9seWxpbmUiIDogewogICAgICAgICAgICAgICAg
+        ICAgICAgICAicG9pbnRzIiA6ICJzYHRlRmR2YWpWYEJTfEFVbEBHckJXUkNu
+        QElIPyIKICAgICAgICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAg
+        ICAgICAgInN0YXJ0X2xvY2F0aW9uIiA6IHsKICAgICAgICAgICAgICAgICAg
+        ICAgICAgImxhdCIgOiAzNy43OTA5NzYsCiAgICAgICAgICAgICAgICAgICAg
+        ICAgICJsbmciIDogLTEyMi40MDI0MjgxCiAgICAgICAgICAgICAgICAgICAg
+        IH0sCiAgICAgICAgICAgICAgICAgICAgICJ0cmF2ZWxfbW9kZSIgOiAiRFJJ
+        VklORyIKICAgICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgICAg
+        ewogICAgICAgICAgICAgICAgICAgICAiZGlzdGFuY2UiIDogewogICAgICAg
+        ICAgICAgICAgICAgICAgICAidGV4dCIgOiAiMC4yIG1pIiwKICAgICAgICAg
+        ICAgICAgICAgICAgICAgInZhbHVlIiA6IDQwMgogICAgICAgICAgICAgICAg
+        ICAgICB9LAogICAgICAgICAgICAgICAgICAgICAiZHVyYXRpb24iIDogewog
+        ICAgICAgICAgICAgICAgICAgICAgICAidGV4dCIgOiAiMSBtaW4iLAogICAg
+        ICAgICAgICAgICAgICAgICAgICAidmFsdWUiIDogNTIKICAgICAgICAgICAg
+        ICAgICAgICAgfSwKICAgICAgICAgICAgICAgICAgICAgImVuZF9sb2NhdGlv
+        biIgOiB7CiAgICAgICAgICAgICAgICAgICAgICAgICJsYXQiIDogMzcuNzg2
+        MjE0MiwKICAgICAgICAgICAgICAgICAgICAgICAgImxuZyIgOiAtMTIyLjM5
+        ODk4NjYKICAgICAgICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAg
+        ICAgICAgImh0bWxfaW5zdHJ1Y3Rpb25zIiA6ICJDb250aW51ZSBvbnRvIFx1
+        MDAzY2JcdTAwM2VOZXcgTW9udGdvbWVyeSBTdFx1MDAzYy9iXHUwMDNlIiwK
+        ICAgICAgICAgICAgICAgICAgICAgInBvbHlsaW5lIiA6IHsKICAgICAgICAg
+        ICAgICAgICAgICAgICAgInBvaW50cyIgOiAiY3NzZUZsc2FqVlRIQj9IP0A/
+        P0FAP0BBZEF3QWRBX0JmQG9AbkBfQW5BaUJyQV9CdkFrQiIKICAgICAgICAg
+        ICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgICAgICAgInN0YXJ0X2xv
+        Y2F0aW9uIiA6IHsKICAgICAgICAgICAgICAgICAgICAgICAgImxhdCIgOiAz
+        Ny43ODg4MTk3LAogICAgICAgICAgICAgICAgICAgICAgICAibG5nIiA6IC0x
+        MjIuNDAxOTkxNAogICAgICAgICAgICAgICAgICAgICB9LAogICAgICAgICAg
+        ICAgICAgICAgICAidHJhdmVsX21vZGUiIDogIkRSSVZJTkciCiAgICAgICAg
+        ICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAg
+        ICAgICAgICAgImRpc3RhbmNlIiA6IHsKICAgICAgICAgICAgICAgICAgICAg
+        ICAgInRleHQiIDogIjE2NCBmdCIsCiAgICAgICAgICAgICAgICAgICAgICAg
+        ICJ2YWx1ZSIgOiA1MAogICAgICAgICAgICAgICAgICAgICB9LAogICAgICAg
+        ICAgICAgICAgICAgICAiZHVyYXRpb24iIDogewogICAgICAgICAgICAgICAg
+        ICAgICAgICAidGV4dCIgOiAiMSBtaW4iLAogICAgICAgICAgICAgICAgICAg
+        ICAgICAidmFsdWUiIDogMTAKICAgICAgICAgICAgICAgICAgICAgfSwKICAg
+        ICAgICAgICAgICAgICAgICAgImVuZF9sb2NhdGlvbiIgOiB7CiAgICAgICAg
+        ICAgICAgICAgICAgICAgICJsYXQiIDogMzcuNzg1OTAwMiwKICAgICAgICAg
+        ICAgICAgICAgICAgICAgImxuZyIgOiAtMTIyLjM5OTM4NjQKICAgICAgICAg
+        ICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgICAgICAgImh0bWxfaW5z
+        dHJ1Y3Rpb25zIiA6ICJUdXJuIFx1MDAzY2JcdTAwM2VyaWdodFx1MDAzYy9i
+        XHUwMDNlIG9udG8gXHUwMDNjYlx1MDAzZUhvd2FyZCBTdFx1MDAzYy9iXHUw
+        MDNlIiwKICAgICAgICAgICAgICAgICAgICAgIm1hbmV1dmVyIiA6ICJ0dXJu
+        LXJpZ2h0IiwKICAgICAgICAgICAgICAgICAgICAgInBvbHlsaW5lIiA6IHsK
+        ICAgICAgICAgICAgICAgICAgICAgICAgInBvaW50cyIgOiAieWJzZUZ0YGFq
+        VnxAbkEiCiAgICAgICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAg
+        ICAgICAgICJzdGFydF9sb2NhdGlvbiIgOiB7CiAgICAgICAgICAgICAgICAg
+        ICAgICAgICJsYXQiIDogMzcuNzg2MjE0MiwKICAgICAgICAgICAgICAgICAg
+        ICAgICAgImxuZyIgOiAtMTIyLjM5ODk4NjYKICAgICAgICAgICAgICAgICAg
+        ICAgfSwKICAgICAgICAgICAgICAgICAgICAgInRyYXZlbF9tb2RlIiA6ICJE
+        UklWSU5HIgogICAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAg
+        ICB7CiAgICAgICAgICAgICAgICAgICAgICJkaXN0YW5jZSIgOiB7CiAgICAg
+        ICAgICAgICAgICAgICAgICAgICJ0ZXh0IiA6ICIwLjEgbWkiLAogICAgICAg
+        ICAgICAgICAgICAgICAgICAidmFsdWUiIDogMTkyCiAgICAgICAgICAgICAg
+        ICAgICAgIH0sCiAgICAgICAgICAgICAgICAgICAgICJkdXJhdGlvbiIgOiB7
+        CiAgICAgICAgICAgICAgICAgICAgICAgICJ0ZXh0IiA6ICIxIG1pbiIsCiAg
+        ICAgICAgICAgICAgICAgICAgICAgICJ2YWx1ZSIgOiAyOQogICAgICAgICAg
+        ICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgICAgICAiZW5kX2xvY2F0
+        aW9uIiA6IHsKICAgICAgICAgICAgICAgICAgICAgICAgImxhdCIgOiAzNy43
+        ODQ2ODI3LAogICAgICAgICAgICAgICAgICAgICAgICAibG5nIiA6IC0xMjIu
+        Mzk3ODQ1MQogICAgICAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAg
+        ICAgICAgICAiaHRtbF9pbnN0cnVjdGlvbnMiIDogIlRha2UgdGhlIDFzdCBc
+        dTAwM2NiXHUwMDNlbGVmdFx1MDAzYy9iXHUwMDNlIG9udG8gXHUwMDNjYlx1
+        MDAzZUhhd3Rob3JuZSBTdFx1MDAzYy9iXHUwMDNlIiwKICAgICAgICAgICAg
+        ICAgICAgICAgInBvbHlsaW5lIiA6IHsKICAgICAgICAgICAgICAgICAgICAg
+        ICAgInBvaW50cyIgOiAie2BzZUZkY2FqVnJGc0giCiAgICAgICAgICAgICAg
+        ICAgICAgIH0sCiAgICAgICAgICAgICAgICAgICAgICJzdGFydF9sb2NhdGlv
+        biIgOiB7CiAgICAgICAgICAgICAgICAgICAgICAgICJsYXQiIDogMzcuNzg1
+        OTAwMiwKICAgICAgICAgICAgICAgICAgICAgICAgImxuZyIgOiAtMTIyLjM5
+        OTM4NjQKICAgICAgICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAg
+        ICAgICAgInRyYXZlbF9tb2RlIiA6ICJEUklWSU5HIgogICAgICAgICAgICAg
+        ICAgICB9LAogICAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAg
+        ICAgICJkaXN0YW5jZSIgOiB7CiAgICAgICAgICAgICAgICAgICAgICAgICJ0
+        ZXh0IiA6ICI5NSBmdCIsCiAgICAgICAgICAgICAgICAgICAgICAgICJ2YWx1
+        ZSIgOiAyOQogICAgICAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAg
+        ICAgICAgICAiZHVyYXRpb24iIDogewogICAgICAgICAgICAgICAgICAgICAg
+        ICAidGV4dCIgOiAiMSBtaW4iLAogICAgICAgICAgICAgICAgICAgICAgICAi
+        dmFsdWUiIDogMTAKICAgICAgICAgICAgICAgICAgICAgfSwKICAgICAgICAg
+        ICAgICAgICAgICAgImVuZF9sb2NhdGlvbiIgOiB7CiAgICAgICAgICAgICAg
+        ICAgICAgICAgICJsYXQiIDogMzcuNzg0ODYyNSwKICAgICAgICAgICAgICAg
+        ICAgICAgICAgImxuZyIgOiAtMTIyLjM5NzYxMTUKICAgICAgICAgICAgICAg
+        ICAgICAgfSwKICAgICAgICAgICAgICAgICAgICAgImh0bWxfaW5zdHJ1Y3Rp
+        b25zIiA6ICJUYWtlIHRoZSAxc3QgXHUwMDNjYlx1MDAzZWxlZnRcdTAwM2Mv
+        Ylx1MDAzZSBvbnRvIFx1MDAzY2JcdTAwM2VGb2xzb20gU3RcdTAwM2MvYlx1
+        MDAzZVx1MDAzY2RpdiBzdHlsZT1cImZvbnQtc2l6ZTowLjllbVwiXHUwMDNl
+        RGVzdGluYXRpb24gd2lsbCBiZSBvbiB0aGUgcmlnaHRcdTAwM2MvZGl2XHUw
+        MDNlIiwKICAgICAgICAgICAgICAgICAgICAgInBvbHlsaW5lIiA6IHsKICAg
+        ICAgICAgICAgICAgICAgICAgICAgInBvaW50cyIgOiAiZ3lyZUZweWBqVmNA
+        b0AiCiAgICAgICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICAg
+        ICAgICJzdGFydF9sb2NhdGlvbiIgOiB7CiAgICAgICAgICAgICAgICAgICAg
+        ICAgICJsYXQiIDogMzcuNzg0NjgyNywKICAgICAgICAgICAgICAgICAgICAg
+        ICAgImxuZyIgOiAtMTIyLjM5Nzg0NTEKICAgICAgICAgICAgICAgICAgICAg
+        fSwKICAgICAgICAgICAgICAgICAgICAgInRyYXZlbF9tb2RlIiA6ICJEUklW
+        SU5HIgogICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgIF0sCiAg
+        ICAgICAgICAgICAgICJ2aWFfd2F5cG9pbnQiIDogW10KICAgICAgICAgICAg
+        fQogICAgICAgICBdLAogICAgICAgICAib3ZlcnZpZXdfcG9seWxpbmUiIDog
+        ewogICAgICAgICAgICAicG9pbnRzIiA6ICJxYHFlRnJmZmpWTHBCfUFSdUNc
+        XF9DVnNBdVNpQGdJfURmQHVHdkB1SmpBdUpoQXlEYkBpRWhAfUloQWFCUm1A
+        e0l5QmVddUF3U3dCb11fQXdOd0FfVUtrQWBCU2pDXWZDW3hASVhISj9CQ2pD
+        d0R2QW9CbkFpQnJBX0J2QWtCfEBuQXJGc0hjQG9AIgogICAgICAgICB9LAog
+        ICAgICAgICAic3VtbWFyeSIgOiAiQnVzaCBTdCBhbmQgTmV3IE1vbnRnb21l
+        cnkgU3QiLAogICAgICAgICAid2FybmluZ3MiIDogW10sCiAgICAgICAgICJ3
+        YXlwb2ludF9vcmRlciIgOiBbIDAgXQogICAgICB9CiAgIF0sCiAgICJzdGF0
+        dXMiIDogIk9LIgp9Cg==
+    http_version: !binary |-
+      MS4x
+  recorded_at: Sun, 13 Apr 2014 20:55:19 GMT
+recorded_with: VCR 2.9.0
