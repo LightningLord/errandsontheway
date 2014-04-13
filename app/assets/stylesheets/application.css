@@ -26,11 +26,11 @@ html body {
   font-family: 'Roboto', sans-serif;
 }
 
-html h1, h2, h3 {
+html h1, html h2, html h3 {
   font-family: 'Roboto Slab', serif;
 }
 
-.errand_search, #map-canvas,#directions-panel {
+#map-canvas,#directions-panel {
   height: 50%;
   width: 35%;
   margin: auto;
