@@ -6,6 +6,9 @@
 
 
   <h1>Your trip</h1>
+  <p><b>Start-point:</b> <%= @trip.start_point_address %><br>
+  <b>Destination:</b> <%= @trip.end_point_address %></p>
+
   <h3>Trip Duration: <%= time_in_minutes(@trip_duration) %></h3>
 
   <div id="map-canvas"></div>
