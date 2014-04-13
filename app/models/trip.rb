@@ -1,6 +1,6 @@
 class Trip < ActiveRecord::Base
   has_many :errands
-  validates :start_point_address, :end_point_address, presence: true
+  validates :start_point_address, :end_point_address, :original_duration, presence: true 
   validates :start_point_latitude, :start_point_longitude, :end_point_latitude, :end_point_longitude, presence: {message: "Please enter valid start-point and end-point."}
 
   def set_coordinates(start_coords, end_coords)

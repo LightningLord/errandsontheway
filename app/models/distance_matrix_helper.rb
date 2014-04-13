@@ -11,8 +11,9 @@ class DistanceMatrixHelper
                           key: ENV["API_KEY"] } }
   end
 
-  def distance_matrix
-    self.class.get("/maps/api/distancematrix/json", @options)
+  def get_trip_duration
+    response = self.class.get("/maps/api/distancematrix/json", @options)
+    response.parsed_response["rows"].first["elements"].first["duration"]["value"]
   end
 
 
