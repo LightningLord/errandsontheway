@@ -18,7 +18,7 @@ $(function(){
     triggerAjax: function(event){
       event.preventDefault()
       $('#spinner').show()
-      $('.row').hide()
+      $('.row').remove()
       $.ajax({
         url: '/options',
         method: 'get',
