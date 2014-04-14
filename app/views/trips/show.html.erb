@@ -14,7 +14,7 @@
 </div>
 
 <div id="map-canvas"></div>
-<% if reached_max_errands? %>
+<% if @trip.reached_max_errands? %>
 <div class="row">
     <p>You have reached the maximum amount of errands. Please finalize your route to see the route.</p>
 </div>
@@ -55,7 +55,7 @@
     </ul>
   </div>
 </div>
-<% unless reached_max_errands? %>
+<% unless @trip.reached_max_errands? %>
 <div class="row">
   <div class="small-12 large-12 columns">
     <p class="total">
