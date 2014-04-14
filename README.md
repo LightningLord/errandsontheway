@@ -21,7 +21,12 @@ Members:
 * Melanie Archer
 * Christine Dolendo
 
-Getting Started
+####Getting Started
+
+#####API Key
 Get a Bing api key from http://www.microsoft.com/maps/create-a-bing-maps-key.aspx
 Create a .env file in the root directory.
-Save your key as BING_KEY = yourkey (no quotes)
+Save your key as BING_KEY = yourkey (no quotes).
+
+
+
