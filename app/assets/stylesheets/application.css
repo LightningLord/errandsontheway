@@ -166,6 +166,13 @@ html .button.travelmode:hover {
   background-color: #e8eded;
 }
 
+html .button.travelmode.selected {
+  color: #24C775;
+  background-color: #e8eded;
+  border-width: 1px;
+  border-color: #24C775;
+}
+
 html #travelmode_label {
   background-color: #fff;
   color: #4d4d4d;
