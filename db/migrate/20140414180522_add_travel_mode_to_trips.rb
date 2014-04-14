@@ -1,5 +1,5 @@
 class AddTravelModeToTrips < ActiveRecord::Migration
   def change
-    add_column :trips, :travel_mode, :string, default: "DRIVING"
+    add_column :trips, :travel_mode, :string
   end
 end
