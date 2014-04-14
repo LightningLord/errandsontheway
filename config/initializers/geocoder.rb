@@ -1,5 +1,3 @@
-# Geocoder.configure({
-#   lookup: :google,
-#   api_key: ENV['API_KEY'],
-#   cache: Rails.cache
-# })
+Geocoder.configure({
+  cache: Rails.cache
+})
