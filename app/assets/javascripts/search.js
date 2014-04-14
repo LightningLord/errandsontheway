@@ -15,17 +15,20 @@ $(function(){
       $('#spinner').hide()
     },
 
-    triggerAjax: function(e){
-      e.preventDefault()
+    triggerAjax: function(event){
+      event.preventDefault()
       $('#spinner').show()
       $('.row').hide()
       $.ajax({
-        action: '/options',
-        method: this.method,
+        url: '/options',
+        method: 'get',
         data: $(this).serialize()
       }).done(function(server_data){
-        $('#spinner').hide()
-        console.log(server_data)
-      })
+        $('body').append(server_data)
+        $('#spinner').remove()
+        $('#map-canvas').remove()
+      }
+
+      )
     }
   }
