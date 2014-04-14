@@ -1,24 +1,25 @@
 <div class="row">
   <div class="small-12 large-12 columns">
-      <h2>You Searched: <%= @search_term %></h2>
+      <h2>Places on the way for: <%= @search_term %></h2>
   </div>
 </div>
 
 
 <div class="row">
-  <dl>
+
   <% @businesses.each do |business| %>
-    <dt><%= business.name %></dt>
-    <dd><%= business.address %></dd>
-    <dd><%= time_in_minutes(business.extra_duration) %></dd>
-    <%= form_tag('/errands', method: 'post') do %>
+    <ul id="business_container" class="pricing-table">
+    <li class="price"><%= business.name %></li>
+    <li class="description"><%= business.address %></li>
+    <li class="description">Additional time: <%= time_in_minutes(business.extra_duration) %></dd>
+    <li class="cta-button"><%= form_tag('/errands', method: 'post') do %>
       <%= hidden_field_tag("errand[business_name]", business.name)%>
       <%= hidden_field_tag("errand[address]", business.address)%>
       <%= hidden_field_tag("errand[delta_duration]", business.extra_duration)%>
-      <%= submit_tag("Choose this Business") %>
+    <%= submit_tag("Choose this Business", class: "button") %></li>
     <% end %>
-
+  </ul>
   <% end %>
 
-  </dl>
+
 </div>
