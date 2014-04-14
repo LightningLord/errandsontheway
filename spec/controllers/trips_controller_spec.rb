@@ -46,10 +46,6 @@ describe TripsController do
       end
     end
 
-    it "should render new page for invalid addresses" do
-      post :create, trip: {"start_point_address"=>"1BadAddress", "end_point_address"=>"2Bad Address"}
-      expect(response).to render_template(:new)
-    end
   end
 
   describe "finalize and summary" do
