@@ -5,6 +5,9 @@ class TripsController < ApplicationController
     @trip = Trip.new
   end
 
+  # No test break if I comment out this method (Damn VCR dependency). Lines 10
+  # and 11 confuse me, why are you creating with permitted_params, then
+  # immediately updating with the regular params?
   def create
     trip = Trip.new(permitted_params)
     trip.update(params)
