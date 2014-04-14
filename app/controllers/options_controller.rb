@@ -1,4 +1,10 @@
 class OptionsController < ApplicationController
+  # This is the most complicated action in your application with a flog score of
+  # 29.1. However, when I comment out the code, only one test,
+  # options_controller_spec "with no session it redirects" fails. I would expect
+  # a corresponding test would cover the case of having a session. What should
+  # the values of the search_term, trip, start_place, end_place, start_business,
+  # and end_business be?
   def index
     if session[:trip_id]
       @search_term = params[:search]
