@@ -59,7 +59,7 @@
 <div class="row">
   <div class="small-12 large-12 columns">
     <p class="total">
-      You have added <%= @trip.errands.count %> out of 3 total errands to your trip.
+      You have added <%= @trip.errands.count %> out of <%= @trip.max_errand_limit %> total errands to your trip.
     </p>
   </div>
 </div>

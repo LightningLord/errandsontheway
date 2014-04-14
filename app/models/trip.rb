@@ -33,7 +33,11 @@ class Trip < ActiveRecord::Base
   end
 
   def reached_max_errands?
-    self.errands.length == 5
+    self.errands.length == max_errand_limit
+  end
+
+  def max_errand_limit
+    5
   end
 
   private
