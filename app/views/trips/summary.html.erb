@@ -2,8 +2,8 @@
   <div class="small-12 large-12 columns">
     <h1>Here's your trip!</h1>
     <%= render "headerblock" %>
-    <h3>Trip Duration Without Errands: <%= @trip.format_original_duration %></h3>
-    <h3>Trip Duration With Errands: <%= @trip.format_ending_duration %></h3>
+    <h3>Trip Duration Without Errands: <%= @trip.format_original_duration %> (<%= @trip.travel_mode.downcase %>) </h3>
+    <h3>Trip Duration With Errands: <%= @trip.format_ending_duration %> (<%= @trip.travel_mode.downcase %>) </h3>
   </div>  
 </div>
 
