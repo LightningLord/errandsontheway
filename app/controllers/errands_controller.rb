@@ -8,7 +8,7 @@ class ErrandsController < ApplicationController
     if errand.save
       flash[:notice] = "Your errand has been added!"
     else
-      flash[:notice] = "There was a problem saving this errand. Please choose a different business."
+      flash[:alert] = "There was a problem saving this errand. Please choose a different business."
     end
     redirect_to(trip)
   end
