@@ -30,8 +30,15 @@ $(function(){
       }).fail(function(){
         $('#spinner').remove()
         $('#map-canvas').remove()
-        $('body').append('<div class="alert-box alert" data-alert="">Something went wrong. Please refresh the page!<a class="close" href="#">×</a></div>')
+
+        $('body').append(errorMsg);
       })
     }
   }
 
+var errorMsg = function(){
+  msg = $('<div>', {
+    'class': 'row',
+    'html' : '<div class="small-12 large-12 columns alert-box alert" data-alert="">Something went wrong. Please refresh the page!<a class="close" href="#">×</a></div>'
+    });
+  };
