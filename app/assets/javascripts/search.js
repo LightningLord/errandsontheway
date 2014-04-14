@@ -27,8 +27,11 @@ $(function(){
         $('body').append(server_data)
         $('#spinner').remove()
         $('#map-canvas').remove()
-      }
-
-      )
+      }).fail(function(){
+        $('#spinner').remove()
+        $('#map-canvas').remove()
+        $('body').append('<div class="alert-box alert" data-alert="">Something went wrong. Please refresh the page!<a class="close" href="#">×</a></div>')
+      })
     }
   }
+
