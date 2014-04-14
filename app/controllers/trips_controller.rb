@@ -34,6 +34,11 @@ class TripsController < ApplicationController
     end
   end
 
+  # Two tests fail when I delete this code, which is good. I dislike the use of
+  # a postfix if on long lines, please move that conditional to its own line.
+  # No tests are proving that the third line does anything, so after moving the
+  # conditional, ensure that the ending-duration is changed when the
+  # ending_duration is 0, and not changed otherwise.
   def finalize
     trip = Trip.find(session[:trip_id])
     trip.update_attributes(url: ShortenedLink.generate_random_string)
