@@ -22,6 +22,16 @@ class OptionsController < ApplicationController
 
   private
 
+  # This is your codebase's second most complicated method, and nothing fails if
+  # I comment out each piece of logic, so I guess it must not be important.
+  # I personally find an explicit return to be distasteful, and I think that
+  # what you are looking for instead of `businesses.each do |business|` is
+  # `businesses.map do |business|`. You have lines that are more than
+  # 120-characters long in this action, which is beyond the realm of human
+  # understanding. I think that this thing could use some major work, but the
+  # only way it should happen is with some test coverage around it. Inside of
+  # your iterator you have two postfix conditionals and they are easy to miss,
+  # but offhand, I'd say there are like 4-8 cases you'd need to create tests for.
   def get_business_info_near_point(place, trip)
     businesses = place.get_names_and_addresses.map { |name_address_hash| Business.new(name_address_hash[:name], name_address_hash[:address])}
     businesses.each do |business|
