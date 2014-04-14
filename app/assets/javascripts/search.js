@@ -31,14 +31,7 @@ $(function(){
         $('#spinner').remove()
         $('#map-canvas').remove()
 
-        $('body').append(errorMsg);
+        $('body').append('<div class="row"><div class="small-12 large-12 columns alert-box alert" data-alert="">Something went wrong. Please refresh the page!<a class="close" href="#">×</a></div></div>');
       })
     }
   }
-
-var errorMsg = function(){
-  msg = $('<div>', {
-    'class': 'row',
-    'html' : '<div class="small-12 large-12 columns alert-box alert" data-alert="">Something went wrong. Please refresh the page!<a class="close" href="#">×</a></div>'
-    });
-  };
