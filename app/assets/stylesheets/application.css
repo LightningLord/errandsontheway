@@ -50,6 +50,9 @@ html h1, html h2, html h3 {
   font-family: 'Roboto Slab', serif;
 }
 
+html h2, html h2 small {
+  font-size: 1.6875rem;
+}
 
 html input[type=text] {
   font-size: 1rem;
