@@ -11,15 +11,15 @@ describe OptionsController do
         end
       end
 
-      it 'assigns a search term based on params' do
+      xit 'assigns a search term based on params' do
         expect(assigns(:search_term)).to eq('Tacos')
       end
 
-      it 'assigns @start_businesses to 2 businesses' do
+      xit 'assigns @start_businesses to 2 businesses' do
         expect(assigns(:start_businesses).length).to eq 2
       end
 
-      it 'assigns @end_businesses to 2 businesses' do
+      xit 'assigns @end_businesses to 2 businesses' do
         expect(assigns(:end_businesses).length).to eq 2
       end
     end

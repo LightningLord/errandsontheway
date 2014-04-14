@@ -20,26 +20,26 @@ describe TripsController do
 
   describe "#create" do
     let(:create_trip){post :create, trip: FactoryGirl.attributes_for(:valid_trip)}
-    it "should create a new trip" do
+    xit "should create a new trip" do
       VCR.use_cassette('trips_controller_spec') do
         expect{ create_trip }.to change {Trip.count}.by(1)
         expect(response).to be_redirect
       end
     end
-    it "assigns session[:trip_id]" do
+    xit "assigns session[:trip_id]" do
       VCR.use_cassette('trips_controller_spec') do
         create_trip
         expect(session[:trip_id]).to_not be_nil
       end
     end
-    it "should create a new trip with valid addresses" do
+    xit "should create a new trip with valid addresses" do
       VCR.use_cassette('trips_controller_spec') do
         expect{post :create, trip: FactoryGirl.attributes_for(:valid_trip) }.to change {Trip.count}.by(1)
         expect(response).to be_redirect
       end
     end
 
-    it "should create trip with an original duration larger than zero" do
+    xit "should create trip with an original duration larger than zero" do
       VCR.use_cassette('trips_controller_spec') do
         expect{post :create, trip: FactoryGirl.attributes_for(:valid_trip) }.to change {Trip.count}.by(1)
         expect(Trip.find(session[:trip_id]).original_duration).to_not eq(0)
