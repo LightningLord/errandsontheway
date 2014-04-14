@@ -66,14 +66,14 @@ html ol {
 }
 
 html .button {
-  background: #23d1ef;
+  background: #23b7e0;
   color: #fff;
   text-shadow: 1px 1px #999;
 }
 
 html .button:hover {
-  background: #e3e5e5;
-  color: #23d1ef;
+  background: #e8eded;
+  color: #23b7e0;
 }
 
 html .button-group {
