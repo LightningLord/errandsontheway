@@ -1,9 +1,15 @@
-<h1>Here's your trip!</h1>
+<div class="row">
+  <div class="small-12 large-12 columns">
+    <h1>Here's your trip!</h1>
+    <%= render "headerblock" %>
+    <h3>Trip Duration Without Errands: <%= @trip.format_original_duration %></h3>
+    <h3>Trip Duration With Errands: <%= @trip.format_ending_duration %></h3>
+</div>
+<div class="row">
 
-<p><b>Start-point:</b> <%= @trip.start_point_address %><br/>
-<b>Destination:</b> <%= @trip.end_point_address %></p>
 
-<p><b>Trip Duration Without Errands:</b> <%= @trip.format_original_duration %><br><b>Trip Duration With Errands:</b> <%= @trip.format_ending_duration %></p>
+
+
 
 <h4>Your errands on the way:</h4>
 <ol>
@@ -11,6 +17,7 @@
     <li><%= errand.business_name %></li>
   <% end %>
 </ol>
+</div>
 
 <p>This trip link is yours! Bookmark it, share it, save it.</p>
 

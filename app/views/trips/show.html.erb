@@ -4,44 +4,71 @@
   renderMap(trip, errands, false);
 </script>
 
-
-  <h1>Your trip:</h1>
-  <p><b>Start-point:</b> <%= @trip.start_point_address %><br>
-  <b>Destination:</b> <%= @trip.end_point_address %></p>
-
-  <h3>Trip Duration: <%= time_in_minutes(@trip_duration) %></h3>
-  <%= display_flash_messages %>
-
-  <div id="map-canvas"></div>
-    <% if reached_max_errands? %>
-    <ol class="maximum">
-      <% @trip.errands.each do |errand| %>
-        <li><%= errand.business_name %> - <%= errand.address %></li>
-      <% end %>
-
-    </ol>
-
-  <p>You have reached the maximum amount of errands. Please finalize your route to see the route.</p>
-<% else %>
-  Type in an errand:
-  <div class="errand_search">
-    <%= form_tag('/options', method: 'get') do %>
-    <ol class="inline-list">
-      <li><%= text_field_tag :search, nil, :placeholder => 'e.g. Pick up laundry, buy coffee' %></li>
-      <li><%= submit_tag('Search') %></li>
-    </ol>
-
-    <ol>
-      <% @trip.errands.each do |errand| %>
-        <li><%= errand.business_name %> - <%= errand.address %></li>
-      <% end %>
-    </ol>
-    <p>You have added <%= @trip.errands.count %> out of 3 total errands to your trip. </p>
-  <% end %>
+<div class="row">
+  <div class="small-12 large-12 columns">
+      <h1>Your trip</h1>
+      <%= render "headerblock" %>
+      <h3>Trip Duration: <%= time_in_minutes(@trip_duration) %></h3>
+        <%= display_flash_messages %>
   </div>
+</div>
+
+<div id="map-canvas"></div>
+<% if reached_max_errands? %>
+<div class="row">
+    <p>You have reached the maximum amount of errands. Please finalize your route to see the route.</p>
+</div>
+
+
+<div class="row">
+  <ul class="button-group radius">
+    <li>
+    <%= link_to 'Finalize Trip', trips_finalize_path, method: "post", class: 'button' %>
+    </li>
+    <li>
+    <%= render "start_over_link" %>
+    </li>
+  </ul>
+</div>
+<% else %>
+<div class="row">
+  <div class="small-12 large-6 columns">
+    <div class="row collapse">
+      <form action="/options" method="get">
+        <div class="small-12 large-9 columns">
+          <input class="radius" name="search" placeholder="e.g. Laundry, Gas, Tacos" type="text">
+        </div>
+        <div class="small-12 large-3 columns text-center">
+          <input class="button radius" type="submit" value="Search">
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="small-12 large-5 large-offset-1  text-center columns">
+    <ul class="button-group radius">
+      <li>
+      <%= link_to 'Finalize Trip', trips_finalize_path, method: "post", class: 'button' %>
+      </li>
+      <li>
+      <%= render "start_over_link" %>
+      </li>
+    </ul>
+  </div>
+</div>
 <% end %>
+<ol>
+  <% @trip.errands.each do |errand| %>
+    <li>
+        <%= errand.business_name %> -
+        <%= errand.address %>
+  </li>
+  <% end %>
+</ol>
 
-
-<%= button_to "Finalize Trip", action: "finalize" %>
-<%= render "start_over_link" %>
-
+<% unless reached_max_errands? %>
+<div class="row">
+  <div class="small-12 large-12 columns">
+    <p>You have added <%= @trip.errands.count %> out of 3 total errands to your trip. </p>
+  </div>
+</div>
+<% end %>
