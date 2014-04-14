@@ -32,6 +32,14 @@ class Trip < ActiveRecord::Base
     self.save
   end
 
+  def reached_max_errands?
+    errands.length >= max_errand_limit
+  end
+
+  def max_errand_limit
+    5
+  end
+
   private
 
   def call_coordinates_retriever(address)
