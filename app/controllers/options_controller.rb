@@ -20,7 +20,7 @@ class OptionsController < ApplicationController
     businesses.each do |business|
       waypoints_list = [business.address]
       waypoints_list += trip.errands.map{|errand| errand.address} unless trip.errands.empty?
-      trip_info = {origin: trip.start_point_address, destination: trip.end_point_address, waypoints: waypoints_list}
+      trip_info = {origin: trip.start_point_address, destination: trip.end_point_address, waypoints: waypoints_list, travel_mode: trip.travel_mode}
       business.extra_duration = business.calculate_delta_duration(DirectionsServiceHelper.new(trip_info).calculate_total_duration, trip.original_duration)
       business.extra_duration = 0 if business.extra_duration < 0
     end

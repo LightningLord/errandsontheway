@@ -21,7 +21,7 @@ var renderMap = function(trip, errands, display_directions){
       request = {
           origin: trip.start_point_address,
           destination: trip.end_point_address,
-          travelMode: google.maps.TravelMode.DRIVING
+          travelMode: google.maps.TravelMode[trip.travel_mode]
       };
     }
     
@@ -35,7 +35,7 @@ var renderMap = function(trip, errands, display_directions){
           waypoints: errands_array,
           destination: trip.end_point_address,
           optimizeWaypoints: true,
-          travelMode: google.maps.TravelMode.DRIVING
+          travelMode: google.maps.TravelMode[trip.travel_mode]
       };
     }
 

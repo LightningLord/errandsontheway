@@ -40,7 +40,7 @@ class Trip < ActiveRecord::Base
   end
 
   def call_distance_matrix_helper
-    DistanceMatrixHelper.new({origins: self.start_point_address, destinations: self.end_point_address}).get_trip_duration
+    DistanceMatrixHelper.new({origins: self.start_point_address, destinations: self.end_point_address, travel_mode: self.travel_mode}).get_trip_duration
   end
 
 end
