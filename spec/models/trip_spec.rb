@@ -119,7 +119,16 @@ describe Trip do
         expect(my_trip.reached_max_errands?).to be(false)
       end
     end
-
+    context "trip has reached max errand limit" do
+      before(:each) do
+        5.times do
+          my_trip.errands.build(FactoryGirl.attributes_for(:valid_errand))
+        end
+      end
+      it "should return true" do
+        expect(my_trip.reached_max_errands?).to be(true)
+      end
+    end
   end
 
 end
