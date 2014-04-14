@@ -148,8 +148,7 @@ html .pricing-table .title {
 .business_container{
   margin-top: 2rem;
 }
-
-
+s
 .business_container.pricing-table .description{
   text-align: center;
   background-color: transparent;
@@ -166,6 +165,7 @@ html .pricing-table .title {
   margin: auto;
   padding: 1rem;
   position: absolute;
+  top: 40%;
   -webkit-transform-origin: 0 0;  /* Chrome, Safari 3.1+ */
    -o-transform-origin: 0 0;  /* Opera 10.50-12.00 */
       transform-origin: 0 0;  /* Firefox 16+, IE 10+, Opera 12.10+ */
