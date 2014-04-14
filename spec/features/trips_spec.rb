@@ -15,7 +15,7 @@ describe "Trips" do
     end
 
     it "finalizes a trip" do
-      click_button "Finalize Trip"
+      click_link "Finalize Trip"
       expect(page).to have_content("Trip Duration With Errands")
     end
 

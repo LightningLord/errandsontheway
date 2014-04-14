@@ -13,7 +13,9 @@
 
  *= require_tree .
  */
-
+/*Red: ea2323
+Blue: 23d1ef
+Gray: e3e5e5*/
 
 html, body {
   height: 100%;
@@ -22,18 +24,71 @@ html, body {
   text-align: center;
 }
 
+html a {
+  background: #23d1ef;
+}
+
 html body {
+  background: #fff;
+  color: #333;
+}
+
+html body,
+html .button {
   font-family: 'Roboto', sans-serif;
 }
 
-html h1, h2, h3 {
+html header {
+  background: #ea2323;
+  color: #fff;
+  text-shadow
+  width: 100%;
+}
+
+html h1, html h2, html h3 {
+  color: inherit;
   font-family: 'Roboto Slab', serif;
 }
 
-.errand_search, #map-canvas,#directions-panel {
+
+html input[type=text] {
+  font-size: 1rem;
+  height: 3.25rem;
+}
+
+html label {
+  margin-bottom: .5rem;
+  text-align: left;
+}
+
+html ol {
+  text-align: left;
+}
+
+html .button {
+  background: #23d1ef;
+  color: #fff;
+  text-shadow: 1px 1px #999;
+}
+
+html .button:hover {
+  background: #e3e5e5;
+  color: #23d1ef;
+}
+
+html .button-group {
+  margin: 0 auto;
+  width: 300px;
+}
+
+#map-canvas, #directions-panel {
   height: 50%;
-  width: 35%;
-  margin: auto;
+  /*width: 35%;*/
+  margin: 0 auto;
+}
+
+#map-canvas {
+  margin-bottom: 1.65rem;
 }
 
 
