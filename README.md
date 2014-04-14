@@ -20,3 +20,6 @@ Members:
 * Ryan Wood
 * Melanie Archer
 * Christine Dolendo
+
+Getting Started
+Get a Bing api key from http://www.microsoft.com/maps/create-a-bing-maps-key.aspx
