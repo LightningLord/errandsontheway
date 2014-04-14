@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 20140414180522) do
     t.datetime "updated_at"
     t.text     "start_point_address"
     t.text     "end_point_address"
-    t.string   "travel_mode",           default: "DRIVING"
+    t.string   "travel_mode"
   end
 
 end
