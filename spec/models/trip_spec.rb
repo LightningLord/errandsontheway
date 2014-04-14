@@ -111,8 +111,14 @@ describe Trip do
         expect(my_trip).to_not receive(:call_distance_matrix_helper)
       end
     end
+  end
 
-
+  describe "#reached_max_errands?" do
+    context "trip has not reached max errand limit" do
+      it "should return false" do
+        expect(my_trip.reached_max_errands?).to be(false)
+      end
+    end
 
   end
 
