@@ -4,7 +4,9 @@
     <%= render "headerblock" %>
     <h3>Trip Duration Without Errands: <%= @trip.format_original_duration %></h3>
     <h3>Trip Duration With Errands: <%= @trip.format_ending_duration %></h3>
+  </div>  
 </div>
+
 <div class="row">
 
 <h4>Your errands on the way:</h4>
@@ -19,8 +21,7 @@
 
 <%= render "start_over_link" %>
 <br>
-<a id="directions">Show Directions</a>
-
+<button id="directions" class="button">Show Directions</button>
 <div id="map-canvas"></div>
 <div id="directions-panel"></div>
 
