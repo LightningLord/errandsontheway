@@ -77,13 +77,16 @@ html ol {
   text-align: left;
 }
 
+html .alert-box {
+  border-style: none;
+}
+
 html .alert-box.alert {
   background-color: #ea2323;
 }
 
 html .alert-box.success {
   background-color: #7ce2b3;
-  border-style: none;
 }
 
 html .button {

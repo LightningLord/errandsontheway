@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="small-12 large-12 columns">
+      <h2>Places on the way for: <%= @search_term %></h2>
+  </div>
+</div>
+<div class="row">
+  <div class="marker near">
+    <h3>Start point</h3>
+    <% @start_businesses.each do |business| %>
+      <%= render 'trips/businesses_list', business: business %>
+    <% end %>
+  </div>
+  <div class="marker far">
+    <h3>End point</h3>
+    <% @end_businesses.each do |business| %>
+      <%= render 'trips/businesses_list', business: business %>
+    <% end %>
+  </div>
+</div>
