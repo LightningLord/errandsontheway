@@ -9,9 +9,9 @@
       <h1>Your trip</h1>
       <%= render "headerblock" %>
       <h3>Trip Duration: <%= time_in_minutes(@trip_duration) %></h3>
+        <%= display_flash_messages %>
   </div>
 </div>
-
 
 <div id="map-canvas"></div>
 <% if reached_max_errands? %>
