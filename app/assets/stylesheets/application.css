@@ -51,6 +51,10 @@ html header h1 {
   line-height: 250%;
 }
 
+html header h1 a, html header h1 a:hover{
+  color: #fff;
+}
+
 html h1, html h2, html h3 {
   color: inherit;
   font-family: 'Roboto Slab', serif;
@@ -76,7 +80,11 @@ html ol {
 
 html .alert-box.alert {
   background-color: #ea2323;
+}
 
+html .alert-box.success {
+  background-color: #7ce2b3;
+  border-style: none;
 }
 
 html .button {
@@ -113,6 +121,12 @@ html .pricing-table .bullet-item {
   border-bottom-color: #666;
 }
 
+html .pricing-table .price {
+  font-family: Roboto, sans-serif;
+}
+
+
+
 html .pricing-table .title,
 html .pricing-table .description,
 html .pricing-table .bullet-item {
@@ -136,3 +150,13 @@ html .pricing-table .title {
 #business_container{
   margin-top: 2%;
 }
+
+
+#business_container.pricing-table .description{
+  text-align: center;
+  background-color: transparent;
+  color: #777;
+}
+
+
+
