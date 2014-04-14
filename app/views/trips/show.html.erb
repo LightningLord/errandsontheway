@@ -55,20 +55,35 @@
     </ul>
   </div>
 </div>
-<% end %>
-<ol>
-  <% @trip.errands.each do |errand| %>
-    <li>
-        <%= errand.business_name %> -
-        <%= errand.address %>
-  </li>
-  <% end %>
-</ol>
-
 <% unless reached_max_errands? %>
 <div class="row">
   <div class="small-12 large-12 columns">
-    <p>You have added <%= @trip.errands.count %> out of 3 total errands to your trip. </p>
+    <div >
+      You have added <%= @trip.errands.count %> out of 3 total errands to your trip.
+    </div>
   </div>
 </div>
 <% end %>
+<div class="row">
+  <div class="small-12 large-12 columns">
+    <div class="pricing-table">
+      <p class="title small-12 large-12 columns">
+        Your errands:
+      </p>
+        <ol>
+        <% @trip.errands.each do |errand| %>
+          <li>
+          <span class="description small-12 large-12 columns">
+              <%= errand.business_name %>
+          </span>
+          <span class="bullet-item small-12 large-12 columns">
+            <%= errand.address %>
+          </span>
+        </li>
+        <% end %>
+      </ol>
+    </div>
+  </div>
+</div>
+<% end %>
+
