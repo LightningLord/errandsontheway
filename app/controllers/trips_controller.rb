@@ -17,6 +17,10 @@ class TripsController < ApplicationController
     end
   end
 
+  # Nested conditionals are the devil, but test coverage is sweet, and you have
+  # some for this method. You have four failing tests on this method if the code
+  # is deleted. I reviewed the tests, and like them, but think that two tests
+  # could include a subject.
   def show
     if params[:id].to_i == session[:trip_id]
       @trip = Trip.find(params[:id])

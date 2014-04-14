@@ -86,6 +86,7 @@ describe TripsController do
         expect(assigns(:trip)).to eq my_trip
       end
 
+      # Use subject http://betterspecs.org/#subject
       it "assigns @trip_duration to original_duration when no errands" do
         expect(assigns(:trip_duration)).to eq my_trip.original_duration
       end
