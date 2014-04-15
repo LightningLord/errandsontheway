@@ -70,7 +70,7 @@ describe Trip do
   end
 
   describe "update" do
-    context "when CoordinatesRetriever returns coordinates" do
+    context "when GeocodeRetriever returns coordinates" do
       before(:each) do
         my_trip.stub(:call_coordinates_retriever).and_return([33.33, 44.44])
         my_trip.stub(:call_distance_matrix_helper).and_return(1500)
