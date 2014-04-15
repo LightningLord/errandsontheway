@@ -44,11 +44,12 @@ html header {
   color: #fff;
   text-shadow
   width: 100%;
-  margin-bottom: 2%;
+  margin-bottom: 3%;
 }
 
 html header h1 {
-  line-height: 250%;
+  padding-top: 25px;
+  padding-bottom: 25px;
   margin-top: 0px;
 }
 
