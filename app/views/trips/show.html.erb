@@ -22,7 +22,7 @@
 <img src="/assets/ajax-loader.gif" id="spinner">
 <h2 id="wait-message">Please wait while we fetch you some awesome options near your route.</h2>
 
-<div id="errands-form"> 
+<div id="errands-form">
   <% if @trip.reached_max_errands? %>
   <div class="row">
       <p>You have reached the maximum amount of errands. Please finalize your route to see the route.</p>
@@ -31,7 +31,7 @@
   <div class="row">
     <ul class="button-group radius">
       <li>
-      <%= link_to 'Finalize Trip', trips_finalize_path, method: "post", class: 'button' %>
+      <%= link_to 'Finalize Trip', trips_finalize_path, method: "post", class: 'button radius' %>
       </li>
       <li>
       <%= render "start_over_link" %>
@@ -55,7 +55,7 @@
     <div class="small-12 large-5 large-offset-1  text-center columns">
       <ul class="button-group radius">
         <li>
-        <%= link_to 'Finalize Trip', trips_finalize_path, method: "post", class: 'button' %>
+        <%= link_to 'Finalize Trip', trips_finalize_path, method: "post", class: 'button radius' %>
         </li>
         <li>
         <%= render "start_over_link" %>
@@ -86,7 +86,7 @@
       <% if @trip.errands.empty? %>
         <li class="description small-12 large-12 columns">You have no errands!</li>
       <% else %>
-        
+
         <% @trip.errands.each do |errand| %>
           <li>
           <span class="description small-12 large-12 columns">
