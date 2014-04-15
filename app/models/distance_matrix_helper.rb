@@ -6,8 +6,9 @@ class DistanceMatrixHelper
 
   def initialize(args)
     @options = { query: { origins: args[:origins],
-                          destinations: args[:destinations] ,
+                          destinations: args[:destinations],
                           sensor: false,
+                          mode: args[:travel_mode].downcase,
                           key: ENV["API_KEY"] } }
   end
 

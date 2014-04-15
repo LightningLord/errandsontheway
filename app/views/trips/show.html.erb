@@ -8,7 +8,7 @@
   <div class="small-12 large-12 columns">
       <h1>Your trip</h1>
       <%= render "headerblock" %>
-      <h3>Trip Duration: <%= time_in_minutes(@trip_duration) %></h3>
+      <h3>Trip Duration: <%= time_in_minutes(@trip_duration) %> (<%= @trip.travel_mode.downcase %>) </h3>
         <%= display_flash_messages %>
   </div>
 </div>

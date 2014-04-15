@@ -86,7 +86,8 @@ html .alert-box.alert {
 }
 
 html .alert-box.success {
-  background-color: #7ce2b3;
+  background-color: #24C775;
+  border-style: none;
 }
 
 html .button {
@@ -148,14 +149,25 @@ html .pricing-table .title {
   margin-bottom: 1.65rem;
 }
 
+
 .business_container{
   margin-top: 2rem;
 }
-s
+
 .business_container.pricing-table .description{
   text-align: center;
   background-color: transparent;
   color: #777;
+}
+
+
+html .button.travelmode {
+  background-color: #24C775;
+}
+
+html .button.travelmode:hover {
+  color: #24C775;
+  background-color: #e8eded;
 }
 
 .marker {
@@ -178,4 +190,22 @@ s
 
 }
 
+html .button.travelmode.selected {
+  color: #24C775;
+  background-color: #e8eded;
+  border-width: 1px;
+  border-color: #24C775;
+}
 
+html #travelmode_label {
+  background-color: #fff;
+  color: #4d4d4d;
+  font-size: 0.875rem;
+  text-shadow: none;
+  padding-bottom: 15px;
+  padding-top: 20px;
+}
+
+#submit_route {
+  margin-top: 10px;
+}
