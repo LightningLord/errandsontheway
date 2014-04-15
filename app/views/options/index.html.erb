@@ -1,3 +1,10 @@
+<script type="text/javascript">
+  var trip = <%= raw @trip.to_json.gsub('/', '\/') %>;
+  var options = <%= raw @trip.options.to_json.gsub('/', '\/') %>;
+  renderMap(trip, options, false);
+</script>
+
+
 <div class="row">
   <div class="small-12 large-12 columns">
       <h2>Places on the way for: <%= @search_term %></h2>
