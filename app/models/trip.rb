@@ -20,8 +20,8 @@ class Trip < ActiveRecord::Base
   end
 
   def update(params)
-    start_coords = call_coordinates_retriever(params[:trip][:start_point_address])
-    end_coords = call_coordinates_retriever(params[:trip][:end_point_address])
+    start_coords = call_coordinates_retriever(params[:start_point_address])
+    end_coords = call_coordinates_retriever(params[:end_point_address])
     if start_coords && end_coords
       self.set_coordinates(start_coords, end_coords)
       self.original_duration = call_distance_matrix_helper
