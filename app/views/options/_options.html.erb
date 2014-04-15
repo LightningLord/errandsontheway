@@ -1,3 +1,5 @@
+<div id="map-canvas" class="row small-11 small-centered columns"></div>
+
 <div class="row">
   <div class="small-12 large-12 columns">
       <h2>Places on the way for: <%= @search_term %></h2>
@@ -17,3 +19,12 @@
     <% end %>
   </div>
 </div>
+
+<div id="map-canvas" class="row small-11 small-centered columns"></div>
+
+
+<script type="text/javascript">
+  var trip = <%= raw @trip.to_json.gsub('/', '\/') %>;
+  var options = <%= raw @options.to_json.gsub('/', '\/') %>;
+  renderOptionsMap(trip, options);
+</script>

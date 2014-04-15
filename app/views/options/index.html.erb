@@ -1,9 +1,10 @@
 <script type="text/javascript">
   var trip = <%= raw @trip.to_json.gsub('/', '\/') %>;
-  var options = <%= raw @trip.options.to_json.gsub('/', '\/') %>;
-  renderMap(trip, options, false);
+  var options = <%= raw @options.to_json.gsub('/', '\/') %>;
+  renderOptionsMap(trip, options);
 </script>
 
+<div id="map-canvas" class="row small-11 small-centered columns"></div>
 
 <div class="row">
   <div class="small-12 large-12 columns">
