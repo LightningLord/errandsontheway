@@ -3,11 +3,9 @@ class CoordinatesRetriever
   def self.get_coordinates(address)
     location = Location.find_by_address(address)
     if location
-      p "location found!"
       [location.latitude, location.longitude]
     else
       self.create_location(address)
-      p "location created!"
     end
   end
 
