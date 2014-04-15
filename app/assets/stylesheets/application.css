@@ -34,6 +34,7 @@ html a {
 html body {
   background: #fff;
   color: #333;
+  font-size: 20px;
 }
 
 html body,
@@ -46,11 +47,13 @@ html header {
   color: #fff;
   text-shadow
   width: 100%;
-  margin-bottom: 2%;
+  margin-bottom: 3%;
 }
 
 html header h1 {
-  line-height: 250%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-top: 0px;
 }
 
 html header h1 a, html header h1 a:hover{
@@ -97,11 +100,16 @@ html .button {
   background: #23b7e0;
   color: #fff;
   text-shadow: 1px 1px #999;
+  border-width: .05rem;
+  border-color: #b7b7b5;
+  padding: 20px;
+  margin: 2px;
 }
 
 html .button:hover {
   background: #e8eded;
   color: #23b7e0;
+  text-shadow: none;
 }
 
 html .button-group {
@@ -132,7 +140,6 @@ html .pricing-table .price {
 }
 
 
-
 html .pricing-table .title,
 html .pricing-table .description,
 html .pricing-table .bullet-item {
@@ -152,9 +159,13 @@ html #directions-panel .adp .adp-directions {
   width: 100%;
 }
 
+html #directions-panel .adp-placemark td {
+  min-width: 50px;
+}
+
 #map-canvas {
   height: 50%;
-  margin: 0 auto;
+  margin: auto;
 }
 
 #map-canvas {
@@ -173,16 +184,6 @@ html #directions-panel .adp .adp-directions {
 }
 
 
-html .button.travelmode {
-  background-color: #24C775;
-  border-color: #24C775;;
-}
-
-html .button.travelmode:hover {
-  color: #24C775;
-  background-color: #e8eded;
-}
-
 .marker {
   position: relative;
 }
@@ -200,31 +201,46 @@ html .button.travelmode:hover {
 -webkit-transform: rotate(90deg);  /* Chrome, Safari 3.1+ */
      -o-transform: rotate(90deg);  /* Opera 10.50-12.00 */
         transform: rotate(90deg);  /* Firefox 16+, IE 10+, Opera 12.10+ */
-
 }
+
+html .button.travelmode {
+  background-color: #24C775;
+  border-color: #24C775;;
+}
+
+html .button.travelmode:hover {
+  color: #24C775;
+  background-color: #e8eded;
+  border-width: 1px;
+  border-color: #24C775;
+  text-shadow: none;
+}
+
 
 html .button.travelmode.selected {
   color: #24C775;
   background-color: #e8eded;
   border-width: 1px;
   border-color: #24C775;
+  text-shadow: none;
 }
 
 html #travelmode_label {
   background-color: #fff;
   color: #4d4d4d;
-  font-size: 0.875rem;
+  font-size: 20px;
   text-shadow: none;
   padding-bottom: 15px;
   padding-top: 20px;
 }
 
 #submit_route {
-  margin-top: 10px;
+  margin-top: 25px;
 }
 
 html #errands-form{
   margin: 20px;
+
 }
 
 .trip_details {
@@ -241,13 +257,11 @@ html #errands-form{
   font-size: 26px;
 }
 
-
 html .trip_details ol {
   text-align: center;
   font-size: 20px;
   color: #6b6b6b;
   font-weight: 500;
-  font-family: 'Roboto', sans-serif;
   list-style-type: none;
 }
 
@@ -255,7 +269,6 @@ html .trip_details ol {
   font-size: 20px;
   color: #6b6b6b;
   font-weight: 500;
-  font-family: 'Roboto', sans-serif;
 }
 
 p .disclaimer {
@@ -275,3 +288,4 @@ footer p {
   margin: 0;
   padding: 1rem 0;
 }
+
