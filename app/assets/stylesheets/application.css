@@ -117,6 +117,12 @@ html .button-group {
   width: 300px;
 }
 
+#current-location {
+  float: left;
+  padding-bottom: .8rem;
+  font-size: 0.875em;
+}
+
 html .pricing-table {
   border: 1px solid #fff;
 }
@@ -203,11 +209,11 @@ html #directions-panel .adp-placemark td {
   position: absolute;
   top: 40%;
   -webkit-transform-origin: 0 0;  /* Chrome, Safari 3.1+ */
-   -o-transform-origin: 0 0;  /* Opera 10.50-12.00 */
-      transform-origin: 0 0;  /* Firefox 16+, IE 10+, Opera 12.10+ */
--webkit-transform: rotate(90deg);  /* Chrome, Safari 3.1+ */
-     -o-transform: rotate(90deg);  /* Opera 10.50-12.00 */
-        transform: rotate(90deg);  /* Firefox 16+, IE 10+, Opera 12.10+ */
+  -o-transform-origin: 0 0;  /* Opera 10.50-12.00 */
+  transform-origin: 0 0;  /* Firefox 16+, IE 10+, Opera 12.10+ */
+  -webkit-transform: rotate(90deg);  /* Chrome, Safari 3.1+ */
+  -o-transform: rotate(90deg);  /* Opera 10.50-12.00 */
+  transform: rotate(90deg);  /* Firefox 16+, IE 10+, Opera 12.10+ */
 }
 
 html .button.travelmode {
@@ -295,4 +301,3 @@ footer p {
   margin: 0;
   padding: 1rem 0;
 }
-
