@@ -80,8 +80,12 @@
     <div class="pricing-table">
       <p class="title small-12 large-12 columns">
         Your errands:
+      <ol>
       </p>
-        <ol>
+      <% if @trip.errands.empty? %>
+        <li class="description small-12 large-12 columns">You have no errands!</li>
+      <% else %>
+        
         <% @trip.errands.each do |errand| %>
           <li>
           <span class="description small-12 large-12 columns">
@@ -92,6 +96,7 @@
           </span>
         </li>
         <% end %>
+      <% end %>
       </ol>
     </div>
   </div>
