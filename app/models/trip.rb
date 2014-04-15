@@ -19,7 +19,7 @@ class Trip < ActiveRecord::Base
     "#{(self.original_duration / 60)} minutes"
   end
 
-  def update(params)
+  def add_api_info(params)
     start_coords = call_coordinates_retriever(params[:start_point_address])
     end_coords = call_coordinates_retriever(params[:end_point_address])
     if start_coords && end_coords

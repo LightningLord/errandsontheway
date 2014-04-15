@@ -7,7 +7,7 @@ class TripsController < ApplicationController
 
   def create
     trip = Trip.new(permitted_params)
-    trip.update(permitted_params)
+    trip.add_api_info(permitted_params)
     trip.ending_duration = trip.original_duration
     if trip.save
       session[:trip_id] = trip.id
