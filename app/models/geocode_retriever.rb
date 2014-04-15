@@ -10,7 +10,7 @@ class GeocodeRetriever
   end
 
   def self.get_address(coords)
-    locations = Location.where(["latitude = :latitude and longitude = :longitude", { latitude: coords.first, longitude: coords.last}])
+    locations = Location.find_by_lat_long(coords.first, coords.last)
     if locations.empty?
       self.create_location_from_coords(coords)
     else
@@ -38,6 +38,7 @@ class GeocodeRetriever
       })
     address
   end
+
 
 
 end
