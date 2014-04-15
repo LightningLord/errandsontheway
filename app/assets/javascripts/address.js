@@ -28,7 +28,8 @@ geoLocator.Controller = function() {
 
 geoLocator.Controller.prototype = { 
   bindGeolocate: function(controller) {
-    $('input[value="Current Location"]').on('click', function(){
+    $('#current-location').on('click', function(event){
+      event.preventDefault();
       controller.getLocation();
     });
   },
@@ -48,8 +49,7 @@ geoLocator.Controller.prototype = {
       type: 'post',
       data: {coords: coords}
     }).done(function(serverData){
-      console.log("this is working")
-      console.log(serverData)
+      $('#trip_start_point_address').val(serverData)
     });
   }
 };
