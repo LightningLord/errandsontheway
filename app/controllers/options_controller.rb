@@ -13,8 +13,6 @@ class OptionsController < ApplicationController
     end
   end
 
-
-
   private
 
   def get_business_info_near_point(place, trip)

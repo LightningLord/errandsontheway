@@ -11,7 +11,6 @@ var renderMap = function(trip, errands, display_directions){
     if (display_directions === true){
       directionsDisplay.setPanel(document.getElementById('directions-panel'));
     }
-
   }
 
   function calcRoute() {
