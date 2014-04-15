@@ -27,7 +27,6 @@ feature "Trips", :js => true do
       end
     end
   end
-<<<<<<< HEAD
 
   context "autofilling the user's origin based on their current location" do
     xit "should fill in the origin field with an address" do
@@ -39,6 +38,4 @@ feature "Trips", :js => true do
     end
   end
 end
-=======
-end
->>>>>>> master
+
