@@ -14,11 +14,11 @@
 </div>
 
 <div id="map-canvas"></div>
-<% if reached_max_errands? %>
+<img src="/assets/ajax-loader.gif" id="spinner">
+<% if @trip.reached_max_errands? %>
 <div class="row">
     <p>You have reached the maximum amount of errands. Please finalize your route to see the route.</p>
 </div>
-
 
 <div class="row">
   <ul class="button-group radius">
@@ -34,7 +34,7 @@
 <div class="row">
   <div class="small-12 large-6 columns">
     <div class="row collapse">
-      <form action="/options" method="get">
+      <form id="errand_search"action="/options" method="get">
         <div class="small-12 large-9 columns">
           <input class="radius" name="search" placeholder="e.g. Laundry, Gas, Tacos" type="text">
         </div>
@@ -55,12 +55,12 @@
     </ul>
   </div>
 </div>
-<% unless reached_max_errands? %>
+<% unless @trip.reached_max_errands? %>
 <div class="row">
   <div class="small-12 large-12 columns">
-    <div >
-      You have added <%= @trip.errands.count %> out of 3 total errands to your trip.
-    </div>
+    <p class="total">
+      You have added <%= @trip.errands.count %> out of <%= @trip.max_errand_limit %> total errands to your trip.
+    </p>
   </div>
 </div>
 <% end %>

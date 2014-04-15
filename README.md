@@ -20,3 +20,14 @@ Members:
 * Ryan Wood
 * Melanie Archer
 * Christine Dolendo
+
+####Getting Started
+
+#####API Key
+Get a Bing api key from http://www.microsoft.com/maps/create-a-bing-maps-key.aspx
+Create a .env file in the root directory.
+Save your key as BING_KEY = yourkey (no quotes).
+
+#####VCR Errors
+If VCR Errors come up that reference options_spec.rb, delete options_spec.yml in the vcr_cassettes folder and run the tests again.
+

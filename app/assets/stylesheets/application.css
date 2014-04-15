@@ -77,6 +77,10 @@ html ol {
   text-align: left;
 }
 
+html .alert-box {
+  border-style: none;
+}
+
 html .alert-box.alert {
   background-color: #ea2323;
 }
@@ -138,7 +142,6 @@ html .pricing-table .title {
 
 #map-canvas, #directions-panel {
   height: 50%;
-  /*width: 35%;*/
   margin: 0 auto;
 }
 
@@ -146,12 +149,11 @@ html .pricing-table .title {
   margin-bottom: 1.65rem;
 }
 
-#business_container {
-  margin-top: 2%;
+.business_container {
+  margin-top: 2rem;
 }
 
-
-#business_container.pricing-table .description {
+.business_container.pricing-table .description{
   text-align: center;
   background-color: transparent;
   color: #777;
@@ -164,6 +166,25 @@ html .button.travelmode {
 html .button.travelmode:hover {
   color: #24C775;
   background-color: #e8eded;
+}
+
+.marker {
+  position: relative;
+}
+
+.marker h3 {
+  background: #fff;
+  color: #333;
+  margin: auto;
+  padding: 1rem;
+  position: absolute;
+  top: 40%;
+  -webkit-transform-origin: 0 0;  /* Chrome, Safari 3.1+ */
+   -o-transform-origin: 0 0;  /* Opera 10.50-12.00 */
+      transform-origin: 0 0;  /* Firefox 16+, IE 10+, Opera 12.10+ */
+-webkit-transform: rotate(90deg);  /* Chrome, Safari 3.1+ */
+     -o-transform: rotate(90deg);  /* Opera 10.50-12.00 */
+        transform: rotate(90deg);  /* Firefox 16+, IE 10+, Opera 12.10+ */
 }
 
 html .button.travelmode.selected {

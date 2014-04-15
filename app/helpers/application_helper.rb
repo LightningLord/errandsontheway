@@ -5,8 +5,4 @@ module ApplicationHelper
     "#{seconds / 60} minutes"
   end
 
-  def reached_max_errands?
-    @trip.errands.length == 3
-  end
-
 end
