@@ -5,8 +5,8 @@ class OptionsController < ApplicationController
       trip = Trip.find(session[:trip_id])
       start_place = Place.new(trip.start_point_latitude.to_s, trip.start_point_longitude.to_s, @search_term)
       end_place = Place.new(trip.end_point_latitude.to_s, trip.end_point_longitude.to_s, @search_term)
-      @start_businesses = get_business_info_near_point(start_place, trip)
-      @end_businesses = get_business_info_near_point(end_place, trip)
+      @businesses = get_business_info_near_point(start_place, trip) + get_business_info_near_point(end_place, trip)
+      @businesses.sort!{|a,b| a.extra_duration <=> b.extra_duration}
       render :partial => "options"
     else
       redirect_to root_path
