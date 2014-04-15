@@ -41,7 +41,20 @@ class Trip < ActiveRecord::Base
     5
   end
 
+
+  def trip_info(business_address)
+    {origin: self.start_point_address, destination: self.end_point_address,
+      waypoints: waypoints_list(business_address), travel_mode: self.travel_mode
+    }
+  end
+
   private
+
+  def waypoints_list(business_address)
+    list = [business_address]
+    waypoints_list += self.errands.map{|errand| errand.address} unless self.errands.empty?
+    list
+  end
 
   def call_coordinates_retriever(address)
     GeocodeRetriever.get_coordinates(address)

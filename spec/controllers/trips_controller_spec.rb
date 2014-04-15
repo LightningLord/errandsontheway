@@ -102,4 +102,6 @@ describe TripsController do
     end
 
   end
+
+
 end
