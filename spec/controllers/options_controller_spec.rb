@@ -24,6 +24,10 @@ describe OptionsController do
         expect(assigns(:businesses).length).to eq 4
       end
 
+      it 'sorts by extra_duration' do
+        expect(assigns(:businesses)).to eq assigns(:businesses).sort{|a,b| a.extra_duration <=> b.extra_duration}
+      end
+
     end
 
     context "with no session" do
