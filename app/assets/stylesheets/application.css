@@ -179,16 +179,23 @@ html #directions-panel .adp-placemark td {
 }
 
 
-.business_container{
+.business-container{
   margin-top: 2rem;
 }
 
-.business_container.pricing-table .description{
-  text-align: center;
-  background-color: transparent;
-  color: #777;
+.business-container.pricing-table .description,
+.business-container.pricing-table .cta-button {
+  background: transparent;
 }
 
+.business-container.pricing-table .cta-button form {
+  margin-bottom: .5rem;
+}
+
+.business-container.pricing-table .description {
+  text-align: center;
+  color: #777;
+}
 
 .marker {
   position: relative;
@@ -280,7 +287,7 @@ html .trip_details ol {
 p .disclaimer {
   font-size: 20px;
   margin: 20px;
-  
+
 }
 
 footer {
