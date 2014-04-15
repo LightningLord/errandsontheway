@@ -3,13 +3,16 @@ require 'spec_helper'
 feature "Trips", :js => true do
   describe "Trips" do
     context "with valid form fields" do
+      let(:fell){FactoryGirl.create(:fell)}
+      let(:folsom){FactoryGirl.create(:folsom)}
       before(:each) do
         VCR.use_cassette('trips_spec') do
           visit root_path
-          fill_in "Where are you starting?", with: "460 Fell St. San Francisco, CA"
-          fill_in "Where are you going?", with: "633 Folsom St. San Francisco, CA"
+          fill_in "Where are you starting?", with: fell.address
+          fill_in "Where are you going?", with: folsom.address
           find(:css, "#walking").click
           click_on "Route my trip!"
+          save_and_open_page
         end
       end
       it "successfully submits your origin and destination" do
