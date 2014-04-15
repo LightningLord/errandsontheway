@@ -40,4 +40,5 @@ group :test do
   gem 'vcr'
   gem 'fakeweb'
   gem 'capybara-webkit'
+  gem 'launchy'
 end
