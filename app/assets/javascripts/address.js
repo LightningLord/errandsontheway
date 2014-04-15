@@ -25,7 +25,7 @@ geoLocator.Controller.prototype = {
   onSuccess: function(position){
     var coords = [position.coords.latitude, position.coords.longitude];
     $.ajax({
-      url: '/coordinates-converter',
+      url: '/geocode-converter',
       type: 'post',
       data: {coords: coords}
     }).done(function(serverData){
