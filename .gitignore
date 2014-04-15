@@ -1,3 +1,4 @@
+vcr_cassettes/*.yml
 coverage
 *.rbc
 capybara-*.html

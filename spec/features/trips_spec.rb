@@ -29,6 +29,7 @@ describe "Trips" do
     xit "should fill in the origin field with an address" do
       visit root_path
       click_link 'current-location'
+      wait_for_ajax_to_finish
       puts "hello #{ find_field('trip_start_point_address').value}"
       expect(find_field('trip_start_point_address').value.to_not be_empty)
     end

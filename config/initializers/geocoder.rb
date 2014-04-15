@@ -1,3 +1,4 @@
 Geocoder.configure({
-  cache: Rails.cache
+  lookup: :bing,
+  api_key: ENV['BING_KEY']
 })

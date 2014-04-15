@@ -2,6 +2,166 @@
 http_interactions:
 - request:
     method: get
+    uri: http://dev.virtualearth.net/REST/v1/Locations?key=AruvEli3RaCLrr-K8KWOWLhoC-AlUobrj5t1kUnDqCZFAAFfI_6f9XwRJ_34z42E&query=460+Fell+St.%2C+San+Francisco%2C+CA
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      cache-control:
+      - no-cache
+      transfer-encoding:
+      - chunked
+      content-type:
+      - application/json; charset=utf-8
+      content-encoding:
+      - gzip
+      vary:
+      - Accept-Encoding
+      server:
+      - Microsoft-IIS/8.0
+      x-bm-traceid:
+      - dd3e7661ac5f493c85d9a916c26ec7c8
+      x-bm-srv:
+      - CO30276339, CO3SCH010265218, CO3SCH010265217, CO3SCH010265303
+      x-ms-bm-ws-info:
+      - '0'
+      x-aspnet-version:
+      - 4.0.30319
+      x-powered-by:
+      - ASP.NET
+      date:
+      - Tue, 15 Apr 2014 01:52:00 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJhdXRoZW50aWNhdGlvblJlc3VsdENvZGUiOiJWYWxpZENyZWRlbnRpYWxz
+        IiwiYnJhbmRMb2dvVXJpIjoiaHR0cDpcL1wvZGV2LnZpcnR1YWxlYXJ0aC5u
+        ZXRcL0JyYW5kaW5nXC9sb2dvX3Bvd2VyZWRfYnkucG5nIiwiY29weXJpZ2h0
+        IjoiQ29weXJpZ2h0IMKpIDIwMTQgTWljcm9zb2Z0IGFuZCBpdHMgc3VwcGxp
+        ZXJzLiBBbGwgcmlnaHRzIHJlc2VydmVkLiBUaGlzIEFQSSBjYW5ub3QgYmUg
+        YWNjZXNzZWQgYW5kIHRoZSBjb250ZW50IGFuZCBhbnkgcmVzdWx0cyBtYXkg
+        bm90IGJlIHVzZWQsIHJlcHJvZHVjZWQgb3IgdHJhbnNtaXR0ZWQgaW4gYW55
+        IG1hbm5lciB3aXRob3V0IGV4cHJlc3Mgd3JpdHRlbiBwZXJtaXNzaW9uIGZy
+        b20gTWljcm9zb2Z0IENvcnBvcmF0aW9uLiIsInJlc291cmNlU2V0cyI6W3si
+        ZXN0aW1hdGVkVG90YWwiOjEsInJlc291cmNlcyI6W3siX190eXBlIjoiTG9j
+        YXRpb246aHR0cDpcL1wvc2NoZW1hcy5taWNyb3NvZnQuY29tXC9zZWFyY2hc
+        L2xvY2FsXC93c1wvcmVzdFwvdjEiLCJiYm94IjpbMzcuNzcyMDA0NzQ0NTg3
+        NTI3LC0xMjIuNDMyMDA2OTM5OTM2NjQsMzcuNzc5NzMwMTc5NzI4ODgsLTEy
+        Mi40MTg5NzU3MjYwNzkzNV0sIm5hbWUiOiI0NjAgRmVsbCBTdCwgU2FuIEZy
+        YW5jaXNjbywgQ0EgOTQxMDIiLCJwb2ludCI6eyJ0eXBlIjoiUG9pbnQiLCJj
+        b29yZGluYXRlcyI6WzM3Ljc3NTg2NzQ2MjE1ODIsLTEyMi40MjU0OTEzMzMw
+        MDhdfSwiYWRkcmVzcyI6eyJhZGRyZXNzTGluZSI6IjQ2MCBGZWxsIFN0Iiwi
+        YWRtaW5EaXN0cmljdCI6IkNBIiwiYWRtaW5EaXN0cmljdDIiOiJTYW4gRnJh
+        bmNpc2NvIENvLiIsImNvdW50cnlSZWdpb24iOiJVbml0ZWQgU3RhdGVzIiwi
+        Zm9ybWF0dGVkQWRkcmVzcyI6IjQ2MCBGZWxsIFN0LCBTYW4gRnJhbmNpc2Nv
+        LCBDQSA5NDEwMiIsImxvY2FsaXR5IjoiU2FuIEZyYW5jaXNjbyIsInBvc3Rh
+        bENvZGUiOiI5NDEwMiJ9LCJjb25maWRlbmNlIjoiSGlnaCIsImVudGl0eVR5
+        cGUiOiJBZGRyZXNzIiwiZ2VvY29kZVBvaW50cyI6W3sidHlwZSI6IlBvaW50
+        IiwiY29vcmRpbmF0ZXMiOlszNy43NzU4Njc0NjIxNTgyLC0xMjIuNDI1NDkx
+        MzMzMDA4XSwiY2FsY3VsYXRpb25NZXRob2QiOiJQYXJjZWwiLCJ1c2FnZVR5
+        cGVzIjpbIkRpc3BsYXkiXX0seyJ0eXBlIjoiUG9pbnQiLCJjb29yZGluYXRl
+        cyI6WzM3Ljc3NTYwODA2Mjc0NDEsLTEyMi40MjU0NjA4MTU0M10sImNhbGN1
+        bGF0aW9uTWV0aG9kIjoiSW50ZXJwb2xhdGlvbiIsInVzYWdlVHlwZXMiOlsi
+        Um91dGUiXX1dLCJtYXRjaENvZGVzIjpbIkdvb2QiXX1dfV0sInN0YXR1c0Nv
+        ZGUiOjIwMCwic3RhdHVzRGVzY3JpcHRpb24iOiJPSyIsInRyYWNlSWQiOiJk
+        ZDNlNzY2MWFjNWY0OTNjODVkOWE5MTZjMjZlYzdjOHxDTzMwMjc2MzM5fDAy
+        LjAwLjEyOS4yMTAwfENPM1NDSDAxMDI2NTIxOCwgQ08zU0NIMDEwMjY1MjE3
+        LCBDTzNTQ0gwMTAyNjUzMDMifQ==
+    http_version: '1.1'
+  recorded_at: Tue, 15 Apr 2014 01:52:01 GMT
+- request:
+    method: get
+    uri: http://dev.virtualearth.net/REST/v1/Locations?key=AruvEli3RaCLrr-K8KWOWLhoC-AlUobrj5t1kUnDqCZFAAFfI_6f9XwRJ_34z42E&query=633+Folsom+St.%2C+San+Francisco%2C+CA
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      cache-control:
+      - no-cache
+      transfer-encoding:
+      - chunked
+      content-type:
+      - application/json; charset=utf-8
+      content-encoding:
+      - gzip
+      vary:
+      - Accept-Encoding
+      server:
+      - Microsoft-IIS/8.0
+      x-bm-traceid:
+      - 77f07c37f7fb498b9ddbd8de825da0b6
+      x-bm-srv:
+      - CO30275940, CO3SCH010265512, CO3SCH010265209, CO3SCH010265312
+      x-ms-bm-ws-info:
+      - '0'
+      x-aspnet-version:
+      - 4.0.30319
+      x-powered-by:
+      - ASP.NET
+      date:
+      - Tue, 15 Apr 2014 01:52:01 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJhdXRoZW50aWNhdGlvblJlc3VsdENvZGUiOiJWYWxpZENyZWRlbnRpYWxz
+        IiwiYnJhbmRMb2dvVXJpIjoiaHR0cDpcL1wvZGV2LnZpcnR1YWxlYXJ0aC5u
+        ZXRcL0JyYW5kaW5nXC9sb2dvX3Bvd2VyZWRfYnkucG5nIiwiY29weXJpZ2h0
+        IjoiQ29weXJpZ2h0IMKpIDIwMTQgTWljcm9zb2Z0IGFuZCBpdHMgc3VwcGxp
+        ZXJzLiBBbGwgcmlnaHRzIHJlc2VydmVkLiBUaGlzIEFQSSBjYW5ub3QgYmUg
+        YWNjZXNzZWQgYW5kIHRoZSBjb250ZW50IGFuZCBhbnkgcmVzdWx0cyBtYXkg
+        bm90IGJlIHVzZWQsIHJlcHJvZHVjZWQgb3IgdHJhbnNtaXR0ZWQgaW4gYW55
+        IG1hbm5lciB3aXRob3V0IGV4cHJlc3Mgd3JpdHRlbiBwZXJtaXNzaW9uIGZy
+        b20gTWljcm9zb2Z0IENvcnBvcmF0aW9uLiIsInJlc291cmNlU2V0cyI6W3si
+        ZXN0aW1hdGVkVG90YWwiOjEsInJlc291cmNlcyI6W3siX190eXBlIjoiTG9j
+        YXRpb246aHR0cDpcL1wvc2NoZW1hcy5taWNyb3NvZnQuY29tXC9zZWFyY2hc
+        L2xvY2FsXC93c1wvcmVzdFwvdjEiLCJiYm94IjpbMzcuNzc5NzYzODM4ODI1
+        ODIyLC0xMjIuNDA0MjEzNzM5NTI0NDcsMzcuNzg3NDg5MjczOTY3MTc1LC0x
+        MjIuMzkxMTgxMTU3OTM1NTNdLCJuYW1lIjoiNjMzIEZvbHNvbSBTdCwgU2Fu
+        IEZyYW5jaXNjbywgQ0EgOTQxMDciLCJwb2ludCI6eyJ0eXBlIjoiUG9pbnQi
+        LCJjb29yZGluYXRlcyI6WzM3Ljc4MzYyNjU1NjM5NjUsLTEyMi4zOTc2OTc0
+        NDg3M119LCJhZGRyZXNzIjp7ImFkZHJlc3NMaW5lIjoiNjMzIEZvbHNvbSBT
+        dCIsImFkbWluRGlzdHJpY3QiOiJDQSIsImFkbWluRGlzdHJpY3QyIjoiU2Fu
+        IEZyYW5jaXNjbyBDby4iLCJjb3VudHJ5UmVnaW9uIjoiVW5pdGVkIFN0YXRl
+        cyIsImZvcm1hdHRlZEFkZHJlc3MiOiI2MzMgRm9sc29tIFN0LCBTYW4gRnJh
+        bmNpc2NvLCBDQSA5NDEwNyIsImxvY2FsaXR5IjoiU2FuIEZyYW5jaXNjbyIs
+        InBvc3RhbENvZGUiOiI5NDEwNyJ9LCJjb25maWRlbmNlIjoiSGlnaCIsImVu
+        dGl0eVR5cGUiOiJBZGRyZXNzIiwiZ2VvY29kZVBvaW50cyI6W3sidHlwZSI6
+        IlBvaW50IiwiY29vcmRpbmF0ZXMiOlszNy43ODM2MjY1NTYzOTY1LC0xMjIu
+        Mzk3Njk3NDQ4NzNdLCJjYWxjdWxhdGlvbk1ldGhvZCI6IlBhcmNlbCIsInVz
+        YWdlVHlwZXMiOlsiRGlzcGxheSJdfSx7InR5cGUiOiJQb2ludCIsImNvb3Jk
+        aW5hdGVzIjpbMzcuNzg0MzM2MDkwMDg3OSwtMTIyLjM5ODI2MjAyMzkyNl0s
+        ImNhbGN1bGF0aW9uTWV0aG9kIjoiSW50ZXJwb2xhdGlvbiIsInVzYWdlVHlw
+        ZXMiOlsiUm91dGUiXX1dLCJtYXRjaENvZGVzIjpbIkdvb2QiXX1dfV0sInN0
+        YXR1c0NvZGUiOjIwMCwic3RhdHVzRGVzY3JpcHRpb24iOiJPSyIsInRyYWNl
+        SWQiOiI3N2YwN2MzN2Y3ZmI0OThiOWRkYmQ4ZGU4MjVkYTBiNnxDTzMwMjc1
+        OTQwfDAyLjAwLjEyOS4yMTAwfENPM1NDSDAxMDI2NTUxMiwgQ08zU0NIMDEw
+        MjY1MjA5LCBDTzNTQ0gwMTAyNjUzMTIifQ==
+    http_version: '1.1'
+  recorded_at: Tue, 15 Apr 2014 01:52:01 GMT
+- request:
+    method: get
     uri: https://maps.googleapis.com/maps/api/distancematrix/json?origins=460%20Fell%20St.%2C%20San%20Francisco%2C%20CA&destinations=633%20Folsom%20St.%2C%20San%20Francisco%2C%20CA&sensor=false&key=AIzaSyAAPig8eebUk6Vj79Fgd275gDQfOvFqYnU
     body:
       encoding: US-ASCII
@@ -15,9 +175,9 @@ http_interactions:
       content-type:
       - application/json; charset=UTF-8
       date:
-      - Sun, 13 Apr 2014 20:57:47 GMT
+      - Tue, 15 Apr 2014 01:52:02 GMT
       expires:
-      - Mon, 14 Apr 2014 20:57:47 GMT
+      - Wed, 16 Apr 2014 01:52:02 GMT
       cache-control:
       - public, max-age=86400
       vary:
@@ -35,15 +195,30 @@ http_interactions:
       transfer-encoding:
       - chunked
     body:
-      encoding: US-ASCII
-      string: ! "{\n   \"destination_addresses\" : [ \"633 Folsom Street, San Francisco,
-        CA 94107, USA\" ],\n   \"origin_addresses\" : [ \"460 Fell Street, San Francisco,
-        CA 94102, USA\" ],\n   \"rows\" : [\n      {\n         \"elements\" : [\n
-        \           {\n               \"distance\" : {\n                  \"text\"
-        : \"3.6 km\",\n                  \"value\" : 3570\n               },\n               \"duration\"
-        : {\n                  \"text\" : \"7 mins\",\n                  \"value\"
-        : 402\n               },\n               \"status\" : \"OK\"\n            }\n
-        \        ]\n      }\n   ],\n   \"status\" : \"OK\"\n}\n"
+      encoding: UTF-8
+      string: |
+        {
+           "destination_addresses" : [ "633 Folsom Street, San Francisco, CA 94107, USA" ],
+           "origin_addresses" : [ "460 Fell Street, San Francisco, CA 94102, USA" ],
+           "rows" : [
+              {
+                 "elements" : [
+                    {
+                       "distance" : {
+                          "text" : "3.6 km",
+                          "value" : 3570
+                       },
+                       "duration" : {
+                          "text" : "7 mins",
+                          "value" : 402
+                       },
+                       "status" : "OK"
+                    }
+                 ]
+              }
+           ],
+           "status" : "OK"
+        }
     http_version: '1.1'
-  recorded_at: Sun, 13 Apr 2014 20:57:47 GMT
+  recorded_at: Tue, 15 Apr 2014 01:52:02 GMT
 recorded_with: VCR 2.9.0
