@@ -8,7 +8,7 @@ class DistanceMatrixHelper
     @options = { query: { origins: args[:origins],
                           destinations: args[:destinations],
                           sensor: false,
-                          mode: args[:travel_mode].downcase,
+                          mode: args[:travel_mode],
                           key: ENV["API_KEY"] } }
   end
 

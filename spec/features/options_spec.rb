@@ -2,7 +2,6 @@
 # feature "Options", :js => true do
 #   describe"return a list of business options" do
 #     let(:my_trip){FactoryGirl.create(:valid_trip)}
-
 #     before(:each) do
 #       VCR.use_cassette('options_spec') do
 #         visit root_path
@@ -20,12 +19,11 @@
 #       wait_for_ajax_to_finish
 #       expect(page).to have_content "laundry"
 #     end
-
 #     it "displays buttons to select a business" do
 #       wait_for_ajax_to_finish
 #       expect(page).to have_button "Choose this Business"
 #     end
-
+#
 #   end
 # end
 

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://maps.googleapis.com/maps/api/distancematrix/json?origins=460%20Fell%20St.%2C%20San%20Francisco%2C%20CA&destinations=633%20Folsom%20St.%2C%20San%20Francisco%2C%20CA&sensor=false&mode=walking&key=AIzaSyAAPig8eebUk6Vj79Fgd275gDQfOvFqYnU
+    uri: https://maps.googleapis.com/maps/api/distancematrix/json?origins=460%20Fell%20St.%2C%20San%20Francisco%2C%20CA&destinations=633%20Folsom%20St.%2C%20San%20Francisco%2C%20CA&sensor=false&mode=WALKING&key=AIzaSyAAPig8eebUk6Vj79Fgd275gDQfOvFqYnU
     body:
       encoding: US-ASCII
       string: ''
@@ -15,9 +15,9 @@ http_interactions:
       content-type:
       - application/json; charset=UTF-8
       date:
-      - Tue, 15 Apr 2014 00:02:32 GMT
+      - Tue, 15 Apr 2014 00:32:28 GMT
       expires:
-      - Wed, 16 Apr 2014 00:02:32 GMT
+      - Wed, 16 Apr 2014 00:32:28 GMT
       cache-control:
       - public, max-age=86400
       vary:
@@ -45,12 +45,12 @@ http_interactions:
                  "elements" : [
                     {
                        "distance" : {
-                          "text" : "3.2 km",
-                          "value" : 3190
+                          "text" : "3.6 km",
+                          "value" : 3570
                        },
                        "duration" : {
-                          "text" : "41 mins",
-                          "value" : 2438
+                          "text" : "7 mins",
+                          "value" : 402
                        },
                        "status" : "OK"
                     }
@@ -60,5 +60,5 @@ http_interactions:
            "status" : "OK"
         }
     http_version: '1.1'
-  recorded_at: Tue, 15 Apr 2014 00:02:32 GMT
+  recorded_at: Tue, 15 Apr 2014 00:32:28 GMT
 recorded_with: VCR 2.9.0
