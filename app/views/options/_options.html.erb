@@ -18,6 +18,6 @@
 
 <script type="text/javascript">
   var trip = <%= raw @trip.to_json.gsub('/', '\/') %>;
-  var options = <%= raw @options.to_json.gsub('/', '\/') %>;
+  var options = <%= raw @businesses.to_json.gsub('/', '\/') %>;
   renderOptionsMap(trip, options);
 </script>
