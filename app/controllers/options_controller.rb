@@ -19,7 +19,7 @@ class OptionsController < ApplicationController
 
   def get_business_info_near_point(place, trip)
     businesses = create_businesses(place)
-    businesses.each { |business| business.set_directions(trip)}
+    businesses.each { |business| business.set_extra_duration(trip)}
     businesses
   end
 
