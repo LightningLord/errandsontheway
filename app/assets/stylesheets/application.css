@@ -31,6 +31,7 @@ html a {
 html body {
   background: #fff;
   color: #333;
+  font-size: 20px;
 }
 
 html body,
@@ -208,14 +209,14 @@ html .button.travelmode.selected {
 html #travelmode_label {
   background-color: #fff;
   color: #4d4d4d;
-  font-size: 0.875rem;
+  font-size: 20px;
   text-shadow: none;
   padding-bottom: 15px;
   padding-top: 20px;
 }
 
 #submit_route {
-  margin-top: 10px;
+  margin-top: 25px;
 }
 
 .trip_details {
