@@ -19,12 +19,7 @@ class OptionsController < ApplicationController
 
   def get_business_info_near_point(place, trip)
     businesses = create_businesses(place)
-    businesses.each do |business|
-      waypoints_list = [business.address]
-      waypoints_list += trip.errands.map{|errand| errand.address} unless trip.errands.empty?
-      trip_info = {origin: trip.start_point_address, destination: trip.end_point_address, waypoints: waypoints_list, travel_mode: trip.travel_mode}
-      business.set_extra_duration(DirectionsServiceHelper.new(trip_info).calculate_total_duration, trip.original_duration)
-    end
+    businesses.each { |business| business.get_directions(trip)}
     businesses
   end
 
