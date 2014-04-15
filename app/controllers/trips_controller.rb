@@ -13,6 +13,7 @@ class TripsController < ApplicationController
       session[:trip_id] = trip.id
       redirect_to(trip)
     else
+      flash[:alert] = "Error: Please confirm your locations are correct."
       redirect_to root_path
     end
   end

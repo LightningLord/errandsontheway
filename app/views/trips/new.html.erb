@@ -1,4 +1,5 @@
 <%= form_for(@trip) do |f| %>
+  <%= display_flash_messages %>
   <div class="row">
     <div class="small-12 columns">
       <%= link_to "Use Current Location", '#', id: "current-location", remote: true %>
