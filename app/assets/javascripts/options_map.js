@@ -52,7 +52,7 @@ var renderOptionsMap = function(trip, options){
         draggable: false,
         animation: google.maps.Animation.DROP,
         infoWindow: new google.maps.InfoWindow({
-                content: "<bold>" + options[iterator].name + " </bold>" + options[iterator].address
+                content: "<h4>" + options[iterator].name + " </h4>" + options[iterator].address + "<br/> Additional Time: " + parseInt(options[iterator].extra_duration/60) + " minutes"
         })
       });
       markers.push(marker);
