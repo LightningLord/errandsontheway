@@ -147,7 +147,7 @@ html .pricing-table .title {
 
 #map-canvas, #directions-panel {
   height: 50%;
-  margin: 0 auto;
+  margin: auto;
 }
 
 #map-canvas {
