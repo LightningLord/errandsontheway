@@ -13,13 +13,13 @@ class DistanceMatrixHelper
   end
 
   def get_trip_duration
-    make_api_call["rows"].first["elements"].first["duration"]["value"]
+    self.class.make_api_call(@options)["rows"].first["elements"].first["duration"]["value"]
   end
 
   private
 
-  def make_api_call
-    self.class.get("/maps/api/distancematrix/json", @options).parsed_response
+  def self.make_api_call(options)
+    self.get("/maps/api/distancematrix/json", options).parsed_response
   end
 
 
