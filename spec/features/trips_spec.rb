@@ -4,13 +4,11 @@ feature "Trips", :js => true do
   describe "Trips" do
     context "with valid form fields" do
       before(:each) do
-        VCR.use_cassette('trips_spec') do
-          visit root_path
-          fill_in "Where are you starting?", with: "460 Fell St. San Francisco, CA"
-          fill_in "Where are you going?", with: "633 Folsom St. San Francisco, CA"
-          find(:css, "#walking").click
-          click_on "Route my trip!"
-        end
+        visit root_path
+        fill_in "Where are you starting?", with: "460 Fell St. San Francisco, CA"
+        fill_in "Where are you going?", with: "633 Folsom St. San Francisco, CA"
+        find(:css, "#walking").click
+        click_on "Route my trip!"
       end
       it "successfully submits your origin and destination" do
           expect(page).to have_content("Trip Duration")
@@ -28,14 +26,15 @@ feature "Trips", :js => true do
     end
   end
 
-  context "autofilling the user's origin based on their current location" do
-    xit "should fill in the origin field with an address" do
-      visit root_path
-      click_link 'current-location'
-      wait_for_ajax_to_finish
-      puts "hello #{ find_field('trip_start_point_address').value}"
-      expect(find_field('trip_start_point_address').value.to_not be_empty)
-    end
-  end
+  # context "autofilling the user's origin based on their current location" do
+  #   it "should fill in the origin field with an address", focus: true do
+  #     visit root_path
+  #     click_link 'current-location'
+  #     wait_for_ajax_to_finish
+  #     save_and_open_page
+  #     puts "hello #{ find_field('trip_start_point_address').value}"
+  #     expect(find_field('trip_start_point_address').value.to_not be_empty)
+  #   end
+  # end
 end
 
