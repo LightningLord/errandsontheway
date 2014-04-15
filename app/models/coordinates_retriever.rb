@@ -9,6 +9,8 @@ class CoordinatesRetriever
     end
   end
 
+  private
+
   def self.create_location(address)
     coords = Geocoder.coordinates(address)
     Location.create({
