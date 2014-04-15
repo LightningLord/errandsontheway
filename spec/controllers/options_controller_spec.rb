@@ -20,13 +20,10 @@ describe OptionsController do
         expect(assigns(:search_term)).to eq('Tacos')
       end
 
-      it 'assigns @start_businesses to 2 businesses' do
-        expect(assigns(:start_businesses).length).to eq 2
+      it 'assigns @businesses to 4 businesses' do
+        expect(assigns(:businesses).length).to eq 4
       end
 
-      it 'assigns @end_businesses to 2 businesses' do
-        expect(assigns(:end_businesses).length).to eq 2
-      end
     end
 
     context "with no session" do
