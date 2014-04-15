@@ -1,4 +1,4 @@
-class CoordinatesRetriever
+class GeocodeRetriever
 
   def self.get_coordinates(address)
     location = Location.find_by_address(address)
@@ -9,8 +9,11 @@ class CoordinatesRetriever
     end
   end
 
-  private
+  def self.get_address(coords)
+    Geocoder.address(coords)
+  end
 
+  private
   def self.create_location(address)
     coords = Geocoder.coordinates(address)
     Location.create({
@@ -21,4 +24,11 @@ class CoordinatesRetriever
     coords
   end
 
+
 end
+
+
+
+
+
+
