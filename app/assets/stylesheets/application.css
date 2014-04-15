@@ -163,6 +163,7 @@ html .pricing-table .title {
 
 html .button.travelmode {
   background-color: #24C775;
+  border-color: #24C775;;
 }
 
 html .button.travelmode:hover {
