@@ -1,33 +1,44 @@
-<h1>Here's your trip!</h1>
-<%= render "headerblock" %><br/><br/>
-<div id="map-canvas" class="row small-11 small-centered columns"></div>
-<div id="directions-panel" class="row small-11 small-centered columns"></div>
-<%= render "start_over_link" %>
-<button id="directions" class="button">Show Directions</button>
-<br/><br/>
-
-
-<div class="row small-11 small-centered columns trip_details">
-    <h2>Without Errands:<br/><span class="address"> <%= @trip.format_original_duration %> (<%= @trip.travel_mode.downcase %>) </span></h2>
-    <h2>With Errands:<br/><span class="address"> <%= @trip.format_ending_duration %> (<%= @trip.travel_mode.downcase %>)</span> </h2>
-</div>  
-
-<br/><br/>
-
-<div class="row small-11 small-centered columns trip_details">
-    <h2>Errands on the way:</h2>
-    <ol>
-      <% @trip.errands.each do |errand| %>
-        <li class="address"><%= errand.business_name %></li>
-      <% end %>
-    </ol>
+<div class="row">
+  <div class="small-12 large-12 columns">
+  <h1>Here's your trip!</h1>
+  <%= render "headerblock" %>
   </div>
 </div>
-
-
-<br/><br/>
-<p class="disclaimer">This trip link is yours! Bookmark it, share it, save it.</p>
-
+<div id="map-canvas"></div>
+<div class="row">
+  <div class="small-12 large-12 columns">
+    <div id="directions-panel"></div>
+  </div>
+</div>
+<div class="row">
+  <%= render "start_over_link" %>
+  <button id="directions" class="button radius">Show Directions</button>
+</div>
+<div class="row">
+  <div class="small-12 large-12 columns">
+    <div class="trip_details">
+    <h2>Without Errands:<br/><span class="address"> <%= @trip.format_original_duration %> (<%= @trip.travel_mode.downcase %>) </span></h2>
+    <h2>With Errands:<br/><span class="address"> <%= @trip.format_ending_duration %> (<%= @trip.travel_mode.downcase %>)</span> </h2>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="small-12 large-12 columns">
+    <div class="trip_details">
+      <h2>Errands On The Way:</h2>
+      <ol>
+        <% @trip.errands.each do |errand| %>
+          <li class="address"><%= errand.business_name %></li>
+        <% end %>
+      </ol>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="small-12 large-12 columns">
+    <p class="disclaimer">This trip link is yours! Bookmark it, share it, save it.</p>
+  </div>
+</div>
 
 <script type="text/javascript">
   var trip = <%= raw @trip.to_json.gsub('/', '\/') %>;
