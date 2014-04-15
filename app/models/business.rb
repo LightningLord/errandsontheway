@@ -11,7 +11,7 @@ class Business
 
   def get_directions(trip)
     trip_info = {origin: trip.start_point_address, destination: trip.end_point_address,
-      waypoints: waypoints_list(trip), travel_mode: trip.travel_mode}
+      waypoints: trip.waypoints_list(@address), travel_mode: trip.travel_mode}
     set_extra_duration(DirectionsServiceHelper.new(trip_info).calculate_total_duration, trip.original_duration)
   end
 # private
@@ -20,11 +20,7 @@ class Business
     @extra_duration = 0 if @extra_duration < 0
   end
 
-  def waypoints_list(trip)
-    waypoints_list = [@address]
-    waypoints_list += trip.errands.map{|errand| errand.address} unless trip.errands.empty?
-    waypoints_list
-  end
+
 
 
 

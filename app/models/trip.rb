@@ -41,6 +41,12 @@ class Trip < ActiveRecord::Base
     5
   end
 
+  def waypoints_list(business_address)
+    list = [business_address]
+    waypoints_list += self.errands.map{|errand| errand.address} unless self.errands.empty?
+    list
+  end
+
   private
 
   def call_coordinates_retriever(address)
