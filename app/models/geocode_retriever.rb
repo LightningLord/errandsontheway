@@ -5,16 +5,21 @@ class GeocodeRetriever
     if location
       [location.latitude, location.longitude]
     else
-      self.create_location(address)
+      self.create_location_from_address(address)
     end
   end
 
   def self.get_address(coords)
-    Geocoder.address(coords)
+    locations = Location.where(["latitude = :latitude and longitude = :longitude", { latitude: coords.first, longitude: coords.last}])
+    if locations.empty?
+      self.create_location_from_coords(coords)
+    else
+      locations.first.address
+    end
   end
 
   private
-  def self.create_location(address)
+  def self.create_location_from_address(address)
     coords = Geocoder.coordinates(address)
     Location.create({
       address: address,
@@ -22,6 +27,16 @@ class GeocodeRetriever
       longitude: coords.last
       })
     coords
+  end
+
+  def self.create_location_from_coords(coords)
+    address = Geocoder.address(coords)
+    Location.create({
+      address: address,
+      latitude: coords.first,
+      longitude: coords.last
+      })
+    address
   end
 
 
