@@ -52,54 +52,7 @@ var renderMap = function(trip, errands, display_directions){
   
 };
 
-var activateAutocomplete = function(){
 
-  autocomplete = new google.maps.places.Autocomplete(
-      (document.getElementById('trip_start_point_address')));
-  autocomplete2 = new google.maps.places.Autocomplete(
-      (document.getElementById('trip_end_point_address')));
-
-  geolocate();
-
-
-};
-
-function geolocate() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      var geolocation = new google.maps.LatLng(
-          position.coords.latitude, position.coords.longitude);
-      autocomplete.setBounds(new google.maps.LatLngBounds(geolocation,
-          geolocation));
-    });
-  }
-}
-
-var activateDirectionsToggle = function(){
-  var directionsPanel = document.getElementById('directions-panel');
-  directionsPanel.style.display = 'none';
-  var showDirectionsLink = document.getElementById('directions');
-
-  showDirectionsLink.addEventListener('click', function(event){
-    event.preventDefault();
-    $("#map-canvas").slideToggle("drop");
-    $("#directions-panel").slideToggle("drop");
-    updateDirectionsLink();
-  });
-
-};
-
-function updateDirectionsLink(){
- 
-  if ($("#directions").text() === "Show Directions"){
-    $("#directions").text("Hide Directions");
-  }
-
-  else if ($("#directions").text() === "Hide Directions"){
-    $("#directions").text("Show Directions");
-  }
-
-}
 
 
 
