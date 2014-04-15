@@ -101,6 +101,7 @@ html .button {
 html .button:hover {
   background: #e8eded;
   color: #23b7e0;
+  text-shadow: none;
 }
 
 html .button-group {
@@ -170,6 +171,7 @@ html .button.travelmode:hover {
   background-color: #e8eded;
   border-width: 1px;
   border-color: #24C775;
+  text-shadow: none;
 }
 
 .marker {
@@ -196,6 +198,7 @@ html .button.travelmode.selected {
   background-color: #e8eded;
   border-width: 1px;
   border-color: #24C775;
+  text-shadow: none;
 }
 
 html #travelmode_label {
