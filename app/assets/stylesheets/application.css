@@ -135,7 +135,6 @@ html .pricing-table .price {
 }
 
 
-
 html .pricing-table .title,
 html .pricing-table .description,
 html .pricing-table .bullet-item {
@@ -155,7 +154,8 @@ html .pricing-table .title {
   margin-bottom: 1.65rem;
 }
 
-.business_container {
+
+.business_container{
   margin-top: 2rem;
 }
 
@@ -164,6 +164,7 @@ html .pricing-table .title {
   background-color: transparent;
   color: #777;
 }
+
 
 html .button.travelmode {
   background-color: #24C775;
@@ -210,11 +211,11 @@ html #travelmode_label {
   font-size: 0.875rem;
   text-shadow: none;
   padding-bottom: 15px;
-  padding-top: 20px; 
+  padding-top: 20px;
 }
 
 #submit_route {
-  margin-top: 10px;  
+  margin-top: 10px;
 }
 
 .trip_details {
