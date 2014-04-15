@@ -17,8 +17,6 @@ RSpec.configure do |config|
   config.use_transactional_fixtures = true
   config.include CapybaraHelpers
 
-  config.filter_run :focus => true
-
   config.before(:suite) do
     DatabaseCleaner.strategy = :truncation
   end
