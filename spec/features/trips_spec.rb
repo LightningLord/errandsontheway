@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-feature "Trips", :js => false do
+feature "Trips", :js => true do
   describe "Trips" do
     context "with valid form fields" do
       before(:each) do
@@ -9,7 +9,9 @@ feature "Trips", :js => false do
           fill_in "Where are you starting?", with: "460 Fell St. San Francisco, CA"
           fill_in "Where are you going?", with: "633 Folsom St. San Francisco, CA"
           find(:css, "#walking").click
+          wait_for_ajax_to_finish
           click_on "Route my trip!"
+          save_and_open_page
         end
       end
       it "successfully submits your origin and destination" do

@@ -13,7 +13,7 @@ class TripsController < ApplicationController
       session[:trip_id] = trip.id
       redirect_to(trip)
     else
-      render :new
+      redirect_to root_path
     end
   end
 
