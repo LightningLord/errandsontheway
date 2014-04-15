@@ -31,4 +31,16 @@ FactoryGirl.define do
     latitude {11.11}
     longitude {22.22}
   end
+
+  factory :fell, class: Location do
+    address {"460 Fell St. San Francisco, CA"}
+    latitude {37.7758674621582}
+    longitude {-122.425491333008}
+  end
+
+  factory :folsom, class: Location do
+    address {"633 Folsom St. San Francisco, CA"}
+    latitude {37.7836265563965}
+    longitude {-122.3976974487}
+  end
 end

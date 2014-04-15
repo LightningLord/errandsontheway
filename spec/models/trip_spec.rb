@@ -100,7 +100,7 @@ describe Trip do
       end
     end
 
-    context "when CoordinatesRetriever does not return coordinates" do
+    context "when GeocodeRetriever does not return coordinates" do
       before(:each){ my_trip.stub(:call_coordinates_retriever).and_return(nil)}
       after(:each){ my_trip.update({trip: {}}) }
       it "does not call set_coordinates" do
