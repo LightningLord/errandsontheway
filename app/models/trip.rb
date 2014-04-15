@@ -43,7 +43,7 @@ class Trip < ActiveRecord::Base
   private
 
   def call_coordinates_retriever(address)
-    CoordinatesRetriever.get_coordinates(address)
+    GeocodeRetriever.get_coordinates(address)
   end
 
   def call_distance_matrix_helper
