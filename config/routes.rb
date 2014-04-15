@@ -11,5 +11,4 @@ Errandsontheway::Application.routes.draw do
   get '/:url', to: 'trips#summary', as: 'trip_summary'
   post '/coordinates-converter', to: 'coordinates#convert'
 
-
 end
