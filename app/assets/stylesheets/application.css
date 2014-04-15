@@ -94,6 +94,8 @@ html .button {
   background: #23b7e0;
   color: #fff;
   text-shadow: 1px 1px #999;
+  border-width: .05rem;
+  border-color: #b7b7b5;
 }
 
 html .button:hover {
@@ -166,6 +168,8 @@ html .button.travelmode {
 html .button.travelmode:hover {
   color: #24C775;
   background-color: #e8eded;
+  border-width: 1px;
+  border-color: #24C775;
 }
 
 .marker {
