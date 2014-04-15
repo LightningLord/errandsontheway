@@ -48,6 +48,7 @@ html header {
 
 html header h1 {
   line-height: 250%;
+  margin-top: 0px;
 }
 
 html header h1 a, html header h1 a:hover{
