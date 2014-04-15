@@ -2,7 +2,7 @@ class ErrandsController < ApplicationController
   def create
     trip = Trip.find(session[:trip_id])
     errand = trip.errands.build(permitted_params)
-    coords = CoordinatesRetriever.get_coordinates(params[:errand][:address])
+    coords = GeocodeRetriever.get_coordinates(params[:errand][:address])
     errand.set_coordinates(coords) if coords
     trip.set_duration(errand.delta_duration)
     if errand.save

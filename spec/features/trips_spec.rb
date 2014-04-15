@@ -27,4 +27,16 @@ feature "Trips", :js => true do
       end
     end
   end
+
+  # context "autofilling the user's origin based on their current location" do
+  #   it "should fill in the origin field with an address", focus: true do
+  #     visit root_path
+  #     click_link 'current-location'
+  #     wait_for_ajax_to_finish
+  #     save_and_open_page
+  #     puts "hello #{ find_field('trip_start_point_address').value}"
+  #     expect(find_field('trip_start_point_address').value.to_not be_empty)
+  #   end
+  # end
 end
+
