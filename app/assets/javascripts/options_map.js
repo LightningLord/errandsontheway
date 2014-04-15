@@ -7,6 +7,7 @@ var renderOptionsMap = function(trip, options){
   var optionsCoordinates = [];
   var markers = [];
   var iterator = 0;
+  var infowindow = null;
 
   function initialize() {
     console.log("at initialize");
@@ -51,9 +52,10 @@ var renderOptionsMap = function(trip, options){
         map: map,
         draggable: false,
         animation: google.maps.Animation.DROP,
-        infoWindow: new google.maps.InfoWindow({
-                content: "<h4>" + options[iterator].name + " </h4>" + options[iterator].address + "<br/> Additional Time: " + parseInt(options[iterator].extra_duration/60) + " minutes"
-        })
+        name: options[iterator].name,
+        address: options[iterator].address,
+        additionalTime: parseInt(options[iterator].extra_duration/60),
+        icon: "http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld="+(iterator+1)+"|23b7e0|000000"
       });
       markers.push(marker);
       addListener(marker);
@@ -64,7 +66,13 @@ var renderOptionsMap = function(trip, options){
     function addListener(marker){
             console.log("add listener");
       google.maps.event.addListener(marker, 'click', function() {
-          marker.infoWindow.open(map, marker);
+        if (infowindow) {
+            infowindow.close();
+        }
+        infowindow = new google.maps.InfoWindow({
+                content: "<h4>" + marker.name + " </h4>" + marker.address + "<br/> Additional Time: " + marker.additionalTime + " minutes" + "<br/>"
+        });
+          infowindow.open(map, marker);
           // alert(marker.customInfo + " " + marker.title);
       });
     }
