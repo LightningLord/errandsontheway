@@ -52,7 +52,7 @@ class Trip < ActiveRecord::Base
 
   def waypoints_list(business_address)
     list = [business_address]
-    waypoints_list += self.errands.map{|errand| errand.address} unless self.errands.empty?
+    list += self.errands.map{|errand| errand.address} unless self.errands.empty?
     list
   end
 
