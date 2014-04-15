@@ -8,6 +8,8 @@ feature "Options", :js => false do
         visit root_path
         fill_in "Where are you starting?", with: "460 Fell St. San Francisco, CA"
         fill_in "Where are you going?", with: "633 Folsom St. San Francisco, CA"
+        find(:css, "#walking").click
+        wait_for_ajax_to_finish
         click_on "Route my trip!"
         fill_in "search", :with => "Laundry"
         click_on "Search"
