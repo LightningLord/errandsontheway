@@ -1,22 +1,3 @@
-// function BindNewLocation() {
-//   $('input[value="Current Location"]').on('click', getLocation());
-// }
-
-// function getLocation() {
-//   if (navigator.geolocation)
-//     {
-//     navigator.geolocation.getCurrentPosition(showPosition);
-//     }
-//   else
-//   {
-//     console.log("Geolocation is not supported by this browser.");
-//   }
-// }
-
-// function showPosition(position){
-//   console.log(position.coords);
-// }
-
 var geoLocator = function(){
   this.controller = new geoLocator.Controller();
   this.controller.bindGeolocate(this.controller);
@@ -43,7 +24,6 @@ geoLocator.Controller.prototype = {
   },
   onSuccess: function(position){
     var coords = [position.coords.latitude, position.coords.longitude];
-    
     $.ajax({
       url: '/coordinates-converter',
       type: 'post',
