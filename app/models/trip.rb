@@ -19,9 +19,9 @@ class Trip < ActiveRecord::Base
     "#{(self.original_duration / 60)} minutes"
   end
 
-  def update(params)
-    start_coords = call_coordinates_retriever(params[:trip][:start_point_address])
-    end_coords = call_coordinates_retriever(params[:trip][:end_point_address])
+  def add_api_info(params)
+    start_coords = call_coordinates_retriever(params[:start_point_address])
+    end_coords = call_coordinates_retriever(params[:end_point_address])
     if start_coords && end_coords
       self.set_coordinates(start_coords, end_coords)
       self.original_duration = call_distance_matrix_helper
@@ -41,7 +41,20 @@ class Trip < ActiveRecord::Base
     5
   end
 
+
+  def trip_info(business_address)
+    {origin: self.start_point_address, destination: self.end_point_address,
+      waypoints: waypoints_list(business_address), travel_mode: self.travel_mode
+    }
+  end
+
   private
+
+  def waypoints_list(business_address)
+    list = [business_address]
+    waypoints_list += self.errands.map{|errand| errand.address} unless self.errands.empty?
+    list
+  end
 
   def call_coordinates_retriever(address)
     GeocodeRetriever.get_coordinates(address)

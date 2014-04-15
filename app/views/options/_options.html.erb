@@ -4,16 +4,9 @@
   </div>
 </div>
 <div class="row">
-  <div class="marker near">
     <h3>Start point</h3>
-    <% @start_businesses.each do |business| %>
+    <% @businesses.each do |business| %>
       <%= render 'trips/businesses_list', business: business %>
     <% end %>
-  </div>
-  <div class="marker far">
-    <h3>End point</h3>
-    <% @end_businesses.each do |business| %>
-      <%= render 'trips/businesses_list', business: business %>
-    <% end %>
-  </div>
+
 </div>
