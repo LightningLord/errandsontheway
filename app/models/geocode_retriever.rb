@@ -21,12 +21,14 @@ class GeocodeRetriever
   private
   def self.create_location_from_address(address)
     coords = Geocoder.coordinates(address)
-    Location.create({
-      address: address,
-      latitude: coords.first,
-      longitude: coords.last
-      })
-    coords
+    if coords
+      Location.create({
+        address: address,
+        latitude: coords.first,
+        longitude: coords.last
+        })
+      coords
+    end
   end
 
   def self.create_location_from_coords(coords)
@@ -38,9 +40,6 @@ class GeocodeRetriever
       })
     address
   end
-
-
-
 end
 
 
