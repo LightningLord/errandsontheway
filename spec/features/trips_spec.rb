@@ -24,4 +24,13 @@ describe "Trips" do
       expect(page).to have_button "Route my trip!"
     end
   end
+
+  context "autofilling the user's origin based on their current location" do
+    xit "should fill in the origin field with an address" do
+      visit root_path
+      click_link 'current-location'
+      puts "hello #{ find_field('trip_start_point_address').value}"
+      expect(find_field('trip_start_point_address').value.to_not be_empty)
+    end
+  end
 end
