@@ -220,6 +220,11 @@ html #travelmode_label {
   margin-top: 25px;
 }
 
+html #errands-form{
+  margin: 20px;
+
+}
+
 .trip_details {
   background-color: #f4f4f4;
   padding: 15px;
