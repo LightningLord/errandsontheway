@@ -123,6 +123,10 @@ html .button-group {
   font-size: 0.875em;
 }
 
+.google-marker {
+  margin-right: 8px;
+}
+
 html .pricing-table {
   border: 1px solid #fff;
 }
