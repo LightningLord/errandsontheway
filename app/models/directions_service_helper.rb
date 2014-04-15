@@ -7,7 +7,7 @@ class DirectionsServiceHelper
                             destination: args[:destination],
                             waypoints: "optimize:true|" + args[:waypoints].join(" | "),
                             sensor: false,
-
+                            mode: args[:travel_mode],
                             key: ENV['API_KEY']
                           }
                   }

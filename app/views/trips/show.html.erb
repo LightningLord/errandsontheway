@@ -6,45 +6,29 @@
 
 <div class="row">
   <div class="small-12 large-12 columns">
-      <h1>Your trip</h1>
-      <%= render "headerblock" %>
-      <h3>Trip Duration: <%= time_in_minutes(@trip_duration) %></h3>
+    <h1>Your trip</h1>
+    <div class="trip_details row small-11 small-centered columns">
+      <h2>Start point: <br/><span class="address"><%= @trip.start_point_address %></span></h2>
+      <h2>Destination: <br/><span class="address"><%= @trip.end_point_address %></span></h2>
+      <h2>Trip Duration:<br/><span class="address"> <%= time_in_minutes(@trip_duration) %> (<%= @trip.travel_mode.downcase %>) </span></h2>
+    </div>
         <%= display_flash_messages %>
   </div>
 </div>
 
-<div id="map-canvas"></div>
-<% if @trip.reached_max_errands? %>
-<div class="row">
-    <p>You have reached the maximum amount of errands. Please finalize your route to see the route.</p>
-</div>
+<br/><br/>
 
+<div id="map-canvas" class="row small-11 small-centered columns"></div>
+<img src="/assets/ajax-loader.gif" id="spinner">
+<h2 id="wait-message">Please wait while we fetch you some awesome options near your route.</h2>
 
-<div class="row">
-  <ul class="button-group radius">
-    <li>
-    <%= link_to 'Finalize Trip', trips_finalize_path, method: "post", class: 'button' %>
-    </li>
-    <li>
-    <%= render "start_over_link" %>
-    </li>
-  </ul>
-</div>
-<% else %>
-<div class="row">
-  <div class="small-12 large-6 columns">
-    <div class="row collapse">
-      <form action="/options" method="get">
-        <div class="small-12 large-9 columns">
-          <input class="radius" name="search" placeholder="e.g. Laundry, Gas, Tacos" type="text">
-        </div>
-        <div class="small-12 large-3 columns text-center">
-          <input class="button radius" type="submit" value="Search">
-        </div>
-      </form>
-    </div>
+<div id="errands-form"> 
+  <% if @trip.reached_max_errands? %>
+  <div class="row">
+      <p>You have reached the maximum amount of errands. Please finalize your route to see the route.</p>
   </div>
-  <div class="small-12 large-5 large-offset-1  text-center columns">
+
+  <div class="row">
     <ul class="button-group radius">
       <li>
       <%= link_to 'Finalize Trip', trips_finalize_path, method: "post", class: 'button' %>
@@ -54,7 +38,34 @@
       </li>
     </ul>
   </div>
+  <% else %>
+  <div class="row">
+    <div class="small-12 large-6 columns">
+      <div class="row collapse">
+        <form id="errand_search"action="/options" method="get">
+          <div class="small-12 large-9 columns">
+            <input class="radius" name="search" placeholder="e.g. Laundry, Gas, Tacos" type="text">
+          </div>
+          <div class="small-12 large-3 columns text-center">
+            <input class="button radius" type="submit" value="Search">
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="small-12 large-5 large-offset-1  text-center columns">
+      <ul class="button-group radius">
+        <li>
+        <%= link_to 'Finalize Trip', trips_finalize_path, method: "post", class: 'button' %>
+        </li>
+        <li>
+        <%= render "start_over_link" %>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
+
+
 <% unless @trip.reached_max_errands? %>
 <div class="row">
   <div class="small-12 large-12 columns">
@@ -64,13 +75,18 @@
   </div>
 </div>
 <% end %>
+
 <div class="row">
   <div class="small-12 large-12 columns">
     <div class="pricing-table">
       <p class="title small-12 large-12 columns">
         Your errands:
+      <ol>
       </p>
-        <ol>
+      <% if @trip.errands.empty? %>
+        <li class="description small-12 large-12 columns">You have no errands!</li>
+      <% else %>
+        
         <% @trip.errands.each do |errand| %>
           <li>
           <span class="description small-12 large-12 columns">
@@ -81,6 +97,7 @@
           </span>
         </li>
         <% end %>
+      <% end %>
       </ol>
     </div>
   </div>

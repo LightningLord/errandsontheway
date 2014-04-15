@@ -5,7 +5,7 @@ describe DistanceMatrixHelper do
     it "returns the duration" do
     DistanceMatrixHelper.any_instance.stub(:make_api_call).and_return({"rows" =>
       [{"elements" => [{"duration" => {"value" => 150}}]}]})
-    expect(DistanceMatrixHelper.new({}).get_trip_duration).to eq 150
+    expect(DistanceMatrixHelper.new({travel_mode: "WALKING"}).get_trip_duration).to eq 150
     end
   end
 end
