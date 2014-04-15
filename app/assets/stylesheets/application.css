@@ -117,6 +117,12 @@ html .button-group {
   width: 300px;
 }
 
+#current-location {
+  float: left;
+  padding-bottom: .8rem;
+  font-size: 0.875em;
+}
+
 html .pricing-table {
   border: 1px solid #fff;
 }
@@ -173,16 +179,23 @@ html #directions-panel .adp-placemark td {
 }
 
 
-.business_container{
+.business-container{
   margin-top: 2rem;
 }
 
-.business_container.pricing-table .description{
-  text-align: center;
-  background-color: transparent;
-  color: #777;
+.business-container.pricing-table .description,
+.business-container.pricing-table .cta-button {
+  background: transparent;
 }
 
+.business-container.pricing-table .cta-button form {
+  margin-bottom: .5rem;
+}
+
+.business-container.pricing-table .description {
+  text-align: center;
+  color: #777;
+}
 
 .marker {
   position: relative;
@@ -196,16 +209,16 @@ html #directions-panel .adp-placemark td {
   position: absolute;
   top: 40%;
   -webkit-transform-origin: 0 0;  /* Chrome, Safari 3.1+ */
-   -o-transform-origin: 0 0;  /* Opera 10.50-12.00 */
-      transform-origin: 0 0;  /* Firefox 16+, IE 10+, Opera 12.10+ */
--webkit-transform: rotate(90deg);  /* Chrome, Safari 3.1+ */
-     -o-transform: rotate(90deg);  /* Opera 10.50-12.00 */
-        transform: rotate(90deg);  /* Firefox 16+, IE 10+, Opera 12.10+ */
+  -o-transform-origin: 0 0;  /* Opera 10.50-12.00 */
+  transform-origin: 0 0;  /* Firefox 16+, IE 10+, Opera 12.10+ */
+  -webkit-transform: rotate(90deg);  /* Chrome, Safari 3.1+ */
+  -o-transform: rotate(90deg);  /* Opera 10.50-12.00 */
+  transform: rotate(90deg);  /* Firefox 16+, IE 10+, Opera 12.10+ */
 }
 
 html .button.travelmode {
   background-color: #24C775;
-  border-color: #24C775;;
+  border-color: #24C775;
 }
 
 html .button.travelmode:hover {
@@ -274,7 +287,7 @@ html .trip_details ol {
 p .disclaimer {
   font-size: 20px;
   margin: 20px;
-  
+
 }
 
 footer {
@@ -288,4 +301,3 @@ footer p {
   margin: 0;
   padding: 1rem 0;
 }
-

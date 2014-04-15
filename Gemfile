@@ -40,7 +40,6 @@ group :test do
   gem 'debugger'
   gem 'simplecov', require: false
   gem 'faker'
-  gem 'vcr'
   gem 'fakeweb'
   gem 'launchy'
 end

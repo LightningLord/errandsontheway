@@ -4,7 +4,7 @@ describe Place do
   let(:place){ Place.new('-33.87054', '151.198815', "laundry")}
   let(:business){{name: "Laundromat", address: "717 California Street, San Francisco"}}
   before(:each) do
-    Place.any_instance.stub(:request_businesses).and_return([{"name" => business[:name], "vicinity" => business[:address]}])
+    Place.stub(:request_businesses).and_return([{"name" => business[:name], "vicinity" => business[:address]}])
   end
 
   it "extracts each business's name and address" do
