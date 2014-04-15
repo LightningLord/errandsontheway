@@ -4,8 +4,7 @@ class Place
     @latitude = latitude
     @longitude = longitude
     @keyword = keyword
-    @request_businesses = request_businesses
-    @request_businesses
+    @request_businesses = self.class.request_businesses(latitude, longitude, keyword)
   end
   #latitude and longitude are passed in as strings with many decimals
   #ie '-33.8670522'
@@ -21,13 +20,13 @@ class Place
     @client
   end
 
-  def request_businesses
-    location = GooglePlaces::Location.new(@latitude, @longitude).format
+  def self.request_businesses(latitude, longitude, keyword)
+    location = GooglePlaces::Location.new(latitude, longitude).format
     response = GooglePlaces::Request.spots(
       :location => location,
       :rankby => 'distance',
       :sensor => false,
-      :keyword => @keyword,
+      :keyword => keyword,
       :opennow => true,
       :key => ENV["API_KEY"]
       )

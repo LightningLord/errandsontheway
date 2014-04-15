@@ -14,9 +14,12 @@ gem 'dotenv-rails'
 gem 'zurb-foundation'
 gem 'foundation_rails_helper'
 
-
 group :doc do
   gem 'sdoc', require: false
+end
+
+group :production do
+  gem 'rails_12factor'
 end
 
 group :development, :test do
@@ -37,8 +40,6 @@ group :test do
   gem 'debugger'
   gem 'simplecov', require: false
   gem 'faker'
-  gem 'vcr'
   gem 'fakeweb'
-  #gem 'capybara-webkit'
   gem 'launchy'
 end

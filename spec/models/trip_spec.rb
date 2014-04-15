@@ -78,31 +78,31 @@ describe Trip do
       let(:params){ {trip: {start_point_address: my_trip.start_point_address,
           end_point_address: my_trip.end_point_address}} }
       it "sets the coordinates" do
-        my_trip.update(params)
+        my_trip.add_api_info(params)
         my_trip.save
         expect(my_trip.reload.start_point_latitude).to eq 33.33
       end
 
       it "calls set_coordinates" do
         expect(my_trip).to receive(:set_coordinates)
-        my_trip.update(params)
+        my_trip.add_api_info(params)
       end
 
       it "calls distance_matrix_helper" do
         expect(my_trip).to receive(:call_distance_matrix_helper)
-        my_trip.update(params)
+        my_trip.add_api_info(params)
       end
 
       it "sets original duration" do
-        my_trip.update(params)
+        my_trip.add_api_info(params)
         my_trip.save
         expect(my_trip.reload.original_duration).to eq 1500
       end
     end
 
-    context "when CoordinatesRetriever does not return coordinates" do
+    context "when GeocodeRetriever does not return coordinates" do
       before(:each){ my_trip.stub(:call_coordinates_retriever).and_return(nil)}
-      after(:each){ my_trip.update({trip: {}}) }
+      after(:each){ my_trip.add_api_info({}) }
       it "does not call set_coordinates" do
         expect(my_trip).to_not receive(:set_coordinates)
       end
