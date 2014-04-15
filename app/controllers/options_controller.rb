@@ -17,7 +17,7 @@ class OptionsController < ApplicationController
   private
 
   def get_business_info_near_point(place, trip)
-    businesses = place.get_names_and_addresses.map { |name_address_hash| Business.new(name_address_hash[:name], name_address_hash[:address])}
+    p businesses = place.get_biz_names_addresses_coordinates.map { |name_address_coord_hash| Business.new(name_address_coord_hash[:name], name_address_coord_hash[:address], name_address_coord_hash[:latitude], name_address_coord_hash[:longitude])}
     businesses.each do |business|
       waypoints_list = [business.address]
       waypoints_list += trip.errands.map{|errand| errand.address} unless trip.errands.empty?

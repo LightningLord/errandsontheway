@@ -5,13 +5,14 @@ class Place
     @longitude = longitude
     @keyword = keyword
     @request_businesses = request_businesses
+    @request_businesses
   end
   #latitude and longitude are passed in as strings with many decimals
   #ie '-33.8670522'
 
 
-  def get_names_and_addresses
-    @request_businesses.shift(2).map{|business|{name: business["name"], address: business["vicinity"]}}
+  def get_biz_names_addresses_coordinates
+    @request_businesses.shift(2).map{|business|{name: business["name"], address: business["vicinity"], latitude: business["geometry"]["location"]["lat"], longitude: business["geometry"]["location"]["lng"]}}
   end
 
   private
