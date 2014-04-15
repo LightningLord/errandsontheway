@@ -5,6 +5,9 @@ class TripsController < ApplicationController
     @trip = Trip.new
   end
 
+  # No test break if I comment out this method (Damn VCR dependency). Lines 10
+  # and 11 confuse me, why are you creating with permitted_params, then
+  # immediately updating with the regular params?
   def create
     trip = Trip.new(permitted_params)
     trip.update(params)
@@ -17,6 +20,10 @@ class TripsController < ApplicationController
     end
   end
 
+  # Nested conditionals are the devil, but test coverage is sweet, and you have
+  # some for this method. You have four failing tests on this method if the code
+  # is deleted. I reviewed the tests, and like them, but think that two tests
+  # could include a subject.
   def show
     if params[:id].to_i == session[:trip_id]
       @trip = Trip.find(params[:id])
@@ -30,6 +37,11 @@ class TripsController < ApplicationController
     end
   end
 
+  # Two tests fail when I delete this code, which is good. I dislike the use of
+  # a postfix if on long lines, please move that conditional to its own line.
+  # No tests are proving that the third line does anything, so after moving the
+  # conditional, ensure that the ending-duration is changed when the
+  # ending_duration is 0, and not changed otherwise.
   def finalize
     trip = Trip.find(session[:trip_id])
     trip.update_attributes(url: ShortenedLink.generate_random_string)
