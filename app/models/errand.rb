@@ -7,5 +7,4 @@ class Errand < ActiveRecord::Base
     self.longitude = coords.last
   end
 
-
 end

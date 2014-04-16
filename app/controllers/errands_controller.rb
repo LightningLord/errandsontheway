@@ -14,6 +14,7 @@ class ErrandsController < ApplicationController
   end
 
   private
+
   def permitted_params
     params.require(:errand).permit(:business_name,
                                    :address,

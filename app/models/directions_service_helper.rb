@@ -13,18 +13,15 @@ class DirectionsServiceHelper
                   }
   end
 
-
   def calculate_total_duration
     self.class.api_request(@options)["routes"].first["legs"].map{ |leg| leg["duration"]["value"]}.reduce(:+)
   end
 
-
   private
+
   def self.api_request(options)
     self.get('/maps/api/directions/json', options).parsed_response
   end
-
-
 
 end
 

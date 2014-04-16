@@ -21,9 +21,6 @@ class DistanceMatrixRetriever
     self.get("/maps/api/distancematrix/json", options).parsed_response
   end
 
-
-
-
 end
 
 

@@ -1,14 +1,12 @@
 <%= form_for(@trip) do |f| %>
   <%= display_flash_messages %>
-
   <div class="row">
       <div class="small-12 large-6 columns">
       <%= link_to "Use Current Location", '#', id: "current-location", remote: true %>
-    </div> 
+    </div>
     <div class="small-12 columns">
       <%= f.text_field :start_point_address, class: "radius", label: "Where are you starting?", placeholder: "start point", onFocus: "geolocate()" %>
     </div>
-   
   </div>
   <div class="row">
     <div class="small-12 columns">
