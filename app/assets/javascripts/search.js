@@ -7,10 +7,6 @@ $(function(){
 
   searchController.prototype = {
     initialize: function(){
-      $('#errand_search').on("submit", this.triggerAjax)
-  }
-  searchController.prototype = {
-    initialize: function(){
       $('#errand_search').on("submit", this.triggerAjax);
       $('#spinner').hide();
       $('#wait-message').hide();
