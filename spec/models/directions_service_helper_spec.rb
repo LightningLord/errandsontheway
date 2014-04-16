@@ -1,14 +1,14 @@
 require 'spec_helper'
 
-describe DirectionsServiceHelper do
+describe DirectionsRetriever do
 
   it "calculate the total duration with way points" do
     route_options = { origin: "origin address",
                       destination: "destination address",waypoints: ["errand1address", "errand2address"], travel_mode: "WALKING"}
-    helper = DirectionsServiceHelper.new(route_options)
+    helper = DirectionsRetriever.new(route_options)
 
     stub_return = {"routes" => [{"legs" => [{"duration" => {"value" => 50} }] }]}
-    DirectionsServiceHelper.stub(:api_request).and_return(stub_return)
+    DirectionsRetriever.stub(:api_request).and_return(stub_return)
     expect(helper.calculate_total_duration).to eq(50)
   end
 
