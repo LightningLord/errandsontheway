@@ -1,13 +1,9 @@
 var activateAutocomplete = function(){
-
   autocomplete = new google.maps.places.Autocomplete(
       (document.getElementById('trip_start_point_address')));
   autocomplete2 = new google.maps.places.Autocomplete(
       (document.getElementById('trip_end_point_address')));
-
   geolocate();
-
-
 };
 
 function geolocate() {

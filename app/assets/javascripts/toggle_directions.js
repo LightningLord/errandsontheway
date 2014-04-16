@@ -9,17 +9,13 @@ var activateDirectionsToggle = function(){
     $("#directions-panel").slideToggle("drop");
     updateDirectionsLink();
   });
-
 };
 
 function updateDirectionsLink(){
- 
   if ($("#directions").text() === "Show Directions"){
     $("#directions").text("Hide Directions");
   }
-
   else if ($("#directions").text() === "Hide Directions"){
     $("#directions").text("Show Directions");
   }
-
 }

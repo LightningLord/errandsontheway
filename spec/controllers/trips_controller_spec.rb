@@ -3,6 +3,7 @@ require 'spec_helper'
 describe TripsController do
 
   let(:my_trip){FactoryGirl.create(:valid_trip)}
+
   describe "#new" do
     before(:each){get :new}
     it "renders new page" do
@@ -21,18 +22,22 @@ describe TripsController do
   describe "#create" do
 
     let(:create_trip){post :create, trip: FactoryGirl.attributes_for(:valid_trip)}
+
     before(:each) do
       DistanceMatrixRetriever.stub(:make_api_call).and_return({"rows" =>
       [{"elements" => [{"duration" => {"value" => 150}}]}]})
     end
+
     it "should create a new trip" do
       expect{ create_trip }.to change {Trip.count}.by(1)
       expect(response).to be_redirect
     end
+
     it "assigns session[:trip_id]" do
       create_trip
       expect(session[:trip_id]).to_not be_nil
     end
+
     it "should create a new trip with valid addresses" do
       expect{post :create, trip: FactoryGirl.attributes_for(:valid_trip) }.to change {Trip.count}.by(1)
       expect(response).to be_redirect
@@ -47,6 +52,7 @@ describe TripsController do
 
   describe "finalize and summary" do
     before(:each){request.session[:trip_id] = my_trip.id}
+
     describe "#finalize" do
       it "assigns a secure random url to a trip" do
         my_trip.update_attributes(url: nil)
@@ -79,6 +85,7 @@ describe TripsController do
         request.session[:trip_id] = my_trip.id
         get :show, :id => my_trip.id
       end
+
       it "assigns @trip properly" do
         expect(assigns(:trip)).to eq my_trip
       end

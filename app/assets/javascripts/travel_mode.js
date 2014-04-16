@@ -1,12 +1,8 @@
-
 var assignTravelMode = function(){
-
   var selectionMade = false;
-
   $(".travelmode").on('click', function(event){
     event.preventDefault();
     var id = $(this).attr('id');
-
     if (selectionMade === false) {
       $(this).addClass("selected");
       $("#new_trip").append("<input name='trip[travel_mode]' type='hidden' value='"+id+"' />");
@@ -18,7 +14,5 @@ var assignTravelMode = function(){
       $(this).addClass("selected");
       $("#new_trip").append("<input name='trip[travel_mode]' type='hidden' value='"+id+"' />");
     }
-
   });
-
 };
