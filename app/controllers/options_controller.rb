@@ -3,7 +3,6 @@ class OptionsController < ApplicationController
     if session[:trip_id]
       @search_term = params[:search]
       @trip = Trip.find(session[:trip_id])
-      p @trip
       @businesses = prepare_businesses(@trip, @search_term)
       if @businesses.empty?
         flash[:alert] = "Sorry! No places found near your route. Please try another."
