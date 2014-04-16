@@ -1,7 +1,7 @@
 <ul class="business-container pricing-table">
   <li class="price"><img class="google-marker" src="http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld= <%= index + 1 %> |23b7e0|000000"><%= business.name %></li>
   <li class="description"><%= business.address %></li>
-  <li class="description">Additional time: <%= time_in_minutes(business.extra_duration) %></dd>
+  <li class="description">Total additional time: <%= time_in_minutes(business.extra_duration) %></dd>
   <li class="cta-button">
     <%= form_tag('/errands', method: 'post') do %>
     <%= hidden_field_tag("errand[business_name]", business.name)%>
