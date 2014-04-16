@@ -21,11 +21,6 @@ class TripsController < ApplicationController
   def show
     if params[:id].to_i == session[:trip_id]
       @trip = Trip.find(params[:id])
-      if @trip.errands.empty?
-        @trip_duration = @trip.original_duration
-      else
-        @trip_duration = @trip.ending_duration
-      end
     else
       redirect_to root_path
     end
