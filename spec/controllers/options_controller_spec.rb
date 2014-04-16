@@ -6,7 +6,7 @@ describe OptionsController do
       let(:new_trip){FactoryGirl.create(:valid_trip)}
       before(:each) do
         stub_return = {"routes" => [{"legs" => [{"duration" => {"value" => 50} }] }]}
-        DirectionsServiceHelper.stub(:api_request).and_return(stub_return)
+        DirectionsRetriever.stub(:api_request).and_return(stub_return)
         DistanceMatrixRetriever.stub(:make_api_call).and_return({"rows" =>
         [{"elements" => [{"duration" => {"value" => 150}}]}]})
         request.session[:trip_id] = new_trip.id
