@@ -48,6 +48,5 @@ class TripsController < ApplicationController
     params.require(:trip).permit(:start_point_address, :end_point_address, :travel_mode)
   end
 
-
 end
 

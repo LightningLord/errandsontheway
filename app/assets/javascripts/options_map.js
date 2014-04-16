@@ -1,5 +1,4 @@
 var renderOptionsMap = function(trip, errands, options){
-  console.log("at renderoptions");
 
   var directionsDisplay;
   var directionsService = new google.maps.DirectionsService();

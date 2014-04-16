@@ -1,8 +1,7 @@
-class DistanceMatrixHelper
+class DistanceMatrixRetriever
   include HTTParty
 
   base_uri 'https://maps.googleapis.com'
-  #enter in origins and destinations as addresses
 
   def initialize(args)
     @options = { query: { origins: args[:origins],
@@ -21,9 +20,6 @@ class DistanceMatrixHelper
   def self.make_api_call(options)
     self.get("/maps/api/distancematrix/json", options).parsed_response
   end
-
-
-
 
 end
 

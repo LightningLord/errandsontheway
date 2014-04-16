@@ -41,7 +41,6 @@ class Trip < ActiveRecord::Base
     5
   end
 
-
   def trip_info(business_address)
     {origin: self.start_point_address, destination: self.end_point_address,
       waypoints: waypoints_list(business_address), travel_mode: self.travel_mode
@@ -61,7 +60,7 @@ class Trip < ActiveRecord::Base
   end
 
   def call_distance_matrix_helper
-    DistanceMatrixHelper.new({origins: self.start_point_address, destinations: self.end_point_address, travel_mode: self.travel_mode}).get_trip_duration
+    DistanceMatrixRetriever.new({origins: self.start_point_address, destinations: self.end_point_address, travel_mode: self.travel_mode}).get_trip_duration
   end
 
 end

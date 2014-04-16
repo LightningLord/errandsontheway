@@ -14,7 +14,6 @@ ActiveRecord::Migration.check_pending! if defined?(ActiveRecord::Migration)
 RSpec.configure do |config|
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
   config.use_transactional_fixtures = true
-  config.include CapybaraHelpers
 
   config.before(:suite) do
     DatabaseCleaner.strategy = :truncation
@@ -33,5 +32,3 @@ RSpec.configure do |config|
   config.color_enabled = true
   config.tty = true
 end
-
-Capybara.javascript_driver = :webkit

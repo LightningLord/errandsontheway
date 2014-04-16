@@ -4,10 +4,9 @@ var geoLocator = function(){
 };
 
 geoLocator.Controller = function() {
-
 };
 
-geoLocator.Controller.prototype = { 
+geoLocator.Controller.prototype = {
   bindGeolocate: function(controller) {
     $('#current-location').on('click', function(event){
       event.preventDefault();
