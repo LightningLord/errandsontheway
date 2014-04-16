@@ -42,6 +42,10 @@ describe OptionsController do
         expect(assigns(:businesses)).to eq assigns(:businesses).sort{|a,b| a.extra_duration <=> b.extra_duration}
       end
 
+      it "assigns@trip to the right trip" do
+        expect(assigns(:trip)).to eq new_trip
+      end
+
     end
 
     context "with no session" do
