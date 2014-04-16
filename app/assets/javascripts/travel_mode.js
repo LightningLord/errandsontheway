@@ -22,4 +22,3 @@ var assignTravelMode = function(){
   });
 
 };
-
