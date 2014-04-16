@@ -16,7 +16,7 @@ class Business
   private
 
   def get_new_trip_duration(trip)
-    DirectionsServiceHelper.new(trip.trip_info(@address)).calculate_total_duration
+    DirectionsRetriever.new(trip.trip_info(@address)).calculate_total_duration
   end
 
   def calculate_extra_duration(duration_with_business, original_trip_duration)

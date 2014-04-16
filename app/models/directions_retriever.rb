@@ -1,4 +1,4 @@
-class DirectionsServiceHelper
+class DirectionsRetriever
   include HTTParty
 
   base_uri 'https://maps.googleapis.com'
