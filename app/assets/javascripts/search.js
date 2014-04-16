@@ -3,7 +3,8 @@ $(function(){
   mysearchController.initialize();
  });
   var searchController = function(){
-  }
+  };
+
   searchController.prototype = {
     initialize: function(){
       $('#errand_search').on("submit", this.triggerAjax);
@@ -26,12 +27,14 @@ $(function(){
         $('body').append(server_data);
         $('body').append(footer);
         $('#spinner').remove();
-        $('#wait-message').remove();      
+        $('#wait-message').remove();
       }).fail(function(){
+        var template = $('#alert-template').html();
         $('#spinner').remove();
         $('#map-canvas').remove();
         $('#wait-message').remove();
-        $('body').append('<div class="row"><div class="small-12 large-12 columns alert-box alert" data-alert="">Something went wrong. Please refresh the page!<a class="close" href="#">×</a></div></div>');
-      })
+        $('#errands-form').append(template.replace('{alertText}',
+                        'Something went wrong. Please refresh the page!'));
+      });
     }
   }
