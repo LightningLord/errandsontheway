@@ -5,8 +5,8 @@
 </div>
 <div class="row">
     <h3>Start point</h3>
-    <% @businesses.each do |business| %>
-      <%= render 'trips/businesses_list', business: business %>
+    <% @businesses.each_with_index do |business, index| %>
+      <%= render 'trips/businesses_list', business: business, index: index %>
     <% end %>
 
 </div>
