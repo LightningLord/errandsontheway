@@ -39,20 +39,20 @@
   </div>
   <% else %>
   <div class="row">
-    <div class="small-12 large-6 columns">
+    <div class="small-12 large-8 columns">
       <div class="row collapse">
         <form id="errand_search"action="/options" method="get">
-          <div class="small-12 large-9 columns">
-            <label for="category-search">Search an Errand Category:</label>
+          <div class="small-12 large-8 columns">
+            <label for="category-search">Enter an Errand Category to search for options on the way:</label>
             <input class="radius" id="category-search" name="search" placeholder="e.g. Laundry, Gas, Tacos" type="text">
           </div>
-          <div class="small-12 large-3 columns text-center">
+          <div class="small-12 large-4 columns text-center">
             <input class="button radius" type="submit" value="Search">
           </div>
         </form>
       </div>
     </div>
-    <div class="small-12 large-5 large-offset-1  text-center columns">
+    <div class="small-12 large-4  text-center columns">
       <ul class="button-group radius">
         <li>
         <%= link_to 'Finalize Trip', trips_finalize_path, method: "post", class: 'button radius' %>
