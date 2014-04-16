@@ -1,4 +1,4 @@
-var renderOptionsMap = function(trip, options){
+var renderOptionsMap = function(trip, errands, options){
   console.log("at renderoptions");
 
   var directionsDisplay;
@@ -10,7 +10,6 @@ var renderOptionsMap = function(trip, options){
   var infowindow = null;
 
   function initialize() {
-    console.log("at initialize");
     directionsDisplay = new google.maps.DirectionsRenderer();
     map = new google.maps.Map(document.getElementById('map-canvas'));
     directionsDisplay.setMap(map);
@@ -21,13 +20,30 @@ var renderOptionsMap = function(trip, options){
   }
 
   function calcRoute() {
-    console.log("calcRoute");
     var request;
-    request = {
-        origin: trip.start_point_address,
-        destination: trip.end_point_address,
-        travelMode: google.maps.TravelMode[trip.travel_mode.toUpperCase()]
-    };
+
+    if (errands.length === 0){
+      request = {
+          origin: trip.start_point_address,
+          destination: trip.end_point_address,
+          travelMode: google.maps.TravelMode[trip.travel_mode.toUpperCase()]
+      };
+    }
+    
+    else {
+
+      var errands_array = [];
+      for (var i in errands) {
+        errands_array.push({location: errands[i].address});
+      }
+      request = {
+          origin: trip.start_point_address,
+          waypoints: errands_array,
+          destination: trip.end_point_address,
+          optimizeWaypoints: true,
+          travelMode: google.maps.TravelMode[trip.travel_mode.toUpperCase()]
+      };
+    }
 
     directionsService.route(request, function(response, status) {
       if (status == google.maps.DirectionsStatus.OK) {
@@ -37,7 +53,6 @@ var renderOptionsMap = function(trip, options){
     });
 
     function drop() {
-      console.log("drop");
       for (var i = 0; i < optionsCoordinates.length; i++) {
         setTimeout(function() {
           addMarker();
@@ -46,7 +61,6 @@ var renderOptionsMap = function(trip, options){
     }
 
     function addMarker() {
-      console.log("add marker");
       var marker = new google.maps.Marker({
         position: optionsCoordinates[iterator],
         map: map,
@@ -64,7 +78,6 @@ var renderOptionsMap = function(trip, options){
     }
 
     function addListener(marker){
-            console.log("add listener");
       google.maps.event.addListener(marker, 'click', function() {
         if (infowindow) {
             infowindow.close();

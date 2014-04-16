@@ -17,6 +17,7 @@
 
 <script type="text/javascript">
   var trip = <%= raw @trip.to_json.gsub('/', '\/') %>;
+  var errands = <%= raw @trip.errands.to_json.gsub('/', '\/') %>;
   var options = <%= raw @businesses.to_json.gsub('/', '\/') %>;
-  renderOptionsMap(trip, options);
+  renderOptionsMap(trip, errands, options);
 </script>
