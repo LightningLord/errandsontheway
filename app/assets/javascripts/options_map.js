@@ -1,5 +1,4 @@
 var renderOptionsMap = function(trip, errands, options){
-  console.log("at renderoptions");
 
   var directionsDisplay;
   var directionsService = new google.maps.DirectionsService();
@@ -29,7 +28,7 @@ var renderOptionsMap = function(trip, errands, options){
           travelMode: google.maps.TravelMode[trip.travel_mode.toUpperCase()]
       };
     }
-    
+
     else {
 
       var errands_array = [];
@@ -86,7 +85,6 @@ var renderOptionsMap = function(trip, errands, options){
                 content: "<h4>" + marker.name + " </h4>" + marker.address + "<br/> Additional Time: " + marker.additionalTime + " minutes" + "<br/>"
         });
           infowindow.open(map, marker);
-          // alert(marker.customInfo + " " + marker.title);
       });
     }
   }

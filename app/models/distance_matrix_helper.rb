@@ -2,7 +2,6 @@ class DistanceMatrixHelper
   include HTTParty
 
   base_uri 'https://maps.googleapis.com'
-  #enter in origins and destinations as addresses
 
   def initialize(args)
     @options = { query: { origins: args[:origins],
