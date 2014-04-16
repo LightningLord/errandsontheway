@@ -12,7 +12,6 @@ describe Trip do
         trip = FactoryGirl.build(:valid_trip)
         expect(trip).to be_valid
       end
-
     end
 
     context "with an invalid address" do
@@ -29,6 +28,7 @@ describe Trip do
 
   describe "format durations" do
     before(:each){my_trip.update_attributes(original_duration: 1500, ending_duration: 3000)}
+
     it "should format the ending duration" do
       expect(my_trip.format_original_duration).to eq("25 minutes")
     end
@@ -75,6 +75,7 @@ describe Trip do
         my_trip.stub(:call_coordinates_retriever).and_return([33.33, 44.44])
         my_trip.stub(:call_distance_matrix_helper).and_return(1500)
       end
+
       let(:params){ {trip: {start_point_address: my_trip.start_point_address,
           end_point_address: my_trip.end_point_address}} }
       it "sets the coordinates" do
@@ -103,6 +104,7 @@ describe Trip do
     context "when GeocodeRetriever does not return coordinates" do
       before(:each){ my_trip.stub(:call_coordinates_retriever).and_return(nil)}
       after(:each){ my_trip.add_api_info({}) }
+
       it "does not call set_coordinates" do
         expect(my_trip).to_not receive(:set_coordinates)
       end
