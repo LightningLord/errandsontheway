@@ -108,6 +108,8 @@ html .button {
 
 html .button:hover {
   background: #e8eded;
+  border-width: 1px;
+  border-color: #23b7e0;
   color: #23b7e0;
   text-shadow: none;
 }
