@@ -21,8 +21,9 @@ describe OptionsController do
           "vicinity"=> "1524 Kirkham Street, San Francisco, CA",
           "geometry" =>{"location" => {"lat" =>37.8, "lng" =>  -122.6 }} } ]
       end
+
       before(:each) do
-        DirectionsServiceHelper.stub(:api_request).and_return(stub_return)
+        DirectionsRetriever.stub(:api_request).and_return(stub_return)
         DistanceMatrixRetriever.stub(:make_api_call).and_return({"rows" =>
         [{"elements" => [{"duration" => {"value" => 150}}]}]})
         request.session[:trip_id] = new_trip.id
@@ -30,13 +31,6 @@ describe OptionsController do
         get :index, :search => "Tacos"
       end
 
-      before(:each) do
-        stub_return = {"routes" => [{"legs" => [{"duration" => {"value" => 50} }] }]}
-        DirectionsServiceHelper.stub(:api_request).and_return(stub_return)
-        DistanceMatrixRetriever.stub(:make_api_call).and_return({"rows" =>
-        [{"elements" => [{"duration" => {"value" => 150}}]}]})
-        request.session[:trip_id] = new_trip.id
-      end
       it 'assigns a search term based on params' do
         expect(assigns(:search_term)).to eq('Tacos')
       end
@@ -53,6 +47,10 @@ describe OptionsController do
         expect(assigns(:trip)).to eq new_trip
       end
 
+      it "renders the options partial" do
+        expect(response).to render_template(:partial => '_options')
+      end
+
     end
 
     context "with no session" do
@@ -61,6 +59,7 @@ describe OptionsController do
         expect(response).to redirect_to root_path
       end
     end
+
   end
 end
 

@@ -1,5 +1,4 @@
 <div id="map-canvas" class="row small-11 small-centered columns"></div>
-
 <div class="row">
   <div class="small-12 large-12 columns">
       <h2>Places open now for: <%= @search_term %></h2>
@@ -9,12 +8,8 @@
     <% @businesses.each_with_index do |business, index| %>
       <%= render 'trips/businesses_list', business: business, index: index %>
     <% end %>
-
 </div>
-
 <div id="map-canvas" class="row small-11 small-centered columns"></div>
-
-
 <script type="text/javascript">
   var trip = <%= raw @trip.to_json.gsub('/', '\/') %>;
   var errands = <%= raw @trip.errands.to_json.gsub('/', '\/') %>;

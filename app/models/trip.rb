@@ -41,7 +41,6 @@ class Trip < ActiveRecord::Base
     5
   end
 
-
   def trip_info(business_address)
     {origin: self.start_point_address, destination: self.end_point_address,
       waypoints: waypoints_list(business_address), travel_mode: self.travel_mode

@@ -7,10 +7,12 @@ describe GeocodeRetriever do
       expect(GeocodeRetriever).to_not receive(:create_location_from_address)
       GeocodeRetriever.get_coordinates(fell.address)
     end
+
     it "does call create_location when it doesn't find a location in db" do
       expect(GeocodeRetriever).to receive(:create_location_from_address)
       GeocodeRetriever.get_coordinates("633 Folsom Street, San Francisco, CA")
     end
+
   end
 
   describe "get_address" do
@@ -39,8 +41,5 @@ describe GeocodeRetriever do
         GeocodeRetriever.get_address([37.7836265563965, -122.3976974487])
       }.to change{Location.count}.by(1)
     end
-
   end
-
-
 end

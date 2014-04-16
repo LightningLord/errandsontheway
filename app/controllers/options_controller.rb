@@ -4,7 +4,12 @@ class OptionsController < ApplicationController
       @search_term = params[:search]
       @trip = Trip.find(session[:trip_id])
       @businesses = prepare_businesses(@trip, @search_term)
-      render :partial => "options"
+      if @businesses.empty?
+        flash[:alert] = "Sorry! No places found near your route. Please try another."
+        render :partial => "trips/search"
+      else
+        render :partial => "options"
+      end
     else
       redirect_to root_path
     end

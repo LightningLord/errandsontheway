@@ -1,21 +1,20 @@
 $(function(){
-  var mysearchController = new searchController;
+  var mysearchController = new searchController
   mysearchController.initialize();
-
  });
-
-
   var searchController = function(){
-
   };
 
   searchController.prototype = {
     initialize: function(){
       $('#errand_search').on("submit", this.triggerAjax)
+  }
+  searchController.prototype = {
+    initialize: function(){
+      $('#errand_search').on("submit", this.triggerAjax);
       $('#spinner').hide();
       $('#wait-message').hide();
     },
-
     triggerAjax: function(event){
       event.preventDefault();
       $('#spinner').show();
@@ -30,9 +29,9 @@ $(function(){
         $('footer').remove();
         $('.route-map').remove();
         $('body').append(server_data);
+        $('body').append(footer);
         $('#spinner').remove();
         $('#wait-message').remove();
-        $('body').append(footer);
       }).fail(function(){
         var template = $('#alert-template').html();
         $('#spinner').remove();
@@ -40,6 +39,6 @@ $(function(){
         $('#wait-message').remove();
         $('#errands-form').append(template.replace('{alertText}',
                         'Something went wrong. Please refresh the page!'));
-      })
+      });
     }
   }

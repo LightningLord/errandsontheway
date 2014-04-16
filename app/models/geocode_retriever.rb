@@ -19,6 +19,7 @@ class GeocodeRetriever
   end
 
   private
+
   def self.create_location_from_address(address)
     coords = Geocoder.coordinates(address)
     if coords
@@ -40,6 +41,7 @@ class GeocodeRetriever
       })
     address
   end
+
 end
 
 

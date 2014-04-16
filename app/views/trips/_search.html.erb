@@ -1,24 +1,11 @@
-<script type="text/javascript">
-  var trip = <%= raw @trip.to_json.gsub('/', '\/') %>;
-  var errands = <%= raw @trip.errands.to_json.gsub('/', '\/') %>;
-  renderMap(trip, errands, false);
-</script>
-<script type="text/template" id="alert-template">
-  <div class="row">
-    <div class="small-12 large-12 columns alert-box alert" data-alert="">
-      {alertText}
-      <a class="close" href="#">x</a>
-    </div>
-  </div>
-</script>
-
 <div class="row">
   <div class="small-12 large-12 columns">
     <h1>Your trip</h1>
     <div class="trip_details row small-11 small-centered columns">
       <h2>Start point: <br/><span class="address"><%= @trip.start_point_address %></span></h2>
       <h2>Destination: <br/><span class="address"><%= @trip.end_point_address %></span></h2>
-      <h2>Trip Duration:<br/><span class="address"> <%= time_in_minutes(@trip.ending_duration) %> (<%= @trip.travel_mode.downcase %>) </span></h2>
+      <% trip_duration = @trip.ending_duration %>
+      <h2>Trip Duration:<br/><span class="address"> <%= time_in_minutes(trip_duration) %> (<%= @trip.travel_mode.downcase %>) </span></h2>
     </div>
         <%= display_flash_messages %>
   </div>
@@ -27,21 +14,20 @@
 <br/><br/>
 
 <div id="map-canvas" class="row small-11 small-centered columns route-map"></div>
-<img src="/assets/ajax-loader.gif" id="spinner">
-<h2 id="wait-message">Please wait while we fetch you some awesome options near your route.</h2>
 
 <div id="errands-form">
   <% if @trip.reached_max_errands? %>
   <div class="row">
       <p>You have reached the maximum amount of errands. Please finalize your route to see the route.</p>
   </div>
+
   <div class="row">
     <ul class="button-group radius">
       <li>
       <%= link_to 'Finalize Trip', trips_finalize_path, method: "post", class: 'button radius' %>
       </li>
       <li>
-      <%= render "start_over_link" %>
+      <%= render "trips/start_over_link" %>
       </li>
     </ul>
   </div>
@@ -66,7 +52,7 @@
         <%= link_to 'Finalize Trip', trips_finalize_path, method: "post", class: 'button radius' %>
         </li>
         <li>
-        <%= render "start_over_link" %>
+        <%= render "trips/start_over_link" %>
         </li>
       </ul>
     </div>
@@ -112,3 +98,8 @@
 </div>
 <% end %>
 
+<script type="text/javascript">
+  var trip = <%= raw @trip.to_json.gsub('/', '\/') %>;
+  var errands = <%= raw @trip.errands.to_json.gsub('/', '\/') %>;
+  renderMap(trip, errands, false);
+</script>
