@@ -2,6 +2,7 @@
   <div class="small-12 large-12 columns">
   <h1>Here's your trip!</h1>
   <%= render "headerblock" %>
+  <br/><br/>
   </div>
 </div>
 <div id="map-canvas" class="row small-11 small-centered columns"></div>
@@ -29,11 +30,14 @@
       <ol>
         <% @trip.errands.each do |errand| %>
           <li class="address"><%= errand.business_name %></li>
+          <li class="address detail"><%= errand.address %></li>
+          <br/>
         <% end %>
       </ol>
     </div>
   </div>
 </div>
+<br/><br/>
 <div class="row">
   <div class="small-12 large-12 columns">
     <p class="disclaimer">This trip link is yours! Bookmark it, share it, save it.</p>
