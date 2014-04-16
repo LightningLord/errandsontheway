@@ -1,4 +1,4 @@
-class DistanceMatrixHelper
+class DistanceMatrixRetriever
   include HTTParty
 
   base_uri 'https://maps.googleapis.com'

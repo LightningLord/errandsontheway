@@ -22,7 +22,7 @@ describe TripsController do
 
     let(:create_trip){post :create, trip: FactoryGirl.attributes_for(:valid_trip)}
     before(:each) do
-      DistanceMatrixHelper.stub(:make_api_call).and_return({"rows" =>
+      DistanceMatrixRetriever.stub(:make_api_call).and_return({"rows" =>
       [{"elements" => [{"duration" => {"value" => 150}}]}]})
     end
     it "should create a new trip" do
