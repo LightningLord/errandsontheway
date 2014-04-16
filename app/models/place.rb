@@ -11,7 +11,13 @@ class Place
 
 
   def get_biz_names_addresses_coordinates
+    # p @request_businesses[0]
+    # p @request_businesses[0]["name"]
+    # p @request_businesses[0]["vicinity"]
+    # p @request_businesses[0]["geometry"]
+
     @request_businesses.shift(2).map{|business|{name: business["name"], address: business["vicinity"], latitude: business["geometry"]["location"]["lat"], longitude: business["geometry"]["location"]["lng"]}}
+
   end
 
   private
