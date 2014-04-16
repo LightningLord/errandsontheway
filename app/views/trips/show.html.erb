@@ -16,9 +16,8 @@
   </div>
 </div>
 
-<br/><br/>
+<br/>
 
-<div id="map-canvas" class="row small-9 small-centered large-10 columns route-map"></div>
 <img src="/assets/ajax-loader.gif" id="spinner">
 <h2 id="wait-message">Please wait while we fetch you some awesome options near your route.</h2>
 
@@ -44,7 +43,7 @@
       <div class="row collapse">
         <form id="errand_search"action="/options" method="get">
           <div class="small-12 large-9 columns">
-            <label for="category-search">Search an Errand Category</label>
+            <label for="category-search">Search an Errand Category:</label>
             <input class="radius" id="category-search" name="search" placeholder="e.g. Laundry, Gas, Tacos" type="text">
           </div>
           <div class="small-12 large-3 columns text-center">
@@ -66,6 +65,7 @@
   </div>
 </div>
 
+<div id="map-canvas" class="row small-9 small-centered large-10 columns route-map"></div>
 
 <% unless @trip.reached_max_errands? %>
 <div class="row">
