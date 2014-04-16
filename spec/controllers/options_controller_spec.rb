@@ -21,6 +21,7 @@ describe OptionsController do
           "vicinity"=> "1524 Kirkham Street, San Francisco, CA",
           "geometry" =>{"location" => {"lat" =>37.8, "lng" =>  -122.6 }} } ]
       end
+
       before(:each) do
         DirectionsServiceHelper.stub(:api_request).and_return(stub_return)
         DistanceMatrixRetriever.stub(:make_api_call).and_return({"rows" =>
@@ -30,13 +31,6 @@ describe OptionsController do
         get :index, :search => "Tacos"
       end
 
-      before(:each) do
-        stub_return = {"routes" => [{"legs" => [{"duration" => {"value" => 50} }] }]}
-        DirectionsServiceHelper.stub(:api_request).and_return(stub_return)
-        DistanceMatrixRetriever.stub(:make_api_call).and_return({"rows" =>
-        [{"elements" => [{"duration" => {"value" => 150}}]}]})
-        request.session[:trip_id] = new_trip.id
-      end
       it 'assigns a search term based on params' do
         expect(assigns(:search_term)).to eq('Tacos')
       end
