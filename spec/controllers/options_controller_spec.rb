@@ -60,8 +60,6 @@ describe OptionsController do
       end
     end
 
-    context "with no businesses" do
-    end
   end
 end
 
