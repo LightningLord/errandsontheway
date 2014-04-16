@@ -24,9 +24,9 @@ $(function(){
         $('footer').remove();
         $('.route-map').remove();
         $('body').append(server_data);
-        $('#spinner').remove();
-        $('#wait-message').remove();
         $('body').append(footer);
+        $('#spinner').remove();
+        $('#wait-message').remove();      
       }).fail(function(){
         $('#spinner').remove();
         $('#map-canvas').remove();
