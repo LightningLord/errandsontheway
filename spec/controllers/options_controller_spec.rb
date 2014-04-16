@@ -4,32 +4,39 @@ describe OptionsController do
   describe '#index' do
     context "with session " do
       let(:new_trip){FactoryGirl.create(:valid_trip)}
+      let(:stub_return){{"routes" => [{"legs" => [{"duration" => {"value" => 50} }] }]}}
+      let(:place_stub_return_start) do
+          [{"name" => "DBC",
+          "vicinity"=> "717 California Street, San Francisco, CA",
+          "geometry" =>{"location" => {"lat" =>37.7, "lng" =>  -122.4 }} },
+        {"name" => "DBC",
+          "vicinity"=> "1137 Hawthorne Street, San Francisco, CA",
+          "geometry" =>{"location" => {"lat" =>37.6, "lng" =>  -122.3 }} }]
+        end
+      let(:place_stub_return_end) do
+        place_stub_return_end = [{"name" => "DBC new",
+          "vicinity"=> "633 Folsom Street, San Francisco, CA",
+          "geometry" =>{"location" => {"lat" =>37.5, "lng" =>  -122.5 }} },
+        {"name" => "DBC new",
+          "vicinity"=> "1524 Kirkham Street, San Francisco, CA",
+          "geometry" =>{"location" => {"lat" =>37.8, "lng" =>  -122.6 }} } ]
+      end
+      before(:each) do
+        DirectionsRetriever.stub(:api_request).and_return(stub_return)
+        DistanceMatrixRetriever.stub(:make_api_call).and_return({"rows" =>
+        [{"elements" => [{"duration" => {"value" => 150}}]}]})
+        request.session[:trip_id] = new_trip.id
+        Place.stub(:request_businesses).and_return(place_stub_return_start, place_stub_return_end)
+        get :index, :search => "Tacos"
+      end
+
       before(:each) do
         stub_return = {"routes" => [{"legs" => [{"duration" => {"value" => 50} }] }]}
         DirectionsRetriever.stub(:api_request).and_return(stub_return)
         DistanceMatrixRetriever.stub(:make_api_call).and_return({"rows" =>
         [{"elements" => [{"duration" => {"value" => 150}}]}]})
         request.session[:trip_id] = new_trip.id
-        place_stub_return_start = [{"name" => "DBC",
-          "vicinity"=> "717 California Street, San Francisco, CA",
-          "geometry" =>{"location" => {"lat" =>37.7, "lng" =>  -122.4 }} },
-        {"name" => "DBC",
-          "vicinity"=> "717 California Street, San Francisco, CA",
-          "geometry" =>{"location" => {"lat" =>37.7, "lng" =>  -122.4 }} }]
-
-
-
-        place_stub_return_end = [{"name" => "DBC new",
-          "vicinity"=> "633 Folsom Street, San Francisco, CA",
-          "geometry" =>{"location" => {"lat" =>37.7, "lng" =>  -122.4 }} },
-
-        {"name" => "DBC new",
-          "vicinity"=> "633 Folsom Street, San Francisco, CA",
-          "geometry" =>{"location" => {"lat" =>37.7, "lng" =>  -122.4 }} } ]
-        Place.stub(:request_businesses).and_return(place_stub_return_start, place_stub_return_end)
-        get :index, :search => "Tacos"
       end
-
       it 'assigns a search term based on params' do
         expect(assigns(:search_term)).to eq('Tacos')
       end
