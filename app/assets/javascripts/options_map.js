@@ -29,7 +29,7 @@ var renderOptionsMap = function(trip, errands, options){
           travelMode: google.maps.TravelMode[trip.travel_mode.toUpperCase()]
       };
     }
-    
+
     else {
 
       var errands_array = [];
@@ -79,14 +79,19 @@ var renderOptionsMap = function(trip, errands, options){
 
     function addListener(marker){
       google.maps.event.addListener(marker, 'click', function() {
+        var unit;
+        if (marker.additionalTime == 1){
+          unit = " minute"
+        } else {
+          unit = " minutes"
+        };
         if (infowindow) {
             infowindow.close();
         }
         infowindow = new google.maps.InfoWindow({
-                content: "<h4>" + marker.name + " </h4>" + marker.address + "<br/> Additional Time: " + marker.additionalTime + " minutes" + "<br/>"
+                content: "<h4>" + marker.name + " </h4>" + marker.address + "<br/> Additional Time: " + marker.additionalTime + unit + "<br/>"
         });
           infowindow.open(map, marker);
-          // alert(marker.customInfo + " " + marker.title);
       });
     }
   }
