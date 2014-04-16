@@ -47,8 +47,9 @@ var renderMap = function(trip, errands, display_directions){
   }
 
 
-  google.maps.event.addDomListener(window, 'load', initialize);
-  
+   google.maps.event.addDomListener(window, 'load', initialize);
+   google.maps.event.trigger(window, 'load');
+    
 };
 
 
