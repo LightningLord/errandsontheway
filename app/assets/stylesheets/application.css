@@ -10,6 +10,7 @@
  *
  *= require_self
  *= require foundation_and_overrides
+
  *= require_tree .
  */
 
@@ -19,7 +20,6 @@ Blue: 23d1ef
 Gray: e3e5e5
 Green: 24C775
 */
-
 html, body {
   height: 100%;
   margin: 0;
@@ -42,6 +42,12 @@ html body {
 html body,
 html .button {
   font-family: 'Roboto', sans-serif;
+}
+
+html .button .icon {
+  font-family: 'icomoon';
+  font-style: normal;
+  padding-right: .5rem;
 }
 
 html header {
@@ -110,6 +116,8 @@ html .button {
 
 html .button:hover {
   background: #e8eded;
+  border-width: 1px;
+  border-color: #23b7e0;
   color: #23b7e0;
   text-shadow: none;
 }
@@ -123,6 +131,10 @@ html .button-group {
   float: left;
   padding-bottom: .8rem;
   font-size: 0.875em;
+}
+
+.google-marker {
+  margin-right: 8px;
 }
 
 html .pricing-table {
