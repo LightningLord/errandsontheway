@@ -3,7 +3,8 @@ Errands on the Way
 
 Errands on the Way DBC Final Project
 
--><img src='http://i.imgur.com/xiKbeLR'><-
+![Imgur](http://i.imgur.com/xiKbeLR.png)
+
 
 #### Site on Heroku
 [errandsontheway.herokuapp.com](https://errandsontheway.herokuapp.com)
