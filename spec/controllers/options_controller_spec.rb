@@ -47,6 +47,10 @@ describe OptionsController do
         expect(assigns(:trip)).to eq new_trip
       end
 
+      it "renders the options partial" do
+        expect(response).to render_template(:partial => '_options')
+      end
+
     end
 
     context "with no session" do
@@ -55,6 +59,7 @@ describe OptionsController do
         expect(response).to redirect_to root_path
       end
     end
+
   end
 end
 

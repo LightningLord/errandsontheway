@@ -10,7 +10,7 @@
     <div class="trip_details row small-11 small-centered columns">
       <h2>Start point: <br/><span class="address"><%= @trip.start_point_address %></span></h2>
       <h2>Destination: <br/><span class="address"><%= @trip.end_point_address %></span></h2>
-      <h2>Trip Duration:<br/><span class="address"> <%= time_in_minutes(@trip_duration) %> (<%= @trip.travel_mode.downcase %>) </span></h2>
+      <h2>Trip Duration:<br/><span class="address"> <%= time_in_minutes(@trip.ending_duration) %> (<%= @trip.travel_mode.downcase %>) </span></h2>
     </div>
         <%= display_flash_messages %>
   </div>
