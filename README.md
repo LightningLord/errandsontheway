@@ -37,7 +37,7 @@ rake spec
 
 ![Imgur](http://i.imgur.com/xiKbeLR.png)
 
-[errandsontheway.herokuapp.com](https://errandsontheway.herokuapp.com)
+[http://errandsontheway.com/](http://errandsontheway.com/)
 
 ## Members:
 
