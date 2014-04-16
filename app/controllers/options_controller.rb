@@ -6,7 +6,6 @@ class OptionsController < ApplicationController
       @businesses = prepare_businesses(@trip, @search_term)
       if @businesses.empty?
         flash[:alert] = "Sorry! No places found near your route. Please try another."
-        # redirect_to(@trip)
         render :partial => "trips/search"
       else
         render :partial => "options"
