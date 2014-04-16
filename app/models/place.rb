@@ -10,8 +10,8 @@ class Place
   #ie '-33.8670522'
 
 
-  def get_names_and_addresses
-    @request_businesses.shift(2).map{|business|{name: business["name"], address: business["vicinity"]}}
+  def get_biz_names_addresses_coordinates
+    @request_businesses.shift(2).map{|business|{name: business["name"], address: business["vicinity"], latitude: business["geometry"]["location"]["lat"], longitude: business["geometry"]["location"]["lng"]}}
   end
 
   private

@@ -1,6 +1,6 @@
 require 'spec_helper'
 describe Business do
-  let(:my_business){Business.new("Ned's Place", "1 Stark Way")}
+  let(:my_business){Business.new("Ned's Place", "1 Stark Way", 37.7, -122)}
   let(:my_trip){FactoryGirl.create(:valid_trip)}
   it "sets directions" do
     stub_return = {"routes" => [{"legs" => [{"duration" => {"value" => 50} }] }]}
