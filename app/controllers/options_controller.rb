@@ -3,9 +3,13 @@ class OptionsController < ApplicationController
     if session[:trip_id]
       @search_term = params[:search]
       @trip = Trip.find(session[:trip_id])
-      start_place = Place.new(@trip.start_point_latitude.to_s, @trip.start_point_longitude.to_s, @search_term)
-      end_place = Place.new(@trip.end_point_latitude.to_s, @trip.end_point_longitude.to_s, @search_term)
-      @businesses = get_business_info_near_point(start_place, @trip) + get_business_info_near_point(end_place, @trip)
+      places = []
+      places << Place.new(@trip.start_point_latitude.to_s, @trip.start_point_longitude.to_s, @search_term)
+      places << Place.new(@trip.end_point_latitude.to_s, @trip.end_point_longitude.to_s, @search_term)
+      @trip.errands.each {|errand| places << Place.new(errand.latitude.to_s, errand.longitude.to_s, @search_term)} if @trip.errands
+      @businesses = []
+      places.each {|place| @businesses << get_business_info_near_point(place, @trip)}
+      @businesses.flatten!
       @businesses.sort!{|a,b| a.extra_duration <=> b.extra_duration}
       render :partial => "options"
     else
