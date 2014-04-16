@@ -90,15 +90,6 @@ describe TripsController do
         expect(assigns(:trip)).to eq my_trip
       end
 
-      it "assigns @trip_duration to original_duration when no errands" do
-        expect(assigns(:trip_duration)).to eq my_trip.original_duration
-      end
-
-      it "assigns @trip_duration to ending_duration when trip has errands" do
-        my_trip.errands << FactoryGirl.create(:valid_errand)
-        get :show, :id => my_trip.id
-        expect(assigns(:trip_duration)).to eq my_trip.ending_duration
-      end
     end
 
     context "no session" do
@@ -109,6 +100,5 @@ describe TripsController do
     end
 
   end
-
 
 end
