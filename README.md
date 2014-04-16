@@ -3,14 +3,7 @@ Errands on the Way
 
 Errands on the Way DBC Final Project
 
-#### Workflow / Agreement
-![Imgur](http://i.imgur.com/zGaBShs.png)
-
-#### Wireframe
-![Imgur](http://i.imgur.com/Gji4I7b.png)
-
-#### Page Flow
-![Imgur](http://i.imgur.com/AATAMvR.png)
+-> ![Imgur](http://i.imgur.com/xiKbeLR) <-
 
 #### Site on Heroku
 [errandsontheway.herokuapp.com](https://errandsontheway.herokuapp.com)
@@ -27,7 +20,3 @@ Members:
 Get a Bing api key from http://www.microsoft.com/maps/create-a-bing-maps-key.aspx
 Create a .env file in the root directory.
 Save your key as BING_KEY = yourkey (no quotes).
-
-#####VCR Errors
-If VCR Errors come up that reference options_spec.rb, delete options_spec.yml in the vcr_cassettes folder and run the tests again.
-
