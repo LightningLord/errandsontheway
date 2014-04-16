@@ -14,18 +14,16 @@ describe OptionsController do
           "vicinity"=> "717 California Street, San Francisco, CA",
           "geometry" =>{"location" => {"lat" =>37.7, "lng" =>  -122.4 }} },
         {"name" => "DBC",
-          "vicinity"=> "717 California Street, San Francisco, CA",
-          "geometry" =>{"location" => {"lat" =>37.7, "lng" =>  -122.4 }} }]
-
-
+          "vicinity"=> "1137 Hawthorne Street, San Francisco, CA",
+          "geometry" =>{"location" => {"lat" =>37.6, "lng" =>  -122.3 }} }]
 
         place_stub_return_end = [{"name" => "DBC new",
           "vicinity"=> "633 Folsom Street, San Francisco, CA",
-          "geometry" =>{"location" => {"lat" =>37.7, "lng" =>  -122.4 }} },
+          "geometry" =>{"location" => {"lat" =>37.5, "lng" =>  -122.5 }} },
 
         {"name" => "DBC new",
-          "vicinity"=> "633 Folsom Street, San Francisco, CA",
-          "geometry" =>{"location" => {"lat" =>37.7, "lng" =>  -122.4 }} } ]
+          "vicinity"=> "1524 Kirkham Street, San Francisco, CA",
+          "geometry" =>{"location" => {"lat" =>37.8, "lng" =>  -122.6 }} } ]
         Place.stub(:request_businesses).and_return(place_stub_return_start, place_stub_return_end)
         get :index, :search => "Tacos"
       end
