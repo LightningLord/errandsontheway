@@ -7,7 +7,7 @@ describe OptionsController do
       before(:each) do
         stub_return = {"routes" => [{"legs" => [{"duration" => {"value" => 50} }] }]}
         DirectionsServiceHelper.stub(:api_request).and_return(stub_return)
-        DistanceMatrixHelper.stub(:make_api_call).and_return({"rows" =>
+        DistanceMatrixRetriever.stub(:make_api_call).and_return({"rows" =>
         [{"elements" => [{"duration" => {"value" => 150}}]}]})
         request.session[:trip_id] = new_trip.id
         place_stub_return_start = [{"name" => "DBC",
