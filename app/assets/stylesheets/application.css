@@ -315,6 +315,13 @@ html .trip_details ol {
   font-weight: 500;
 }
 
+.address.detail {
+  font-size: 17px;
+  color: #6b6b6b;
+  font-weight: 400;
+}
+
+
 p .disclaimer {
   font-size: 20px;
   margin: 20px;

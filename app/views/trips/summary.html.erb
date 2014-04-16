@@ -30,6 +30,8 @@
       <ol>
         <% @trip.errands.each do |errand| %>
           <li class="address"><%= errand.business_name %></li>
+          <li class="address detail"><%= errand.address %></li>
+          <br/>
         <% end %>
       </ol>
     </div>
