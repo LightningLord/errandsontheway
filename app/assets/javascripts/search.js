@@ -28,14 +28,14 @@ $(function(){
       }).done(function(server_data){
         var footer = $('footer');
         $('footer').remove();
-        $('body').append(server_data)
-        $('#spinner').remove()
-        $('#map-canvas').remove()
+        $('.route-map').remove();
+        $('body').append(server_data);
+        $('#spinner').remove();
         $('#wait-message').remove();
         $('body').append(footer);
       }).fail(function(){
-        $('#spinner').remove()
-        $('#map-canvas').remove()
+        $('#spinner').remove();
+        $('#map-canvas').remove();
         $('#wait-message').remove();
 
         $('body').append('<div class="row"><div class="small-12 large-12 columns alert-box alert" data-alert="">Something went wrong. Please refresh the page!<a class="close" href="#">×</a></div></div>');

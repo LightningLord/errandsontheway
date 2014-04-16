@@ -1,9 +1,11 @@
 class Business
   attr_reader :name, :address, :extra_duration
 
-  def initialize(name, address)
+  def initialize(name, address, latitude, longitude)
     @address = address
     @name = name
+    @latitude = latitude
+    @longitude = longitude
     @extra_duration = 0
   end
 

@@ -10,7 +10,6 @@
  *
  *= require_self
  *= require foundation_and_overrides
-
  *= require_tree .
  */
 
@@ -20,6 +19,41 @@ Blue: 23d1ef
 Gray: e3e5e5
 Green: 24C775
 */
+
+@font-face {
+  font-family: 'icomoon';
+  src:url('/fonts/icomoon.eot?b91s2s');
+  src:url('/fonts/icomoon.eot?#iefixb91s2s') format('embedded-opentype'),
+    url('/fonts/icomoon.woff?b91s2s') format('woff'),
+    url('/fonts/icomoon.ttf?b91s2s') format('truetype'),
+    url('/fonts/icomoon.svg?b91s2s#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon.walk:before {
+  content: "\e600";
+}
+.icon.bike:before {
+  content: "\e601";
+}
+.icon.drive:before {
+  content: "\e602";
+}
 html, body {
   height: 100%;
   margin: 0;
