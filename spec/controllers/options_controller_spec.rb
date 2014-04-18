@@ -51,9 +51,7 @@ describe OptionsController do
         expect(response).to render_template(:partial => '_options')
       end
 
-      it "does not create a flash notice" do
-        expect(flash).to be_nil
-      end
+
 
 
     end
