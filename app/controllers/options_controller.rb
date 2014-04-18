@@ -4,18 +4,24 @@ class OptionsController < ApplicationController
       @search_term = params[:search]
       @trip = Trip.find(session[:trip_id])
       @businesses = prepare_businesses(@trip, @search_term)
-      if @businesses.empty?
-        flash[:alert] = "Sorry! No places found near your route. Please try another."
-        render :partial => "trips/search"
-      else
-        render :partial => "options"
-      end
+      render_partial(@businesses)
     else
       redirect_to root_path
     end
   end
 
   private
+
+  def render_partial(businesses)
+    @businesses = businesses
+    if @businesses.empty?
+      flash[:alert] = "Sorry! No places found near your route. Please try another."
+      render :partial => "trips/search"
+    else
+      render :partial => "options"
+    end
+  end
+
 
   def get_business_info_near_point(place, trip)
     businesses = create_businesses(place)
