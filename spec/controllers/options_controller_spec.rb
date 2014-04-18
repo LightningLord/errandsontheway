@@ -2,8 +2,8 @@ require 'spec_helper'
 
 describe OptionsController do
   describe '#index' do
+    let(:new_trip){FactoryGirl.create(:valid_trip)}
     context "with session " do
-      let(:new_trip){FactoryGirl.create(:valid_trip)}
       let(:stub_return){{"routes" => [{"legs" => [{"duration" => {"value" => 50} }] }]}}
       let(:place_stub_return_start) do
           [{"name" => "DBC",
@@ -14,7 +14,7 @@ describe OptionsController do
           "geometry" =>{"location" => {"lat" =>37.6, "lng" =>  -122.3 }} }]
         end
       let(:place_stub_return_end) do
-        place_stub_return_end = [{"name" => "DBC new",
+          [{"name" => "DBC new",
           "vicinity"=> "633 Folsom Street, San Francisco, CA",
           "geometry" =>{"location" => {"lat" =>37.5, "lng" =>  -122.5 }} },
         {"name" => "DBC new",
@@ -49,6 +49,21 @@ describe OptionsController do
 
       it "renders the options partial" do
         expect(response).to render_template(:partial => '_options')
+      end
+
+      it "does not create a flash notice" do
+        expect(flash).to be_nil
+      end
+
+
+    end
+
+    context "with empty businesses" do
+      it "renders trips/search partial" do
+        Place.stub(:request_businesses).and_return([])
+        request.session[:trip_id] = new_trip.id
+        get :index, :search => "Tacos"
+        expect(response).to render_template(:partial => 'trips/_search')
       end
 
     end
